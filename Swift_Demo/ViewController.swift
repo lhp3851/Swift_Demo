@@ -38,7 +38,6 @@ class ViewController: UIViewController {
             print("Destruct")
         }
         
-        
         alert.addAction(actionSure)
         alert.addAction(actionCancle)
         alert.addAction(actionDestruct)

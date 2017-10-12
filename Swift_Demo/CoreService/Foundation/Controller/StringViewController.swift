@@ -8,19 +8,17 @@
 
 import UIKit
 
-class StringViewController: UIViewController {
+class StringViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-
 
 }
