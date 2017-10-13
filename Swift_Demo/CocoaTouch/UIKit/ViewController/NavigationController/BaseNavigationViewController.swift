@@ -13,9 +13,17 @@ class BaseNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.initNavigationBar()
     }
 
+    func initNavigationBar() -> Void {
+        let image = kIMAGE_WITH(name: "navigation_bar")
+        UINavigationBar.appearance().setBackgroundImage(image, for: UIBarMetrics.default)
+        UINavigationBar.appearance().barStyle = UIBarStyle.black
+        UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedStringKey.foregroundColor:kCOLOR_WHITE,NSAttributedStringKey.font:kFONT_18]}()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

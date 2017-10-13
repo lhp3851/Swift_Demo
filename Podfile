@@ -16,16 +16,16 @@ target 'Swift_Demo' do
     pod 'Charts'
     pod 'NVActivityIndicatorView' #HUD
     pod 'Instructions', '~> 1.0.0' # instruction for freshmen
-    pod 'RazzleDazzle' # instruction page
-    pod 'RAMAnimatedTabBarController', '~> 2.0.13'  #swift 3
-    pod 'SCLAlertView' #alert View
-    pod 'DOFavoriteButton'#有动画效果的button，适用于收藏、喜欢、点赞等
+    #pod 'RazzleDazzle' # instruction page
+    #pod 'RAMAnimatedTabBarController', '~> 2.0.13'  #swift 3
+    #pod 'SCLAlertView' #alert View
+    #pod 'DOFavoriteButton'#有动画效果的button，适用于收藏、喜欢、点赞等
     pod 'LTMorphingLabel'#Label
-    pod 'PageMenu' #
+    #pod 'PageMenu' #
     pod 'XCGLogger', '~> 6.0.1'
-    pod 'PermissionScope' #
+    #pod 'PermissionScope' #
     pod 'SwiftyStoreKit' #轻量级的APP内购框架
-    pod 'BluetoothKit', '~> 0.2.0'#
+    #pod 'BluetoothKit', '~> 0.2.0'#
     pod 'Appz' # app Comunication
 
   target 'Swift_DemoTests' do

@@ -14,35 +14,35 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
 
         initPannle()
+        setItemAttribute()
     }
 
     func initPannle() -> Void {
         let homeVC = HomeViewController()
         let homeNav = BaseNavigationViewController.init(rootViewController: homeVC)
-        homeNav.tabBarItem.title = "首页"
-        homeNav.tabBarItem.image = UIImage.init(named: "Profile.png")
-        homeNav.tabBarItem.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: -3.0)
+        homeNav.tabBarItem.itemWithImage(title: "首页", image: "home-page_icon_normal", selectedImage: "home-page_icon_select")
         
         let genealogyVC = GenealogyViewController()
         let genealogyNav = BaseNavigationViewController.init(rootViewController: genealogyVC)
-        genealogyNav.tabBarItem.title = "家谱"
-        genealogyNav.tabBarItem.image = UIImage(named:"Profile")
-        genealogyNav.tabBarItem.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: -3.0)
+        genealogyNav.tabBarItem.itemWithImage(title: "家谱", image: "praise_icon_normal", selectedImage: "praise_icon_select")
+        
         
         let traceVC = TraceViewController()
         let traceNav = BaseNavigationViewController.init(rootViewController: traceVC)
-        traceNav.tabBarItem.title = "事迹"
-        traceNav.tabBarItem.image = UIImage(named:"Profile")
-        traceNav.tabBarItem.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: -3.0)
+        traceNav.tabBarItem.itemWithImage(title: "事迹", image: "activity_icon_normal", selectedImage: "activity_icon_select")
         
         let pofileVC = ProfileViewController()
         let pofileNav = BaseNavigationViewController.init(rootViewController: pofileVC)
-        pofileNav.tabBarItem.title = "我的"
-        pofileNav.tabBarItem.image = UIImage(named:"Profile")
-        pofileNav.tabBarItem.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: -3.0)
+        pofileNav.tabBarItem.itemWithImage(title: "我的", image: "mine_icon_normal", selectedImage: "mine_icon_select")
         
         self.viewControllers = [homeNav,genealogyNav,traceNav,pofileNav]
         
+    }
+    
+    
+    func setItemAttribute() -> Void {
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kCOLOR_TABBAR_GRAY], for: UIControlState.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kCOLOR_NAVIGATION], for: UIControlState.selected)
     }
     
     override func didReceiveMemoryWarning() {
