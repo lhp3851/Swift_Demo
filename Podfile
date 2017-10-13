@@ -6,12 +6,12 @@ target 'Swift_Demo' do
   use_frameworks!
 
   # Pods for Swift_Demo
-
+  
+    pod 'SQLite.swift', '~> 0.11'
     pod 'SnapKit', '~> 4.0.0'
     pod 'Alamofire', '~> 4.5'
     pod 'Kingfisher', '~> 4.0'
     pod 'ReachabilitySwift'
-    #pod 'SQLite.swift', '~> 0.11.4'
     pod 'Charts'
 
   target 'Swift_DemoTests' do
