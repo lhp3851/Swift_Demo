@@ -1363,6 +1363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lhp3851.Swift-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1379,6 +1380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lhp3851.Swift-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
