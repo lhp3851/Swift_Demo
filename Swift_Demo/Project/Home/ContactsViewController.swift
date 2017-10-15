@@ -25,16 +25,16 @@ class ContactsViewController: BaseViewController {
     override func initPannel() {
         super.initPannel()
         self.view.addSubview(self.contactsView)
-        ContactsTool.getContacts { (contacts) in
-            self.contactsView.datas = contacts
-            self.contactsView.contactsTableview.reloadData()
-        }
         self.setConstraints()
     }
     
     override func initData() {
         super.initData()
         self.navigationItem.title = "通讯录"
+        ContactsTool.getContacts { (contacts) in
+            self.contactsView.messyDatas = contacts
+            self.contactsView.contactsTableview.reloadData()
+        }
     }
     
     func setConstraints() -> Void {

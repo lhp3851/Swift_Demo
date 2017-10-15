@@ -83,7 +83,7 @@ class ContactsTool: NSObject {
         do {
             try store.enumerateContacts(with: request, usingBlock: {
                 (contact : CNContact, stop : UnsafeMutablePointer<ObjCBool>) -> Void in
-                self.descrption(contact: contact)
+//                self.descrption(contact: contact)
                 contacts.append(contact)
                 
             })
@@ -91,6 +91,43 @@ class ContactsTool: NSObject {
             print(error)
         }
         self.completeHnadler!(contacts)
+    }
+    
+    class func loadDatas() -> [CNContact] {
+        var contacts : [CNContact] = Array()
+        
+        //获取授权状态
+        let status = CNContactStore.authorizationStatus(for: .contacts)
+        //判断当前授权状态
+        guard status == .authorized else { return [] }
+        
+        //创建通讯录对象
+        let store = CNContactStore()
+        
+        //获取Fetch,并且指定要获取联系人中的什么属性
+        let keys = [CNContactFamilyNameKey, CNContactGivenNameKey, CNContactNicknameKey,
+                    CNContactOrganizationNameKey, CNContactJobTitleKey,
+                    CNContactDepartmentNameKey, CNContactNoteKey, CNContactPhoneNumbersKey,
+                    CNContactEmailAddressesKey, CNContactPostalAddressesKey,
+                    CNContactDatesKey, CNContactInstantMessageAddressesKey
+        ]
+        
+        //创建请求对象
+        //需要传入一个(keysToFetch: [CNKeyDescriptor]) 包含CNKeyDescriptor类型的数组
+        let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+        
+        //遍历所有联系人
+        do {
+            try store.enumerateContacts(with: request, usingBlock: {
+                (contact : CNContact, stop : UnsafeMutablePointer<ObjCBool>) -> Void in
+                //                self.descrption(contact: contact)
+                contacts.append(contact)
+                
+            })
+        } catch {
+            print(error)
+        }
+        return contacts
     }
     
     
