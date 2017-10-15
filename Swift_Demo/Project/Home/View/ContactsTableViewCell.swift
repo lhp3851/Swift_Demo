@@ -123,9 +123,15 @@ class ContactsTableViewCell: UITableViewCell {
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        let color = self.handlerButton.backgroundColor
         super.setSelected(selected, animated: animated)
-
-        
+        self.handlerButton.backgroundColor = color
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        let color = self.handlerButton.backgroundColor
+        super.setHighlighted(highlighted, animated: animated)
+        self.handlerButton.backgroundColor = color
     }
 
 }
