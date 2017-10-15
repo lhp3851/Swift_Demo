@@ -1,13 +1,12 @@
 //
-//  String+Extension.swift
-//  Swift_Demo
+//  StringExtension.swift
+//  ZhaoCaiMao_Swift
 //
-//  Created by lhp3851 on 2017/9/22.
-//  Copyright © 2017年 Jerry. All rights reserved.
+//  Created by 刘合鹏 on 2017/9/11.
+//  Copyright © 2017年 TMWL. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
 enum ValidatedType {
     case Email
@@ -15,19 +14,7 @@ enum ValidatedType {
     case FixedPhone
 }
 
-extension String {
-    
-    static func locallized(locallized:String) -> String {
-        let locallizedString = NSLocalizedString(locallized, comment: locallized)
-        return locallizedString
-    }
-    
-    func locallized() -> String {
-        let lable : String = self
-        let locallizedString = NSLocalizedString(lable, comment: lable)
-        return locallizedString
-    }
-    
+extension String{
     //固定宽度计算文字高度
     func getTextHeigh(font:UIFont,width:CGFloat) -> CGFloat {
         
@@ -108,5 +95,6 @@ extension String {
         print((pinyin as String).uppercased())
         return (pinyin as String).uppercased();
     }
+    
     
 }

@@ -11,7 +11,7 @@ target 'Swift_Demo' do
     pod 'SnapKit', '~> 4.0.0'
     pod 'Alamofire', '~> 4.5'
     pod 'Kingfisher', '~> 4.0'
-    pod 'ReachabilitySwift'
+    pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
     pod 'SwiftyJSON'
     pod 'Charts'
     pod 'NVActivityIndicatorView' #HUD

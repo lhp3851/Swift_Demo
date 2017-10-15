@@ -76,7 +76,7 @@ class BarButtonItem: UIBarButtonItem {
     }()
     
     lazy var searchItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "seach_icon")
+        let image = FilesManagerTool.imageWithNames(imageName: "search_icon")
         let selector : Selector = #selector(normalSelector)
         let searchBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItemStyle.done, target: self, action: selector);
         return searchBarItem;

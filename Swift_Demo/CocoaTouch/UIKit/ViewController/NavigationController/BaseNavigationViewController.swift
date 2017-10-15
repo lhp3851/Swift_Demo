@@ -20,8 +20,11 @@ class BaseNavigationViewController: UINavigationController {
         let image = kIMAGE_WITH(name: "navigation_bar")
         UINavigationBar.appearance().setBackgroundImage(image, for: UIBarMetrics.default)
         UINavigationBar.appearance().barStyle = UIBarStyle.black
+        UINavigationBar.appearance().tintColor = kCOLOR_BUTTON_NORMOL
+        UINavigationBar.appearance().barTintColor = kCOLOR_CLEAR
         UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedStringKey.foregroundColor:kCOLOR_WHITE,NSAttributedStringKey.font:kFONT_18]}()
-        
+        UINavigationBar.appearance().backIndicatorImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
     }
     
     override func didReceiveMemoryWarning() {

@@ -26,7 +26,6 @@ class BaseTabBarController: UITabBarController {
         let genealogyNav = BaseNavigationViewController.init(rootViewController: genealogyVC)
         genealogyNav.tabBarItem.itemWithImage(title: "家谱", image: "praise_icon_normal", selectedImage: "praise_icon_select")
         
-        
         let traceVC = TraceViewController()
         let traceNav = BaseNavigationViewController.init(rootViewController: traceVC)
         traceNav.tabBarItem.itemWithImage(title: "事迹", image: "activity_icon_normal", selectedImage: "activity_icon_select")
@@ -36,7 +35,6 @@ class BaseTabBarController: UITabBarController {
         pofileNav.tabBarItem.itemWithImage(title: "我的", image: "mine_icon_normal", selectedImage: "mine_icon_select")
         
         self.viewControllers = [homeNav,genealogyNav,traceNav,pofileNav]
-        
     }
     
     

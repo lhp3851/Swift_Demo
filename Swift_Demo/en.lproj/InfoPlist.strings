@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Swift_Demo
+
+  Created by lhp3851 on 2017/10/14.
+  Copyright © 2017年 Jerry. All rights reserved.
+*/
+CFBundleName= "FamilyTree";
+CFBundleDisplayName= "FamilyTree";

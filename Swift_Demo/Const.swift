@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+
 
 /// 项目配置等常量
 let kWINDOW_WIDTH  = (min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height))
@@ -31,7 +31,9 @@ let kSYSTEM_VERSION = UIDevice().systemVersion
 //字体大小
 let kFONT_11 =  UIFont.systemFont(ofSize: 11)
 let kFONT_12 =  UIFont.systemFont(ofSize: 12)
+let kFONT_13 =  UIFont.systemFont(ofSize: 13)
 let kFONT_14 =  UIFont.systemFont(ofSize: 14)
+let kFONT_15 =  UIFont.systemFont(ofSize: 15)
 let kFONT_16 =  UIFont.systemFont(ofSize: 16)
 let kFONT_18 =  UIFont.systemFont(ofSize: 18)
 let kFONT_20 =  UIFont.systemFont(ofSize: 20)
