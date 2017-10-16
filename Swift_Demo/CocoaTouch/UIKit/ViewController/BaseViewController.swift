@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        self.defualtSetting()
+        self.defualtSetting()
         self.initData()
         self.initPannel()
         self.listenNetWork()

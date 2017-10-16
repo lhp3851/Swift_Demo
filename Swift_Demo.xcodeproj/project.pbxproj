@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		670BC97DD9ECDC49E4BA43CC /* Pods_Swift_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6A93057D8F2087D0802DCB /* Pods_Swift_Demo.framework */; };
 		7A08544C1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A08544B1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift */; };
+		7A37032B1F950FCC00F519F3 /* ProfileViewes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37032A1F950FCC00F519F3 /* ProfileViewes.swift */; };
+		7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A37032D1F9518FB00F519F3 /* ProfileModle.swift */; };
 		7A4C11991F91F9EA00F02866 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C11981F91F9EA00F02866 /* ContactsViewController.swift */; };
 		7A4C11A51F9242A600F02866 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C11A71F9242A600F02866 /* InfoPlist.strings */; };
 		7A4C11AB1F92432700F02866 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A4C11AD1F92432700F02866 /* Localizable.strings */; };
@@ -109,6 +111,8 @@
 		3F8B8B5FFB501604FFFC3B69 /* Pods-Swift_DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoTests/Pods-Swift_DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67F92991FA661353B173534F /* Pods-Swift_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Demo/Pods-Swift_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		7A08544B1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarItem+UITabBarItem.swift"; sourceTree = "<group>"; };
+		7A37032A1F950FCC00F519F3 /* ProfileViewes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewes.swift; sourceTree = "<group>"; };
+		7A37032D1F9518FB00F519F3 /* ProfileModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModle.swift; sourceTree = "<group>"; };
 		7A4C11981F91F9EA00F02866 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		7A4C11A31F92429800F02866 /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7A4C11A41F92429800F02866 /* zh-Hans-CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans-CN"; path = "zh-Hans-CN.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -232,6 +236,22 @@
 				7A08544B1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7A3703291F950F8800F519F3 /* Viewes */ = {
+			isa = PBXGroup;
+			children = (
+				7A37032A1F950FCC00F519F3 /* ProfileViewes.swift */,
+			);
+			path = Viewes;
+			sourceTree = "<group>";
+		};
+		7A37032C1F9518D800F519F3 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+				7A37032D1F9518FB00F519F3 /* ProfileModle.swift */,
+			);
+			path = Modle;
 			sourceTree = "<group>";
 		};
 		7A4C11B11F93069300F02866 /* NetWorkTool */ = {
@@ -402,6 +422,8 @@
 		7A7818A01F8FC6DA0043254E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7A37032C1F9518D800F519F3 /* Modle */,
+				7A3703291F950F8800F519F3 /* Viewes */,
 				7A7818A51F8FC7A40043254E /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -1530,6 +1552,7 @@
 				7A4C11B51F93069300F02866 /* BaseRequest.swift in Sources */,
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
+				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
@@ -1545,6 +1568,7 @@
 				7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */,
 				7A4C11BC1F9308B200F02866 /* UIImage+Extention.swift in Sources */,
 				7A9783F21F7558B1003F17D1 /* AppDelegate.swift in Sources */,
+				7A37032B1F950FCC00F519F3 /* ProfileViewes.swift in Sources */,
 				7A7818A61F8FC7A40043254E /* ProfileViewController.swift in Sources */,
 				7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */,
 				7A4C11B71F93069300F02866 /* ReachAblityTool.swift in Sources */,
