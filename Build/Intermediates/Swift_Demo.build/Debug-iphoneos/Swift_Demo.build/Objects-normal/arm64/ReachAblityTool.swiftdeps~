@@ -1,0 +1,161 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ReachAblityTool"
+provides-nominal:
+- "10Swift_Demo15ReachAblityToolC"
+provides-member:
+- ["10Swift_Demo15ReachAblityToolC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Bool"
+- "NSObject"
+- "NetworkReachabilityManager"
+- "ReachAblityTool"
+- "Void"
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "NetWorkType"]
+- !private ["s7CVarArgP", "NetworkReachabilityManager"]
+- ["s7CVarArgP", "ReachAblityTool"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", ""]
+- !private ["9Alamofire26NetworkReachabilityManagerC14ConnectionTypeO", "ethernetOrWiFi"]
+- !private ["9Alamofire26NetworkReachabilityManagerC14ConnectionTypeO", "wwan"]
+- !private ["s28CustomDebugStringConvertibleP", "NetWorkType"]
+- !private ["s28CustomDebugStringConvertibleP", "NetworkReachabilityManager"]
+- ["s28CustomDebugStringConvertibleP", "ReachAblityTool"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "NetWorkType"]
+- !private ["s23CustomStringConvertibleP", "NetworkReachabilityManager"]
+- ["s23CustomStringConvertibleP", "ReachAblityTool"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "NetWorkType"]
+- !private ["s9EquatableP", "NetworkReachabilityManager"]
+- ["s9EquatableP", "ReachAblityTool"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "ethernetOrWiFi"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "wwan"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "NetWorkType"]
+- !private ["s8HashableP", "NetworkReachabilityManager"]
+- ["s8HashableP", "ReachAblityTool"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "ethernetOrWiFi"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "wwan"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Listener"]
+- ["So8NSObjectC", "NetWorkStatus"]
+- ["So8NSObjectC", "NetWorkType"]
+- ["So8NSObjectC", "NetworkReachabilityManager"]
+- ["So8NSObjectC", "ReachAblityTool"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isReachable"]
+- ["So8NSObjectC", "listener"]
+- ["So8NSObjectC", "netWorkStatus"]
+- ["So8NSObjectC", "netWorkType"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "NetWorkType"]
+- !private ["So16NSObjectProtocolP", "NetworkReachabilityManager"]
+- ["So16NSObjectProtocolP", "ReachAblityTool"]
+- ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", ""]
+- ["9Alamofire26NetworkReachabilityManagerC", "ConnectionType"]
+- ["9Alamofire26NetworkReachabilityManagerC", "NetworkReachabilityStatus"]
+- !private ["9Alamofire26NetworkReachabilityManagerC", "init"]
+- !private ["9Alamofire26NetworkReachabilityManagerC", "isReachable"]
+- !private ["9Alamofire26NetworkReachabilityManagerC", "isReachableOnWWAN"]
+- !private ["9Alamofire26NetworkReachabilityManagerC", "networkReachabilityStatus"]
+- ["10Swift_Demo15ReachAblityToolC", "Bool"]
+- ["10Swift_Demo15ReachAblityToolC", "Listener"]
+- ["10Swift_Demo15ReachAblityToolC", "NetWorkStatus"]
+- ["10Swift_Demo15ReachAblityToolC", "NetWorkType"]
+- ["10Swift_Demo15ReachAblityToolC", "NetworkReachabilityManager"]
+- ["10Swift_Demo15ReachAblityToolC", "ReachAblityTool"]
+- ["10Swift_Demo15ReachAblityToolC", "Void"]
+- ["10Swift_Demo15ReachAblityToolC", "default"]
+- ["10Swift_Demo15ReachAblityToolC", "deinit"]
+- ["10Swift_Demo15ReachAblityToolC", "init"]
+- ["10Swift_Demo15ReachAblityToolC", "isReachable"]
+- ["10Swift_Demo15ReachAblityToolC", "listener"]
+- ["10Swift_Demo15ReachAblityToolC", "netWorkStatus"]
+- ["10Swift_Demo15ReachAblityToolC", "netWorkType"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NetWorkType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NetworkReachabilityManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ReachAblityTool"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+depends-nominal:
+- !private "Sb"
+- "s7CVarArgP"
+- !private "9Alamofire26NetworkReachabilityManagerC14ConnectionTypeO"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "9Alamofire26NetworkReachabilityManagerC"
+- "10Swift_Demo15ReachAblityToolC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/SnapKit.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+interface-hash: "51e0462123087d99f667fe1bc51584b8"

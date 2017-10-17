@@ -1,0 +1,740 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ContactsViewController"
+provides-nominal:
+- "10Swift_Demo22ContactsViewControllerC"
+provides-member:
+- ["10Swift_Demo22ContactsViewControllerC", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+depends-top-level:
+- "Array"
+- "AssignmentPrecedence"
+- "BaseViewController"
+- !private "CGRect"
+- !private "ContactsTool"
+- "ContactsView"
+- "ContactsViewController"
+- !private "StringLiteralType"
+- !private "UIEdgeInsetsMake"
+- "Void"
+depends-member:
+- ["Sa", "init"]
+- !private ["10Swift_Demo13BaseTableviewC", "reloadData"]
+- !private ["10Swift_Demo8BaseViewC", "contactsTableview"]
+- !private ["10Swift_Demo8BaseViewC", "messyDatas"]
+- !private ["10Swift_Demo8BaseViewC", "snp"]
+- ["10Swift_Demo18BaseViewControllerC", "Array"]
+- !private ["10Swift_Demo18BaseViewControllerC", "CGRect"]
+- !private ["10Swift_Demo18BaseViewControllerC", "ContactsTool"]
+- ["10Swift_Demo18BaseViewControllerC", "ContactsView"]
+- !private ["10Swift_Demo18BaseViewControllerC", "UIEdgeInsetsMake"]
+- ["10Swift_Demo18BaseViewControllerC", "Void"]
+- ["10Swift_Demo18BaseViewControllerC", "contacts"]
+- ["10Swift_Demo18BaseViewControllerC", "contactsView"]
+- ["10Swift_Demo18BaseViewControllerC", "contactsView.storage"]
+- ["10Swift_Demo18BaseViewControllerC", "didReceiveMemoryWarning"]
+- ["10Swift_Demo18BaseViewControllerC", "init"]
+- ["10Swift_Demo18BaseViewControllerC", "initData"]
+- ["10Swift_Demo18BaseViewControllerC", "initPannel"]
+- !private ["10Swift_Demo18BaseViewControllerC", "navigationItem"]
+- ["10Swift_Demo18BaseViewControllerC", "setConstraints"]
+- !private ["10Swift_Demo18BaseViewControllerC", "view"]
+- ["10Swift_Demo18BaseViewControllerC", "viewDidLoad"]
+- ["10Swift_Demo18BaseViewControllerC", ""]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "addSubview"]
+- !private ["So15CALayerDelegateP", "contactsTableview"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "messyDatas"]
+- !private ["So15CALayerDelegateP", "reloadData"]
+- !private ["So15CALayerDelegateP", "snp"]
+- !private ["SC6CGRectV", "zero"]
+- !private ["So15CNKeyDescriptorP", "init"]
+- ["s7CVarArgP", "Array"]
+- !private ["s7CVarArgP", "CGRect"]
+- !private ["s7CVarArgP", "ContactsTool"]
+- !private ["s7CVarArgP", "ContactsView"]
+- !private ["s7CVarArgP", "UIEdgeInsetsMake"]
+- !private ["s7CVarArgP", "addSubview"]
+- !private ["s7CVarArgP", "contactsTableview"]
+- !private ["s7CVarArgP", "contactsView"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "getContacts"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "initData"]
+- !private ["s7CVarArgP", "initPannel"]
+- !private ["s7CVarArgP", "messyDatas"]
+- !private ["s7CVarArgP", "navigationItem"]
+- !private ["s7CVarArgP", "reloadData"]
+- !private ["s7CVarArgP", "setConstraints"]
+- !private ["s7CVarArgP", "snp"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "view"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s7CVarArgP", ""]
+- ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["7SnapKit23ConstraintAttributesDSLP", "makeConstraints"]
+- !private ["7SnapKit28ConstraintBasicAttributesDSLP", "makeConstraints"]
+- !private ["7SnapKit13ConstraintDSLP", "makeConstraints"]
+- !private ["7SnapKit15ConstraintMakerC", "edges"]
+- !private ["7SnapKit25ConstraintMakerExtendableC", "equalTo"]
+- !private ["7SnapKit24ConstraintMakerRelatableC", "equalTo"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "addSubview"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "contactsTableview"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "init"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "messyDatas"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "reloadData"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "snp"]
+- !private ["7SnapKit17ConstraintViewDSLV", "makeConstraints"]
+- !private ["10Swift_Demo12ContactsToolC", "getContacts"]
+- !private ["10Swift_Demo12ContactsViewC", "contactsTableview"]
+- !private ["10Swift_Demo12ContactsViewC", "init"]
+- !private ["10Swift_Demo12ContactsViewC", "messyDatas"]
+- !private ["10Swift_Demo12ContactsViewC", "snp"]
+- ["10Swift_Demo22ContactsViewControllerC", "Array"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "CGRect"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "ContactsTool"]
+- ["10Swift_Demo22ContactsViewControllerC", "ContactsView"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "UIEdgeInsetsMake"]
+- ["10Swift_Demo22ContactsViewControllerC", "Void"]
+- ["10Swift_Demo22ContactsViewControllerC", "contacts"]
+- ["10Swift_Demo22ContactsViewControllerC", "contactsView"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "contactsView.storage"]
+- ["10Swift_Demo22ContactsViewControllerC", "deinit"]
+- ["10Swift_Demo22ContactsViewControllerC", "didReceiveMemoryWarning"]
+- ["10Swift_Demo22ContactsViewControllerC", "init"]
+- ["10Swift_Demo22ContactsViewControllerC", "initData"]
+- ["10Swift_Demo22ContactsViewControllerC", "initPannel"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "navigationItem"]
+- ["10Swift_Demo22ContactsViewControllerC", "setConstraints"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "view"]
+- ["10Swift_Demo22ContactsViewControllerC", "viewDidLoad"]
+- ["s28CustomDebugStringConvertibleP", "Array"]
+- !private ["s28CustomDebugStringConvertibleP", "CGRect"]
+- !private ["s28CustomDebugStringConvertibleP", "ContactsTool"]
+- !private ["s28CustomDebugStringConvertibleP", "ContactsView"]
+- !private ["s28CustomDebugStringConvertibleP", "UIEdgeInsetsMake"]
+- !private ["s28CustomDebugStringConvertibleP", "addSubview"]
+- !private ["s28CustomDebugStringConvertibleP", "contactsTableview"]
+- !private ["s28CustomDebugStringConvertibleP", "contactsView"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "getContacts"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "initData"]
+- !private ["s28CustomDebugStringConvertibleP", "initPannel"]
+- !private ["s28CustomDebugStringConvertibleP", "messyDatas"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
+- !private ["s28CustomDebugStringConvertibleP", "reloadData"]
+- !private ["s28CustomDebugStringConvertibleP", "setConstraints"]
+- !private ["s28CustomDebugStringConvertibleP", "snp"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "zero"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "zero"]
+- ["s23CustomStringConvertibleP", "Array"]
+- !private ["s23CustomStringConvertibleP", "CGRect"]
+- !private ["s23CustomStringConvertibleP", "ContactsTool"]
+- !private ["s23CustomStringConvertibleP", "ContactsView"]
+- !private ["s23CustomStringConvertibleP", "UIEdgeInsetsMake"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addSubview"]
+- !private ["s23CustomStringConvertibleP", "contactsTableview"]
+- !private ["s23CustomStringConvertibleP", "contactsView"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "getContacts"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "initData"]
+- !private ["s23CustomStringConvertibleP", "initPannel"]
+- !private ["s23CustomStringConvertibleP", "messyDatas"]
+- !private ["s23CustomStringConvertibleP", "navigationItem"]
+- !private ["s23CustomStringConvertibleP", "reloadData"]
+- !private ["s23CustomStringConvertibleP", "setConstraints"]
+- !private ["s23CustomStringConvertibleP", "snp"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "view"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "zero"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "zero"]
+- ["s9EquatableP", "Array"]
+- !private ["s9EquatableP", "CGRect"]
+- !private ["s9EquatableP", "ContactsTool"]
+- !private ["s9EquatableP", "ContactsView"]
+- !private ["s9EquatableP", "UIEdgeInsetsMake"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addSubview"]
+- !private ["s9EquatableP", "contactsTableview"]
+- !private ["s9EquatableP", "contactsView"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "getContacts"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "initData"]
+- !private ["s9EquatableP", "initPannel"]
+- !private ["s9EquatableP", "messyDatas"]
+- !private ["s9EquatableP", "navigationItem"]
+- !private ["s9EquatableP", "reloadData"]
+- !private ["s9EquatableP", "setConstraints"]
+- !private ["s9EquatableP", "snp"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "view"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- !private ["s9EquatableP", "zero"]
+- ["s9EquatableP", ""]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "Array"]
+- !private ["s8HashableP", "CGRect"]
+- !private ["s8HashableP", "ContactsTool"]
+- !private ["s8HashableP", "ContactsView"]
+- !private ["s8HashableP", "UIEdgeInsetsMake"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addSubview"]
+- !private ["s8HashableP", "contactsTableview"]
+- !private ["s8HashableP", "contactsView"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "getContacts"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "initData"]
+- !private ["s8HashableP", "initPannel"]
+- !private ["s8HashableP", "messyDatas"]
+- !private ["s8HashableP", "navigationItem"]
+- !private ["s8HashableP", "reloadData"]
+- !private ["s8HashableP", "setConstraints"]
+- !private ["s8HashableP", "snp"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "view"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s8HashableP", ""]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["7SnapKit20LayoutConstraintItemP", "addSubview"]
+- !private ["7SnapKit20LayoutConstraintItemP", "contactsTableview"]
+- !private ["7SnapKit20LayoutConstraintItemP", "init"]
+- !private ["7SnapKit20LayoutConstraintItemP", "messyDatas"]
+- !private ["7SnapKit20LayoutConstraintItemP", "reloadData"]
+- !private ["7SnapKit20LayoutConstraintItemP", "snp"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["s17MutableCollectionP", "init"]
+- ["So8NSCodingP", "Array"]
+- !private ["So8NSCodingP", "CGRect"]
+- !private ["So8NSCodingP", "ContactsTool"]
+- !private ["So8NSCodingP", "ContactsView"]
+- !private ["So8NSCodingP", "UIEdgeInsetsMake"]
+- !private ["So8NSCodingP", "addSubview"]
+- !private ["So8NSCodingP", "contactsTableview"]
+- !private ["So8NSCodingP", "contactsView"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "initData"]
+- !private ["So8NSCodingP", "initPannel"]
+- !private ["So8NSCodingP", "messyDatas"]
+- !private ["So8NSCodingP", "navigationItem"]
+- !private ["So8NSCodingP", "reloadData"]
+- !private ["So8NSCodingP", "setConstraints"]
+- !private ["So8NSCodingP", "snp"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So8NSCodingP", "view"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "Array"]
+- !private ["So26NSExtensionRequestHandlingP", "CGRect"]
+- !private ["So26NSExtensionRequestHandlingP", "ContactsTool"]
+- !private ["So26NSExtensionRequestHandlingP", "ContactsView"]
+- !private ["So26NSExtensionRequestHandlingP", "UIEdgeInsetsMake"]
+- !private ["So26NSExtensionRequestHandlingP", "contactsView"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "initData"]
+- !private ["So26NSExtensionRequestHandlingP", "initPannel"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
+- !private ["So26NSExtensionRequestHandlingP", "setConstraints"]
+- !private ["So26NSExtensionRequestHandlingP", "view"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "Array"]
+- !private ["So8NSObjectC", "CGRect"]
+- !private ["So8NSObjectC", "ContactsTool"]
+- ["So8NSObjectC", "ContactsView"]
+- !private ["So8NSObjectC", "UIEdgeInsetsMake"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "addSubview"]
+- ["So8NSObjectC", "contacts"]
+- !private ["So8NSObjectC", "contactsTableview"]
+- ["So8NSObjectC", "contactsView"]
+- ["So8NSObjectC", "contactsView.storage"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- !private ["So8NSObjectC", "getContacts"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "initData"]
+- ["So8NSObjectC", "initPannel"]
+- !private ["So8NSObjectC", "messyDatas"]
+- !private ["So8NSObjectC", "navigationItem"]
+- !private ["So8NSObjectC", "reloadData"]
+- ["So8NSObjectC", "setConstraints"]
+- !private ["So8NSObjectC", "snp"]
+- !private ["So8NSObjectC", "title"]
+- !private ["So8NSObjectC", "view"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So16NSObjectProtocolP", "Array"]
+- !private ["So16NSObjectProtocolP", "CGRect"]
+- !private ["So16NSObjectProtocolP", "ContactsTool"]
+- !private ["So16NSObjectProtocolP", "ContactsView"]
+- !private ["So16NSObjectProtocolP", "UIEdgeInsetsMake"]
+- !private ["So16NSObjectProtocolP", "addSubview"]
+- !private ["So16NSObjectProtocolP", "contactsTableview"]
+- !private ["So16NSObjectProtocolP", "contactsView"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "getContacts"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "initData"]
+- !private ["So16NSObjectProtocolP", "initPannel"]
+- !private ["So16NSObjectProtocolP", "messyDatas"]
+- !private ["So16NSObjectProtocolP", "navigationItem"]
+- !private ["So16NSObjectProtocolP", "reloadData"]
+- !private ["So16NSObjectProtocolP", "setConstraints"]
+- !private ["So16NSObjectProtocolP", "snp"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "view"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "addSubview"]
+- !private ["So29UIAccessibilityIdentificationP", "contactsTableview"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "messyDatas"]
+- !private ["So29UIAccessibilityIdentificationP", "reloadData"]
+- !private ["So29UIAccessibilityIdentificationP", "snp"]
+- !private ["So12UIAppearanceP", "addSubview"]
+- !private ["So12UIAppearanceP", "contactsTableview"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "messyDatas"]
+- !private ["So12UIAppearanceP", "reloadData"]
+- !private ["So12UIAppearanceP", "snp"]
+- ["So21UIAppearanceContainerP", "Array"]
+- !private ["So21UIAppearanceContainerP", "CGRect"]
+- !private ["So21UIAppearanceContainerP", "ContactsTool"]
+- !private ["So21UIAppearanceContainerP", "ContactsView"]
+- !private ["So21UIAppearanceContainerP", "UIEdgeInsetsMake"]
+- !private ["So21UIAppearanceContainerP", "addSubview"]
+- !private ["So21UIAppearanceContainerP", "contactsTableview"]
+- !private ["So21UIAppearanceContainerP", "contactsView"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "initData"]
+- !private ["So21UIAppearanceContainerP", "initPannel"]
+- !private ["So21UIAppearanceContainerP", "messyDatas"]
+- !private ["So21UIAppearanceContainerP", "navigationItem"]
+- !private ["So21UIAppearanceContainerP", "reloadData"]
+- !private ["So21UIAppearanceContainerP", "setConstraints"]
+- !private ["So21UIAppearanceContainerP", "snp"]
+- !private ["So21UIAppearanceContainerP", "view"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", ""]
+- ["So18UIContentContainerP", "Array"]
+- !private ["So18UIContentContainerP", "CGRect"]
+- !private ["So18UIContentContainerP", "ContactsTool"]
+- !private ["So18UIContentContainerP", "ContactsView"]
+- !private ["So18UIContentContainerP", "UIEdgeInsetsMake"]
+- !private ["So18UIContentContainerP", "contactsView"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "initData"]
+- !private ["So18UIContentContainerP", "initPannel"]
+- !private ["So18UIContentContainerP", "navigationItem"]
+- !private ["So18UIContentContainerP", "setConstraints"]
+- !private ["So18UIContentContainerP", "view"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", ""]
+- !private ["So17UICoordinateSpaceP", "addSubview"]
+- !private ["So17UICoordinateSpaceP", "contactsTableview"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "messyDatas"]
+- !private ["So17UICoordinateSpaceP", "reloadData"]
+- !private ["So17UICoordinateSpaceP", "snp"]
+- !private ["So23UIDataSourceTranslatingP", "reloadData"]
+- !private ["So13UIDynamicItemP", "addSubview"]
+- !private ["So13UIDynamicItemP", "contactsTableview"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "messyDatas"]
+- !private ["So13UIDynamicItemP", "reloadData"]
+- !private ["So13UIDynamicItemP", "snp"]
+- ["So18UIFocusEnvironmentP", "Array"]
+- !private ["So18UIFocusEnvironmentP", "CGRect"]
+- !private ["So18UIFocusEnvironmentP", "ContactsTool"]
+- !private ["So18UIFocusEnvironmentP", "ContactsView"]
+- !private ["So18UIFocusEnvironmentP", "UIEdgeInsetsMake"]
+- !private ["So18UIFocusEnvironmentP", "addSubview"]
+- !private ["So18UIFocusEnvironmentP", "contactsTableview"]
+- !private ["So18UIFocusEnvironmentP", "contactsView"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "initData"]
+- !private ["So18UIFocusEnvironmentP", "initPannel"]
+- !private ["So18UIFocusEnvironmentP", "messyDatas"]
+- !private ["So18UIFocusEnvironmentP", "navigationItem"]
+- !private ["So18UIFocusEnvironmentP", "reloadData"]
+- !private ["So18UIFocusEnvironmentP", "setConstraints"]
+- !private ["So18UIFocusEnvironmentP", "snp"]
+- !private ["So18UIFocusEnvironmentP", "view"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "addSubview"]
+- !private ["So11UIFocusItemP", "contactsTableview"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "messyDatas"]
+- !private ["So11UIFocusItemP", "reloadData"]
+- !private ["So11UIFocusItemP", "snp"]
+- !private ["So16UINavigationItemC", "title"]
+- ["So30UIPasteConfigurationSupportingP", "Array"]
+- !private ["So30UIPasteConfigurationSupportingP", "CGRect"]
+- !private ["So30UIPasteConfigurationSupportingP", "ContactsTool"]
+- !private ["So30UIPasteConfigurationSupportingP", "ContactsView"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIEdgeInsetsMake"]
+- !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
+- !private ["So30UIPasteConfigurationSupportingP", "contactsTableview"]
+- !private ["So30UIPasteConfigurationSupportingP", "contactsView"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "initData"]
+- !private ["So30UIPasteConfigurationSupportingP", "initPannel"]
+- !private ["So30UIPasteConfigurationSupportingP", "messyDatas"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
+- !private ["So30UIPasteConfigurationSupportingP", "setConstraints"]
+- !private ["So30UIPasteConfigurationSupportingP", "snp"]
+- !private ["So30UIPasteConfigurationSupportingP", "view"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "Array"]
+- !private ["So11UIResponderC", "CGRect"]
+- !private ["So11UIResponderC", "ContactsTool"]
+- ["So11UIResponderC", "ContactsView"]
+- !private ["So11UIResponderC", "UIEdgeInsetsMake"]
+- ["So11UIResponderC", "Void"]
+- !private ["So11UIResponderC", "addSubview"]
+- ["So11UIResponderC", "contacts"]
+- !private ["So11UIResponderC", "contactsTableview"]
+- ["So11UIResponderC", "contactsView"]
+- ["So11UIResponderC", "contactsView.storage"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "initData"]
+- ["So11UIResponderC", "initPannel"]
+- !private ["So11UIResponderC", "messyDatas"]
+- !private ["So11UIResponderC", "navigationItem"]
+- !private ["So11UIResponderC", "reloadData"]
+- ["So11UIResponderC", "setConstraints"]
+- !private ["So11UIResponderC", "snp"]
+- !private ["So11UIResponderC", "view"]
+- ["So11UIResponderC", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", "Array"]
+- !private ["So30UIResponderStandardEditActionsP", "CGRect"]
+- !private ["So30UIResponderStandardEditActionsP", "ContactsTool"]
+- !private ["So30UIResponderStandardEditActionsP", "ContactsView"]
+- !private ["So30UIResponderStandardEditActionsP", "UIEdgeInsetsMake"]
+- !private ["So30UIResponderStandardEditActionsP", "addSubview"]
+- !private ["So30UIResponderStandardEditActionsP", "contactsTableview"]
+- !private ["So30UIResponderStandardEditActionsP", "contactsView"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "initData"]
+- !private ["So30UIResponderStandardEditActionsP", "initPannel"]
+- !private ["So30UIResponderStandardEditActionsP", "messyDatas"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
+- !private ["So30UIResponderStandardEditActionsP", "reloadData"]
+- !private ["So30UIResponderStandardEditActionsP", "setConstraints"]
+- !private ["So30UIResponderStandardEditActionsP", "snp"]
+- !private ["So30UIResponderStandardEditActionsP", "view"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So12UIScrollViewC", "reloadData"]
+- !private ["So20UIScrollViewDelegateP", "contactsTableview"]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "messyDatas"]
+- !private ["So20UIScrollViewDelegateP", "snp"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
+- ["So16UIStateRestoringP", "Array"]
+- !private ["So16UIStateRestoringP", "CGRect"]
+- !private ["So16UIStateRestoringP", "ContactsTool"]
+- !private ["So16UIStateRestoringP", "ContactsView"]
+- !private ["So16UIStateRestoringP", "UIEdgeInsetsMake"]
+- !private ["So16UIStateRestoringP", "contactsView"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "initData"]
+- !private ["So16UIStateRestoringP", "initPannel"]
+- !private ["So16UIStateRestoringP", "navigationItem"]
+- !private ["So16UIStateRestoringP", "setConstraints"]
+- !private ["So16UIStateRestoringP", "view"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So11UITableViewC", "reloadData"]
+- !private ["So21UITableViewDataSourceP", "contactsTableview"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "messyDatas"]
+- !private ["So21UITableViewDataSourceP", "snp"]
+- !private ["So19UITableViewDelegateP", "contactsTableview"]
+- !private ["So19UITableViewDelegateP", "init"]
+- !private ["So19UITableViewDelegateP", "messyDatas"]
+- !private ["So19UITableViewDelegateP", "snp"]
+- ["So18UITraitEnvironmentP", "Array"]
+- !private ["So18UITraitEnvironmentP", "CGRect"]
+- !private ["So18UITraitEnvironmentP", "ContactsTool"]
+- !private ["So18UITraitEnvironmentP", "ContactsView"]
+- !private ["So18UITraitEnvironmentP", "UIEdgeInsetsMake"]
+- !private ["So18UITraitEnvironmentP", "addSubview"]
+- !private ["So18UITraitEnvironmentP", "contactsTableview"]
+- !private ["So18UITraitEnvironmentP", "contactsView"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "initData"]
+- !private ["So18UITraitEnvironmentP", "initPannel"]
+- !private ["So18UITraitEnvironmentP", "messyDatas"]
+- !private ["So18UITraitEnvironmentP", "navigationItem"]
+- !private ["So18UITraitEnvironmentP", "reloadData"]
+- !private ["So18UITraitEnvironmentP", "setConstraints"]
+- !private ["So18UITraitEnvironmentP", "snp"]
+- !private ["So18UITraitEnvironmentP", "view"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So6UIViewC", "addSubview"]
+- !private ["So6UIViewC", "contactsTableview"]
+- !private ["So6UIViewC", "messyDatas"]
+- !private ["So6UIViewC", "reloadData"]
+- !private ["So6UIViewC", "snp"]
+- ["So16UIViewControllerC", "Array"]
+- !private ["So16UIViewControllerC", "CGRect"]
+- !private ["So16UIViewControllerC", "ContactsTool"]
+- ["So16UIViewControllerC", "ContactsView"]
+- !private ["So16UIViewControllerC", "UIEdgeInsetsMake"]
+- ["So16UIViewControllerC", "Void"]
+- ["So16UIViewControllerC", "contacts"]
+- ["So16UIViewControllerC", "contactsView"]
+- ["So16UIViewControllerC", "contactsView.storage"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "initData"]
+- ["So16UIViewControllerC", "initPannel"]
+- !private ["So16UIViewControllerC", "navigationItem"]
+- ["So16UIViewControllerC", "setConstraints"]
+- !private ["So16UIViewControllerC", "view"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["9Alamofire14URLConvertibleP", "init"]
+- ["s14_ArrayProtocolP", "init"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "contactsTableview"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "messyDatas"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "snp"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s10_IndexableP", "init"]
+- ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Array"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ContactsTool"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ContactsView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIEdgeInsetsMake"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contactsTableview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contactsView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getContacts"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "initData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "initPannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "messyDatas"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setConstraints"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "snp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s17_MutableIndexableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "zero"]
+- ["s22_RandomAccessIndexableP", "init"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "Sa"
+- !private "10Swift_Demo13BaseTableviewC"
+- !private "10Swift_Demo8BaseViewC"
+- "10Swift_Demo18BaseViewControllerC"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- !private "SC6CGRectV"
+- !private "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- !private "s10ComparableP"
+- !private "7SnapKit23ConstraintAttributesDSLP"
+- !private "7SnapKit28ConstraintBasicAttributesDSLP"
+- !private "7SnapKit13ConstraintDSLP"
+- !private "7SnapKit15ConstraintMakerC"
+- !private "7SnapKit25ConstraintMakerExtendableC"
+- !private "7SnapKit24ConstraintMakerRelatableC"
+- !private "7SnapKit25ConstraintRelatableTargetP"
+- !private "7SnapKit17ConstraintViewDSLV"
+- !private "10Swift_Demo12ContactsToolC"
+- !private "10Swift_Demo12ContactsViewC"
+- "10Swift_Demo22ContactsViewControllerC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "10SwiftyJSON17JSONSubscriptTypeP"
+- !private "7SnapKit20LayoutConstraintItemP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So16UINavigationItemC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
+- !private "So20UIScrollViewDelegateP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So16UIStateRestoringP"
+- !private "So11UITableViewC"
+- !private "So21UITableViewDataSourceP"
+- !private "So19UITableViewDelegateP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "9Alamofire14URLConvertibleP"
+- "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/SnapKit.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+interface-hash: "ed7a6b2d2f0d58517d447642307c9569"

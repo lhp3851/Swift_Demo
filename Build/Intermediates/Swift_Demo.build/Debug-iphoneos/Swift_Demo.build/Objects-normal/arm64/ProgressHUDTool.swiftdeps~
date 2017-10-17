@@ -1,0 +1,463 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ProgressHUDTool"
+provides-nominal:
+- "10Swift_Demo15ProgressHUDToolC"
+provides-member:
+- ["10Swift_Demo15ProgressHUDToolC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "BaseView"
+- "CGRect"
+- "NVActivityIndicatorType"
+- "NVActivityIndicatorView"
+- "ProgressHUDTool"
+- "Void"
+- "kCOLOR_SAFELY"
+- "kCOLOR_WHITE"
+- "kMARGIN_HORIZONE"
+depends-member:
+- ["10Swift_Demo8BaseViewC", "CGRect"]
+- ["10Swift_Demo8BaseViewC", "NVActivityIndicatorType"]
+- ["10Swift_Demo8BaseViewC", "NVActivityIndicatorView"]
+- !private ["10Swift_Demo8BaseViewC", "ProgressHUDTool"]
+- ["10Swift_Demo8BaseViewC", "Void"]
+- ["10Swift_Demo8BaseViewC", "activityView"]
+- ["10Swift_Demo8BaseViewC", "init"]
+- ["10Swift_Demo8BaseViewC", "kCOLOR_SAFELY"]
+- ["10Swift_Demo8BaseViewC", "kCOLOR_WHITE"]
+- ["10Swift_Demo8BaseViewC", "kMARGIN_HORIZONE"]
+- ["10Swift_Demo8BaseViewC", "startAnimating"]
+- ["10Swift_Demo8BaseViewC", "stopAnmating"]
+- ["10Swift_Demo8BaseViewC", ""]
+- ["So15CALayerDelegateP", "CGRect"]
+- ["So15CALayerDelegateP", "NVActivityIndicatorType"]
+- ["So15CALayerDelegateP", "NVActivityIndicatorView"]
+- !private ["So15CALayerDelegateP", "ProgressHUDTool"]
+- !private ["So15CALayerDelegateP", "activityView"]
+- ["So15CALayerDelegateP", "backgroundColor"]
+- ["So15CALayerDelegateP", "init"]
+- ["So15CALayerDelegateP", "kCOLOR_SAFELY"]
+- ["So15CALayerDelegateP", "kCOLOR_WHITE"]
+- ["So15CALayerDelegateP", "kMARGIN_HORIZONE"]
+- !private ["So15CALayerDelegateP", "startAnimating"]
+- !private ["So15CALayerDelegateP", "stopAnimating"]
+- ["So15CALayerDelegateP", ""]
+- ["SC6CGRectV", "init"]
+- ["s7CVarArgP", "CGRect"]
+- ["s7CVarArgP", "NVActivityIndicatorType"]
+- ["s7CVarArgP", "NVActivityIndicatorView"]
+- !private ["s7CVarArgP", "ProgressHUDTool"]
+- !private ["s7CVarArgP", "activityView"]
+- ["s7CVarArgP", "backgroundColor"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "kCOLOR_SAFELY"]
+- ["s7CVarArgP", "kCOLOR_WHITE"]
+- ["s7CVarArgP", "kMARGIN_HORIZONE"]
+- !private ["s7CVarArgP", "startAnimating"]
+- !private ["s7CVarArgP", "stopAnimating"]
+- ["s7CVarArgP", ""]
+- ["7SnapKit25ConstraintRelatableTargetP", "CGRect"]
+- ["7SnapKit25ConstraintRelatableTargetP", "NVActivityIndicatorType"]
+- ["7SnapKit25ConstraintRelatableTargetP", "NVActivityIndicatorView"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "ProgressHUDTool"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "activityView"]
+- ["7SnapKit25ConstraintRelatableTargetP", "backgroundColor"]
+- ["7SnapKit25ConstraintRelatableTargetP", "init"]
+- ["7SnapKit25ConstraintRelatableTargetP", "kCOLOR_SAFELY"]
+- ["7SnapKit25ConstraintRelatableTargetP", "kCOLOR_WHITE"]
+- ["7SnapKit25ConstraintRelatableTargetP", "kMARGIN_HORIZONE"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "startAnimating"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "stopAnimating"]
+- ["7SnapKit25ConstraintRelatableTargetP", ""]
+- ["s28CustomDebugStringConvertibleP", "CGRect"]
+- ["s28CustomDebugStringConvertibleP", "NVActivityIndicatorType"]
+- ["s28CustomDebugStringConvertibleP", "NVActivityIndicatorView"]
+- !private ["s28CustomDebugStringConvertibleP", "ProgressHUDTool"]
+- !private ["s28CustomDebugStringConvertibleP", "activityView"]
+- ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "kCOLOR_SAFELY"]
+- ["s28CustomDebugStringConvertibleP", "kCOLOR_WHITE"]
+- ["s28CustomDebugStringConvertibleP", "kMARGIN_HORIZONE"]
+- !private ["s28CustomDebugStringConvertibleP", "startAnimating"]
+- !private ["s28CustomDebugStringConvertibleP", "stopAnimating"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "CGRect"]
+- ["s23CustomStringConvertibleP", "NVActivityIndicatorType"]
+- ["s23CustomStringConvertibleP", "NVActivityIndicatorView"]
+- !private ["s23CustomStringConvertibleP", "ProgressHUDTool"]
+- !private ["s23CustomStringConvertibleP", "activityView"]
+- ["s23CustomStringConvertibleP", "backgroundColor"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "kCOLOR_SAFELY"]
+- ["s23CustomStringConvertibleP", "kCOLOR_WHITE"]
+- ["s23CustomStringConvertibleP", "kMARGIN_HORIZONE"]
+- !private ["s23CustomStringConvertibleP", "startAnimating"]
+- !private ["s23CustomStringConvertibleP", "stopAnimating"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "CGRect"]
+- ["s9EquatableP", "NVActivityIndicatorType"]
+- ["s9EquatableP", "NVActivityIndicatorView"]
+- !private ["s9EquatableP", "ProgressHUDTool"]
+- !private ["s9EquatableP", "activityView"]
+- ["s9EquatableP", "backgroundColor"]
+- ["s9EquatableP", "ballClipRotate"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "kCOLOR_SAFELY"]
+- ["s9EquatableP", "kCOLOR_WHITE"]
+- ["s9EquatableP", "kMARGIN_HORIZONE"]
+- !private ["s9EquatableP", "startAnimating"]
+- !private ["s9EquatableP", "stopAnimating"]
+- ["s9EquatableP", ""]
+- ["s8HashableP", "CGRect"]
+- ["s8HashableP", "NVActivityIndicatorType"]
+- ["s8HashableP", "NVActivityIndicatorView"]
+- !private ["s8HashableP", "ProgressHUDTool"]
+- !private ["s8HashableP", "activityView"]
+- ["s8HashableP", "backgroundColor"]
+- ["s8HashableP", "ballClipRotate"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "kCOLOR_SAFELY"]
+- ["s8HashableP", "kCOLOR_WHITE"]
+- ["s8HashableP", "kMARGIN_HORIZONE"]
+- !private ["s8HashableP", "startAnimating"]
+- !private ["s8HashableP", "stopAnimating"]
+- ["s8HashableP", ""]
+- ["7SnapKit20LayoutConstraintItemP", "CGRect"]
+- ["7SnapKit20LayoutConstraintItemP", "NVActivityIndicatorType"]
+- ["7SnapKit20LayoutConstraintItemP", "NVActivityIndicatorView"]
+- !private ["7SnapKit20LayoutConstraintItemP", "ProgressHUDTool"]
+- !private ["7SnapKit20LayoutConstraintItemP", "activityView"]
+- ["7SnapKit20LayoutConstraintItemP", "backgroundColor"]
+- ["7SnapKit20LayoutConstraintItemP", "init"]
+- ["7SnapKit20LayoutConstraintItemP", "kCOLOR_SAFELY"]
+- ["7SnapKit20LayoutConstraintItemP", "kCOLOR_WHITE"]
+- ["7SnapKit20LayoutConstraintItemP", "kMARGIN_HORIZONE"]
+- !private ["7SnapKit20LayoutConstraintItemP", "startAnimating"]
+- !private ["7SnapKit20LayoutConstraintItemP", "stopAnimating"]
+- ["7SnapKit20LayoutConstraintItemP", ""]
+- ["So8NSCodingP", "CGRect"]
+- ["So8NSCodingP", "NVActivityIndicatorType"]
+- ["So8NSCodingP", "NVActivityIndicatorView"]
+- !private ["So8NSCodingP", "ProgressHUDTool"]
+- !private ["So8NSCodingP", "activityView"]
+- ["So8NSCodingP", "backgroundColor"]
+- ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "kCOLOR_SAFELY"]
+- ["So8NSCodingP", "kCOLOR_WHITE"]
+- ["So8NSCodingP", "kMARGIN_HORIZONE"]
+- !private ["So8NSCodingP", "startAnimating"]
+- !private ["So8NSCodingP", "stopAnimating"]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "NVActivityIndicatorType"]
+- ["So8NSObjectC", "NVActivityIndicatorView"]
+- !private ["So8NSObjectC", "ProgressHUDTool"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", "activityView"]
+- ["So8NSObjectC", "backgroundColor"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "kCOLOR_SAFELY"]
+- ["So8NSObjectC", "kCOLOR_WHITE"]
+- ["So8NSObjectC", "kMARGIN_HORIZONE"]
+- ["So8NSObjectC", "startAnimating"]
+- !private ["So8NSObjectC", "stopAnimating"]
+- ["So8NSObjectC", "stopAnmating"]
+- ["So16NSObjectProtocolP", "CGRect"]
+- ["So16NSObjectProtocolP", "NVActivityIndicatorType"]
+- ["So16NSObjectProtocolP", "NVActivityIndicatorView"]
+- !private ["So16NSObjectProtocolP", "ProgressHUDTool"]
+- !private ["So16NSObjectProtocolP", "activityView"]
+- ["So16NSObjectProtocolP", "backgroundColor"]
+- ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "kCOLOR_SAFELY"]
+- ["So16NSObjectProtocolP", "kCOLOR_WHITE"]
+- ["So16NSObjectProtocolP", "kMARGIN_HORIZONE"]
+- !private ["So16NSObjectProtocolP", "startAnimating"]
+- !private ["So16NSObjectProtocolP", "stopAnimating"]
+- ["So16NSObjectProtocolP", ""]
+- ["23NVActivityIndicatorView0aB4TypeO", "ballClipRotate"]
+- ["23NVActivityIndicatorViewAAC", "backgroundColor"]
+- ["23NVActivityIndicatorViewAAC", "init"]
+- !private ["23NVActivityIndicatorViewAAC", "startAnimating"]
+- !private ["23NVActivityIndicatorViewAAC", "stopAnimating"]
+- ["10Swift_Demo15ProgressHUDToolC", "CGRect"]
+- ["10Swift_Demo15ProgressHUDToolC", "NVActivityIndicatorType"]
+- ["10Swift_Demo15ProgressHUDToolC", "NVActivityIndicatorView"]
+- !private ["10Swift_Demo15ProgressHUDToolC", "ProgressHUDTool"]
+- ["10Swift_Demo15ProgressHUDToolC", "Void"]
+- ["10Swift_Demo15ProgressHUDToolC", "activityView"]
+- ["10Swift_Demo15ProgressHUDToolC", "deinit"]
+- ["10Swift_Demo15ProgressHUDToolC", "init"]
+- ["10Swift_Demo15ProgressHUDToolC", "kCOLOR_SAFELY"]
+- ["10Swift_Demo15ProgressHUDToolC", "kCOLOR_WHITE"]
+- ["10Swift_Demo15ProgressHUDToolC", "kMARGIN_HORIZONE"]
+- ["10Swift_Demo15ProgressHUDToolC", "startAnimating"]
+- ["10Swift_Demo15ProgressHUDToolC", "stopAnmating"]
+- ["s16RawRepresentableP", "ballClipRotate"]
+- ["So29UIAccessibilityIdentificationP", "CGRect"]
+- ["So29UIAccessibilityIdentificationP", "NVActivityIndicatorType"]
+- ["So29UIAccessibilityIdentificationP", "NVActivityIndicatorView"]
+- !private ["So29UIAccessibilityIdentificationP", "ProgressHUDTool"]
+- !private ["So29UIAccessibilityIdentificationP", "activityView"]
+- ["So29UIAccessibilityIdentificationP", "backgroundColor"]
+- ["So29UIAccessibilityIdentificationP", "init"]
+- ["So29UIAccessibilityIdentificationP", "kCOLOR_SAFELY"]
+- ["So29UIAccessibilityIdentificationP", "kCOLOR_WHITE"]
+- ["So29UIAccessibilityIdentificationP", "kMARGIN_HORIZONE"]
+- !private ["So29UIAccessibilityIdentificationP", "startAnimating"]
+- !private ["So29UIAccessibilityIdentificationP", "stopAnimating"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- ["So12UIAppearanceP", "CGRect"]
+- ["So12UIAppearanceP", "NVActivityIndicatorType"]
+- ["So12UIAppearanceP", "NVActivityIndicatorView"]
+- !private ["So12UIAppearanceP", "ProgressHUDTool"]
+- !private ["So12UIAppearanceP", "activityView"]
+- ["So12UIAppearanceP", "backgroundColor"]
+- ["So12UIAppearanceP", "init"]
+- ["So12UIAppearanceP", "kCOLOR_SAFELY"]
+- ["So12UIAppearanceP", "kCOLOR_WHITE"]
+- ["So12UIAppearanceP", "kMARGIN_HORIZONE"]
+- !private ["So12UIAppearanceP", "startAnimating"]
+- !private ["So12UIAppearanceP", "stopAnimating"]
+- ["So12UIAppearanceP", ""]
+- ["So21UIAppearanceContainerP", "CGRect"]
+- ["So21UIAppearanceContainerP", "NVActivityIndicatorType"]
+- ["So21UIAppearanceContainerP", "NVActivityIndicatorView"]
+- !private ["So21UIAppearanceContainerP", "ProgressHUDTool"]
+- !private ["So21UIAppearanceContainerP", "activityView"]
+- ["So21UIAppearanceContainerP", "backgroundColor"]
+- ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "kCOLOR_SAFELY"]
+- ["So21UIAppearanceContainerP", "kCOLOR_WHITE"]
+- ["So21UIAppearanceContainerP", "kMARGIN_HORIZONE"]
+- !private ["So21UIAppearanceContainerP", "startAnimating"]
+- !private ["So21UIAppearanceContainerP", "stopAnimating"]
+- ["So21UIAppearanceContainerP", ""]
+- ["So17UICoordinateSpaceP", "CGRect"]
+- ["So17UICoordinateSpaceP", "NVActivityIndicatorType"]
+- ["So17UICoordinateSpaceP", "NVActivityIndicatorView"]
+- !private ["So17UICoordinateSpaceP", "ProgressHUDTool"]
+- !private ["So17UICoordinateSpaceP", "activityView"]
+- ["So17UICoordinateSpaceP", "backgroundColor"]
+- ["So17UICoordinateSpaceP", "init"]
+- ["So17UICoordinateSpaceP", "kCOLOR_SAFELY"]
+- ["So17UICoordinateSpaceP", "kCOLOR_WHITE"]
+- ["So17UICoordinateSpaceP", "kMARGIN_HORIZONE"]
+- !private ["So17UICoordinateSpaceP", "startAnimating"]
+- !private ["So17UICoordinateSpaceP", "stopAnimating"]
+- ["So17UICoordinateSpaceP", ""]
+- ["So13UIDynamicItemP", "CGRect"]
+- ["So13UIDynamicItemP", "NVActivityIndicatorType"]
+- ["So13UIDynamicItemP", "NVActivityIndicatorView"]
+- !private ["So13UIDynamicItemP", "ProgressHUDTool"]
+- !private ["So13UIDynamicItemP", "activityView"]
+- ["So13UIDynamicItemP", "backgroundColor"]
+- ["So13UIDynamicItemP", "init"]
+- ["So13UIDynamicItemP", "kCOLOR_SAFELY"]
+- ["So13UIDynamicItemP", "kCOLOR_WHITE"]
+- ["So13UIDynamicItemP", "kMARGIN_HORIZONE"]
+- !private ["So13UIDynamicItemP", "startAnimating"]
+- !private ["So13UIDynamicItemP", "stopAnimating"]
+- ["So13UIDynamicItemP", ""]
+- ["So18UIFocusEnvironmentP", "CGRect"]
+- ["So18UIFocusEnvironmentP", "NVActivityIndicatorType"]
+- ["So18UIFocusEnvironmentP", "NVActivityIndicatorView"]
+- !private ["So18UIFocusEnvironmentP", "ProgressHUDTool"]
+- !private ["So18UIFocusEnvironmentP", "activityView"]
+- ["So18UIFocusEnvironmentP", "backgroundColor"]
+- ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "kCOLOR_SAFELY"]
+- ["So18UIFocusEnvironmentP", "kCOLOR_WHITE"]
+- ["So18UIFocusEnvironmentP", "kMARGIN_HORIZONE"]
+- !private ["So18UIFocusEnvironmentP", "startAnimating"]
+- !private ["So18UIFocusEnvironmentP", "stopAnimating"]
+- ["So18UIFocusEnvironmentP", ""]
+- ["So11UIFocusItemP", "CGRect"]
+- ["So11UIFocusItemP", "NVActivityIndicatorType"]
+- ["So11UIFocusItemP", "NVActivityIndicatorView"]
+- !private ["So11UIFocusItemP", "ProgressHUDTool"]
+- !private ["So11UIFocusItemP", "activityView"]
+- ["So11UIFocusItemP", "backgroundColor"]
+- ["So11UIFocusItemP", "init"]
+- ["So11UIFocusItemP", "kCOLOR_SAFELY"]
+- ["So11UIFocusItemP", "kCOLOR_WHITE"]
+- ["So11UIFocusItemP", "kMARGIN_HORIZONE"]
+- !private ["So11UIFocusItemP", "startAnimating"]
+- !private ["So11UIFocusItemP", "stopAnimating"]
+- ["So11UIFocusItemP", ""]
+- ["So30UIPasteConfigurationSupportingP", "CGRect"]
+- ["So30UIPasteConfigurationSupportingP", "NVActivityIndicatorType"]
+- ["So30UIPasteConfigurationSupportingP", "NVActivityIndicatorView"]
+- !private ["So30UIPasteConfigurationSupportingP", "ProgressHUDTool"]
+- !private ["So30UIPasteConfigurationSupportingP", "activityView"]
+- ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
+- ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "kCOLOR_SAFELY"]
+- ["So30UIPasteConfigurationSupportingP", "kCOLOR_WHITE"]
+- ["So30UIPasteConfigurationSupportingP", "kMARGIN_HORIZONE"]
+- !private ["So30UIPasteConfigurationSupportingP", "startAnimating"]
+- !private ["So30UIPasteConfigurationSupportingP", "stopAnimating"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "CGRect"]
+- ["So11UIResponderC", "NVActivityIndicatorType"]
+- ["So11UIResponderC", "NVActivityIndicatorView"]
+- !private ["So11UIResponderC", "ProgressHUDTool"]
+- ["So11UIResponderC", "Void"]
+- ["So11UIResponderC", "activityView"]
+- ["So11UIResponderC", "backgroundColor"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "kCOLOR_SAFELY"]
+- ["So11UIResponderC", "kCOLOR_WHITE"]
+- ["So11UIResponderC", "kMARGIN_HORIZONE"]
+- ["So11UIResponderC", "startAnimating"]
+- !private ["So11UIResponderC", "stopAnimating"]
+- ["So11UIResponderC", "stopAnmating"]
+- ["So30UIResponderStandardEditActionsP", "CGRect"]
+- ["So30UIResponderStandardEditActionsP", "NVActivityIndicatorType"]
+- ["So30UIResponderStandardEditActionsP", "NVActivityIndicatorView"]
+- !private ["So30UIResponderStandardEditActionsP", "ProgressHUDTool"]
+- !private ["So30UIResponderStandardEditActionsP", "activityView"]
+- ["So30UIResponderStandardEditActionsP", "backgroundColor"]
+- ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "kCOLOR_SAFELY"]
+- ["So30UIResponderStandardEditActionsP", "kCOLOR_WHITE"]
+- ["So30UIResponderStandardEditActionsP", "kMARGIN_HORIZONE"]
+- !private ["So30UIResponderStandardEditActionsP", "startAnimating"]
+- !private ["So30UIResponderStandardEditActionsP", "stopAnimating"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So18UITraitEnvironmentP", "CGRect"]
+- ["So18UITraitEnvironmentP", "NVActivityIndicatorType"]
+- ["So18UITraitEnvironmentP", "NVActivityIndicatorView"]
+- !private ["So18UITraitEnvironmentP", "ProgressHUDTool"]
+- !private ["So18UITraitEnvironmentP", "activityView"]
+- ["So18UITraitEnvironmentP", "backgroundColor"]
+- ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", "kCOLOR_SAFELY"]
+- ["So18UITraitEnvironmentP", "kCOLOR_WHITE"]
+- ["So18UITraitEnvironmentP", "kMARGIN_HORIZONE"]
+- !private ["So18UITraitEnvironmentP", "startAnimating"]
+- !private ["So18UITraitEnvironmentP", "stopAnimating"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "CGRect"]
+- ["So6UIViewC", "NVActivityIndicatorType"]
+- ["So6UIViewC", "NVActivityIndicatorView"]
+- !private ["So6UIViewC", "ProgressHUDTool"]
+- ["So6UIViewC", "Void"]
+- ["So6UIViewC", "activityView"]
+- ["So6UIViewC", "backgroundColor"]
+- ["So6UIViewC", "init"]
+- ["So6UIViewC", "kCOLOR_SAFELY"]
+- ["So6UIViewC", "kCOLOR_WHITE"]
+- ["So6UIViewC", "kMARGIN_HORIZONE"]
+- ["So6UIViewC", "startAnimating"]
+- !private ["So6UIViewC", "stopAnimating"]
+- ["So6UIViewC", "stopAnmating"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "CGRect"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "NVActivityIndicatorType"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "NVActivityIndicatorView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "ProgressHUDTool"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "activityView"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "kCOLOR_SAFELY"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "kCOLOR_WHITE"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "kMARGIN_HORIZONE"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "startAnimating"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "stopAnimating"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NVActivityIndicatorType"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NVActivityIndicatorView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ProgressHUDTool"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "activityView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "kCOLOR_SAFELY"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "kCOLOR_WHITE"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "kMARGIN_HORIZONE"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startAnimating"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stopAnimating"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- "10Swift_Demo8BaseViewC"
+- "So15CALayerDelegateP"
+- "SC6CGRectV"
+- "s7CVarArgP"
+- "7SnapKit25ConstraintRelatableTargetP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s8HashableP"
+- "7SnapKit20LayoutConstraintItemP"
+- "So8NSCodingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "23NVActivityIndicatorView0aB4TypeO"
+- "23NVActivityIndicatorViewAAC"
+- "10Swift_Demo15ProgressHUDToolC"
+- "s16RawRepresentableP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/SnapKit.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+interface-hash: "d784be9731bdeec5e5685b7e2f0c1728"

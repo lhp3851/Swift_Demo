@@ -15,6 +15,7 @@ target 'Swift_Demo' do
     pod 'SwiftyJSON'
     pod 'Charts'
     pod 'NVActivityIndicatorView' #HUD
+    pod 'MBProgressHUD', '~> 1.0.0'
     pod 'Instructions', '~> 1.0.0' # instruction for freshmen
     #pod 'RazzleDazzle' # instruction page
     #pod 'RAMAnimatedTabBarController', '~> 2.0.13'  #swift 3

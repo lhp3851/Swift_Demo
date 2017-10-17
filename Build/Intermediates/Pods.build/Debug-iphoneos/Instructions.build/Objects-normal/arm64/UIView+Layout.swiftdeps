@@ -1,0 +1,401 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["So6UIViewC", ""]
+- ["So6UIViewC", "fillSuperview"]
+- ["So6UIViewC", "fillSuperviewVertically"]
+- ["So6UIViewC", "fillSuperviewHorizontally"]
+- ["So6UIViewC", "makeConstraintToFillSuperviewVertically"]
+- ["So6UIViewC", "makeConstraintToFillSuperviewHorizontally"]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "NSLayoutConstraint"
+- !private "StringLiteralType"
+- "UIView"
+- !private "print"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "bottomAnchor"]
+- !private ["So15CALayerDelegateP", "fillSuperviewHorizontally"]
+- !private ["So15CALayerDelegateP", "fillSuperviewVertically"]
+- !private ["So15CALayerDelegateP", "leadingAnchor"]
+- !private ["So15CALayerDelegateP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So15CALayerDelegateP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So15CALayerDelegateP", "print"]
+- !private ["So15CALayerDelegateP", "superview"]
+- !private ["So15CALayerDelegateP", "topAnchor"]
+- !private ["So15CALayerDelegateP", "trailingAnchor"]
+- !private ["s7CVarArgP", "bottomAnchor"]
+- !private ["s7CVarArgP", "constraint"]
+- !private ["s7CVarArgP", "fillSuperviewHorizontally"]
+- !private ["s7CVarArgP", "fillSuperviewVertically"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isActive"]
+- !private ["s7CVarArgP", "leadingAnchor"]
+- !private ["s7CVarArgP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["s7CVarArgP", "makeConstraintToFillSuperviewVertically"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "superview"]
+- !private ["s7CVarArgP", "topAnchor"]
+- !private ["s7CVarArgP", "trailingAnchor"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "constraint"]
+- !private ["s28CustomDebugStringConvertibleP", "fillSuperviewHorizontally"]
+- !private ["s28CustomDebugStringConvertibleP", "fillSuperviewVertically"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isActive"]
+- !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["s28CustomDebugStringConvertibleP", "makeConstraintToFillSuperviewVertically"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "superview"]
+- !private ["s28CustomDebugStringConvertibleP", "topAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "bottomAnchor"]
+- !private ["s23CustomStringConvertibleP", "constraint"]
+- !private ["s23CustomStringConvertibleP", "fillSuperviewHorizontally"]
+- !private ["s23CustomStringConvertibleP", "fillSuperviewVertically"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isActive"]
+- !private ["s23CustomStringConvertibleP", "leadingAnchor"]
+- !private ["s23CustomStringConvertibleP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["s23CustomStringConvertibleP", "makeConstraintToFillSuperviewVertically"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "superview"]
+- !private ["s23CustomStringConvertibleP", "topAnchor"]
+- !private ["s23CustomStringConvertibleP", "trailingAnchor"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "bottomAnchor"]
+- !private ["s9EquatableP", "constraint"]
+- !private ["s9EquatableP", "fillSuperviewHorizontally"]
+- !private ["s9EquatableP", "fillSuperviewVertically"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isActive"]
+- !private ["s9EquatableP", "leadingAnchor"]
+- !private ["s9EquatableP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["s9EquatableP", "makeConstraintToFillSuperviewVertically"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "superview"]
+- !private ["s9EquatableP", "topAnchor"]
+- !private ["s9EquatableP", "trailingAnchor"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "bottomAnchor"]
+- !private ["s8HashableP", "constraint"]
+- !private ["s8HashableP", "fillSuperviewHorizontally"]
+- !private ["s8HashableP", "fillSuperviewVertically"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isActive"]
+- !private ["s8HashableP", "leadingAnchor"]
+- !private ["s8HashableP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["s8HashableP", "makeConstraintToFillSuperviewVertically"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "superview"]
+- !private ["s8HashableP", "topAnchor"]
+- !private ["s8HashableP", "trailingAnchor"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "bottomAnchor"]
+- !private ["So8NSCodingP", "fillSuperviewHorizontally"]
+- !private ["So8NSCodingP", "fillSuperviewVertically"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "leadingAnchor"]
+- !private ["So8NSCodingP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So8NSCodingP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "superview"]
+- !private ["So8NSCodingP", "topAnchor"]
+- !private ["So8NSCodingP", "trailingAnchor"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So14NSLayoutAnchorC", "constraint"]
+- !private ["So18NSLayoutConstraintC", "isActive"]
+- !private ["So19NSLayoutXAxisAnchorC", "constraint"]
+- !private ["So19NSLayoutYAxisAnchorC", "constraint"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "NSLayoutConstraint"]
+- !private ["So8NSObjectC", "bottomAnchor"]
+- !private ["So8NSObjectC", "constraint"]
+- ["So8NSObjectC", "fillSuperview"]
+- ["So8NSObjectC", "fillSuperviewHorizontally"]
+- ["So8NSObjectC", "fillSuperviewVertically"]
+- !private ["So8NSObjectC", "isActive"]
+- !private ["So8NSObjectC", "leadingAnchor"]
+- ["So8NSObjectC", "makeConstraintToFillSuperviewHorizontally"]
+- ["So8NSObjectC", "makeConstraintToFillSuperviewVertically"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "superview"]
+- !private ["So8NSObjectC", "topAnchor"]
+- !private ["So8NSObjectC", "trailingAnchor"]
+- !private ["So16NSObjectProtocolP", "bottomAnchor"]
+- !private ["So16NSObjectProtocolP", "constraint"]
+- !private ["So16NSObjectProtocolP", "fillSuperviewHorizontally"]
+- !private ["So16NSObjectProtocolP", "fillSuperviewVertically"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isActive"]
+- !private ["So16NSObjectProtocolP", "leadingAnchor"]
+- !private ["So16NSObjectProtocolP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So16NSObjectProtocolP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "superview"]
+- !private ["So16NSObjectProtocolP", "topAnchor"]
+- !private ["So16NSObjectProtocolP", "trailingAnchor"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "bottomAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "fillSuperviewHorizontally"]
+- !private ["So29UIAccessibilityIdentificationP", "fillSuperviewVertically"]
+- !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So29UIAccessibilityIdentificationP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So29UIAccessibilityIdentificationP", "print"]
+- !private ["So29UIAccessibilityIdentificationP", "superview"]
+- !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
+- !private ["So12UIAppearanceP", "bottomAnchor"]
+- !private ["So12UIAppearanceP", "fillSuperviewHorizontally"]
+- !private ["So12UIAppearanceP", "fillSuperviewVertically"]
+- !private ["So12UIAppearanceP", "leadingAnchor"]
+- !private ["So12UIAppearanceP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So12UIAppearanceP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So12UIAppearanceP", "print"]
+- !private ["So12UIAppearanceP", "superview"]
+- !private ["So12UIAppearanceP", "topAnchor"]
+- !private ["So12UIAppearanceP", "trailingAnchor"]
+- !private ["So21UIAppearanceContainerP", "bottomAnchor"]
+- !private ["So21UIAppearanceContainerP", "fillSuperviewHorizontally"]
+- !private ["So21UIAppearanceContainerP", "fillSuperviewVertically"]
+- !private ["So21UIAppearanceContainerP", "leadingAnchor"]
+- !private ["So21UIAppearanceContainerP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So21UIAppearanceContainerP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "superview"]
+- !private ["So21UIAppearanceContainerP", "topAnchor"]
+- !private ["So21UIAppearanceContainerP", "trailingAnchor"]
+- !private ["So17UICoordinateSpaceP", "bottomAnchor"]
+- !private ["So17UICoordinateSpaceP", "fillSuperviewHorizontally"]
+- !private ["So17UICoordinateSpaceP", "fillSuperviewVertically"]
+- !private ["So17UICoordinateSpaceP", "leadingAnchor"]
+- !private ["So17UICoordinateSpaceP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So17UICoordinateSpaceP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So17UICoordinateSpaceP", "print"]
+- !private ["So17UICoordinateSpaceP", "superview"]
+- !private ["So17UICoordinateSpaceP", "topAnchor"]
+- !private ["So17UICoordinateSpaceP", "trailingAnchor"]
+- !private ["So13UIDynamicItemP", "bottomAnchor"]
+- !private ["So13UIDynamicItemP", "fillSuperviewHorizontally"]
+- !private ["So13UIDynamicItemP", "fillSuperviewVertically"]
+- !private ["So13UIDynamicItemP", "leadingAnchor"]
+- !private ["So13UIDynamicItemP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So13UIDynamicItemP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So13UIDynamicItemP", "print"]
+- !private ["So13UIDynamicItemP", "superview"]
+- !private ["So13UIDynamicItemP", "topAnchor"]
+- !private ["So13UIDynamicItemP", "trailingAnchor"]
+- !private ["So18UIFocusEnvironmentP", "bottomAnchor"]
+- !private ["So18UIFocusEnvironmentP", "fillSuperviewHorizontally"]
+- !private ["So18UIFocusEnvironmentP", "fillSuperviewVertically"]
+- !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
+- !private ["So18UIFocusEnvironmentP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So18UIFocusEnvironmentP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "superview"]
+- !private ["So18UIFocusEnvironmentP", "topAnchor"]
+- !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
+- !private ["So11UIFocusItemP", "bottomAnchor"]
+- !private ["So11UIFocusItemP", "fillSuperviewHorizontally"]
+- !private ["So11UIFocusItemP", "fillSuperviewVertically"]
+- !private ["So11UIFocusItemP", "leadingAnchor"]
+- !private ["So11UIFocusItemP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So11UIFocusItemP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So11UIFocusItemP", "print"]
+- !private ["So11UIFocusItemP", "superview"]
+- !private ["So11UIFocusItemP", "topAnchor"]
+- !private ["So11UIFocusItemP", "trailingAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "bottomAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "fillSuperviewHorizontally"]
+- !private ["So30UIPasteConfigurationSupportingP", "fillSuperviewVertically"]
+- !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So30UIPasteConfigurationSupportingP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "superview"]
+- !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
+- ["So11UIResponderC", "NSLayoutConstraint"]
+- !private ["So11UIResponderC", "bottomAnchor"]
+- ["So11UIResponderC", "fillSuperview"]
+- ["So11UIResponderC", "fillSuperviewHorizontally"]
+- ["So11UIResponderC", "fillSuperviewVertically"]
+- !private ["So11UIResponderC", "leadingAnchor"]
+- ["So11UIResponderC", "makeConstraintToFillSuperviewHorizontally"]
+- ["So11UIResponderC", "makeConstraintToFillSuperviewVertically"]
+- !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "superview"]
+- !private ["So11UIResponderC", "topAnchor"]
+- !private ["So11UIResponderC", "trailingAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "bottomAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "fillSuperviewHorizontally"]
+- !private ["So30UIResponderStandardEditActionsP", "fillSuperviewVertically"]
+- !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So30UIResponderStandardEditActionsP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "superview"]
+- !private ["So30UIResponderStandardEditActionsP", "topAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
+- !private ["So18UITraitEnvironmentP", "bottomAnchor"]
+- !private ["So18UITraitEnvironmentP", "fillSuperviewHorizontally"]
+- !private ["So18UITraitEnvironmentP", "fillSuperviewVertically"]
+- !private ["So18UITraitEnvironmentP", "leadingAnchor"]
+- !private ["So18UITraitEnvironmentP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["So18UITraitEnvironmentP", "makeConstraintToFillSuperviewVertically"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "superview"]
+- !private ["So18UITraitEnvironmentP", "topAnchor"]
+- !private ["So18UITraitEnvironmentP", "trailingAnchor"]
+- ["So6UIViewC", "NSLayoutConstraint"]
+- !private ["So6UIViewC", "bottomAnchor"]
+- ["So6UIViewC", "fillSuperview"]
+- ["So6UIViewC", "fillSuperviewHorizontally"]
+- ["So6UIViewC", "fillSuperviewVertically"]
+- !private ["So6UIViewC", "leadingAnchor"]
+- ["So6UIViewC", "makeConstraintToFillSuperviewHorizontally"]
+- ["So6UIViewC", "makeConstraintToFillSuperviewVertically"]
+- !private ["So6UIViewC", "print"]
+- !private ["So6UIViewC", "superview"]
+- !private ["So6UIViewC", "topAnchor"]
+- !private ["So6UIViewC", "trailingAnchor"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fillSuperviewHorizontally"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fillSuperviewVertically"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "makeConstraintToFillSuperviewVertically"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "print"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "superview"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fillSuperviewHorizontally"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fillSuperviewVertically"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "makeConstraintToFillSuperviewHorizontally"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "makeConstraintToFillSuperviewVertically"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "superview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "topAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So14NSLayoutAnchorC"
+- !private "So18NSLayoutConstraintC"
+- !private "So19NSLayoutXAxisAnchorC"
+- !private "So19NSLayoutYAxisAnchorC"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- !private "s23_BidirectionalIndexableP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/Instructions/Instructions-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/Instructions.build/unextended-module.modulemap"
+interface-hash: "126701ea2730fced8e5f3c3ebceed674"

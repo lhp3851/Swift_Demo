@@ -1,0 +1,158 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DestinationProtocol"
+provides-nominal:
+- "9XCGLogger19DestinationProtocolP"
+provides-member:
+- ["9XCGLogger19DestinationProtocolP", ""]
+- ["9XCGLogger19DestinationProtocolP", "shouldExclude"]
+- ["9XCGLogger19DestinationProtocolP", "applyFormatters"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private ">"
+- !private "??"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CustomDebugStringConvertible"
+- "DestinationProtocol"
+- "FilterProtocol"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "LogDetails"
+- "LogFormatterProtocol"
+- "String"
+- "XCGLogger"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s10CollectionP", "count"]
+- ["s28CustomDebugStringConvertibleP", "Bool"]
+- ["s28CustomDebugStringConvertibleP", "FilterProtocol"]
+- ["s28CustomDebugStringConvertibleP", "Level"]
+- ["s28CustomDebugStringConvertibleP", "LogDetails"]
+- ["s28CustomDebugStringConvertibleP", "LogFormatterProtocol"]
+- ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", "XCGLogger"]
+- ["s28CustomDebugStringConvertibleP", "applyFormatters"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "filters"]
+- !private ["s28CustomDebugStringConvertibleP", "format"]
+- ["s28CustomDebugStringConvertibleP", "formatters"]
+- ["s28CustomDebugStringConvertibleP", "haveLoggedAppDetails"]
+- ["s28CustomDebugStringConvertibleP", "identifier"]
+- ["s28CustomDebugStringConvertibleP", "isEnabledFor"]
+- ["s28CustomDebugStringConvertibleP", "outputLevel"]
+- ["s28CustomDebugStringConvertibleP", "owner"]
+- ["s28CustomDebugStringConvertibleP", "process"]
+- ["s28CustomDebugStringConvertibleP", "processInternal"]
+- ["s28CustomDebugStringConvertibleP", "shouldExclude"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- ["9XCGLogger19DestinationProtocolP", "Bool"]
+- ["9XCGLogger19DestinationProtocolP", "FilterProtocol"]
+- ["9XCGLogger19DestinationProtocolP", "LogDetails"]
+- ["9XCGLogger19DestinationProtocolP", "LogFormatterProtocol"]
+- ["9XCGLogger19DestinationProtocolP", "String"]
+- ["9XCGLogger19DestinationProtocolP", "XCGLogger"]
+- ["9XCGLogger19DestinationProtocolP", "applyFormatters"]
+- ["9XCGLogger19DestinationProtocolP", "filters"]
+- ["9XCGLogger19DestinationProtocolP", "formatters"]
+- ["9XCGLogger19DestinationProtocolP", "haveLoggedAppDetails"]
+- ["9XCGLogger19DestinationProtocolP", "identifier"]
+- ["9XCGLogger19DestinationProtocolP", "isEnabledFor"]
+- ["9XCGLogger19DestinationProtocolP", "outputLevel"]
+- ["9XCGLogger19DestinationProtocolP", "owner"]
+- ["9XCGLogger19DestinationProtocolP", "process"]
+- ["9XCGLogger19DestinationProtocolP", "processInternal"]
+- ["9XCGLogger19DestinationProtocolP", "shouldExclude"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["9XCGLogger14FilterProtocolP", "shouldExclude"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "format"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s8SequenceP", "count"]
+- ["9XCGLoggerAAC", "Level"]
+- !private ["9XCGLoggerAAC", "filters"]
+- !private ["9XCGLoggerAAC", "formatters"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s10_IndexableP", "count"]
+- !private ["s14_IndexableBaseP", "count"]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- "9XCGLogger19DestinationProtocolP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "9XCGLogger14FilterProtocolP"
+- !private "s8HashableP"
+- !private "9XCGLogger20LogFormatterProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- "9XCGLoggerAAC"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/ObjcExceptionBridging/Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/XCGLogger.build/unextended-module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/ObjcExceptionBridging.build/module.modulemap"
+interface-hash: "5f2c4566c377c782de4480d408d3ccae"

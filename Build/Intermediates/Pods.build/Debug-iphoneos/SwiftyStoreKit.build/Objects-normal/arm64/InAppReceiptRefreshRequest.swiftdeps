@@ -1,0 +1,241 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "InAppReceiptRefreshRequest"
+provides-nominal:
+- "14SwiftyStoreKit26InAppReceiptRefreshRequestC"
+- "14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO"
+provides-member:
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", ""]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO", ""]
+provides-dynamic-lookup:
+- "request"
+- "requestDidFinish"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "DispatchQueue"
+- "Error"
+- "InAppReceiptRefreshRequest"
+- "NSObject"
+- "SKReceiptRefreshRequest"
+- "SKRequest"
+- "SKRequestDelegate"
+- "String"
+- !private "StringLiteralType"
+- "Void"
+depends-member:
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "InAppReceiptRefreshRequest"]
+- !private ["s7CVarArgP", "SKReceiptRefreshRequest"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "callback"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "performCallback"]
+- !private ["s7CVarArgP", "refreshReceiptRequest"]
+- ["s7CVarArgP", "request"]
+- ["s7CVarArgP", "requestDidFinish"]
+- !private ["s7CVarArgP", "start"]
+- ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "InAppReceiptRefreshRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "SKReceiptRefreshRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "callback"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "performCallback"]
+- !private ["s28CustomDebugStringConvertibleP", "refreshReceiptRequest"]
+- ["s28CustomDebugStringConvertibleP", "request"]
+- ["s28CustomDebugStringConvertibleP", "requestDidFinish"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "InAppReceiptRefreshRequest"]
+- !private ["s23CustomStringConvertibleP", "SKReceiptRefreshRequest"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "callback"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "performCallback"]
+- !private ["s23CustomStringConvertibleP", "refreshReceiptRequest"]
+- ["s23CustomStringConvertibleP", "request"]
+- ["s23CustomStringConvertibleP", "requestDidFinish"]
+- !private ["s23CustomStringConvertibleP", "start"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- !private ["s9EquatableP", "InAppReceiptRefreshRequest"]
+- !private ["s9EquatableP", "SKReceiptRefreshRequest"]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "callback"]
+- !private ["s9EquatableP", "delegate"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "performCallback"]
+- !private ["s9EquatableP", "refreshReceiptRequest"]
+- ["s9EquatableP", "request"]
+- ["s9EquatableP", "requestDidFinish"]
+- !private ["s9EquatableP", "start"]
+- ["s9EquatableP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "DispatchQueue"]
+- !private ["s8HashableP", "InAppReceiptRefreshRequest"]
+- !private ["s8HashableP", "SKReceiptRefreshRequest"]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "callback"]
+- !private ["s8HashableP", "delegate"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "performCallback"]
+- !private ["s8HashableP", "refreshReceiptRequest"]
+- ["s8HashableP", "request"]
+- ["s8HashableP", "requestDidFinish"]
+- !private ["s8HashableP", "start"]
+- ["s8HashableP", ""]
+- !private ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "DispatchQueue"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "Error"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "InAppReceiptRefreshRequest"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "ReceiptRefresh"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "RequestCallback"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "ResultType"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "SKReceiptRefreshRequest"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "SKRequest"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "String"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "Void"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "callback"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "deinit"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "init"]
+- !private ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "performCallback"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "refresh"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "refreshReceiptRequest"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "request"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "requestDidFinish"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "start"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Error"]
+- ["So8NSObjectC", "InAppReceiptRefreshRequest"]
+- ["So8NSObjectC", "RequestCallback"]
+- ["So8NSObjectC", "ResultType"]
+- ["So8NSObjectC", "SKReceiptRefreshRequest"]
+- ["So8NSObjectC", "SKRequest"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "callback"]
+- !private ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "performCallback"]
+- ["So8NSObjectC", "refresh"]
+- ["So8NSObjectC", "refreshReceiptRequest"]
+- ["So8NSObjectC", "request"]
+- ["So8NSObjectC", "requestDidFinish"]
+- ["So8NSObjectC", "start"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- !private ["So16NSObjectProtocolP", "InAppReceiptRefreshRequest"]
+- !private ["So16NSObjectProtocolP", "SKReceiptRefreshRequest"]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "callback"]
+- !private ["So16NSObjectProtocolP", "delegate"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "performCallback"]
+- !private ["So16NSObjectProtocolP", "refreshReceiptRequest"]
+- ["So16NSObjectProtocolP", "request"]
+- ["So16NSObjectProtocolP", "requestDidFinish"]
+- !private ["So16NSObjectProtocolP", "start"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO", "Error"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO", "error"]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO", "success"]
+- !private ["So23SKReceiptRefreshRequestC", "delegate"]
+- !private ["So23SKReceiptRefreshRequestC", "init"]
+- !private ["So23SKReceiptRefreshRequestC", "start"]
+- !private ["So9SKRequestC", "delegate"]
+- !private ["So9SKRequestC", "init"]
+- !private ["So9SKRequestC", "start"]
+- !private ["So17SKRequestDelegateP", "DispatchQueue"]
+- !private ["So17SKRequestDelegateP", "InAppReceiptRefreshRequest"]
+- !private ["So17SKRequestDelegateP", "SKReceiptRefreshRequest"]
+- !private ["So17SKRequestDelegateP", "callback"]
+- !private ["So17SKRequestDelegateP", "init"]
+- !private ["So17SKRequestDelegateP", "performCallback"]
+- !private ["So17SKRequestDelegateP", "refreshReceiptRequest"]
+- ["So17SKRequestDelegateP", "request"]
+- ["So17SKRequestDelegateP", "requestDidFinish"]
+- !private ["So17SKRequestDelegateP", "start"]
+- ["So17SKRequestDelegateP", ""]
+- !private ["s12StaticStringV", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "InAppReceiptRefreshRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SKReceiptRefreshRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "callback"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "performCallback"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshReceiptRequest"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "request"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "requestDidFinish"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "start"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "14SwiftyStoreKit26InAppReceiptRefreshRequestC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So9OS_objectC"
+- "14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO"
+- !private "So23SKReceiptRefreshRequestC"
+- !private "So9SKRequestC"
+- "So17SKRequestDelegateP"
+- !private "s12StaticStringV"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/SwiftyStoreKit/SwiftyStoreKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/SwiftyStoreKit.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+interface-hash: "7882e162c5aa5813801f1ccb60827600"

@@ -1,0 +1,67 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TagFilter"
+provides-nominal:
+- "9XCGLogger9TagFilterC"
+provides-member:
+- ["9XCGLogger9TagFilterC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "Sequence"
+- "String"
+- "TagFilter"
+- "UserInfoFilter"
+- !private "XCGLogger"
+depends-member:
+- !private ["9XCGLoggerAAC9ConstantsV", "userInfoKeyTags"]
+- !private ["s28CustomDebugStringConvertibleP", "Constants"]
+- !private ["s28CustomDebugStringConvertibleP", "XCGLogger"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "userInfoKey"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["9XCGLogger14FilterProtocolP", "XCGLogger"]
+- !private ["9XCGLogger14FilterProtocolP", "init"]
+- !private ["9XCGLogger14FilterProtocolP", "userInfoKey"]
+- ["9XCGLogger14FilterProtocolP", ""]
+- ["9XCGLogger9TagFilterC", "Sequence"]
+- ["9XCGLogger9TagFilterC", "String"]
+- !private ["9XCGLogger9TagFilterC", "XCGLogger"]
+- ["9XCGLogger9TagFilterC", "deinit"]
+- ["9XCGLogger9TagFilterC", "init"]
+- !private ["9XCGLogger9TagFilterC", "userInfoKey"]
+- ["9XCGLogger14UserInfoFilterC", "Sequence"]
+- ["9XCGLogger14UserInfoFilterC", "String"]
+- !private ["9XCGLogger14UserInfoFilterC", "XCGLogger"]
+- ["9XCGLogger14UserInfoFilterC", "init"]
+- !private ["9XCGLogger14UserInfoFilterC", "userInfoKey"]
+- ["9XCGLogger14UserInfoFilterC", ""]
+- !private ["9XCGLoggerAAC", "Constants"]
+depends-nominal:
+- !private "9XCGLoggerAAC9ConstantsV"
+- "s28CustomDebugStringConvertibleP"
+- "9XCGLogger14FilterProtocolP"
+- "9XCGLogger9TagFilterC"
+- "9XCGLogger14UserInfoFilterC"
+- !private "9XCGLoggerAAC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/ObjcExceptionBridging/Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/XCGLogger.build/unextended-module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/ObjcExceptionBridging.build/module.modulemap"
+interface-hash: "17bac37e3ae8b567a7abe75bb67c6b21"

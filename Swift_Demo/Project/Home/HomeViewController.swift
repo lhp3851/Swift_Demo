@@ -7,24 +7,36 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class HomeViewController: BaseViewController {
 
+    lazy var activityView:NVActivityIndicatorView = {
+        let view = ProgressHUDTool.activityView
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
     override func initPannel() {
         super.initPannel()
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
+        self.view.addSubview(self.activityView)
+        self.activityView.startAnimating()
         
     }
     
     
     override func initData() {
         super.initData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.activityView.stopAnimating()
+        }
+        
     }
     
     @objc func getContacts() {

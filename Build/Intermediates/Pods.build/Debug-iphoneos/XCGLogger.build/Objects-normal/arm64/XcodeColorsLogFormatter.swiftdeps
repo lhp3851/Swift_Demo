@@ -1,0 +1,409 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "XcodeColorsLogFormatter"
+provides-nominal:
+- "9XCGLogger23XcodeColorsLogFormatterC"
+- "9XCGLogger23XcodeColorsLogFormatterC0B5ColorV"
+provides-member:
+- ["9XCGLogger23XcodeColorsLogFormatterC", ""]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "*"
+- !private "+="
+- !private "<"
+- !private ">"
+- !private "??"
+- "AssignmentPrecedence"
+- !private "CGFloat"
+- "CustomDebugStringConvertible"
+- "CustomStringConvertible"
+- "Int"
+- "LogDetails"
+- "LogFormatterProtocol"
+- "String"
+- "StringLiteralType"
+- "UIColor"
+- "UnicodeScalarType"
+- "XCGLogger"
+- "XcodeColorsLogFormatter"
+- !private "extractTypeName"
+- !private "||"
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "getRed"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "all"]
+- !private ["s10ComparableP", "debug"]
+- !private ["s10ComparableP", "error"]
+- !private ["s10ComparableP", "info"]
+- ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "none"]
+- !private ["s10ComparableP", "severe"]
+- !private ["s10ComparableP", "verbose"]
+- !private ["s10ComparableP", "warning"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- ["s28CustomDebugStringConvertibleP", "Level"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "XCGLogger"]
+- ["s28CustomDebugStringConvertibleP", "XcodeColor"]
+- !private ["s28CustomDebugStringConvertibleP", "XcodeColorsLogFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "blue"]
+- !private ["s28CustomDebugStringConvertibleP", "colorize"]
+- !private ["s28CustomDebugStringConvertibleP", "darkGrey"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "descriptionStrings"]
+- ["s28CustomDebugStringConvertibleP", "escape"]
+- !private ["s28CustomDebugStringConvertibleP", "extractTypeName"]
+- ["s28CustomDebugStringConvertibleP", "format"]
+- !private ["s28CustomDebugStringConvertibleP", "formatString"]
+- !private ["s28CustomDebugStringConvertibleP", "formatStrings"]
+- !private ["s28CustomDebugStringConvertibleP", "getRed"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "lightGrey"]
+- !private ["s28CustomDebugStringConvertibleP", "orange"]
+- !private ["s28CustomDebugStringConvertibleP", "red"]
+- !private ["s28CustomDebugStringConvertibleP", "reset"]
+- !private ["s28CustomDebugStringConvertibleP", "resetBackground"]
+- !private ["s28CustomDebugStringConvertibleP", "resetForeground"]
+- !private ["s28CustomDebugStringConvertibleP", "resetFormatting"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "blue"]
+- !private ["s17CustomReflectableP", "darkGrey"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "lightGrey"]
+- !private ["s17CustomReflectableP", "orange"]
+- !private ["s17CustomReflectableP", "red"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "white"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "XcodeColor"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "all"]
+- !private ["s23CustomStringConvertibleP", "blue"]
+- !private ["s23CustomStringConvertibleP", "darkGrey"]
+- !private ["s23CustomStringConvertibleP", "debug"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "getRed"]
+- !private ["s23CustomStringConvertibleP", "green"]
+- !private ["s23CustomStringConvertibleP", "info"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "lightGrey"]
+- !private ["s23CustomStringConvertibleP", "none"]
+- !private ["s23CustomStringConvertibleP", "orange"]
+- !private ["s23CustomStringConvertibleP", "red"]
+- !private ["s23CustomStringConvertibleP", "severe"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "verbose"]
+- !private ["s23CustomStringConvertibleP", "warning"]
+- !private ["s23CustomStringConvertibleP", "white"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "blue"]
+- !private ["s9DecodableP", "darkGrey"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "lightGrey"]
+- !private ["s9DecodableP", "orange"]
+- !private ["s9DecodableP", "red"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9DecodableP", "white"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "blue"]
+- !private ["s9EncodableP", "darkGrey"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "lightGrey"]
+- !private ["s9EncodableP", "orange"]
+- !private ["s9EncodableP", "red"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EncodableP", "white"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "all"]
+- !private ["s9EquatableP", "debug"]
+- !private ["s9EquatableP", "error"]
+- !private ["s9EquatableP", "getRed"]
+- !private ["s9EquatableP", "info"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "severe"]
+- !private ["s9EquatableP", "verbose"]
+- !private ["s9EquatableP", "warning"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "blue"]
+- !private ["s23ExpressibleByNilLiteralP", "darkGrey"]
+- !private ["s23ExpressibleByNilLiteralP", "lightGrey"]
+- !private ["s23ExpressibleByNilLiteralP", "orange"]
+- !private ["s23ExpressibleByNilLiteralP", "red"]
+- !private ["s23ExpressibleByNilLiteralP", "white"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "all"]
+- !private ["s8HashableP", "debug"]
+- !private ["s8HashableP", "error"]
+- !private ["s8HashableP", "getRed"]
+- !private ["s8HashableP", "info"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "none"]
+- !private ["s8HashableP", "severe"]
+- !private ["s8HashableP", "verbose"]
+- !private ["s8HashableP", "warning"]
+- !private ["Si", "init"]
+- !private ["9XCGLoggerAAC5LevelO", "all"]
+- !private ["9XCGLoggerAAC5LevelO", "debug"]
+- ["9XCGLoggerAAC5LevelO", "deinit"]
+- !private ["9XCGLoggerAAC5LevelO", "error"]
+- !private ["9XCGLoggerAAC5LevelO", "info"]
+- !private ["9XCGLoggerAAC5LevelO", "none"]
+- !private ["9XCGLoggerAAC5LevelO", "severe"]
+- !private ["9XCGLoggerAAC5LevelO", "verbose"]
+- !private ["9XCGLoggerAAC5LevelO", "warning"]
+- !private ["9XCGLogger10LogDetailsV", "level"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "Int"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "String"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "XCGLogger"]
+- ["9XCGLogger20LogFormatterProtocolP", "XcodeColor"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "XcodeColorsLogFormatter"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "colorize"]
+- ["9XCGLogger20LogFormatterProtocolP", "debugDescription"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "descriptionStrings"]
+- ["9XCGLogger20LogFormatterProtocolP", "escape"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "extractTypeName"]
+- ["9XCGLogger20LogFormatterProtocolP", "format"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "formatString"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "formatStrings"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "reset"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "resetBackground"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "resetForeground"]
+- !private ["9XCGLogger20LogFormatterProtocolP", "resetFormatting"]
+- ["9XCGLogger20LogFormatterProtocolP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "getRed"]
+- ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "getRed"]
+- ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "getRed"]
+- ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "getRed"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "getRed"]
+- !private ["So16NSObjectProtocolP", "getRed"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So14NSSecureCodingP", "getRed"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["Sq", "blue"]
+- !private ["Sq", "darkGrey"]
+- !private ["Sq", "lightGrey"]
+- !private ["Sq", "orange"]
+- !private ["Sq", "red"]
+- !private ["Sq", "white"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "all"]
+- !private ["s16RawRepresentableP", "debug"]
+- !private ["s16RawRepresentableP", "error"]
+- !private ["s16RawRepresentableP", "info"]
+- !private ["s16RawRepresentableP", "none"]
+- !private ["s16RawRepresentableP", "severe"]
+- !private ["s16RawRepresentableP", "verbose"]
+- !private ["s16RawRepresentableP", "warning"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So7UIColorC", "getRed"]
+- ["9XCGLoggerAAC", "Level"]
+- !private ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "CGFloat"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "Int"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "String"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "UIColor"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "XcodeColor"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "backgroundCode"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "black"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "blue"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "cyan"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "darkGreen"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "darkGrey"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "deinit"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "description"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "foregroundCode"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "green"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "init"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "lightGrey"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "orange"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "purple"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "red"]
+- ["9XCGLogger23XcodeColorsLogFormatterC0B5ColorV", "white"]
+- !private ["9XCGLogger23XcodeColorsLogFormatterC", "CGFloat"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "CustomStringConvertible"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "Int"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "LogDetails"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "String"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "UIColor"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "XCGLogger"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "XcodeColor"]
+- !private ["9XCGLogger23XcodeColorsLogFormatterC", "XcodeColorsLogFormatter"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "clearFormatting"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "colorize"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "debugDescription"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "deinit"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "descriptionStrings"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "escape"]
+- !private ["9XCGLogger23XcodeColorsLogFormatterC", "extractTypeName"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "format"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "formatString"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "formatStrings"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "init"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "reset"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "resetBackground"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "resetForeground"]
+- ["9XCGLogger23XcodeColorsLogFormatterC", "resetFormatting"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "getRed"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getRed"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "blue"]
+- !private ["s21_ObjectiveCBridgeableP", "darkGrey"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "lightGrey"]
+- !private ["s21_ObjectiveCBridgeableP", "orange"]
+- !private ["s21_ObjectiveCBridgeableP", "red"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "white"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s11_StrideableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- !private "s10DictionaryV"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s8HashableP"
+- !private "Si"
+- "9XCGLoggerAAC5LevelO"
+- !private "9XCGLogger10LogDetailsV"
+- "9XCGLogger20LogFormatterProtocolP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "s7NumericP"
+- !private "Sq"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So7UIColorC"
+- "9XCGLoggerAAC"
+- "9XCGLogger23XcodeColorsLogFormatterC0B5ColorV"
+- "9XCGLogger23XcodeColorsLogFormatterC"
+- "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/ObjcExceptionBridging/Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/XCGLogger.build/unextended-module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/ObjcExceptionBridging.build/module.modulemap"
+interface-hash: "86816d5e70466632c1cf61f6ef4449ea"

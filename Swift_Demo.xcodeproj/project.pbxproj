@@ -83,6 +83,7 @@
 		7A9784071F7558B1003F17D1 /* Swift_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784061F7558B1003F17D1 /* Swift_DemoTests.swift */; };
 		7A9784121F7558B1003F17D1 /* Swift_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */; };
 		7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784211F7559E3003F17D1 /* String+Extension.swift */; };
+		D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */; };
 		E3379564E95FC3840FFD16FB /* Pods_Swift_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */; };
 		FFDDEA213CA2B999E2A13755 /* Pods_Swift_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -199,6 +200,7 @@
 		8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDTool.swift; sourceTree = "<group>"; };
 		E9B250BE21A70A9982AB8688 /* Pods-Swift_DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoTests/Pods-Swift_DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -324,6 +326,7 @@
 		7A51C5AB1F9124DD002449C6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D7E172BD1F96182300A3E247 /* ProgressHUDTool */,
 				7A4C11B11F93069300F02866 /* NetWorkTool */,
 				7A51C5B71F912949002449C6 /* FileManegerTool */,
 				7A51C5AF1F912775002449C6 /* DeviceInfoTool */,
@@ -1181,6 +1184,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D7E172BD1F96182300A3E247 /* ProgressHUDTool */ = {
+			isa = PBXGroup;
+			children = (
+				D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */,
+			);
+			path = ProgressHUDTool;
+			sourceTree = "<group>";
+		};
 		E1E4B08A8B5DBAD3F02C1C14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1448,6 +1459,7 @@
 				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
@@ -1465,6 +1477,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
@@ -1581,6 +1594,7 @@
 				7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */,
 				7A4C11B61F93069300F02866 /* NetWorkTool.swift in Sources */,
 				7A7818A41F8FC7870043254E /* HomeViewController.swift in Sources */,
+				D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */,
 				7A51C5AA1F91249B002449C6 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

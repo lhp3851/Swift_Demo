@@ -1,0 +1,79 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "So18NSExtensionContextC"
+provides-member:
+- ["So18NSExtensionContextC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "ApplicationCaller"
+- "Bool"
+- !private "BooleanLiteralType"
+- "NSExtensionContext"
+- "URL"
+depends-member:
+- ["4Appz17ApplicationCallerP", "canOpenURL"]
+- !private ["4Appz17ApplicationCallerP", "open"]
+- ["4Appz17ApplicationCallerP", "openURL"]
+- ["4Appz17ApplicationCallerP", ""]
+- ["s7CVarArgP", "canOpenURL"]
+- !private ["s7CVarArgP", "open"]
+- ["s7CVarArgP", "openURL"]
+- ["s28CustomDebugStringConvertibleP", "canOpenURL"]
+- !private ["s28CustomDebugStringConvertibleP", "open"]
+- ["s28CustomDebugStringConvertibleP", "openURL"]
+- ["s23CustomStringConvertibleP", "canOpenURL"]
+- !private ["s23CustomStringConvertibleP", "open"]
+- ["s23CustomStringConvertibleP", "openURL"]
+- ["s9EquatableP", "canOpenURL"]
+- !private ["s9EquatableP", "open"]
+- ["s9EquatableP", "openURL"]
+- ["s8HashableP", "canOpenURL"]
+- !private ["s8HashableP", "open"]
+- ["s8HashableP", "openURL"]
+- ["So18NSExtensionContextC", "Bool"]
+- ["So18NSExtensionContextC", "URL"]
+- ["So18NSExtensionContextC", "canOpenURL"]
+- ["So18NSExtensionContextC", "deinit"]
+- !private ["So18NSExtensionContextC", "open"]
+- ["So18NSExtensionContextC", "openURL"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "URL"]
+- ["So8NSObjectC", "canOpenURL"]
+- !private ["So8NSObjectC", "open"]
+- ["So8NSObjectC", "openURL"]
+- ["So16NSObjectProtocolP", "canOpenURL"]
+- !private ["So16NSObjectProtocolP", "open"]
+- ["So16NSObjectProtocolP", "openURL"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "canOpenURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "open"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "openURL"]
+depends-nominal:
+- "4Appz17ApplicationCallerP"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "So18NSExtensionContextC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/Appz/Appz-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/Appz.build/unextended-module.modulemap"
+interface-hash: "4f389a7c0216e441b39a50539c14958a"

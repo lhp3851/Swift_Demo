@@ -1,0 +1,10 @@
+framework module Appz {
+  umbrella header "Appz-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Appz.__Swift {
+    exclude header "Appz-Swift.h"
+}

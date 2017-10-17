@@ -1,0 +1,689 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "XCGLogger"
+- "<"
+provides-nominal:
+- "9XCGLoggerAAC"
+- "9XCGLoggerAAC9ConstantsV"
+- "9XCGLoggerAAC5LevelO"
+provides-member:
+- ["9XCGLoggerAAC", ""]
+- ["9XCGLoggerAAC9ConstantsV", ""]
+- ["9XCGLoggerAAC5LevelO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "+="
+- !private "..<"
+- "<"
+- "<="
+- "=="
+- !private "==="
+- ">"
+- ">="
+- !private "??"
+- "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "Bundle"
+- "CastingPrecedence"
+- "Comparable"
+- !private "ConsoleDestination"
+- "CustomDebugStringConvertible"
+- "CustomStringConvertible"
+- !private "Date"
+- "DateFormatter"
+- "DestinationProtocol"
+- "DispatchQueue"
+- !private "FileDestination"
+- "FilterProtocol"
+- "Int"
+- !private "LogDetails"
+- "LogFormatterProtocol"
+- !private "NSLocale"
+- !private "ProcessInfo"
+- "StaticString"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- !private "UnicodeScalarType"
+- "XCGLogger"
+- !private "extractTypeName"
+- !private "~="
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "filter"]
+- !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "outputLevel"]
+- !private ["9XCGLogger15BaseDestinationC", "init"]
+- !private ["9XCGLogger15BaseDestinationC", "outputLevel"]
+- !private ["9XCGLogger15BaseDestinationC", "showDate"]
+- !private ["9XCGLogger15BaseDestinationC", "showFileName"]
+- !private ["9XCGLogger15BaseDestinationC", "showFunctionName"]
+- !private ["9XCGLogger15BaseDestinationC", "showLevel"]
+- !private ["9XCGLogger15BaseDestinationC", "showLineNumber"]
+- !private ["9XCGLogger15BaseDestinationC", "showLogIdentifier"]
+- !private ["9XCGLogger15BaseDestinationC", "showThreadName"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "init"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "outputLevel"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showDate"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showFileName"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showFunctionName"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showLevel"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showLineNumber"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showLogIdentifier"]
+- !private ["9XCGLogger21BaseQueuedDestinationC", "showThreadName"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "filter"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "outputLevel"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So6BundleC", "infoDictionary"]
+- !private ["So6BundleC", "main"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "dateFormat"]
+- !private ["s7CVarArgP", "filter"]
+- !private ["s7CVarArgP", "hashValue"]
+- !private ["s7CVarArgP", "infoDictionary"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "locale"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "processIdentifier"]
+- !private ["s7CVarArgP", "processInfo"]
+- !private ["s7CVarArgP", "processName"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "filter"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "outputLevel"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10ComparableP", "RawValue"]
+- ["s10ComparableP", "debug"]
+- ["s10ComparableP", "description"]
+- ["s10ComparableP", "error"]
+- ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "info"]
+- ["s10ComparableP", "init"]
+- ["s10ComparableP", "none"]
+- ["s10ComparableP", "rawValue"]
+- ["s10ComparableP", "severe"]
+- ["s10ComparableP", "verbose"]
+- ["s10ComparableP", "warning"]
+- ["s10ComparableP", ""]
+- !private ["9XCGLogger18ConsoleDestinationC", "deinit"]
+- !private ["9XCGLogger18ConsoleDestinationC", "init"]
+- !private ["9XCGLogger18ConsoleDestinationC", "outputLevel"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showDate"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showFileName"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showFunctionName"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showLevel"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showLineNumber"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showLogIdentifier"]
+- !private ["9XCGLogger18ConsoleDestinationC", "showThreadName"]
+- ["9XCGLoggerAAC9ConstantsV", "String"]
+- ["9XCGLoggerAAC9ConstantsV", "XCGLogger"]
+- ["9XCGLoggerAAC9ConstantsV", "baseConsoleDestinationIdentifier"]
+- ["9XCGLoggerAAC9ConstantsV", "baseIdentifier"]
+- ["9XCGLoggerAAC9ConstantsV", "defaultInstanceIdentifier"]
+- ["9XCGLoggerAAC9ConstantsV", "extendedAttributeArchivedLogIdentifierKey"]
+- ["9XCGLoggerAAC9ConstantsV", "extendedAttributeArchivedLogTimestampKey"]
+- ["9XCGLoggerAAC9ConstantsV", "fileDestinationIdentifier"]
+- ["9XCGLoggerAAC9ConstantsV", "init"]
+- ["9XCGLoggerAAC9ConstantsV", "internalUserInfo"]
+- ["9XCGLoggerAAC9ConstantsV", "logQueueIdentifier"]
+- ["9XCGLoggerAAC9ConstantsV", "systemLogDestinationIdentifier"]
+- ["9XCGLoggerAAC9ConstantsV", "userInfoKeyDevs"]
+- ["9XCGLoggerAAC9ConstantsV", "userInfoKeyInternal"]
+- ["9XCGLoggerAAC9ConstantsV", "userInfoKeyTags"]
+- ["9XCGLoggerAAC9ConstantsV", "versionString"]
+- !private ["s28CustomDebugStringConvertibleP", "Bundle"]
+- !private ["s28CustomDebugStringConvertibleP", "ConsoleDestination"]
+- ["s28CustomDebugStringConvertibleP", "Constants"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "FileDestination"]
+- ["s28CustomDebugStringConvertibleP", "Level"]
+- !private ["s28CustomDebugStringConvertibleP", "LogDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "NSLocale"]
+- !private ["s28CustomDebugStringConvertibleP", "ProcessInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", "XCGLogger"]
+- !private ["s28CustomDebugStringConvertibleP", "_customDateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "destination"]
+- !private ["s28CustomDebugStringConvertibleP", "destinations"]
+- !private ["s28CustomDebugStringConvertibleP", "exec"]
+- !private ["s28CustomDebugStringConvertibleP", "extractTypeName"]
+- !private ["s28CustomDebugStringConvertibleP", "filter"]
+- !private ["s28CustomDebugStringConvertibleP", "haveLoggedAppDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "identifier"]
+- !private ["s28CustomDebugStringConvertibleP", "infoDictionary"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEnabledFor"]
+- !private ["s28CustomDebugStringConvertibleP", "locale"]
+- !private ["s28CustomDebugStringConvertibleP", "logAppDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "logln"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "noMessageClosure"]
+- !private ["s28CustomDebugStringConvertibleP", "outputLevel"]
+- !private ["s28CustomDebugStringConvertibleP", "owner"]
+- !private ["s28CustomDebugStringConvertibleP", "process"]
+- !private ["s28CustomDebugStringConvertibleP", "processIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "processInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "processInternal"]
+- !private ["s28CustomDebugStringConvertibleP", "processName"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "setup"]
+- !private ["s28CustomDebugStringConvertibleP", "showDate"]
+- !private ["s28CustomDebugStringConvertibleP", "showFileName"]
+- !private ["s28CustomDebugStringConvertibleP", "showFunctionName"]
+- !private ["s28CustomDebugStringConvertibleP", "showLevel"]
+- !private ["s28CustomDebugStringConvertibleP", "showLineNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "showLogIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "showThreadName"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "hashValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "filter"]
+- !private ["s17CustomReflectableP", "hashValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "outputLevel"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "dateFormat"]
+- ["s23CustomStringConvertibleP", "debug"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "filter"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "info"]
+- !private ["s23CustomStringConvertibleP", "infoDictionary"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "locale"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- ["s23CustomStringConvertibleP", "none"]
+- !private ["s23CustomStringConvertibleP", "outputLevel"]
+- !private ["s23CustomStringConvertibleP", "processIdentifier"]
+- !private ["s23CustomStringConvertibleP", "processInfo"]
+- !private ["s23CustomStringConvertibleP", "processName"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s23CustomStringConvertibleP", "severe"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "verbose"]
+- ["s23CustomStringConvertibleP", "warning"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["10Foundation4DateV", "init"]
+- !private ["So13DateFormatterC", "dateFormat"]
+- !private ["So13DateFormatterC", "init"]
+- !private ["So13DateFormatterC", "locale"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "filter"]
+- !private ["s9DecodableP", "hashValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["9XCGLogger19DestinationProtocolP", "debugDescription"]
+- !private ["9XCGLogger19DestinationProtocolP", "haveLoggedAppDetails"]
+- !private ["9XCGLogger19DestinationProtocolP", "identifier"]
+- !private ["9XCGLogger19DestinationProtocolP", "init"]
+- !private ["9XCGLogger19DestinationProtocolP", "isEnabledFor"]
+- !private ["9XCGLogger19DestinationProtocolP", "outputLevel"]
+- !private ["9XCGLogger19DestinationProtocolP", "owner"]
+- !private ["9XCGLogger19DestinationProtocolP", "process"]
+- !private ["9XCGLogger19DestinationProtocolP", "processInternal"]
+- !private ["9XCGLogger19DestinationProtocolP", "showDate"]
+- !private ["9XCGLogger19DestinationProtocolP", "showFileName"]
+- !private ["9XCGLogger19DestinationProtocolP", "showFunctionName"]
+- !private ["9XCGLogger19DestinationProtocolP", "showLevel"]
+- !private ["9XCGLogger19DestinationProtocolP", "showLineNumber"]
+- !private ["9XCGLogger19DestinationProtocolP", "showLogIdentifier"]
+- !private ["9XCGLogger19DestinationProtocolP", "showThreadName"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["So13DispatchQueueC", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "filter"]
+- !private ["s9EncodableP", "hashValue"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["s9EquatableP", "RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "current"]
+- !private ["s9EquatableP", "dateFormat"]
+- ["s9EquatableP", "debug"]
+- ["s9EquatableP", "description"]
+- ["s9EquatableP", "error"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "info"]
+- !private ["s9EquatableP", "infoDictionary"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "locale"]
+- !private ["s9EquatableP", "main"]
+- ["s9EquatableP", "none"]
+- !private ["s9EquatableP", "processIdentifier"]
+- !private ["s9EquatableP", "processInfo"]
+- !private ["s9EquatableP", "processName"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "severe"]
+- ["s9EquatableP", "verbose"]
+- ["s9EquatableP", "warning"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "filter"]
+- !private ["s25ExpressibleByArrayLiteralP", "outputLevel"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "hashValue"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["9XCGLogger15FileDestinationC", "deinit"]
+- !private ["9XCGLogger15FileDestinationC", "init"]
+- !private ["9XCGLogger15FileDestinationC", "outputLevel"]
+- !private ["9XCGLogger15FileDestinationC", "showDate"]
+- !private ["9XCGLogger15FileDestinationC", "showFileName"]
+- !private ["9XCGLogger15FileDestinationC", "showFunctionName"]
+- !private ["9XCGLogger15FileDestinationC", "showLevel"]
+- !private ["9XCGLogger15FileDestinationC", "showLineNumber"]
+- !private ["9XCGLogger15FileDestinationC", "showLogIdentifier"]
+- !private ["9XCGLogger15FileDestinationC", "showThreadName"]
+- !private ["s17FixedWidthIntegerP", "hashValue"]
+- !private ["So9FormatterC", "dateFormat"]
+- !private ["So9FormatterC", "init"]
+- !private ["So9FormatterC", "locale"]
+- ["s8HashableP", "RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "current"]
+- !private ["s8HashableP", "dateFormat"]
+- ["s8HashableP", "debug"]
+- ["s8HashableP", "description"]
+- ["s8HashableP", "error"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "info"]
+- !private ["s8HashableP", "infoDictionary"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "locale"]
+- !private ["s8HashableP", "main"]
+- ["s8HashableP", "none"]
+- !private ["s8HashableP", "processIdentifier"]
+- !private ["s8HashableP", "processInfo"]
+- !private ["s8HashableP", "processName"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "severe"]
+- ["s8HashableP", "verbose"]
+- ["s8HashableP", "warning"]
+- ["s8HashableP", ""]
+- !private ["Si", "hashValue"]
+- ["9XCGLoggerAAC5LevelO", "Level"]
+- ["9XCGLoggerAAC5LevelO", "RawValue"]
+- ["9XCGLoggerAAC5LevelO", "String"]
+- ["9XCGLoggerAAC5LevelO", "all"]
+- ["9XCGLoggerAAC5LevelO", "debug"]
+- ["9XCGLoggerAAC5LevelO", "deinit"]
+- ["9XCGLoggerAAC5LevelO", "description"]
+- ["9XCGLoggerAAC5LevelO", "error"]
+- ["9XCGLoggerAAC5LevelO", "hashValue"]
+- ["9XCGLoggerAAC5LevelO", "info"]
+- ["9XCGLoggerAAC5LevelO", "init"]
+- ["9XCGLoggerAAC5LevelO", "none"]
+- ["9XCGLoggerAAC5LevelO", "rawValue"]
+- ["9XCGLoggerAAC5LevelO", "severe"]
+- ["9XCGLoggerAAC5LevelO", "verbose"]
+- ["9XCGLoggerAAC5LevelO", "warning"]
+- !private ["9XCGLogger10LogDetailsV", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "hashValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "hashValue"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "filter"]
+- !private ["s17MutableCollectionP", "outputLevel"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "current"]
+- !private ["So8NSCodingP", "dateFormat"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "locale"]
+- !private ["So9NSCopyingP", "current"]
+- !private ["So9NSCopyingP", "dateFormat"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "locale"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- !private ["So8NSLocaleC", "current"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "current"]
+- !private ["So8NSObjectC", "dateFormat"]
+- !private ["So8NSObjectC", "infoDictionary"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "locale"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "processIdentifier"]
+- !private ["So8NSObjectC", "processInfo"]
+- !private ["So8NSObjectC", "processName"]
+- !private ["So16NSObjectProtocolP", "current"]
+- !private ["So16NSObjectProtocolP", "dateFormat"]
+- !private ["So16NSObjectProtocolP", "infoDictionary"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "locale"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "processIdentifier"]
+- !private ["So16NSObjectProtocolP", "processInfo"]
+- !private ["So16NSObjectProtocolP", "processName"]
+- !private ["So14NSSecureCodingP", "current"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- !private ["s7NumericP", "hashValue"]
+- !private ["So11ProcessInfoC", "processIdentifier"]
+- !private ["So11ProcessInfoC", "processInfo"]
+- !private ["So11ProcessInfoC", "processName"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "filter"]
+- !private ["s22RandomAccessCollectionP", "outputLevel"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "filter"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "outputLevel"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", "debug"]
+- ["s16RawRepresentableP", "description"]
+- ["s16RawRepresentableP", "error"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "info"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "none"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "severe"]
+- ["s16RawRepresentableP", "verbose"]
+- ["s16RawRepresentableP", "warning"]
+- ["s16RawRepresentableP", ""]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "filter"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "outputLevel"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "hashValue"]
+- !private ["s13SignedNumericP", "hashValue"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "hashValue"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["9XCGLoggerAAC", "Bool"]
+- !private ["9XCGLoggerAAC", "Bundle"]
+- ["9XCGLoggerAAC", "Comparable"]
+- !private ["9XCGLoggerAAC", "ConsoleDestination"]
+- ["9XCGLoggerAAC", "Constants"]
+- ["9XCGLoggerAAC", "CustomStringConvertible"]
+- !private ["9XCGLoggerAAC", "Date"]
+- ["9XCGLoggerAAC", "DateFormatter"]
+- ["9XCGLoggerAAC", "DestinationProtocol"]
+- ["9XCGLoggerAAC", "DispatchQueue"]
+- !private ["9XCGLoggerAAC", "FileDestination"]
+- ["9XCGLoggerAAC", "FilterProtocol"]
+- ["9XCGLoggerAAC", "Int"]
+- ["9XCGLoggerAAC", "Level"]
+- !private ["9XCGLoggerAAC", "LogDetails"]
+- ["9XCGLoggerAAC", "LogFormatterProtocol"]
+- !private ["9XCGLoggerAAC", "NSLocale"]
+- !private ["9XCGLoggerAAC", "ProcessInfo"]
+- ["9XCGLoggerAAC", "StaticString"]
+- ["9XCGLoggerAAC", "String"]
+- ["9XCGLoggerAAC", "XCGLogger"]
+- ["9XCGLoggerAAC", "_customDateFormatter"]
+- ["9XCGLoggerAAC", "_logln"]
+- ["9XCGLoggerAAC", "add"]
+- ["9XCGLoggerAAC", "dateFormatter"]
+- ["9XCGLoggerAAC", "debug"]
+- ["9XCGLoggerAAC", "debugDescription"]
+- ["9XCGLoggerAAC", "debugExec"]
+- ["9XCGLoggerAAC", "default"]
+- ["9XCGLoggerAAC", "deinit"]
+- ["9XCGLoggerAAC", "destination"]
+- ["9XCGLoggerAAC", "destinations"]
+- ["9XCGLoggerAAC", "error"]
+- ["9XCGLoggerAAC", "errorExec"]
+- ["9XCGLoggerAAC", "exec"]
+- !private ["9XCGLoggerAAC", "extractTypeName"]
+- ["9XCGLoggerAAC", "filters"]
+- ["9XCGLoggerAAC", "formatters"]
+- ["9XCGLoggerAAC", "identifier"]
+- ["9XCGLoggerAAC", "info"]
+- ["9XCGLoggerAAC", "infoExec"]
+- ["9XCGLoggerAAC", "init"]
+- ["9XCGLoggerAAC", "isEnabledFor"]
+- ["9XCGLoggerAAC", "levelDescriptions"]
+- ["9XCGLoggerAAC", "logAppDetails"]
+- ["9XCGLoggerAAC", "logQueue"]
+- ["9XCGLoggerAAC", "logln"]
+- ["9XCGLoggerAAC", "noMessageClosure"]
+- ["9XCGLoggerAAC", "outputLevel"]
+- ["9XCGLoggerAAC", "remove"]
+- ["9XCGLoggerAAC", "setup"]
+- ["9XCGLoggerAAC", "severe"]
+- ["9XCGLoggerAAC", "severeExec"]
+- ["9XCGLoggerAAC", "verbose"]
+- ["9XCGLoggerAAC", "verboseExec"]
+- ["9XCGLoggerAAC", "warning"]
+- ["9XCGLoggerAAC", "warningExec"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "filter"]
+- !private ["s14_ArrayProtocolP", "outputLevel"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- !private ["s23_BidirectionalIndexableP", "filter"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "outputLevel"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "hashValue"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "filter"]
+- !private ["s24_DestructorSafeContainerP", "outputLevel"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "hashValue"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "current"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- !private ["s10_IndexableP", "count"]
+- !private ["s10_IndexableP", "filter"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "outputLevel"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "append"]
+- !private ["s14_IndexableBaseP", "count"]
+- !private ["s14_IndexableBaseP", "filter"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "outputLevel"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "infoDictionary"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "locale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "processIdentifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "processInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "processName"]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s17_MutableIndexableP", "filter"]
+- !private ["s17_MutableIndexableP", "outputLevel"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "filter"]
+- !private ["s21_ObjectiveCBridgeableP", "hashValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "filter"]
+- !private ["s22_RandomAccessIndexableP", "outputLevel"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+- !private ["s26_RangeReplaceableIndexableP", "filter"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "outputLevel"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- !private ["s11_StrideableP", "hashValue"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s10ArraySliceV"
+- !private "9XCGLogger15BaseDestinationC"
+- !private "9XCGLogger21BaseQueuedDestinationC"
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "So6BundleC"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- !private "9XCGLogger18ConsoleDestinationC"
+- "9XCGLoggerAAC9ConstantsV"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "So13DateFormatterC"
+- "s9DecodableP"
+- !private "9XCGLogger19DestinationProtocolP"
+- !private "s10DictionaryV"
+- !private "So13DispatchQueueC"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "9XCGLogger15FileDestinationC"
+- !private "s17FixedWidthIntegerP"
+- !private "So9FormatterC"
+- "s8HashableP"
+- !private "Si"
+- "9XCGLoggerAAC5LevelO"
+- !private "9XCGLogger10LogDetailsV"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- !private "So8NSLocaleC"
+- "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "s7NumericP"
+- !private "So11ProcessInfoC"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "9XCGLoggerAAC"
+- !private "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/ObjcExceptionBridging/ObjcExceptionBridging-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/XCGLogger/XCGLogger-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/ObjcExceptionBridging/Sources/ObjcExceptionBridging/include/ObjcExceptionBridging.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/XCGLogger.build/unextended-module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/ObjcExceptionBridging.build/module.modulemap"
+interface-hash: "70e6685babce86f49712d5ae202542a1"

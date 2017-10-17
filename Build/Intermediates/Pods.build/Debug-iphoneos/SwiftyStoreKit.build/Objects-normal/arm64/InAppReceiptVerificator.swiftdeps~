@@ -1,0 +1,312 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "InAppReceiptVerificator"
+provides-nominal:
+- "14SwiftyStoreKit23InAppReceiptVerificatorC"
+provides-member:
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "Bundle"
+- "Data"
+- !private "DispatchQueue"
+- "InAppReceiptRefreshRequest"
+- "InAppReceiptVerificator"
+- "NSObject"
+- "ReceiptValidator"
+- "String"
+- !private "StringLiteralType"
+- "URL"
+- "VerifyReceiptResult"
+- "Void"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "base64EncodedString"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So6BundleC", "appStoreReceiptURL"]
+- !private ["So6BundleC", "main"]
+- !private ["s7CVarArgP", "Bundle"]
+- !private ["s7CVarArgP", "Data"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "InAppReceiptRefreshRequest"]
+- ["s7CVarArgP", "ReceiptRefresh"]
+- !private ["s7CVarArgP", "appStoreReceiptData"]
+- !private ["s7CVarArgP", "appStoreReceiptURL"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "receiptRefreshRequest"]
+- !private ["s7CVarArgP", "refresh"]
+- !private ["s7CVarArgP", "verify"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "base64EncodedString"]
+- !private ["s10CollectionP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Bundle"]
+- !private ["s28CustomDebugStringConvertibleP", "Data"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "InAppReceiptRefreshRequest"]
+- ["s28CustomDebugStringConvertibleP", "ReceiptRefresh"]
+- !private ["s28CustomDebugStringConvertibleP", "appStoreReceiptData"]
+- !private ["s28CustomDebugStringConvertibleP", "appStoreReceiptURL"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "base64EncodedString"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "receiptRefreshRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "refresh"]
+- !private ["s28CustomDebugStringConvertibleP", "verify"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "base64EncodedString"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Bundle"]
+- !private ["s23CustomStringConvertibleP", "Data"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "InAppReceiptRefreshRequest"]
+- ["s23CustomStringConvertibleP", "ReceiptRefresh"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "appStoreReceiptData"]
+- !private ["s23CustomStringConvertibleP", "appStoreReceiptURL"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "base64EncodedString"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "receiptRefreshRequest"]
+- !private ["s23CustomStringConvertibleP", "refresh"]
+- !private ["s23CustomStringConvertibleP", "verify"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["10Foundation4DataV", "base64EncodedString"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "base64EncodedString"]
+- !private ["s9DecodableP", "init"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "base64EncodedString"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "Bundle"]
+- !private ["s9EquatableP", "Data"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- !private ["s9EquatableP", "InAppReceiptRefreshRequest"]
+- ["s9EquatableP", "ReceiptRefresh"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "appStoreReceiptData"]
+- !private ["s9EquatableP", "appStoreReceiptURL"]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "base64EncodedString"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "receiptRefreshRequest"]
+- !private ["s9EquatableP", "refresh"]
+- !private ["s9EquatableP", "verify"]
+- ["s9EquatableP", ""]
+- !private ["s5ErrorP", "networkError"]
+- !private ["s5ErrorP", "noReceiptData"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Bundle"]
+- !private ["s8HashableP", "Data"]
+- !private ["s8HashableP", "DispatchQueue"]
+- !private ["s8HashableP", "InAppReceiptRefreshRequest"]
+- ["s8HashableP", "ReceiptRefresh"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "appStoreReceiptData"]
+- !private ["s8HashableP", "appStoreReceiptURL"]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "base64EncodedString"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "receiptRefreshRequest"]
+- !private ["s8HashableP", "refresh"]
+- !private ["s8HashableP", "verify"]
+- ["s8HashableP", ""]
+- ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "ReceiptRefresh"]
+- !private ["14SwiftyStoreKit26InAppReceiptRefreshRequestC", "refresh"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "Bool"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "Bundle"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "Data"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "DispatchQueue"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "InAppReceiptRefreshRequest"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "ReceiptValidator"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "String"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "URL"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "VerifyReceiptResult"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "Void"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "appStoreReceiptData"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "appStoreReceiptURL"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "deinit"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "init"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "receiptRefreshRequest"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "verify"]
+- ["14SwiftyStoreKit23InAppReceiptVerificatorC", "verifyReceipt"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s17MutableCollectionP", "base64EncodedString"]
+- !private ["s17MutableCollectionP", "init"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Bundle"]
+- ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "InAppReceiptRefreshRequest"]
+- ["So8NSObjectC", "ReceiptRefresh"]
+- ["So8NSObjectC", "ReceiptValidator"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "URL"]
+- ["So8NSObjectC", "VerifyReceiptResult"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", "appStoreReceiptData"]
+- ["So8NSObjectC", "appStoreReceiptURL"]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "receiptRefreshRequest"]
+- !private ["So8NSObjectC", "refresh"]
+- ["So8NSObjectC", "verify"]
+- ["So8NSObjectC", "verifyReceipt"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "Bundle"]
+- !private ["So16NSObjectProtocolP", "Data"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- !private ["So16NSObjectProtocolP", "InAppReceiptRefreshRequest"]
+- ["So16NSObjectProtocolP", "ReceiptRefresh"]
+- !private ["So16NSObjectProtocolP", "appStoreReceiptData"]
+- !private ["So16NSObjectProtocolP", "appStoreReceiptURL"]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "receiptRefreshRequest"]
+- !private ["So16NSObjectProtocolP", "refresh"]
+- !private ["So16NSObjectProtocolP", "verify"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["s22RandomAccessCollectionP", "base64EncodedString"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "base64EncodedString"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["14SwiftyStoreKit12ReceiptErrorO", "networkError"]
+- !private ["14SwiftyStoreKit12ReceiptErrorO", "noReceiptData"]
+- !private ["14SwiftyStoreKit16ReceiptValidatorP", "validate"]
+- !private ["10Foundation20ReferenceConvertibleP", "base64EncodedString"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO", "error"]
+- !private ["14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO", "success"]
+- ["So17SKRequestDelegateP", "ReceiptRefresh"]
+- !private ["So17SKRequestDelegateP", "refresh"]
+- !private ["s8SequenceP", "base64EncodedString"]
+- !private ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["14SwiftyStoreKit19VerifyReceiptResultO", "error"]
+- !private ["s23_BidirectionalIndexableP", "base64EncodedString"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s10_IndexableP", "base64EncodedString"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "base64EncodedString"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Bundle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "InAppReceiptRefreshRequest"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ReceiptRefresh"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appStoreReceiptData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appStoreReceiptURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "receiptRefreshRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "refresh"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "verify"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "base64EncodedString"]
+- !private ["s17_MutableIndexableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "base64EncodedString"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s22_RandomAccessIndexableP", "base64EncodedString"]
+- !private ["s22_RandomAccessIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "base64EncodedString"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So6BundleC"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "14SwiftyStoreKit26InAppReceiptRefreshRequestC"
+- "14SwiftyStoreKit23InAppReceiptVerificatorC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So9OS_objectC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "14SwiftyStoreKit12ReceiptErrorO"
+- !private "14SwiftyStoreKit16ReceiptValidatorP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "14SwiftyStoreKit26InAppReceiptRefreshRequestC10ResultTypeO"
+- "So17SKRequestDelegateP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "14SwiftyStoreKit19VerifyReceiptResultO"
+- !private "s23_BidirectionalIndexableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/SwiftyStoreKit/SwiftyStoreKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/SwiftyStoreKit.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+interface-hash: "54320e2d542dfafe0316fc69f7124094"

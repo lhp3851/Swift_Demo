@@ -1,0 +1,428 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BaseTableview"
+provides-nominal:
+- "10Swift_Demo13BaseTableviewC"
+provides-member:
+- ["10Swift_Demo13BaseTableviewC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "BaseTableview"
+- "CGRect"
+- "NSCoder"
+- !private "StringLiteralType"
+- !private "UIScrollViewContentInsetAdjustmentBehavior"
+- "UITableView"
+- "UITableViewStyle"
+- !private "fatalError"
+depends-member:
+- ["10Swift_Demo13BaseTableviewC", "CGRect"]
+- ["10Swift_Demo13BaseTableviewC", "NSCoder"]
+- !private ["10Swift_Demo13BaseTableviewC", "UIScrollViewContentInsetAdjustmentBehavior"]
+- ["10Swift_Demo13BaseTableviewC", "UITableViewStyle"]
+- !private ["10Swift_Demo13BaseTableviewC", "contentInsetAdjustmentBehavior"]
+- ["10Swift_Demo13BaseTableviewC", "deinit"]
+- !private ["10Swift_Demo13BaseTableviewC", "estimatedRowHeight"]
+- !private ["10Swift_Demo13BaseTableviewC", "estimatedSectionFooterHeight"]
+- !private ["10Swift_Demo13BaseTableviewC", "estimatedSectionHeaderHeight"]
+- !private ["10Swift_Demo13BaseTableviewC", "fatalError"]
+- ["10Swift_Demo13BaseTableviewC", "init"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So15CALayerDelegateP", "contentInsetAdjustmentBehavior"]
+- !private ["So15CALayerDelegateP", "estimatedRowHeight"]
+- !private ["So15CALayerDelegateP", "estimatedSectionFooterHeight"]
+- !private ["So15CALayerDelegateP", "estimatedSectionHeaderHeight"]
+- !private ["So15CALayerDelegateP", "fatalError"]
+- !private ["So15CALayerDelegateP", "init"]
+- ["So15CALayerDelegateP", ""]
+- !private ["So15CNKeyDescriptorP", "init"]
+- !private ["s7CVarArgP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["s7CVarArgP", "contentInsetAdjustmentBehavior"]
+- !private ["s7CVarArgP", "estimatedRowHeight"]
+- !private ["s7CVarArgP", "estimatedSectionFooterHeight"]
+- !private ["s7CVarArgP", "estimatedSectionHeaderHeight"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "contentInsetAdjustmentBehavior"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "estimatedRowHeight"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "estimatedSectionFooterHeight"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "estimatedSectionHeaderHeight"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "fatalError"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "init"]
+- ["7SnapKit25ConstraintRelatableTargetP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["s28CustomDebugStringConvertibleP", "contentInsetAdjustmentBehavior"]
+- !private ["s28CustomDebugStringConvertibleP", "estimatedRowHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "estimatedSectionFooterHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "estimatedSectionHeaderHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["s23CustomStringConvertibleP", "contentInsetAdjustmentBehavior"]
+- !private ["s23CustomStringConvertibleP", "estimatedRowHeight"]
+- !private ["s23CustomStringConvertibleP", "estimatedSectionFooterHeight"]
+- !private ["s23CustomStringConvertibleP", "estimatedSectionHeaderHeight"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["s9EquatableP", "contentInsetAdjustmentBehavior"]
+- !private ["s9EquatableP", "estimatedRowHeight"]
+- !private ["s9EquatableP", "estimatedSectionFooterHeight"]
+- !private ["s9EquatableP", "estimatedSectionHeaderHeight"]
+- !private ["s9EquatableP", "fatalError"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "never"]
+- ["s9EquatableP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["s8HashableP", "contentInsetAdjustmentBehavior"]
+- !private ["s8HashableP", "estimatedRowHeight"]
+- !private ["s8HashableP", "estimatedSectionFooterHeight"]
+- !private ["s8HashableP", "estimatedSectionHeaderHeight"]
+- !private ["s8HashableP", "fatalError"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "never"]
+- ["s8HashableP", ""]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["7SnapKit20LayoutConstraintItemP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["7SnapKit20LayoutConstraintItemP", "contentInsetAdjustmentBehavior"]
+- !private ["7SnapKit20LayoutConstraintItemP", "estimatedRowHeight"]
+- !private ["7SnapKit20LayoutConstraintItemP", "estimatedSectionFooterHeight"]
+- !private ["7SnapKit20LayoutConstraintItemP", "estimatedSectionHeaderHeight"]
+- !private ["7SnapKit20LayoutConstraintItemP", "fatalError"]
+- !private ["7SnapKit20LayoutConstraintItemP", "init"]
+- ["7SnapKit20LayoutConstraintItemP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So8NSCodingP", "contentInsetAdjustmentBehavior"]
+- !private ["So8NSCodingP", "estimatedRowHeight"]
+- !private ["So8NSCodingP", "estimatedSectionFooterHeight"]
+- !private ["So8NSCodingP", "estimatedSectionHeaderHeight"]
+- !private ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "UIScrollViewContentInsetAdjustmentBehavior"]
+- ["So8NSObjectC", "UITableViewStyle"]
+- !private ["So8NSObjectC", "contentInsetAdjustmentBehavior"]
+- !private ["So8NSObjectC", "estimatedRowHeight"]
+- !private ["So8NSObjectC", "estimatedSectionFooterHeight"]
+- !private ["So8NSObjectC", "estimatedSectionHeaderHeight"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "init"]
+- !private ["So16NSObjectProtocolP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So16NSObjectProtocolP", "contentInsetAdjustmentBehavior"]
+- !private ["So16NSObjectProtocolP", "estimatedRowHeight"]
+- !private ["So16NSObjectProtocolP", "estimatedSectionFooterHeight"]
+- !private ["So16NSObjectProtocolP", "estimatedSectionHeaderHeight"]
+- !private ["So16NSObjectProtocolP", "fatalError"]
+- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "never"]
+- !private ["s8SequenceP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So29UIAccessibilityIdentificationP", "contentInsetAdjustmentBehavior"]
+- !private ["So29UIAccessibilityIdentificationP", "estimatedRowHeight"]
+- !private ["So29UIAccessibilityIdentificationP", "estimatedSectionFooterHeight"]
+- !private ["So29UIAccessibilityIdentificationP", "estimatedSectionHeaderHeight"]
+- !private ["So29UIAccessibilityIdentificationP", "fatalError"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So12UIAppearanceP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So12UIAppearanceP", "contentInsetAdjustmentBehavior"]
+- !private ["So12UIAppearanceP", "estimatedRowHeight"]
+- !private ["So12UIAppearanceP", "estimatedSectionFooterHeight"]
+- !private ["So12UIAppearanceP", "estimatedSectionHeaderHeight"]
+- !private ["So12UIAppearanceP", "fatalError"]
+- !private ["So12UIAppearanceP", "init"]
+- ["So12UIAppearanceP", ""]
+- !private ["So21UIAppearanceContainerP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So21UIAppearanceContainerP", "contentInsetAdjustmentBehavior"]
+- !private ["So21UIAppearanceContainerP", "estimatedRowHeight"]
+- !private ["So21UIAppearanceContainerP", "estimatedSectionFooterHeight"]
+- !private ["So21UIAppearanceContainerP", "estimatedSectionHeaderHeight"]
+- !private ["So21UIAppearanceContainerP", "fatalError"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So17UICoordinateSpaceP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So17UICoordinateSpaceP", "contentInsetAdjustmentBehavior"]
+- !private ["So17UICoordinateSpaceP", "estimatedRowHeight"]
+- !private ["So17UICoordinateSpaceP", "estimatedSectionFooterHeight"]
+- !private ["So17UICoordinateSpaceP", "estimatedSectionHeaderHeight"]
+- !private ["So17UICoordinateSpaceP", "fatalError"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So23UIDataSourceTranslatingP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So23UIDataSourceTranslatingP", "contentInsetAdjustmentBehavior"]
+- !private ["So23UIDataSourceTranslatingP", "estimatedRowHeight"]
+- !private ["So23UIDataSourceTranslatingP", "estimatedSectionFooterHeight"]
+- !private ["So23UIDataSourceTranslatingP", "estimatedSectionHeaderHeight"]
+- !private ["So23UIDataSourceTranslatingP", "fatalError"]
+- !private ["So23UIDataSourceTranslatingP", "init"]
+- ["So23UIDataSourceTranslatingP", ""]
+- !private ["So13UIDynamicItemP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So13UIDynamicItemP", "contentInsetAdjustmentBehavior"]
+- !private ["So13UIDynamicItemP", "estimatedRowHeight"]
+- !private ["So13UIDynamicItemP", "estimatedSectionFooterHeight"]
+- !private ["So13UIDynamicItemP", "estimatedSectionHeaderHeight"]
+- !private ["So13UIDynamicItemP", "fatalError"]
+- !private ["So13UIDynamicItemP", "init"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So18UIFocusEnvironmentP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So18UIFocusEnvironmentP", "contentInsetAdjustmentBehavior"]
+- !private ["So18UIFocusEnvironmentP", "estimatedRowHeight"]
+- !private ["So18UIFocusEnvironmentP", "estimatedSectionFooterHeight"]
+- !private ["So18UIFocusEnvironmentP", "estimatedSectionHeaderHeight"]
+- !private ["So18UIFocusEnvironmentP", "fatalError"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So11UIFocusItemP", "contentInsetAdjustmentBehavior"]
+- !private ["So11UIFocusItemP", "estimatedRowHeight"]
+- !private ["So11UIFocusItemP", "estimatedSectionFooterHeight"]
+- !private ["So11UIFocusItemP", "estimatedSectionHeaderHeight"]
+- !private ["So11UIFocusItemP", "fatalError"]
+- !private ["So11UIFocusItemP", "init"]
+- ["So11UIFocusItemP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So30UIPasteConfigurationSupportingP", "contentInsetAdjustmentBehavior"]
+- !private ["So30UIPasteConfigurationSupportingP", "estimatedRowHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "estimatedSectionFooterHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "estimatedSectionHeaderHeight"]
+- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "CGRect"]
+- ["So11UIResponderC", "NSCoder"]
+- !private ["So11UIResponderC", "UIScrollViewContentInsetAdjustmentBehavior"]
+- ["So11UIResponderC", "UITableViewStyle"]
+- !private ["So11UIResponderC", "contentInsetAdjustmentBehavior"]
+- !private ["So11UIResponderC", "estimatedRowHeight"]
+- !private ["So11UIResponderC", "estimatedSectionFooterHeight"]
+- !private ["So11UIResponderC", "estimatedSectionHeaderHeight"]
+- !private ["So11UIResponderC", "fatalError"]
+- ["So11UIResponderC", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So30UIResponderStandardEditActionsP", "contentInsetAdjustmentBehavior"]
+- !private ["So30UIResponderStandardEditActionsP", "estimatedRowHeight"]
+- !private ["So30UIResponderStandardEditActionsP", "estimatedSectionFooterHeight"]
+- !private ["So30UIResponderStandardEditActionsP", "estimatedSectionHeaderHeight"]
+- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So12UIScrollViewC", "CGRect"]
+- ["So12UIScrollViewC", "NSCoder"]
+- !private ["So12UIScrollViewC", "UIScrollViewContentInsetAdjustmentBehavior"]
+- ["So12UIScrollViewC", "UITableViewStyle"]
+- !private ["So12UIScrollViewC", "contentInsetAdjustmentBehavior"]
+- !private ["So12UIScrollViewC", "estimatedRowHeight"]
+- !private ["So12UIScrollViewC", "estimatedSectionFooterHeight"]
+- !private ["So12UIScrollViewC", "estimatedSectionHeaderHeight"]
+- !private ["So12UIScrollViewC", "fatalError"]
+- ["So12UIScrollViewC", "init"]
+- !private ["SC42UIScrollViewContentInsetAdjustmentBehaviorO", "never"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "contentInsetAdjustmentBehavior"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "estimatedRowHeight"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "estimatedSectionFooterHeight"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "estimatedSectionHeaderHeight"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "fatalError"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- ["So35UISpringLoadedInteractionSupportingP", ""]
+- ["So11UITableViewC", "CGRect"]
+- ["So11UITableViewC", "NSCoder"]
+- !private ["So11UITableViewC", "UIScrollViewContentInsetAdjustmentBehavior"]
+- ["So11UITableViewC", "UITableViewStyle"]
+- !private ["So11UITableViewC", "contentInsetAdjustmentBehavior"]
+- !private ["So11UITableViewC", "estimatedRowHeight"]
+- !private ["So11UITableViewC", "estimatedSectionFooterHeight"]
+- !private ["So11UITableViewC", "estimatedSectionHeaderHeight"]
+- !private ["So11UITableViewC", "fatalError"]
+- ["So11UITableViewC", "init"]
+- ["So11UITableViewC", ""]
+- !private ["So18UITraitEnvironmentP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["So18UITraitEnvironmentP", "contentInsetAdjustmentBehavior"]
+- !private ["So18UITraitEnvironmentP", "estimatedRowHeight"]
+- !private ["So18UITraitEnvironmentP", "estimatedSectionFooterHeight"]
+- !private ["So18UITraitEnvironmentP", "estimatedSectionHeaderHeight"]
+- !private ["So18UITraitEnvironmentP", "fatalError"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "CGRect"]
+- ["So6UIViewC", "NSCoder"]
+- !private ["So6UIViewC", "UIScrollViewContentInsetAdjustmentBehavior"]
+- ["So6UIViewC", "UITableViewStyle"]
+- !private ["So6UIViewC", "contentInsetAdjustmentBehavior"]
+- !private ["So6UIViewC", "estimatedRowHeight"]
+- !private ["So6UIViewC", "estimatedSectionFooterHeight"]
+- !private ["So6UIViewC", "estimatedSectionHeaderHeight"]
+- !private ["So6UIViewC", "fatalError"]
+- ["So6UIViewC", "init"]
+- !private ["9Alamofire14URLConvertibleP", "init"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "contentInsetAdjustmentBehavior"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "estimatedRowHeight"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "estimatedSectionFooterHeight"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "estimatedSectionHeaderHeight"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScrollViewContentInsetAdjustmentBehavior"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentInsetAdjustmentBehavior"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "estimatedRowHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "estimatedSectionFooterHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "estimatedSectionHeaderHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "10Swift_Demo13BaseTableviewC"
+- !private "s23BidirectionalCollectionP"
+- "So15CALayerDelegateP"
+- !private "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "7SnapKit25ConstraintRelatableTargetP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "10SwiftyJSON17JSONSubscriptTypeP"
+- "7SnapKit20LayoutConstraintItemP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So17UICoordinateSpaceP"
+- "So23UIDataSourceTranslatingP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So12UIScrollViewC"
+- !private "SC42UIScrollViewContentInsetAdjustmentBehaviorO"
+- "So35UISpringLoadedInteractionSupportingP"
+- "So11UITableViewC"
+- "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- !private "9Alamofire14URLConvertibleP"
+- !private "s23_BidirectionalIndexableP"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/SnapKit.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/NVActivityIndicatorView.swiftmodule/arm64.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+interface-hash: "ac13325025ff4eef75479da3e17080d3"

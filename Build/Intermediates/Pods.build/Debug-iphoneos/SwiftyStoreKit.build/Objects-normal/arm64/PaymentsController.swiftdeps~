@@ -1,0 +1,504 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Payment"
+- "PaymentsController"
+- "=="
+provides-nominal:
+- "14SwiftyStoreKit7PaymentV"
+- "14SwiftyStoreKit18PaymentsControllerC"
+provides-member:
+- ["14SwiftyStoreKit7PaymentV", ""]
+- ["14SwiftyStoreKit18PaymentsControllerC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- "=="
+- !private "??"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- !private "Dictionary"
+- "Hashable"
+- "Int"
+- "NSError"
+- !private "NSLocalizedDescriptionKey"
+- "Payment"
+- "PaymentQueue"
+- "PaymentsController"
+- !private "PurchaseDetails"
+- "SKError"
+- !private "SKErrorDomain"
+- "SKPaymentTransaction"
+- "SKProduct"
+- "String"
+- !private "StringLiteralType"
+- "TransactionController"
+- "TransactionResult"
+- "Void"
+- !private "print"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "filter"]
+- !private ["Sa", "index"]
+- !private ["Sa", "remove"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "filter"]
+- !private ["s23BidirectionalCollectionP", "hashValue"]
+- !private ["s23BidirectionalCollectionP", "index"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "remove"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "error"]
+- !private ["s7CVarArgP", "filter"]
+- !private ["s7CVarArgP", "hashValue"]
+- !private ["s7CVarArgP", "index"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "payment"]
+- !private ["s7CVarArgP", "productIdentifier"]
+- !private ["s7CVarArgP", "quantity"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "transactionState"]
+- !private ["SC7SKErrorV4CodeO", "rawValue"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "filter"]
+- !private ["s10CollectionP", "hashValue"]
+- !private ["s10CollectionP", "index"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "remove"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "hashValue"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- !private ["s28CustomDebugStringConvertibleP", "failed"]
+- !private ["s28CustomDebugStringConvertibleP", "filter"]
+- !private ["s28CustomDebugStringConvertibleP", "hashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "index"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "payment"]
+- !private ["s28CustomDebugStringConvertibleP", "productIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "purchased"]
+- !private ["s28CustomDebugStringConvertibleP", "quantity"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "restored"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "transactionState"]
+- !private ["10Foundation13CustomNSErrorP", "init"]
+- !private ["10Foundation13CustomNSErrorP", "unknown"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "hashValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "filter"]
+- !private ["s17CustomReflectableP", "hashValue"]
+- !private ["s17CustomReflectableP", "index"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "filter"]
+- !private ["s23CustomStringConvertibleP", "hashValue"]
+- !private ["s23CustomStringConvertibleP", "index"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "payment"]
+- !private ["s23CustomStringConvertibleP", "productIdentifier"]
+- !private ["s23CustomStringConvertibleP", "quantity"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "transactionState"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "filter"]
+- !private ["s9DecodableP", "hashValue"]
+- !private ["s9DecodableP", "index"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "remove"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "filter"]
+- !private ["s9EncodableP", "hashValue"]
+- !private ["s9EncodableP", "index"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "remove"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "atomically"]
+- !private ["s9EquatableP", "callback"]
+- !private ["s9EquatableP", "error"]
+- !private ["s9EquatableP", "failed"]
+- ["s9EquatableP", "hashValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "payment"]
+- !private ["s9EquatableP", "product"]
+- !private ["s9EquatableP", "productIdentifier"]
+- !private ["s9EquatableP", "purchased"]
+- !private ["s9EquatableP", "quantity"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "restored"]
+- !private ["s9EquatableP", "transactionState"]
+- !private ["s9EquatableP", "unknown"]
+- ["s9EquatableP", ""]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "unknown"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "filter"]
+- !private ["s25ExpressibleByArrayLiteralP", "index"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "hashValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "hashValue"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "hashValue"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "atomically"]
+- !private ["s8HashableP", "callback"]
+- !private ["s8HashableP", "error"]
+- !private ["s8HashableP", "failed"]
+- ["s8HashableP", "hashValue"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "payment"]
+- !private ["s8HashableP", "product"]
+- !private ["s8HashableP", "productIdentifier"]
+- !private ["s8HashableP", "purchased"]
+- !private ["s8HashableP", "quantity"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "restored"]
+- !private ["s8HashableP", "transactionState"]
+- !private ["s8HashableP", "unknown"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "hashValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "hashValue"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "filter"]
+- !private ["s17MutableCollectionP", "index"]
+- !private ["s17MutableCollectionP", "remove"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So8NSCodingP", "hashValue"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "hashValue"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "productIdentifier"]
+- !private ["So9NSCopyingP", "quantity"]
+- !private ["So7NSErrorC", "init"]
+- !private ["So21NSItemProviderReadingP", "hashValue"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "hashValue"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "hashValue"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "productIdentifier"]
+- !private ["So16NSMutableCopyingP", "quantity"]
+- !private ["So8NSObjectC", "error"]
+- !private ["So8NSObjectC", "hashValue"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "payment"]
+- !private ["So8NSObjectC", "productIdentifier"]
+- !private ["So8NSObjectC", "quantity"]
+- !private ["So8NSObjectC", "transactionState"]
+- !private ["So16NSObjectProtocolP", "error"]
+- !private ["So16NSObjectProtocolP", "hashValue"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "payment"]
+- !private ["So16NSObjectProtocolP", "productIdentifier"]
+- !private ["So16NSObjectProtocolP", "quantity"]
+- !private ["So16NSObjectProtocolP", "transactionState"]
+- !private ["So14NSSecureCodingP", "hashValue"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "hashValue"]
+- !private ["So8NSStringC", "init"]
+- ["14SwiftyStoreKit7PaymentV", "=="]
+- ["14SwiftyStoreKit7PaymentV", "Bool"]
+- ["14SwiftyStoreKit7PaymentV", "Int"]
+- ["14SwiftyStoreKit7PaymentV", "Payment"]
+- ["14SwiftyStoreKit7PaymentV", "SKProduct"]
+- ["14SwiftyStoreKit7PaymentV", "String"]
+- ["14SwiftyStoreKit7PaymentV", "TransactionResult"]
+- ["14SwiftyStoreKit7PaymentV", "Void"]
+- ["14SwiftyStoreKit7PaymentV", "applicationUsername"]
+- ["14SwiftyStoreKit7PaymentV", "atomically"]
+- ["14SwiftyStoreKit7PaymentV", "callback"]
+- ["14SwiftyStoreKit7PaymentV", "deinit"]
+- ["14SwiftyStoreKit7PaymentV", "hashValue"]
+- ["14SwiftyStoreKit7PaymentV", "init"]
+- ["14SwiftyStoreKit7PaymentV", "product"]
+- ["14SwiftyStoreKit7PaymentV", "quantity"]
+- !private ["14SwiftyStoreKit12PaymentQueueP", "finishTransaction"]
+- !private ["14SwiftyStoreKit18PaymentTransactionP", "error"]
+- !private ["14SwiftyStoreKit18PaymentTransactionP", "payment"]
+- !private ["14SwiftyStoreKit18PaymentTransactionP", "transactionState"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "Bool"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "Int"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "NSError"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "NSLocalizedDescriptionKey"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "Payment"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "PaymentQueue"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "PurchaseDetails"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "SKError"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "SKErrorDomain"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "SKPaymentTransaction"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "String"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "append"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "deinit"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "findPaymentIndex"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "hasPayment"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "init"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "payments"]
+- !private ["14SwiftyStoreKit18PaymentsControllerC", "print"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "processTransaction"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "processTransactions"]
+- ["14SwiftyStoreKit18PaymentsControllerC", "transactionError"]
+- !private ["14SwiftyStoreKit15PurchaseDetailsV", "init"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "filter"]
+- !private ["s22RandomAccessCollectionP", "index"]
+- !private ["s22RandomAccessCollectionP", "remove"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "filter"]
+- !private ["s26RangeReplaceableCollectionP", "hashValue"]
+- !private ["s26RangeReplaceableCollectionP", "index"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "remove"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "failed"]
+- !private ["s16RawRepresentableP", "purchased"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["s16RawRepresentableP", "restored"]
+- !private ["SC7SKErrorV", "init"]
+- !private ["SC7SKErrorV", "unknown"]
+- !private ["So9SKPaymentC", "productIdentifier"]
+- !private ["So9SKPaymentC", "quantity"]
+- !private ["So20SKPaymentTransactionC", "deinit"]
+- !private ["So20SKPaymentTransactionC", "error"]
+- !private ["So20SKPaymentTransactionC", "payment"]
+- !private ["So20SKPaymentTransactionC", "transactionState"]
+- !private ["SC25SKPaymentTransactionStateO", "failed"]
+- !private ["SC25SKPaymentTransactionStateO", "purchased"]
+- !private ["SC25SKPaymentTransactionStateO", "restored"]
+- !private ["So9SKProductC", "productIdentifier"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "filter"]
+- !private ["s8SequenceP", "hashValue"]
+- !private ["s8SequenceP", "index"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "remove"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["SS", "hashValue"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "hashValue"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "hashValue"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "hashValue"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "NSError"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "NSLocalizedDescriptionKey"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "PurchaseDetails"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "SKError"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "SKErrorDomain"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "findPaymentIndex"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "payments"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "print"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "processTransaction"]
+- ["14SwiftyStoreKit21TransactionControllerP", "processTransactions"]
+- !private ["14SwiftyStoreKit21TransactionControllerP", "transactionError"]
+- ["14SwiftyStoreKit21TransactionControllerP", ""]
+- !private ["14SwiftyStoreKit17TransactionResultO", "failed"]
+- !private ["14SwiftyStoreKit17TransactionResultO", "purchased"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "filter"]
+- !private ["s14_ArrayProtocolP", "index"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- !private ["s23_BidirectionalIndexableP", "filter"]
+- !private ["s23_BidirectionalIndexableP", "hashValue"]
+- !private ["s23_BidirectionalIndexableP", "index"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "remove"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "init"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "unknown"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "filter"]
+- !private ["s24_DestructorSafeContainerP", "index"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["10Foundation18_ErrorCodeProtocolP", "rawValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "hashValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "hashValue"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "hashValue"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "hashValue"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "hashValue"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "hashValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- !private ["s10_IndexableP", "filter"]
+- !private ["s10_IndexableP", "hashValue"]
+- !private ["s10_IndexableP", "index"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "remove"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "append"]
+- !private ["s14_IndexableBaseP", "filter"]
+- !private ["s14_IndexableBaseP", "hashValue"]
+- !private ["s14_IndexableBaseP", "index"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "remove"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "error"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hashValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "payment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "productIdentifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "quantity"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "transactionState"]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "filter"]
+- !private ["s17_MutableIndexableP", "index"]
+- !private ["s17_MutableIndexableP", "remove"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "filter"]
+- !private ["s21_ObjectiveCBridgeableP", "hashValue"]
+- !private ["s21_ObjectiveCBridgeableP", "index"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "init"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "unknown"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "filter"]
+- !private ["s22_RandomAccessIndexableP", "index"]
+- !private ["s22_RandomAccessIndexableP", "remove"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "filter"]
+- !private ["s26_RangeReplaceableIndexableP", "hashValue"]
+- !private ["s26_RangeReplaceableIndexableP", "index"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "remove"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- !private ["s16_SwiftStringViewP", "hashValue"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["10Foundation16__BridgedNSErrorP", "init"]
+- !private ["10Foundation16__BridgedNSErrorP", "unknown"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "SC7SKErrorV4CodeO"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "10Foundation13CustomNSErrorP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "14SwiftyStoreKit7PaymentV"
+- !private "14SwiftyStoreKit12PaymentQueueP"
+- !private "14SwiftyStoreKit18PaymentTransactionP"
+- "14SwiftyStoreKit18PaymentsControllerC"
+- !private "14SwiftyStoreKit15PurchaseDetailsV"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "SC7SKErrorV"
+- !private "So9SKPaymentC"
+- !private "So20SKPaymentTransactionC"
+- !private "SC25SKPaymentTransactionStateO"
+- !private "So9SKProductC"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "14SwiftyStoreKit21TransactionControllerP"
+- !private "14SwiftyStoreKit17TransactionResultO"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "10Foundation21_BridgedStoredNSErrorP"
+- !private "s24_DestructorSafeContainerP"
+- !private "10Foundation18_ErrorCodeProtocolP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "10Foundation26_ObjectiveCBridgeableErrorP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+- !private "10Foundation16__BridgedNSErrorP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/SwiftyStoreKit/SwiftyStoreKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/SwiftyStoreKit.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+interface-hash: "df1da05bd2bb90ce199f2265f020ef06"

@@ -1,0 +1,63 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CoachMarksControllerDataSource"
+- "CoachMarksControllerProxyDataSource"
+provides-nominal:
+- "12Instructions30CoachMarksControllerDataSourceP"
+- "12Instructions35CoachMarksControllerProxyDataSourceP"
+provides-member:
+- ["12Instructions30CoachMarksControllerDataSourceP", ""]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", ""]
+- ["12Instructions30CoachMarksControllerDataSourceP", "coachMarksController"]
+provides-dynamic-lookup:
+depends-top-level:
+- "CoachMark"
+- "CoachMarkArrowView"
+- "CoachMarkBodyView"
+- "CoachMarksController"
+- "CoachMarksControllerDataSource"
+- "CoachMarksControllerProxyDataSource"
+- "Int"
+- "NSLayoutConstraint"
+- "UIView"
+depends-member:
+- ["12Instructions30CoachMarksControllerDataSourceP", "CoachMark"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "CoachMarkArrowView"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "CoachMarkBodyView"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "CoachMarksController"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "Int"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "NSLayoutConstraint"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "UIView"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "coachMarksController"]
+- ["12Instructions30CoachMarksControllerDataSourceP", "numberOfCoachMarks"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "CoachMark"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "CoachMarkArrowView"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "CoachMarkBodyView"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "Int"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "NSLayoutConstraint"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "UIView"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "coachMark"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "coachMarkViews"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "constraintsForSkipView"]
+- ["12Instructions35CoachMarksControllerProxyDataSourceP", "numberOfCoachMarks"]
+depends-nominal:
+- "12Instructions30CoachMarksControllerDataSourceP"
+- "12Instructions35CoachMarksControllerProxyDataSourceP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/Instructions/Instructions-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/Instructions.build/unextended-module.modulemap"
+interface-hash: "3685047dee7374fa8392416789d85e3c"

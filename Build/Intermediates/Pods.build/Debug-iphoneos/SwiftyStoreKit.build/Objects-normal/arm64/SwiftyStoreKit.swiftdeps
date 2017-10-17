@@ -1,0 +1,500 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SwiftyStoreKit"
+provides-nominal:
+- "14SwiftyStoreKitAAC"
+provides-member:
+- ["14SwiftyStoreKitAAC", ""]
+- ["14SwiftyStoreKitAAC", "canMakePayments"]
+- ["14SwiftyStoreKitAAC", "retrieveProductsInfo"]
+- ["14SwiftyStoreKitAAC", "purchaseProduct"]
+- ["14SwiftyStoreKitAAC", "purchaseProduct"]
+- ["14SwiftyStoreKitAAC", "restorePurchases"]
+- ["14SwiftyStoreKitAAC", "completeTransactions"]
+- ["14SwiftyStoreKitAAC", "finishTransaction"]
+- ["14SwiftyStoreKitAAC", "shouldAddStorePaymentHandler"]
+- ["14SwiftyStoreKitAAC", "localReceiptData"]
+- ["14SwiftyStoreKitAAC", "verifyReceipt"]
+- ["14SwiftyStoreKitAAC", "fetchReceipt"]
+- ["14SwiftyStoreKitAAC", "verifyPurchase"]
+- ["14SwiftyStoreKitAAC", "verifySubscription"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "CompleteTransactions"
+- "Data"
+- "Date"
+- "Dictionary"
+- "FetchReceiptResult"
+- !private "InAppReceipt"
+- "InAppReceiptVerificator"
+- "Int"
+- !private "NSError"
+- !private "NSLocalizedDescriptionKey"
+- !private "Payment"
+- "PaymentQueueController"
+- "PaymentTransaction"
+- "ProductsInfoController"
+- "Purchase"
+- "PurchaseResult"
+- "ReceiptInfo"
+- "ReceiptValidator"
+- !private "RestorePurchases"
+- "RestoreResults"
+- "RetrieveResults"
+- !private "SKError"
+- !private "SKErrorDomain"
+- !private "SKPaymentQueue"
+- "SKProduct"
+- "Set"
+- "ShouldAddStorePaymentHandler"
+- "String"
+- "StringLiteralType"
+- "SubscriptionType"
+- "SwiftyStoreKit"
+- !private "TransactionResult"
+- "VerifyPurchaseResult"
+- "VerifyReceiptResult"
+- "VerifySubscriptionResult"
+- "Void"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "appStoreReceiptData"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "canMakePayments"]
+- !private ["s7CVarArgP", "completeTransactions"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "fetchReceipt"]
+- !private ["s7CVarArgP", "finishTransaction"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "restorePurchases"]
+- !private ["s7CVarArgP", "retrieveProductsInfo"]
+- !private ["s7CVarArgP", "shouldAddStorePaymentHandler"]
+- !private ["s7CVarArgP", "startPayment"]
+- !private ["s7CVarArgP", "verifyReceipt"]
+- !private ["SC7SKErrorV4CodeO", "rawValue"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "first"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["14SwiftyStoreKit20CompleteTransactionsV", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "appStoreReceiptData"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "canMakePayments"]
+- !private ["s28CustomDebugStringConvertibleP", "completeTransactions"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchReceipt"]
+- !private ["s28CustomDebugStringConvertibleP", "finishTransaction"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "restorePurchases"]
+- !private ["s28CustomDebugStringConvertibleP", "retrieveProductsInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "shouldAddStorePaymentHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "startPayment"]
+- !private ["s28CustomDebugStringConvertibleP", "verifyReceipt"]
+- !private ["10Foundation13CustomNSErrorP", "Code"]
+- !private ["10Foundation13CustomNSErrorP", "init"]
+- !private ["10Foundation13CustomNSErrorP", "paymentInvalid"]
+- !private ["10Foundation13CustomNSErrorP", "paymentNotAllowed"]
+- !private ["10Foundation13CustomNSErrorP", "unknown"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "appStoreReceiptData"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "canMakePayments"]
+- !private ["s23CustomStringConvertibleP", "completeTransactions"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "fetchReceipt"]
+- !private ["s23CustomStringConvertibleP", "finishTransaction"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "restorePurchases"]
+- !private ["s23CustomStringConvertibleP", "retrieveProductsInfo"]
+- !private ["s23CustomStringConvertibleP", "shouldAddStorePaymentHandler"]
+- !private ["s23CustomStringConvertibleP", "startPayment"]
+- !private ["s23CustomStringConvertibleP", "verifyReceipt"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "first"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "first"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "Code"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "appStoreReceiptData"]
+- !private ["s9EquatableP", "canMakePayments"]
+- !private ["s9EquatableP", "completeTransactions"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "fetchReceipt"]
+- !private ["s9EquatableP", "finishTransaction"]
+- !private ["s9EquatableP", "first"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "paymentInvalid"]
+- !private ["s9EquatableP", "paymentNotAllowed"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "restorePurchases"]
+- !private ["s9EquatableP", "retrieveProductsInfo"]
+- !private ["s9EquatableP", "shouldAddStorePaymentHandler"]
+- !private ["s9EquatableP", "startPayment"]
+- !private ["s9EquatableP", "unknown"]
+- !private ["s9EquatableP", "verifyReceipt"]
+- !private ["s5ErrorP", "Code"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "paymentInvalid"]
+- !private ["s5ErrorP", "paymentNotAllowed"]
+- !private ["s5ErrorP", "unknown"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Code"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "appStoreReceiptData"]
+- !private ["s8HashableP", "canMakePayments"]
+- !private ["s8HashableP", "completeTransactions"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "fetchReceipt"]
+- !private ["s8HashableP", "finishTransaction"]
+- !private ["s8HashableP", "first"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "paymentInvalid"]
+- !private ["s8HashableP", "paymentNotAllowed"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "restorePurchases"]
+- !private ["s8HashableP", "retrieveProductsInfo"]
+- !private ["s8HashableP", "shouldAddStorePaymentHandler"]
+- !private ["s8HashableP", "startPayment"]
+- !private ["s8HashableP", "unknown"]
+- !private ["s8HashableP", "verifyReceipt"]
+- !private ["14SwiftyStoreKit12InAppReceiptC", "verifyPurchase"]
+- !private ["14SwiftyStoreKit12InAppReceiptC", "verifySubscription"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "appStoreReceiptData"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "fetchReceipt"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "init"]
+- !private ["14SwiftyStoreKit23InAppReceiptVerificatorC", "verifyReceipt"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So7NSErrorC", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "appStoreReceiptData"]
+- !private ["So8NSObjectC", "canMakePayments"]
+- !private ["So8NSObjectC", "completeTransactions"]
+- !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "fetchReceipt"]
+- !private ["So8NSObjectC", "finishTransaction"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "restorePurchases"]
+- !private ["So8NSObjectC", "retrieveProductsInfo"]
+- !private ["So8NSObjectC", "shouldAddStorePaymentHandler"]
+- !private ["So8NSObjectC", "startPayment"]
+- !private ["So8NSObjectC", "verifyReceipt"]
+- !private ["So16NSObjectProtocolP", "appStoreReceiptData"]
+- !private ["So16NSObjectProtocolP", "canMakePayments"]
+- !private ["So16NSObjectProtocolP", "completeTransactions"]
+- !private ["So16NSObjectProtocolP", "default"]
+- !private ["So16NSObjectProtocolP", "fetchReceipt"]
+- !private ["So16NSObjectProtocolP", "finishTransaction"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "restorePurchases"]
+- !private ["So16NSObjectProtocolP", "retrieveProductsInfo"]
+- !private ["So16NSObjectProtocolP", "shouldAddStorePaymentHandler"]
+- !private ["So16NSObjectProtocolP", "startPayment"]
+- !private ["So16NSObjectProtocolP", "verifyReceipt"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["14SwiftyStoreKit7PaymentV", "init"]
+- !private ["14SwiftyStoreKit12PaymentQueueP", "canMakePayments"]
+- !private ["14SwiftyStoreKit12PaymentQueueP", "default"]
+- !private ["14SwiftyStoreKit22PaymentQueueControllerC", "completeTransactions"]
+- !private ["14SwiftyStoreKit22PaymentQueueControllerC", "finishTransaction"]
+- !private ["14SwiftyStoreKit22PaymentQueueControllerC", "init"]
+- !private ["14SwiftyStoreKit22PaymentQueueControllerC", "restorePurchases"]
+- !private ["14SwiftyStoreKit22PaymentQueueControllerC", "shouldAddStorePaymentHandler"]
+- !private ["14SwiftyStoreKit22PaymentQueueControllerC", "startPayment"]
+- !private ["14SwiftyStoreKit22ProductsInfoControllerC", "init"]
+- !private ["14SwiftyStoreKit22ProductsInfoControllerC", "retrieveProductsInfo"]
+- !private ["14SwiftyStoreKit8PurchaseV", "productId"]
+- !private ["14SwiftyStoreKit15PurchaseDetailsV", "productId"]
+- !private ["14SwiftyStoreKit14PurchaseResultO", "error"]
+- !private ["14SwiftyStoreKit14PurchaseResultO", "success"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["14SwiftyStoreKit16RestorePurchasesV", "init"]
+- !private ["14SwiftyStoreKit14RestoreResultsV", "init"]
+- !private ["14SwiftyStoreKit15RetrieveResultsV", "error"]
+- !private ["14SwiftyStoreKit15RetrieveResultsV", "invalidProductIDs"]
+- !private ["14SwiftyStoreKit15RetrieveResultsV", "retrievedProducts"]
+- !private ["SC7SKErrorV", "Code"]
+- !private ["SC7SKErrorV", "init"]
+- !private ["SC7SKErrorV", "paymentInvalid"]
+- !private ["SC7SKErrorV", "paymentNotAllowed"]
+- !private ["SC7SKErrorV", "unknown"]
+- !private ["So14SKPaymentQueueC", "canMakePayments"]
+- !private ["So14SKPaymentQueueC", "default"]
+- !private ["So14SKPaymentQueueC", "deinit"]
+- !private ["So28SKPaymentTransactionObserverP", "completeTransactions"]
+- !private ["So28SKPaymentTransactionObserverP", "finishTransaction"]
+- !private ["So28SKPaymentTransactionObserverP", "init"]
+- !private ["So28SKPaymentTransactionObserverP", "restorePurchases"]
+- !private ["So28SKPaymentTransactionObserverP", "shouldAddStorePaymentHandler"]
+- !private ["So28SKPaymentTransactionObserverP", "startPayment"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "first"]
+- !private ["s8SequenceP", "init"]
+- !private ["s3SetV", "first"]
+- !private ["s3SetV", "init"]
+- !private ["s10SetAlgebraP", "first"]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- ["14SwiftyStoreKitAAC", "Bool"]
+- !private ["14SwiftyStoreKitAAC", "CompleteTransactions"]
+- ["14SwiftyStoreKitAAC", "Data"]
+- ["14SwiftyStoreKitAAC", "Date"]
+- ["14SwiftyStoreKitAAC", "FetchReceiptResult"]
+- !private ["14SwiftyStoreKitAAC", "InAppReceipt"]
+- ["14SwiftyStoreKitAAC", "InAppReceiptVerificator"]
+- ["14SwiftyStoreKitAAC", "Int"]
+- !private ["14SwiftyStoreKitAAC", "NSError"]
+- !private ["14SwiftyStoreKitAAC", "NSLocalizedDescriptionKey"]
+- !private ["14SwiftyStoreKitAAC", "Payment"]
+- ["14SwiftyStoreKitAAC", "PaymentQueueController"]
+- ["14SwiftyStoreKitAAC", "PaymentTransaction"]
+- ["14SwiftyStoreKitAAC", "ProductsInfoController"]
+- ["14SwiftyStoreKitAAC", "Purchase"]
+- ["14SwiftyStoreKitAAC", "PurchaseResult"]
+- ["14SwiftyStoreKitAAC", "ReceiptInfo"]
+- ["14SwiftyStoreKitAAC", "ReceiptValidator"]
+- !private ["14SwiftyStoreKitAAC", "RestorePurchases"]
+- ["14SwiftyStoreKitAAC", "RestoreResults"]
+- ["14SwiftyStoreKitAAC", "RetrieveResults"]
+- !private ["14SwiftyStoreKitAAC", "SKError"]
+- !private ["14SwiftyStoreKitAAC", "SKErrorDomain"]
+- !private ["14SwiftyStoreKitAAC", "SKPaymentQueue"]
+- ["14SwiftyStoreKitAAC", "SKProduct"]
+- ["14SwiftyStoreKitAAC", "Set"]
+- ["14SwiftyStoreKitAAC", "ShouldAddStorePaymentHandler"]
+- ["14SwiftyStoreKitAAC", "String"]
+- ["14SwiftyStoreKitAAC", "SubscriptionType"]
+- ["14SwiftyStoreKitAAC", "SwiftyStoreKit"]
+- !private ["14SwiftyStoreKitAAC", "TransactionResult"]
+- ["14SwiftyStoreKitAAC", "VerifyPurchaseResult"]
+- ["14SwiftyStoreKitAAC", "VerifyReceiptResult"]
+- ["14SwiftyStoreKitAAC", "VerifySubscriptionResult"]
+- ["14SwiftyStoreKitAAC", "Void"]
+- ["14SwiftyStoreKitAAC", "canMakePayments"]
+- ["14SwiftyStoreKitAAC", "completeTransactions"]
+- ["14SwiftyStoreKitAAC", "deinit"]
+- ["14SwiftyStoreKitAAC", "fetchReceipt"]
+- ["14SwiftyStoreKitAAC", "finishTransaction"]
+- ["14SwiftyStoreKitAAC", "init"]
+- ["14SwiftyStoreKitAAC", "localReceiptData"]
+- !private ["14SwiftyStoreKitAAC", "paymentQueueController"]
+- !private ["14SwiftyStoreKitAAC", "processPurchaseResult"]
+- !private ["14SwiftyStoreKitAAC", "processRestoreResults"]
+- !private ["14SwiftyStoreKitAAC", "productsInfoController"]
+- !private ["14SwiftyStoreKitAAC", "purchase"]
+- ["14SwiftyStoreKitAAC", "purchaseProduct"]
+- !private ["14SwiftyStoreKitAAC", "receiptVerificator"]
+- ["14SwiftyStoreKitAAC", "restorePurchases"]
+- ["14SwiftyStoreKitAAC", "retrieveProductsInfo"]
+- !private ["14SwiftyStoreKitAAC", "sharedInstance"]
+- ["14SwiftyStoreKitAAC", "shouldAddStorePaymentHandler"]
+- !private ["14SwiftyStoreKitAAC", "storeInternalError"]
+- ["14SwiftyStoreKitAAC", "verifyPurchase"]
+- ["14SwiftyStoreKitAAC", "verifyReceipt"]
+- ["14SwiftyStoreKitAAC", "verifySubscription"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["14SwiftyStoreKit17TransactionResultO", "failed"]
+- !private ["14SwiftyStoreKit17TransactionResultO", "purchased"]
+- !private ["14SwiftyStoreKit17TransactionResultO", "restored"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "Code"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "init"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "paymentInvalid"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "paymentNotAllowed"]
+- !private ["10Foundation21_BridgedStoredNSErrorP", "unknown"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["10Foundation18_ErrorCodeProtocolP", "rawValue"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- !private ["s10_IndexableP", "first"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "append"]
+- !private ["s14_IndexableBaseP", "first"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appStoreReceiptData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "canMakePayments"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "completeTransactions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetchReceipt"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "finishTransaction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "restorePurchases"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retrieveProductsInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldAddStorePaymentHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startPayment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "verifyReceipt"]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "Code"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "init"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "paymentInvalid"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "paymentNotAllowed"]
+- !private ["10Foundation26_ObjectiveCBridgeableErrorP", "unknown"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["10Foundation16__BridgedNSErrorP", "Code"]
+- !private ["10Foundation16__BridgedNSErrorP", "init"]
+- !private ["10Foundation16__BridgedNSErrorP", "paymentInvalid"]
+- !private ["10Foundation16__BridgedNSErrorP", "paymentNotAllowed"]
+- !private ["10Foundation16__BridgedNSErrorP", "unknown"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "SC7SKErrorV4CodeO"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "14SwiftyStoreKit20CompleteTransactionsV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "10Foundation13CustomNSErrorP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- !private "14SwiftyStoreKit12InAppReceiptC"
+- !private "14SwiftyStoreKit23InAppReceiptVerificatorC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "14SwiftyStoreKit7PaymentV"
+- !private "14SwiftyStoreKit12PaymentQueueP"
+- !private "14SwiftyStoreKit22PaymentQueueControllerC"
+- !private "14SwiftyStoreKit22ProductsInfoControllerC"
+- !private "14SwiftyStoreKit8PurchaseV"
+- !private "14SwiftyStoreKit15PurchaseDetailsV"
+- !private "14SwiftyStoreKit14PurchaseResultO"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "14SwiftyStoreKit16RestorePurchasesV"
+- !private "14SwiftyStoreKit14RestoreResultsV"
+- !private "14SwiftyStoreKit15RetrieveResultsV"
+- !private "SC7SKErrorV"
+- !private "So14SKPaymentQueueC"
+- !private "So28SKPaymentTransactionObserverP"
+- !private "s8SequenceP"
+- !private "s3SetV"
+- !private "s10SetAlgebraP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- "14SwiftyStoreKitAAC"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "14SwiftyStoreKit17TransactionResultO"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "10Foundation21_BridgedStoredNSErrorP"
+- !private "s24_DestructorSafeContainerP"
+- !private "10Foundation18_ErrorCodeProtocolP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "10Foundation26_ObjectiveCBridgeableErrorP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+- !private "10Foundation16__BridgedNSErrorP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/SwiftyStoreKit/SwiftyStoreKit-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/SwiftyStoreKit.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/StoreKit.framework/Headers/StoreKit.apinotes"
+interface-hash: "1b78410a25a28667224a06426f4167ad"

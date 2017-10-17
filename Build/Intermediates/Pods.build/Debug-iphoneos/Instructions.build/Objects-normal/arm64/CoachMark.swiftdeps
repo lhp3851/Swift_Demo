@@ -1,0 +1,218 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CoachMark"
+- "=="
+provides-nominal:
+- "12Instructions9CoachMarkV"
+provides-member:
+- ["12Instructions9CoachMarkV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "+"
+- !private "/"
+- "=="
+- !private ">"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- "CGPoint"
+- "CGRect"
+- "CoachMark"
+- "CoachMarkArrowOrientation"
+- "Constants"
+- "Equatable"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "UIBezierPath"
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["SC7CGPointV", "init"]
+- !private ["SC7CGPointV", "x"]
+- !private ["SC7CGPointV", "y"]
+- !private ["SC6CGRectV", "height"]
+- !private ["SC6CGRectV", "origin"]
+- !private ["SC6CGRectV", "size"]
+- !private ["SC6CGRectV", "width"]
+- !private ["SC6CGSizeV", "height"]
+- !private ["s7CVarArgP", "bounds"]
+- ["12Instructions9CoachMarkV", "Bool"]
+- ["12Instructions9CoachMarkV", "CGFloat"]
+- ["12Instructions9CoachMarkV", "CGPoint"]
+- ["12Instructions9CoachMarkV", "CGRect"]
+- ["12Instructions9CoachMarkV", "CoachMarkArrowOrientation"]
+- ["12Instructions9CoachMarkV", "Constants"]
+- ["12Instructions9CoachMarkV", "UIBezierPath"]
+- ["12Instructions9CoachMarkV", "allowTouchInsideCutoutPath"]
+- ["12Instructions9CoachMarkV", "animationDuration"]
+- ["12Instructions9CoachMarkV", "arrowOrientation"]
+- ["12Instructions9CoachMarkV", "computeMetadata"]
+- ["12Instructions9CoachMarkV", "computeOrientation"]
+- ["12Instructions9CoachMarkV", "computePointOfInterest"]
+- ["12Instructions9CoachMarkV", "cutoutPath"]
+- ["12Instructions9CoachMarkV", "deinit"]
+- ["12Instructions9CoachMarkV", "disableOverlayTap"]
+- ["12Instructions9CoachMarkV", "gapBetweenBodyAndArrow"]
+- ["12Instructions9CoachMarkV", "gapBetweenCoachMarkAndCutoutPath"]
+- ["12Instructions9CoachMarkV", "horizontalMargin"]
+- ["12Instructions9CoachMarkV", "init"]
+- ["12Instructions9CoachMarkV", "maxWidth"]
+- ["12Instructions9CoachMarkV", "pointOfInterest"]
+- !private ["12Instructions25CoachMarkArrowOrientationO", "bottom"]
+- !private ["12Instructions25CoachMarkArrowOrientationO", "deinit"]
+- !private ["12Instructions25CoachMarkArrowOrientationO", "top"]
+- ["12Instructions9ConstantsV", "coachMarkFadeAnimationDuration"]
+- !private ["s28CustomDebugStringConvertibleP", "bottom"]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "origin"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "top"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "height"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "origin"]
+- !private ["s29CustomPlaygroundQuickLookableP", "size"]
+- !private ["s29CustomPlaygroundQuickLookableP", "width"]
+- !private ["s29CustomPlaygroundQuickLookableP", "x"]
+- !private ["s29CustomPlaygroundQuickLookableP", "y"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "bottom"]
+- !private ["s17CustomReflectableP", "height"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "origin"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "top"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "bounds"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "bottom"]
+- !private ["s9DecodableP", "height"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "origin"]
+- !private ["s9DecodableP", "size"]
+- !private ["s9DecodableP", "top"]
+- !private ["s9DecodableP", "width"]
+- !private ["s9DecodableP", "x"]
+- !private ["s9DecodableP", "y"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "bottom"]
+- !private ["s9EncodableP", "height"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "origin"]
+- !private ["s9EncodableP", "size"]
+- !private ["s9EncodableP", "top"]
+- !private ["s9EncodableP", "width"]
+- !private ["s9EncodableP", "x"]
+- !private ["s9EncodableP", "y"]
+- !private ["s9EquatableP", "CGPoint"]
+- ["s9EquatableP", "Constants"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "allowTouchInsideCutoutPath"]
+- !private ["s9EquatableP", "animationDuration"]
+- !private ["s9EquatableP", "arrowOrientation"]
+- !private ["s9EquatableP", "bottom"]
+- !private ["s9EquatableP", "bounds"]
+- !private ["s9EquatableP", "computeOrientation"]
+- !private ["s9EquatableP", "computePointOfInterest"]
+- !private ["s9EquatableP", "cutoutPath"]
+- !private ["s9EquatableP", "disableOverlayTap"]
+- !private ["s9EquatableP", "gapBetweenBodyAndArrow"]
+- !private ["s9EquatableP", "gapBetweenCoachMarkAndCutoutPath"]
+- !private ["s9EquatableP", "height"]
+- !private ["s9EquatableP", "horizontalMargin"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "maxWidth"]
+- !private ["s9EquatableP", "origin"]
+- !private ["s9EquatableP", "pointOfInterest"]
+- !private ["s9EquatableP", "size"]
+- !private ["s9EquatableP", "top"]
+- !private ["s9EquatableP", "width"]
+- !private ["s9EquatableP", "x"]
+- !private ["s9EquatableP", "y"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s23ExpressibleByNilLiteralP", "bottom"]
+- !private ["s23ExpressibleByNilLiteralP", "top"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "bottom"]
+- !private ["s8HashableP", "bounds"]
+- !private ["s8HashableP", "top"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["So8NSCodingP", "bounds"]
+- !private ["So9NSCopyingP", "bounds"]
+- !private ["So8NSObjectC", "bounds"]
+- !private ["So16NSObjectProtocolP", "bounds"]
+- !private ["So14NSSecureCodingP", "bounds"]
+- !private ["Sq", "bottom"]
+- !private ["Sq", "top"]
+- !private ["So12UIBezierPathC", "bounds"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "bottom"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "origin"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "top"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+depends-nominal:
+- !private "Sb"
+- !private "SC7CGPointV"
+- !private "SC6CGRectV"
+- !private "SC6CGSizeV"
+- !private "s7CVarArgP"
+- "12Instructions9CoachMarkV"
+- !private "12Instructions25CoachMarkArrowOrientationO"
+- "12Instructions9ConstantsV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- !private "So12UIBezierPathC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Target Support Files/Instructions/Instructions-umbrella.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Intermediates/Pods.build/Debug-iphoneos/Instructions.build/unextended-module.modulemap"
+interface-hash: "9177154bdbd1492de57266efeb57c81e"
