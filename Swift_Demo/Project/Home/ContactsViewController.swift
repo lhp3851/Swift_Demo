@@ -33,7 +33,9 @@ class ContactsViewController: BaseViewController {
         self.navigationItem.title = "通讯录"
         ContactsTool.getContacts { (contacts) in
             self.contactsView.messyDatas = contacts
-            self.contactsView.contactsTableview.reloadData()
+            DispatchQueue.main.async(execute: {
+                self.contactsView.contactsTableview.reloadData()
+            })
         }
     }
     

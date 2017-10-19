@@ -19,7 +19,7 @@ class ProfileModle: NSObject {
          
          [["imageName10":"subTitle10"],["imageName11":"subTitle11"],["imageName12":"subTitle12"]],
          
-         [["imageName20":"subTitle20"],["imageName21":"subTitle21"],["imageName22":"subTitle22"]]]
+         [["imageName20":"设置"]]]
     
     class func getModelFromDatas() -> [[ProfileModle]] {
         var modlesArray = Array<[ProfileModle]>()
