@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
-options: "b7a06402ce1097c73a52253c97b5577f"
-build_time: [1508467041, 194337000]
-inputs:
-  "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [1508234327, 0]

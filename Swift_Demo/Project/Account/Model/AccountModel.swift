@@ -7,21 +7,7 @@
 //
 
 import UIKit
-
-class LoginModel: NSObject {
-    
-    var account : String?
-    var password : String?
-    var isLoginStatus : Bool? {
-        
-        let isLogin = !((password?.isEmpty)!)
-        return isLogin
-        
-    }
-}
-
-
-
+import SQLite3
 
 class AccountModel: NSObject {
     
@@ -30,7 +16,8 @@ class AccountModel: NSObject {
         
     }
     
-    var name : String?
+    var account : String?
+    var password : String?
     var session : String?
     
     
