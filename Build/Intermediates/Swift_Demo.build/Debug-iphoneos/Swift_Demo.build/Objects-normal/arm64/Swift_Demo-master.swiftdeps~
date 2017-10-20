@@ -1,10 +1,10 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "e6a02645a075eca493414612f9f3e3d5"
-build_time: [1508238059, 856219000]
+build_time: [1508323328, 465759000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Tool/NetWorkTool/BaseRequest.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CocoaTouch/UIKit/View/Commen/Navigator/NavigationBar.swift": [1508234327, 0]
-  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CocoaTouch/UIKit/ViewController/NavigationController/BaseNavigationViewController.swift": [1508234327, 0]
+  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CocoaTouch/UIKit/ViewController/NavigationController/BaseNavigationViewController.swift": [1508323326, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Profile/Modle/ProfileModle.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Home/View/ContactsView.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Headers.swift": [1508238059, 0]
@@ -15,7 +15,7 @@ inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/ViewController.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Account/AccountViewController.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Tool/FitTool/FitTool.swift": [1508234327, 0]
-  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CocoaTouch/UIKit/View/BaseView.swift": [1508234327, 0]
+  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CocoaTouch/UIKit/View/BaseView.swift": [1508294188, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CocoaTouch/UIKit/ViewController/TabBarController/BaseTabBarController.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Genealogy/GenealogyViewController.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/CoreService/Foundation/String/String+Extension.swift": [1508234327, 0]
@@ -33,6 +33,6 @@ inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Trace/TraceViewController.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Tool/FileManegerTool/FilesManagerTool.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Tool/NetWorkTool/NetWorkTool.swift": [1508234327, 0]
-  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Home/HomeViewController.swift": !dirty [1508238059, 0]
-  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Tool/ProgressHUDTool/ProgressHUDTool.swift": [1508238059, 0]
+  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Project/Home/HomeViewController.swift": [1508298846, 0]
+  "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Tool/ProgressHUDTool/ProgressHUDTool.swift": [1508297957, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Swift_Demo/Const.swift": [1508234327, 0]

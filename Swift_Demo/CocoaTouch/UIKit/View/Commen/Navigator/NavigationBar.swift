@@ -86,7 +86,7 @@ class BarButtonItem: UIBarButtonItem {
         let image = FilesManagerTool.imageWithNames(imageName: "back_white_icon")
         let selector : Selector = #selector(normalSelector)
         let backBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItemStyle.done, target: self, action: selector);
-        return backBarItem;
+        return backBarItem
     }()
     
     lazy var otherItem :UIBarButtonItem = { () -> UIBarButtonItem in

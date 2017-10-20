@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import MBProgressHUD
 
 class ProgressHUDTool: BaseView {
 
@@ -17,7 +18,7 @@ class ProgressHUDTool: BaseView {
         view.backgroundColor = kCOLOR_SAFELY
         return view
     }()
-
+    
     
     func startAnimating() -> Void {
         ProgressHUDTool.activityView.startAnimating()
@@ -25,6 +26,27 @@ class ProgressHUDTool: BaseView {
     
     func stopAnimating() -> Void {
         ProgressHUDTool.activityView.stopAnimating()
+    }
+    
+    
+    class func showHUD(toView:UIView) -> Void {
+        let hud = MBProgressHUD.showAdded(to: toView, animated: true)
+        hud.mode = .indeterminate
+        hud.animationType = .zoom
+        hud.margin = kMARGIN_HORIZONE
+        hud.offset = CGPoint.init(x: 0, y: 0)
+        hud.isSquare = false
+    }
+    
+    class func showAutomaticHUD(toView:UIView) -> Void {
+        self.showHUD(toView: toView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.hieHUD(view: toView)
+        }
+    }
+    
+    class func hieHUD(view:UIView) -> Void {
+        MBProgressHUD.hide(for: view, animated: true)
     }
     
 }
