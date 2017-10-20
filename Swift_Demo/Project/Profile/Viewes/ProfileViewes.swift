@@ -14,8 +14,6 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
         view.delegate = self
         view.dataSource = self
-        view.estimatedSectionFooterHeight = CGFloat.leastNonzeroMagnitude
-        view.estimatedSectionHeaderHeight = CGFloat.leastNonzeroMagnitude
         return view
     }()
     
