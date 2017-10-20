@@ -14,6 +14,8 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
         view.delegate = self
         view.dataSource = self
+        view.estimatedSectionFooterHeight = CGFloat.leastNonzeroMagnitude
+        view.estimatedSectionHeaderHeight = CGFloat.leastNonzeroMagnitude
         return view
     }()
     
@@ -62,6 +64,14 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kFIT_INSTANCE.fitHeight(height: 20.0)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return  nil
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

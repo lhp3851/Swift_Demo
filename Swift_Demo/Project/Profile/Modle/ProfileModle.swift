@@ -13,13 +13,12 @@ class ProfileModle: NSObject {
     var imageName = String()
     var sbuTitle = String()
     
-    
     static let pannelModdel :[[[String:String]]] =
         [[["imageName00":"subTitle00"],["imageName01":"subTitle01"],["imageName02":"subTitle02"]],
          
          [["imageName10":"subTitle10"],["imageName11":"subTitle11"],["imageName12":"subTitle12"]],
          
-         [["imageName20":"设置"]]]
+         [["imageName20":"设置"],["imageName20":"关于"],["imageName20":"设置"],["imageName20":"关于"],["imageName20":"设置"]]]
     
     class func getModelFromDatas() -> [[ProfileModle]] {
         var modlesArray = Array<[ProfileModle]>()

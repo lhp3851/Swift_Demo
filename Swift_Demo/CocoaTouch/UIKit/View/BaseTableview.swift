@@ -15,11 +15,6 @@ class BaseTableview: UITableView {
         self.estimatedRowHeight = 0;
         self.estimatedSectionHeaderHeight = 0;
         self.estimatedSectionFooterHeight = 0;
-        if #available(iOS 11.0, *) {
-            self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {
