@@ -63,24 +63,32 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return kFIT_INSTANCE.fitHeight(height: 20.0)
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifiler = "identifiler"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifiler)
         if cell == nil {
             cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifiler)
         }
+        cell?.accessoryType = .disclosureIndicator
         let model : ProfileModle = self.datas[indexPath.section][indexPath.row]
         cell?.textLabel?.text = model.sbuTitle
         return cell!
     }
-    
-    
-    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        var VC = BaseViewController()
+        
+        let model : ProfileModle = self.datas[indexPath.section][indexPath.row]
+        switch model.sbuTitle {
+        case "设置":
+            VC = StorePageViewController() as BaseViewController
+        default: break
+            VC = StorePageViewController() as BaseViewController
+        }
+        BaseViewController.jumpViewController(sourceViewConrroller: self.viewController()!, destinationViewController: VC, animated: true)
+    }
     
     
     

@@ -174,6 +174,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import ObjectiveC;
 @import UIKit;
+@import StoreKit;
 @import CoreGraphics;
 @import Foundation;
 #endif
@@ -227,6 +228,14 @@ SWIFT_CLASS("_TtC10Swift_Demo11AppDelegate")
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class SKStoreProductViewController;
+
+SWIFT_CLASS("_TtC10Swift_Demo7AppTool")
+@interface AppTool : NSObject <SKStoreProductViewControllerDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)productViewControllerDidFinish:(SKStoreProductViewController * _Nonnull)viewController;
 @end
 
 @class UIButton;
@@ -404,8 +413,8 @@ SWIFT_CLASS("_TtC10Swift_Demo13ProfileViewes")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 
@@ -419,6 +428,18 @@ SWIFT_CLASS("_TtC10Swift_Demo15ProgressHUDTool")
 SWIFT_CLASS("_TtC10Swift_Demo15ReachAblityTool")
 @interface ReachAblityTool : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+@class UITouch;
+@class UIEvent;
+
+SWIFT_CLASS("_TtC10Swift_Demo23StorePageViewController")
+@interface StorePageViewController : BaseViewController
+- (void)viewDidLoad;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -440,8 +461,6 @@ SWIFT_CLASS("_TtC10Swift_Demo19TraceViewController")
 
 
 
-@class UITouch;
-@class UIEvent;
 
 SWIFT_CLASS("_TtC10Swift_Demo14ViewController")
 @interface ViewController : UIViewController

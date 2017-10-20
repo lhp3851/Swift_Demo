@@ -11,12 +11,15 @@ import UIKit
 
 class BaseView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    func viewController()->BaseViewController?{
+        var next:UIView? = self
+        repeat{
+            if let nextResponder = next?.next, nextResponder.isKind(of:BaseViewController.self){
+                return (nextResponder as! BaseViewController)
+            }
+            next = next?.superview
+        }while next != nil
+        return nil
     }
-    */
 
 }

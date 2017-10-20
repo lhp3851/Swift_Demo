@@ -16,6 +16,7 @@ depends-top-level:
 - !private "ContactsTool"
 - "ContactsView"
 - "ContactsViewController"
+- !private "DispatchQueue"
 - !private "StringLiteralType"
 - !private "UIEdgeInsetsMake"
 - "Void"
@@ -29,6 +30,7 @@ depends-member:
 - !private ["10Swift_Demo18BaseViewControllerC", "CGRect"]
 - !private ["10Swift_Demo18BaseViewControllerC", "ContactsTool"]
 - ["10Swift_Demo18BaseViewControllerC", "ContactsView"]
+- !private ["10Swift_Demo18BaseViewControllerC", "DispatchQueue"]
 - !private ["10Swift_Demo18BaseViewControllerC", "UIEdgeInsetsMake"]
 - ["10Swift_Demo18BaseViewControllerC", "Void"]
 - ["10Swift_Demo18BaseViewControllerC", "contacts"]
@@ -57,8 +59,10 @@ depends-member:
 - !private ["s7CVarArgP", "CGRect"]
 - !private ["s7CVarArgP", "ContactsTool"]
 - !private ["s7CVarArgP", "ContactsView"]
+- !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "UIEdgeInsetsMake"]
 - !private ["s7CVarArgP", "addSubview"]
+- !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "contactsTableview"]
 - !private ["s7CVarArgP", "contactsView"]
 - !private ["s7CVarArgP", "didReceiveMemoryWarning"]
@@ -66,6 +70,7 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "initData"]
 - !private ["s7CVarArgP", "initPannel"]
+- !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "messyDatas"]
 - !private ["s7CVarArgP", "navigationItem"]
 - !private ["s7CVarArgP", "reloadData"]
@@ -99,6 +104,7 @@ depends-member:
 - !private ["10Swift_Demo22ContactsViewControllerC", "CGRect"]
 - !private ["10Swift_Demo22ContactsViewControllerC", "ContactsTool"]
 - ["10Swift_Demo22ContactsViewControllerC", "ContactsView"]
+- !private ["10Swift_Demo22ContactsViewControllerC", "DispatchQueue"]
 - !private ["10Swift_Demo22ContactsViewControllerC", "UIEdgeInsetsMake"]
 - ["10Swift_Demo22ContactsViewControllerC", "Void"]
 - ["10Swift_Demo22ContactsViewControllerC", "contacts"]
@@ -117,8 +123,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "CGRect"]
 - !private ["s28CustomDebugStringConvertibleP", "ContactsTool"]
 - !private ["s28CustomDebugStringConvertibleP", "ContactsView"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "UIEdgeInsetsMake"]
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "contactsTableview"]
 - !private ["s28CustomDebugStringConvertibleP", "contactsView"]
 - !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
@@ -126,6 +134,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "initData"]
 - !private ["s28CustomDebugStringConvertibleP", "initPannel"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "messyDatas"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
 - !private ["s28CustomDebugStringConvertibleP", "reloadData"]
@@ -146,9 +155,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CGRect"]
 - !private ["s23CustomStringConvertibleP", "ContactsTool"]
 - !private ["s23CustomStringConvertibleP", "ContactsView"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "UIEdgeInsetsMake"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
+- !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "contactsTableview"]
 - !private ["s23CustomStringConvertibleP", "contactsView"]
 - !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
@@ -156,6 +167,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "initData"]
 - !private ["s23CustomStringConvertibleP", "initPannel"]
+- !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "messyDatas"]
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
 - !private ["s23CustomStringConvertibleP", "reloadData"]
@@ -168,6 +180,10 @@ depends-member:
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "zero"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "zero"]
@@ -175,9 +191,11 @@ depends-member:
 - !private ["s9EquatableP", "CGRect"]
 - !private ["s9EquatableP", "ContactsTool"]
 - !private ["s9EquatableP", "ContactsView"]
+- !private ["s9EquatableP", "DispatchQueue"]
 - !private ["s9EquatableP", "UIEdgeInsetsMake"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "addSubview"]
+- !private ["s9EquatableP", "async"]
 - !private ["s9EquatableP", "contactsTableview"]
 - !private ["s9EquatableP", "contactsView"]
 - !private ["s9EquatableP", "didReceiveMemoryWarning"]
@@ -185,6 +203,7 @@ depends-member:
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "initData"]
 - !private ["s9EquatableP", "initPannel"]
+- !private ["s9EquatableP", "main"]
 - !private ["s9EquatableP", "messyDatas"]
 - !private ["s9EquatableP", "navigationItem"]
 - !private ["s9EquatableP", "reloadData"]
@@ -204,9 +223,11 @@ depends-member:
 - !private ["s8HashableP", "CGRect"]
 - !private ["s8HashableP", "ContactsTool"]
 - !private ["s8HashableP", "ContactsView"]
+- !private ["s8HashableP", "DispatchQueue"]
 - !private ["s8HashableP", "UIEdgeInsetsMake"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "addSubview"]
+- !private ["s8HashableP", "async"]
 - !private ["s8HashableP", "contactsTableview"]
 - !private ["s8HashableP", "contactsView"]
 - !private ["s8HashableP", "didReceiveMemoryWarning"]
@@ -214,6 +235,7 @@ depends-member:
 - !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "initData"]
 - !private ["s8HashableP", "initPannel"]
+- !private ["s8HashableP", "main"]
 - !private ["s8HashableP", "messyDatas"]
 - !private ["s8HashableP", "navigationItem"]
 - !private ["s8HashableP", "reloadData"]
@@ -238,6 +260,7 @@ depends-member:
 - !private ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "ContactsTool"]
 - !private ["So8NSCodingP", "ContactsView"]
+- !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "UIEdgeInsetsMake"]
 - !private ["So8NSCodingP", "addSubview"]
 - !private ["So8NSCodingP", "contactsTableview"]
@@ -260,6 +283,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "CGRect"]
 - !private ["So26NSExtensionRequestHandlingP", "ContactsTool"]
 - !private ["So26NSExtensionRequestHandlingP", "ContactsView"]
+- !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "UIEdgeInsetsMake"]
 - !private ["So26NSExtensionRequestHandlingP", "contactsView"]
 - !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
@@ -278,9 +302,11 @@ depends-member:
 - !private ["So8NSObjectC", "CGRect"]
 - !private ["So8NSObjectC", "ContactsTool"]
 - ["So8NSObjectC", "ContactsView"]
+- !private ["So8NSObjectC", "DispatchQueue"]
 - !private ["So8NSObjectC", "UIEdgeInsetsMake"]
 - ["So8NSObjectC", "Void"]
 - !private ["So8NSObjectC", "addSubview"]
+- !private ["So8NSObjectC", "async"]
 - ["So8NSObjectC", "contacts"]
 - !private ["So8NSObjectC", "contactsTableview"]
 - ["So8NSObjectC", "contactsView"]
@@ -290,6 +316,7 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "initData"]
 - ["So8NSObjectC", "initPannel"]
+- !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "messyDatas"]
 - !private ["So8NSObjectC", "navigationItem"]
 - !private ["So8NSObjectC", "reloadData"]
@@ -302,8 +329,10 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "CGRect"]
 - !private ["So16NSObjectProtocolP", "ContactsTool"]
 - !private ["So16NSObjectProtocolP", "ContactsView"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
 - !private ["So16NSObjectProtocolP", "UIEdgeInsetsMake"]
 - !private ["So16NSObjectProtocolP", "addSubview"]
+- !private ["So16NSObjectProtocolP", "async"]
 - !private ["So16NSObjectProtocolP", "contactsTableview"]
 - !private ["So16NSObjectProtocolP", "contactsView"]
 - !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
@@ -311,6 +340,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "initData"]
 - !private ["So16NSObjectProtocolP", "initPannel"]
+- !private ["So16NSObjectProtocolP", "main"]
 - !private ["So16NSObjectProtocolP", "messyDatas"]
 - !private ["So16NSObjectProtocolP", "navigationItem"]
 - !private ["So16NSObjectProtocolP", "reloadData"]
@@ -322,6 +352,8 @@ depends-member:
 - ["So16NSObjectProtocolP", ""]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So8NSStringC", "init"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
 - ["s22RandomAccessCollectionP", "init"]
 - ["s26RangeReplaceableCollectionP", "init"]
 - ["s8SequenceP", "init"]
@@ -345,6 +377,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "CGRect"]
 - !private ["So21UIAppearanceContainerP", "ContactsTool"]
 - !private ["So21UIAppearanceContainerP", "ContactsView"]
+- !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "UIEdgeInsetsMake"]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
 - !private ["So21UIAppearanceContainerP", "contactsTableview"]
@@ -365,6 +398,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "CGRect"]
 - !private ["So18UIContentContainerP", "ContactsTool"]
 - !private ["So18UIContentContainerP", "ContactsView"]
+- !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "UIEdgeInsetsMake"]
 - !private ["So18UIContentContainerP", "contactsView"]
 - !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
@@ -393,6 +427,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "CGRect"]
 - !private ["So18UIFocusEnvironmentP", "ContactsTool"]
 - !private ["So18UIFocusEnvironmentP", "ContactsView"]
+- !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "UIEdgeInsetsMake"]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
 - !private ["So18UIFocusEnvironmentP", "contactsTableview"]
@@ -420,6 +455,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "CGRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "ContactsTool"]
 - !private ["So30UIPasteConfigurationSupportingP", "ContactsView"]
+- !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIEdgeInsetsMake"]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "contactsTableview"]
@@ -440,6 +476,7 @@ depends-member:
 - !private ["So11UIResponderC", "CGRect"]
 - !private ["So11UIResponderC", "ContactsTool"]
 - ["So11UIResponderC", "ContactsView"]
+- !private ["So11UIResponderC", "DispatchQueue"]
 - !private ["So11UIResponderC", "UIEdgeInsetsMake"]
 - ["So11UIResponderC", "Void"]
 - !private ["So11UIResponderC", "addSubview"]
@@ -462,6 +499,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "CGRect"]
 - !private ["So30UIResponderStandardEditActionsP", "ContactsTool"]
 - !private ["So30UIResponderStandardEditActionsP", "ContactsView"]
+- !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "UIEdgeInsetsMake"]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "contactsTableview"]
@@ -488,6 +526,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "CGRect"]
 - !private ["So16UIStateRestoringP", "ContactsTool"]
 - !private ["So16UIStateRestoringP", "ContactsView"]
+- !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "UIEdgeInsetsMake"]
 - !private ["So16UIStateRestoringP", "contactsView"]
 - !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
@@ -512,6 +551,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "CGRect"]
 - !private ["So18UITraitEnvironmentP", "ContactsTool"]
 - !private ["So18UITraitEnvironmentP", "ContactsView"]
+- !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "UIEdgeInsetsMake"]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
 - !private ["So18UITraitEnvironmentP", "contactsTableview"]
@@ -537,6 +577,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "CGRect"]
 - !private ["So16UIViewControllerC", "ContactsTool"]
 - ["So16UIViewControllerC", "ContactsView"]
+- !private ["So16UIViewControllerC", "DispatchQueue"]
 - !private ["So16UIViewControllerC", "UIEdgeInsetsMake"]
 - ["So16UIViewControllerC", "Void"]
 - ["So16UIViewControllerC", "contacts"]
@@ -573,8 +614,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ContactsTool"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ContactsView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIEdgeInsetsMake"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contactsTableview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contactsView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
@@ -582,6 +625,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "initData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "initPannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "messyDatas"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
@@ -627,6 +671,8 @@ depends-nominal:
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
 - "s9EncodableP"
 - "s9EquatableP"
 - "s25ExpressibleByArrayLiteralP"
@@ -650,6 +696,7 @@ depends-nominal:
 - "So16NSObjectProtocolP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
+- !private "So9OS_objectC"
 - "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
 - "s8SequenceP"
@@ -721,6 +768,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework/Headers/MBProgressHUD.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework/Headers/MBProgressHUD-umbrella.h"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
@@ -731,6 +780,7 @@ depends-external:
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers/SnapKit-Swift.h"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Headers/NVActivityIndicatorView-Swift.h"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/MBProgressHUD/MBProgressHUD.framework/Modules/module.modulemap"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Modules/module.modulemap"

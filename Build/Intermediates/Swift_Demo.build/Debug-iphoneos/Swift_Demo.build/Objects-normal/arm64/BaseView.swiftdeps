@@ -7,69 +7,187 @@ provides-member:
 - ["10Swift_Demo8BaseViewC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!="
+- "AssignmentPrecedence"
 - "BaseView"
+- "BaseViewController"
+- "CastingPrecedence"
 - "UIView"
 depends-member:
+- ["10Swift_Demo8BaseViewC", "BaseViewController"]
+- !private ["10Swift_Demo8BaseViewC", "UIView"]
 - ["10Swift_Demo8BaseViewC", "deinit"]
 - ["10Swift_Demo8BaseViewC", "init"]
+- ["10Swift_Demo8BaseViewC", "viewController"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "BaseViewController"]
 - !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "next"]
+- !private ["So15CALayerDelegateP", "superview"]
 - ["So15CALayerDelegateP", ""]
+- !private ["s7CVarArgP", "BaseViewController"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isKind"]
+- !private ["s7CVarArgP", "next"]
+- !private ["s7CVarArgP", "superview"]
 - ["s7CVarArgP", ""]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "BaseViewController"]
 - !private ["7SnapKit25ConstraintRelatableTargetP", "init"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "next"]
+- !private ["7SnapKit25ConstraintRelatableTargetP", "superview"]
 - ["7SnapKit25ConstraintRelatableTargetP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "BaseViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isKind"]
+- !private ["s28CustomDebugStringConvertibleP", "next"]
+- !private ["s28CustomDebugStringConvertibleP", "superview"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "BaseViewController"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isKind"]
+- !private ["s23CustomStringConvertibleP", "next"]
+- !private ["s23CustomStringConvertibleP", "superview"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "BaseViewController"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isKind"]
+- !private ["s9EquatableP", "next"]
+- !private ["s9EquatableP", "superview"]
 - ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "BaseViewController"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isKind"]
+- !private ["s8HashableP", "next"]
+- !private ["s8HashableP", "superview"]
 - ["s8HashableP", ""]
+- !private ["7SnapKit20LayoutConstraintItemP", "BaseViewController"]
 - !private ["7SnapKit20LayoutConstraintItemP", "init"]
+- !private ["7SnapKit20LayoutConstraintItemP", "next"]
+- !private ["7SnapKit20LayoutConstraintItemP", "superview"]
 - ["7SnapKit20LayoutConstraintItemP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["So8NSCodingP", "BaseViewController"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "next"]
+- !private ["So8NSCodingP", "superview"]
 - ["So8NSCodingP", ""]
+- ["So8NSObjectC", "BaseViewController"]
+- !private ["So8NSObjectC", "UIView"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isKind"]
+- !private ["So8NSObjectC", "next"]
+- !private ["So8NSObjectC", "superview"]
+- ["So8NSObjectC", "viewController"]
+- !private ["So16NSObjectProtocolP", "BaseViewController"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isKind"]
+- !private ["So16NSObjectProtocolP", "next"]
+- !private ["So16NSObjectProtocolP", "superview"]
 - ["So16NSObjectProtocolP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "BaseViewController"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "next"]
+- !private ["So29UIAccessibilityIdentificationP", "superview"]
 - ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So12UIAppearanceP", "BaseViewController"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "next"]
+- !private ["So12UIAppearanceP", "superview"]
 - ["So12UIAppearanceP", ""]
+- !private ["So21UIAppearanceContainerP", "BaseViewController"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "next"]
+- !private ["So21UIAppearanceContainerP", "superview"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So17UICoordinateSpaceP", "BaseViewController"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "next"]
+- !private ["So17UICoordinateSpaceP", "superview"]
 - ["So17UICoordinateSpaceP", ""]
+- !private ["So13UIDynamicItemP", "BaseViewController"]
 - !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "next"]
+- !private ["So13UIDynamicItemP", "superview"]
 - ["So13UIDynamicItemP", ""]
+- !private ["So18UIFocusEnvironmentP", "BaseViewController"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "next"]
+- !private ["So18UIFocusEnvironmentP", "superview"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "BaseViewController"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "next"]
+- !private ["So11UIFocusItemP", "superview"]
 - ["So11UIFocusItemP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "BaseViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "isKind"]
+- !private ["So30UIPasteConfigurationSupportingP", "next"]
+- !private ["So30UIPasteConfigurationSupportingP", "superview"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "BaseViewController"]
+- !private ["So11UIResponderC", "UIView"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "isKind"]
+- !private ["So11UIResponderC", "next"]
+- !private ["So11UIResponderC", "superview"]
+- ["So11UIResponderC", "viewController"]
+- !private ["So30UIResponderStandardEditActionsP", "BaseViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "isKind"]
+- !private ["So30UIResponderStandardEditActionsP", "next"]
+- !private ["So30UIResponderStandardEditActionsP", "superview"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So18UITraitEnvironmentP", "BaseViewController"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "next"]
+- !private ["So18UITraitEnvironmentP", "superview"]
 - ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "BaseViewController"]
+- !private ["So6UIViewC", "UIView"]
 - ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "next"]
+- !private ["So6UIViewC", "superview"]
+- ["So6UIViewC", "viewController"]
 - ["So6UIViewC", ""]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "BaseViewController"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "next"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "superview"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "BaseViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isKind"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "next"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "superview"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 depends-nominal:
 - "10Swift_Demo8BaseViewC"
+- !private "Sb"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "7SnapKit25ConstraintRelatableTargetP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s8HashableP"
 - "7SnapKit20LayoutConstraintItemP"
+- !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
@@ -86,7 +204,9 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So6UIViewC"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -127,4 +247,4 @@ depends-external:
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/NVActivityIndicatorView/NVActivityIndicatorView.framework/Modules/module.modulemap"
 - "/Users/lhp/Documents/GitHub/Swift_Demo/Build/Products/Debug-iphoneos/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-interface-hash: "a0e4036b6ed497b549d15ee6e8b677fc"
+interface-hash: "a973b26e1ab8dba047b1213eaf8eb54e"
