@@ -270,6 +270,7 @@ depends-member:
 - !private ["s16RawRepresentableP", "foregroundColor"]
 - !private ["s16RawRepresentableP", "normal"]
 - !private ["s16RawRepresentableP", "selected"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "init"]
 - !private ["s8SequenceP", "init"]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "selected"]
@@ -571,6 +572,7 @@ depends-nominal:
 - !private "10Swift_Demo21ProfileViewControllerC"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
+- !private "So36SKStoreProductViewControllerDelegateP"
 - !private "s8SequenceP"
 - !private "s10SetAlgebraP"
 - !private "SS"

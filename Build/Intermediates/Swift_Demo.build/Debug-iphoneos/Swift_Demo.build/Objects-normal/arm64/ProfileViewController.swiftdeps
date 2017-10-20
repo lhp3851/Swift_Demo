@@ -228,6 +228,18 @@ depends-member:
 - !private ["10Swift_Demo13ProfileViewesC", "init"]
 - !private ["10Swift_Demo13ProfileViewesC", "snp"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "CGRect"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "ProfileViewes"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "UIEdgeInsetsMake"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "didReceiveMemoryWarning"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "init"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "initData"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "initPannel"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "profileView"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "setConstraints"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "view"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "viewDidLoad"]
+- ["So36SKStoreProductViewControllerDelegateP", ""]
 - !private ["s8SequenceP", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
@@ -460,6 +472,7 @@ depends-nominal:
 - "10Swift_Demo21ProfileViewControllerC"
 - !private "10Swift_Demo13ProfileViewesC"
 - !private "s26RangeReplaceableCollectionP"
+- "So36SKStoreProductViewControllerDelegateP"
 - !private "s8SequenceP"
 - !private "SS"
 - !private "s14StringProtocolP"

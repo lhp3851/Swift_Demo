@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "d8a2ee7d8f821723bb0c74f136304a1e"
-build_time: [1508234509, 248999000]
+build_time: [1508467020, 170412000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/LTMorphingLabel/LTMorphingLabel/LTCharacterDiffResult.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/LTMorphingLabel/LTMorphingLabel/LTCharacterLimbo.swift": [1508234327, 0]

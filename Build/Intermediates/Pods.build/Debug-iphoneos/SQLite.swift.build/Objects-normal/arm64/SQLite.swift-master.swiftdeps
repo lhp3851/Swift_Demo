@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "fd1de8d837a887512b10c7966e7c9eff"
-build_time: [1508234520, 426547000]
+build_time: [1508467032, 323016000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/SQLite.swift/Sources/SQLite/Typed/AggregateFunctions.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/SQLite.swift/Sources/SQLite/Core/Blob.swift": [1508234327, 0]

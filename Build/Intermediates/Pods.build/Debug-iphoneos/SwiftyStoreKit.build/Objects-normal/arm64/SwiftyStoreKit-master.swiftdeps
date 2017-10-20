@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "d0606af2f0768725742c840811464199"
-build_time: [1508237448, 78584000]
+build_time: [1508467043, 28973000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/SwiftyStoreKit/SwiftyStoreKit/AppleReceiptValidator.swift": [1508237434, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/SwiftyStoreKit/SwiftyStoreKit/CompleteTransactionsController.swift": [1508237434, 0]

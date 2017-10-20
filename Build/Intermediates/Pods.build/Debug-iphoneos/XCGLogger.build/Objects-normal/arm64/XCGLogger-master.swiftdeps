@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "02128384e37afb19a228cd2648ac8b86"
-build_time: [1508234536, 101747000]
+build_time: [1508467045, 391313000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/XCGLogger/Sources/XCGLogger/LogFormatters/ANSIColorLogFormatter.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/XCGLogger/Sources/XCGLogger/Destinations/AppleSystemLogDestination.swift": [1508234327, 0]

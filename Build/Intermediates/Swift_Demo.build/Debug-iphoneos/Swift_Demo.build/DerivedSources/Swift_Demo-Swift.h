@@ -289,6 +289,11 @@ SWIFT_CLASS("_TtC10Swift_Demo8BaseView")
 
 
 
+@interface BaseViewController (SWIFT_EXTENSION(Swift_Demo)) <SKStoreProductViewControllerDelegate>
+- (void)productViewControllerDidFinish:(SKStoreProductViewController * _Nonnull)viewController;
+@end
+
+
 SWIFT_CLASS("_TtC10Swift_Demo21ContactsTableViewCell")
 @interface ContactsTableViewCell : UITableViewCell
 - (void)awakeFromNib;

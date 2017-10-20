@@ -84,7 +84,7 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
         switch model.sbuTitle {
         case "设置":
             VC = StorePageViewController() as BaseViewController
-        default: break
+        default: 
             VC = StorePageViewController() as BaseViewController
         }
         BaseViewController.jumpViewController(sourceViewConrroller: self.viewController()!, destinationViewController: VC, animated: true)

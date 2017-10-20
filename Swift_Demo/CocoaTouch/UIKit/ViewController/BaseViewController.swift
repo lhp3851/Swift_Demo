@@ -8,7 +8,7 @@
 
 import UIKit
 import Reachability
-
+import StoreKit
 
 class BaseViewController: UIViewController {
     typealias NetWorkChangedClosure = () -> Void
@@ -169,3 +169,35 @@ class BaseViewController: UIViewController {
     }
 
 }
+
+extension BaseViewController:SKStoreProductViewControllerDelegate {
+    
+    typealias completeBlock = () -> ()
+    
+    func openAppStoreWith(appID:String,block:@escaping completeBlock) -> Void {
+        let storeVC = SKStoreProductViewController()
+        storeVC.delegate = self
+        let appDic :Dictionary = [SKStoreProductParameterITunesItemIdentifier:appID]
+        storeVC.loadProduct(withParameters: appDic) { (complete, error) in
+            if error == nil {
+                self.present(storeVC, animated: true, completion: {
+                    block()
+                })
+            }
+            else{
+                print("wrong bundleID")
+            }
+        }
+    }
+    
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: {
+            
+        })
+    }
+    
+}
+
+
+
+

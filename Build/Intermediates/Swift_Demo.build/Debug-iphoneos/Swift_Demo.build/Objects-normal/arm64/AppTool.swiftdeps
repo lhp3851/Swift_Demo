@@ -169,6 +169,7 @@ depends-member:
 - !private ["So36SKStoreProductViewControllerDelegateP", "SKStoreProductParameterITunesItemIdentifier"]
 - !private ["So36SKStoreProductViewControllerDelegateP", "SKStoreProductViewController"]
 - !private ["So36SKStoreProductViewControllerDelegateP", "delegate"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "present"]
 - !private ["So36SKStoreProductViewControllerDelegateP", "print"]
 - ["So36SKStoreProductViewControllerDelegateP", "productViewControllerDidFinish"]
 - !private ["So36SKStoreProductViewControllerDelegateP", "tempVC"]

@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "6e3d8b1013f05040716c889799fac27b"
-build_time: [1508234438, 442928000]
+build_time: [1508466946, 442283000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Charts/Source/Charts/Jobs/AnimatedMoveViewJob.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift": [1508234327, 0]

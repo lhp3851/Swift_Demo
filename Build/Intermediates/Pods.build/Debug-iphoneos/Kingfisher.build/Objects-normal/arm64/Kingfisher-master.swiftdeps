@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "0b9409ca85f5174d8e1cd89f60e3ed05"
-build_time: [1508237440, 716606000]
+build_time: [1508467014, 826706000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Kingfisher/Sources/AnimatedImageView.swift": [1508237407, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Kingfisher/Sources/Box.swift": [1508237407, 0]

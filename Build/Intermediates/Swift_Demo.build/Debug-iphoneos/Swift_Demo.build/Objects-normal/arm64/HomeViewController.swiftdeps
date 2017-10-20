@@ -344,6 +344,22 @@ depends-member:
 - !private ["10Swift_Demo15ProgressHUDToolC", "hieHUD"]
 - !private ["10Swift_Demo15ProgressHUDToolC", "showHUD"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "BarButtonItem"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "BaseViewController"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "ContactsViewController"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "DispatchQueue"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "ProgressHUDTool"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "activityView"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "didReceiveMemoryWarning"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "getContacts"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "init"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "initData"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "initPannel"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "jumpViewController"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "navigationItem"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "view"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "viewDidLoad"]
+- ["So36SKStoreProductViewControllerDelegateP", ""]
 - !private ["s8SequenceP", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
@@ -666,6 +682,7 @@ depends-nominal:
 - !private "So9OS_objectC"
 - !private "10Swift_Demo15ProgressHUDToolC"
 - !private "s26RangeReplaceableCollectionP"
+- "So36SKStoreProductViewControllerDelegateP"
 - !private "s8SequenceP"
 - !private "SS"
 - !private "s14StringProtocolP"

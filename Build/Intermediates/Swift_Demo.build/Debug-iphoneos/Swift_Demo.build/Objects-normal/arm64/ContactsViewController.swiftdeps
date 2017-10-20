@@ -356,6 +356,22 @@ depends-member:
 - !private ["So9OS_objectC", "main"]
 - ["s22RandomAccessCollectionP", "init"]
 - ["s26RangeReplaceableCollectionP", "init"]
+- ["So36SKStoreProductViewControllerDelegateP", "Array"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "CGRect"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "ContactsTool"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "ContactsView"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "DispatchQueue"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "UIEdgeInsetsMake"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "contactsView"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "didReceiveMemoryWarning"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "init"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "initData"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "initPannel"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "navigationItem"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "setConstraints"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "view"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "viewDidLoad"]
+- ["So36SKStoreProductViewControllerDelegateP", ""]
 - ["s8SequenceP", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
@@ -699,6 +715,7 @@ depends-nominal:
 - !private "So9OS_objectC"
 - "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
+- "So36SKStoreProductViewControllerDelegateP"
 - "s8SequenceP"
 - !private "SS"
 - !private "s14StringProtocolP"

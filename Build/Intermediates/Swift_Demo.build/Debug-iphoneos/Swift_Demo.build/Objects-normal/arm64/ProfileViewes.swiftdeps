@@ -37,7 +37,6 @@ depends-top-level:
 - !private "kFIT_INSTANCE"
 - !private "~="
 depends-member:
-- !private ["10Swift_Demo15AppToolDelegateP", "init"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
 - !private ["s10ArraySliceV", "count"]
@@ -861,6 +860,8 @@ depends-member:
 - !private ["s16RawRepresentableP", "grouped"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["10Foundation20ReferenceConvertibleP", "section"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "init"]
+- !private ["So36SKStoreProductViewControllerDelegateP", "jumpViewController"]
 - !private ["s8SequenceP", "count"]
 - !private ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "row"]
@@ -1809,7 +1810,6 @@ depends-member:
 - !private ["s11_StrideableP", "leastNonzeroMagnitude"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "10Swift_Demo15AppToolDelegateP"
 - !private "Sa"
 - !private "s10ArraySliceV"
 - !private "10Swift_Demo13BaseTableviewC"
@@ -1878,6 +1878,7 @@ depends-nominal:
 - !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
+- !private "So36SKStoreProductViewControllerDelegateP"
 - !private "s8SequenceP"
 - !private "s13SignedNumericP"
 - !private "s12StaticStringV"

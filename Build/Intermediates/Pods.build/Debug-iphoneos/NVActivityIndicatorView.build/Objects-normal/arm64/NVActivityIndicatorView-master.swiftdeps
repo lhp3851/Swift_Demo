@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "1454121303d2587f2dbdec319166d957"
-build_time: [1508234513, 433236000]
+build_time: [1508467024, 493524000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/NVActivityIndicatorView/NVActivityIndicatorView/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift": [1508234327, 0]

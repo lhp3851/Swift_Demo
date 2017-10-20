@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "50795a0cc6cae1801a373bba7dc4cddb"
-build_time: [1508234427, 745312000]
+build_time: [1508466938, 392576000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Instructions/Sources/Instructions/Managers/Internal/OverlayStyleManager/BlurringOverlayStyleManager.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Instructions/Sources/Instructions/Core/Public/CoachMark.swift": [1508234327, 0]

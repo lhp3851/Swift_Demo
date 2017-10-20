@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "088850db97de5d13ff0b2af4718304ad"
-build_time: [1508234411, 875347000]
+build_time: [1508466931, 827572000]
 inputs:
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Alamofire/Source/AFError.swift": [1508234327, 0]
   "/Users/lhp/Documents/GitHub/Swift_Demo/Pods/Alamofire/Source/Alamofire.swift": [1508234327, 0]

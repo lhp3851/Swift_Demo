@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StorePageViewController: BaseViewController,AppToolDelegate {
+class StorePageViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +25,13 @@ class StorePageViewController: BaseViewController,AppToolDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let appTool = AppTool()
-        appTool.delegate = self
-        appTool.openAppStoreWith(appID: "1252223318", viewController: self) {
+        
+        self.openAppStoreWith(appID: "1252223318") {
             print("open ok!")
         }
-        
+
     }
     
-    func completeHandler(viewController: UIViewController) {
-        viewController.dismiss(animated: true) {
-            
-        }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
