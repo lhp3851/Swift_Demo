@@ -24,7 +24,7 @@ class HomeViewController: BaseViewController {
     override func initPannel() {
         super.initPannel()
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
-        
+        self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
         self.view.addSubview(self.activityView)
         self.activityView.startAnimating()
         
@@ -48,6 +48,11 @@ class HomeViewController: BaseViewController {
     @objc func getContacts() {
         let contactsVC = ContactsViewController()
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: contactsVC, animated: true)
+    }
+    
+    @objc func scanQRcode(){
+        let QRcodeVC = QRCodeViewController()
+        BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: QRcodeVC, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
