@@ -27,6 +27,10 @@ class HomeViewController: BaseViewController,KKPageControlDelegate {
         
 //        self.view.addSubview(self.activityView)
 //        self.activityView.startAnimating()
+
+        self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
+        self.view.addSubview(self.activityView)
+        self.activityView.startAnimating()
         
 //        ProgressHUDTool.showHUD(toView: self.view)
     
@@ -67,6 +71,11 @@ class HomeViewController: BaseViewController,KKPageControlDelegate {
         print("control:",control)
     }
     
+    
+    @objc func scanQRcode(){
+        let QRcodeVC = QRCodeViewController()
+        BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: QRcodeVC, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
