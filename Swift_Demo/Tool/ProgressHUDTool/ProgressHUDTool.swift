@@ -36,6 +36,9 @@ class ProgressHUDTool: BaseView {
         hud.margin = kMARGIN_HORIZONE
         hud.offset = CGPoint.init(x: 0, y: 0)
         hud.isSquare = false
+        DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
+            hud.hide(animated: true)
+        }
     }
     
     class func showAutomaticHUD(toView:UIView) -> Void {
