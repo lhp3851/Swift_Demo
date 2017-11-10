@@ -21,6 +21,11 @@ enum KKPageControlPosition {
     case Right
 }
 
+let normalWidth : CGFloat = 8.0
+let selectedWidth : CGFloat = 18.0
+let selectedHeight : CGFloat = 3.0
+let gap : CGFloat = 5.0
+
 protocol KKPageControlDelegate {
     
     func clicked(control:KKPageControl) -> Void
@@ -37,8 +42,9 @@ class KKPageControl: UIPageControl {
     var normalColor = kCOLOR_BUTTON_NORMOL
     var count = 0
     var current = 0
-    var position = KKPageControlPosition.Center
+    var position = KKPageControlPosition.Left
     
+    private var margin = kMARGIN_HORIZONE
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -56,6 +62,16 @@ class KKPageControl: UIPageControl {
         self.count = count
         self.selectedType = selectedType
         self.position = postionType
+        print(self.frame)
+        if self.position == KKPageControlPosition.Left {
+            self.margin = kMARGIN_HORIZONE
+        }
+        else if self.position == KKPageControlPosition.Center {
+            self.margin = (self.frame.width - CGFloat.init((count - 1))*(normalWidth + gap) - selectedWidth)/2 - kMARGIN_HORIZONE
+        }
+        else{
+            self.margin = self.frame.width - CGFloat.init((count - 1))*(normalWidth + gap) - selectedWidth - kMARGIN_HORIZONE*2
+        }
     }
     
     func setUpPannel() -> Void {
@@ -84,7 +100,7 @@ class KKPageControl: UIPageControl {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
        let point = touches.first?.location(in: self)
         print(point!)
-        if (point?.x)! < self.center.x {
+        if (point?.x)! < self.margin + CGFloat(self.current) * selectedWidth {
             if self.current > 0 {
                 self.current -= 1
             }
@@ -107,13 +123,13 @@ class KKPageControl: UIPageControl {
         print("type:",self.normalType,self.selectedType)
         switch self.selectedType {
         case .Dot:
-            let subFrame =  CGRect.init(x: (self.frame.width - 8.0)/2, y: (self.frame.height - 8.0)/2, width: 8.0, height: 8.0)
+            let subFrame =  CGRect.init(x: (self.frame.width - normalWidth)/2, y: (self.frame.height - normalWidth)/2, width: normalWidth, height: normalWidth)
             let path = UIBezierPath.init(ovalIn:subFrame)
             kCOLOR_BUTTON_NORMOL.setFill()
             path.fill()
             
         case .Line:
-            let subFrame =  CGRect.init(x: (self.frame.width - 18.0)/2, y: (self.frame.height - 3.0)/2, width: 18.0, height: 3.0)
+            let subFrame =  CGRect.init(x: (self.frame.width - selectedWidth)/2, y: (self.frame.height - selectedHeight)/2, width: selectedWidth, height: selectedHeight)
             let path = UIBezierPath.init(rect: subFrame)
             kCOLOR_BUTTON_NORMOL.setFill()
             path.fill()
@@ -121,18 +137,15 @@ class KKPageControl: UIPageControl {
         case .LineWithCap:
             for i in 0..<self.count {
                 if i == self.current {
-                    let subFrame =  CGRect.init(x: kMARGIN_HORIZONE + CGFloat(i) * 18.0 , y: (self.frame.height - 3.0)/2, width: 18.0, height: 3.0)
+                    let subFrame =  CGRect.init(x: self.margin + CGFloat(i) * selectedWidth , y: (self.frame.height - selectedHeight)/2, width: selectedWidth, height: selectedHeight)
                     let path = UIBezierPath.init(roundedRect: subFrame, cornerRadius: 4)
                     self.selectedColor.setFill()
                     path.fill()
                 }
                 else{
-                    var subFrame =  CGRect.init(x: kMARGIN_HORIZONE + CGFloat(i) * 18.0, y: (self.frame.height - 8.0)/2, width: 8.0, height: 8.0)
-                    if i-self.current == 1 {
-                        subFrame.origin.x += 5
-                    }
-                    else if i-self.current == -1 {
-                        subFrame.origin.x -= 5
+                    var subFrame =  CGRect.init(x: self.margin + CGFloat(i) * selectedWidth, y: (self.frame.height - normalWidth)/2, width: normalWidth, height: normalWidth)
+                    if i > self.current  {
+                        subFrame.origin.x += (selectedWidth - normalWidth)
                     }
                     let path = UIBezierPath.init(ovalIn:subFrame)
                     self.normalColor.setFill()
@@ -141,7 +154,7 @@ class KKPageControl: UIPageControl {
             }
             
         default:
-            let subFrame =  CGRect.init(x: (self.frame.width - 8.0)/2, y: (self.frame.height - 8.0)/2, width: 8.0, height: 8.0)
+            let subFrame =  CGRect.init(x: (self.frame.width - normalWidth)/2, y: (self.frame.height - normalWidth)/2, width: normalWidth, height: normalWidth)
             let path = UIBezierPath.init(ovalIn:subFrame)
             kCOLOR_BUTTON_NORMOL.setFill()
             path.fill()

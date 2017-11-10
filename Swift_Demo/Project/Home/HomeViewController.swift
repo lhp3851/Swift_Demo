@@ -35,7 +35,7 @@ class HomeViewController: BaseViewController,KKPageControlDelegate {
 //        ProgressHUDTool.showHUD(toView: self.view)
     
         let frame = CGRect.init(x: kMARGIN_HORIZONE, y: 104.0, width: kWINDOW_WIDTH - kMARGIN_HORIZONE*2, height: 80.0)
-        let pageControl = KKPageControl.init(frame: frame , count: 5, selectedType: KKPageControlType.LineWithCap, normalType: KKPageControlType.Dot,postionType:KKPageControlPosition.Center)
+        let pageControl = KKPageControl.init(frame: frame , count: 5, selectedType: KKPageControlType.LineWithCap, normalType: KKPageControlType.Dot,postionType:KKPageControlPosition.Left)
         pageControl.delegate = self
         pageControl.normalColor = kCOLOR_BUTTON_NORMOL
         pageControl.selectedColor = kCOLOR_SAFELY
