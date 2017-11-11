@@ -25,14 +25,7 @@ class HomeViewController: BaseViewController {
         super.initPannel()
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
         self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
-        self.view.addSubview(self.activityView)
-        self.activityView.startAnimating()
         
-        ProgressHUDTool.showHUD(toView: self.view)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
-            ProgressHUDTool.hieHUD(view: self.view)
-        }
     }
     
     

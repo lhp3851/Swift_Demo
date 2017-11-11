@@ -85,6 +85,10 @@
 		7A9784071F7558B1003F17D1 /* Swift_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784061F7558B1003F17D1 /* Swift_DemoTests.swift */; };
 		7A9784121F7558B1003F17D1 /* Swift_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */; };
 		7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784211F7559E3003F17D1 /* String+Extension.swift */; };
+		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
+		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
+		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
+		D720B4C81FA6D18C00299462 /* refresh_cat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */; };
 		D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */; };
 		D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */; };
 		E3379564E95FC3840FFD16FB /* Pods_Swift_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */; };
@@ -205,6 +209,10 @@
 		8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D720B4C11FA6D18C00299462 /* pulling@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@2x.gif"; sourceTree = "<group>"; };
+		D720B4C21FA6D18C00299462 /* pulling@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@3x.gif"; sourceTree = "<group>"; };
+		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
+		D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@3x.png"; sourceTree = "<group>"; };
 		D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDTool.swift; sourceTree = "<group>"; };
 		E9B250BE21A70A9982AB8688 /* Pods-Swift_DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoTests/Pods-Swift_DemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 		7A51C5871F9122F9002449C6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D720B4C01FA6D18C00299462 /* Refresh */,
 				7A51C5B21F912915002449C6 /* NavigationBar */,
 				7A51C5881F912303002449C6 /* TabBar */,
 			);
@@ -1201,6 +1210,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D720B4C01FA6D18C00299462 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				D720B4C11FA6D18C00299462 /* pulling@2x.gif */,
+				D720B4C21FA6D18C00299462 /* pulling@3x.gif */,
+				D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */,
+				D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 		D7E172BD1F96182300A3E247 /* ProgressHUDTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1347,6 +1367,7 @@
 				7A9783FC1F7558B1003F17D1 /* LaunchScreen.storyboard in Resources */,
 				7A4C11D51F930B5000F02866 /* seach_icon@2x.png in Resources */,
 				7A51C59D1F91232D002449C6 /* praise_icon_normal@2x.png in Resources */,
+				D720B4C81FA6D18C00299462 /* refresh_cat@3x.png in Resources */,
 				7A51C5A81F91232D002449C6 /* home-page_icon_normal@3x.png in Resources */,
 				7A4C11DA1F930B5000F02866 /* lucky_cat_home_page@3x.png in Resources */,
 				7A51C5A11F91232D002449C6 /* home-page_icon_select@2x.png in Resources */,
@@ -1358,11 +1379,13 @@
 				7A4C11DB1F930B5000F02866 /* call_icon@3x.png in Resources */,
 				7A4C11AB1F92432700F02866 /* Localizable.strings in Resources */,
 				7A51C59F1F91232D002449C6 /* praise_icon_normal@3x.png in Resources */,
+				D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */,
 				7A4C11E11F930B5000F02866 /* back_darkgray_icon@2x.png in Resources */,
 				7A51C59E1F91232D002449C6 /* activity_icon_normal@3x.png in Resources */,
 				7A51C5A61F91232D002449C6 /* mine_icon_normal@3x.png in Resources */,
 				7A4C11D91F930B5000F02866 /* seach_icon@3x.png in Resources */,
 				7A51C5A01F91232D002449C6 /* mine_icon_select@2x.png in Resources */,
+				D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */,
 				7A4C11E21F930B5000F02866 /* sweep_icon@2x.png in Resources */,
 				7A4C11DE1F930B5000F02866 /* call_icon@2x.png in Resources */,
 				7A51C5A71F91232D002449C6 /* mine_icon_select@3x.png in Resources */,
@@ -1374,6 +1397,7 @@
 				7A51C5991F91232D002449C6 /* activity_icon_select@2x.png in Resources */,
 				7A4C11E31F930B5000F02866 /* sweep_icon@3x.png in Resources */,
 				7A51C5A21F91232D002449C6 /* mine_icon_normal@2x.png in Resources */,
+				D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */,
 				7A4C11DF1F930B5000F02866 /* news_icon@2x.png in Resources */,
 				7A51C5B61F912915002449C6 /* navigation_bar@3x.png in Resources */,
 				7A4C11E01F930B5000F02866 /* news_icon@3x.png in Resources */,
