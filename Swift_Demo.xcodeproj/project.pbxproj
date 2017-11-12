@@ -86,6 +86,12 @@
 		7A9784071F7558B1003F17D1 /* Swift_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784061F7558B1003F17D1 /* Swift_DemoTests.swift */; };
 		7A9784121F7558B1003F17D1 /* Swift_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */; };
 		7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784211F7559E3003F17D1 /* String+Extension.swift */; };
+		7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */; };
+		7AF669A01FB7ECD300535D9F /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699D1FB7ECD300535D9F /* image1.png */; };
+		7AF669A11FB7ECD300535D9F /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699E1FB7ECD300535D9F /* image2.png */; };
+		7AF669A21FB7ECD300535D9F /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699F1FB7ECD300535D9F /* image3.png */; };
+		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
+		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
 		D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */; };
 		D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */; };
 		E3379564E95FC3840FFD16FB /* Pods_Swift_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */; };
@@ -204,6 +210,12 @@
 		7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_DemoUITests.swift; sourceTree = "<group>"; };
 		7A9784131F7558B1003F17D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A9784211F7559E3003F17D1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKInfiniteScrollView.swift; sourceTree = "<group>"; };
+		7AF6699D1FB7ECD300535D9F /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		7AF6699E1FB7ECD300535D9F /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		7AF6699F1FB7ECD300535D9F /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		7AF669A51FB820B100535D9F /* KKScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKScrollView.swift; sourceTree = "<group>"; };
+		7AF669A71FB828ED00535D9F /* KKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKImageView.swift; sourceTree = "<group>"; };
 		8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -302,6 +314,7 @@
 		7A51C5871F9122F9002449C6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7AF6699C1FB7ECD300535D9F /* MyHope */,
 				7A51C5B21F912915002449C6 /* NavigationBar */,
 				7A51C5881F912303002449C6 /* TabBar */,
 			);
@@ -490,6 +503,9 @@
 				7A7818B21F8FC94B0043254E /* BaseView.swift */,
 				7A51C5BA1F912B14002449C6 /* Commen */,
 				7A3DB03F1FB33CEE00053419 /* KKPageControl.swift */,
+				7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */,
+				7AF669A51FB820B100535D9F /* KKScrollView.swift */,
+				7AF669A71FB828ED00535D9F /* KKImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1191,6 +1207,16 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		7AF6699C1FB7ECD300535D9F /* MyHope */ = {
+			isa = PBXGroup;
+			children = (
+				7AF6699D1FB7ECD300535D9F /* image1.png */,
+				7AF6699E1FB7ECD300535D9F /* image2.png */,
+				7AF6699F1FB7ECD300535D9F /* image3.png */,
+			);
+			path = MyHope;
+			sourceTree = "<group>";
+		};
 		B089644429E6E6B35281124B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1350,6 +1376,7 @@
 				7A51C59B1F91232D002449C6 /* activity_icon_normal@2x.png in Resources */,
 				7A9783FC1F7558B1003F17D1 /* LaunchScreen.storyboard in Resources */,
 				7A4C11D51F930B5000F02866 /* seach_icon@2x.png in Resources */,
+				7AF669A01FB7ECD300535D9F /* image1.png in Resources */,
 				7A51C59D1F91232D002449C6 /* praise_icon_normal@2x.png in Resources */,
 				7A51C5A81F91232D002449C6 /* home-page_icon_normal@3x.png in Resources */,
 				7A4C11DA1F930B5000F02866 /* lucky_cat_home_page@3x.png in Resources */,
@@ -1360,6 +1387,8 @@
 				7A7818B91F8FD0B70043254E /* Profile.png in Resources */,
 				7A51C5A51F91232D002449C6 /* home-page_icon_select@3x.png in Resources */,
 				7A4C11DB1F930B5000F02866 /* call_icon@3x.png in Resources */,
+				7AF669A21FB7ECD300535D9F /* image3.png in Resources */,
+				7AF669A11FB7ECD300535D9F /* image2.png in Resources */,
 				7A4C11AB1F92432700F02866 /* Localizable.strings in Resources */,
 				7A51C59F1F91232D002449C6 /* praise_icon_normal@3x.png in Resources */,
 				7A4C11E11F930B5000F02866 /* back_darkgray_icon@2x.png in Resources */,
@@ -1484,6 +1513,8 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -1502,6 +1533,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -1588,6 +1621,7 @@
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
 				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,
+				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
@@ -1601,9 +1635,11 @@
 				7A7818AE1F8FC8C70043254E /* BaseTabBarController.swift in Sources */,
 				7A7818A81F8FC7BB0043254E /* GenealogyViewController.swift in Sources */,
 				7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */,
+				7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */,
 				7A4C11BC1F9308B200F02866 /* UIImage+Extention.swift in Sources */,
 				7A9783F21F7558B1003F17D1 /* AppDelegate.swift in Sources */,
 				7A37032B1F950FCC00F519F3 /* ProfileViewes.swift in Sources */,
+				7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */,
 				D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */,
 				7A7818A61F8FC7A40043254E /* ProfileViewController.swift in Sources */,
 				7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */,

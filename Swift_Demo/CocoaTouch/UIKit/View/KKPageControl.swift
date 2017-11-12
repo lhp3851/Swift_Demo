@@ -83,7 +83,7 @@ class KKPageControl: UIPageControl {
         
     }
     
-    @objc func click(object:KKPageControl) -> Void {
+    @objc private func click(object:KKPageControl) -> Void {
         print(object.current)
         if object.current < self.count - 1 {
             object.current += 1
@@ -96,6 +96,16 @@ class KKPageControl: UIPageControl {
         delegate.clicked(control: object)
     }
     
+    //设计给外部调用的
+    func clickAt(object:KKPageControl) -> Void {
+        if object.current < self.count - 1 {
+            object.current += 1
+        }
+        else{
+            object.current = 0
+        }
+        self.setNeedsDisplay()
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
        let point = touches.first?.location(in: self)
@@ -162,5 +172,9 @@ class KKPageControl: UIPageControl {
         
     }
  
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        print("true")
+        return true
+    }
 
 }
