@@ -28,6 +28,7 @@ target 'Swift_Demo' do
     pod 'SwiftyStoreKit' #轻量级的APP内购框架
     #pod 'BluetoothKit', '~> 0.2.0'#
     pod 'Appz' # app Comunication
+    pod 'SDCycleScrollView','~> 1.73'
 
   target 'Swift_DemoTests' do
     inherit! :search_paths

@@ -8,10 +8,26 @@
 
 import UIKit
 import NVActivityIndicatorView
+import SDCycleScrollView
 
-class HomeViewController: BaseViewController,KKPageControlDelegate {
+class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     lazy var activityView:NVActivityIndicatorView = {
         let view = ProgressHUDTool.activityView
+        return view
+    }()
+    
+    lazy var scrollView : SDCycleScrollView = {
+        let infinitFrame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: kFIT_INSTANCE.fitHeight(height: 256))
+        let view = SDCycleScrollView.init(frame: infinitFrame, imageNamesGroup: ["image1","image2","image3"])
+        view?.autoScrollTimeInterval = 2.0
+        view?.pageControlStyle = SDCycleScrollViewPageContolStyle.init(1)
+        view?.delegate = self
+        return view!
+    }()
+    
+    lazy var infinitView : KKScrollView = {
+        let infinitFrame = CGRect.init(x: 0, y: self.scrollView.frame.maxY + 20.0, width: kWINDOW_WIDTH, height: kFIT_INSTANCE.fitHeight(height: 256))
+        let view = KKScrollView.init(frame: infinitFrame, needControl: true)
         return view
     }()
     
@@ -24,21 +40,14 @@ class HomeViewController: BaseViewController,KKPageControlDelegate {
         super.initPannel()
         self.view.backgroundColor = kCOLOR_BACKGROUND
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
+        self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
         
 //        self.view.addSubview(self.activityView)
 //        self.activityView.startAnimating()
-
-        self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
-        
-
 //        ProgressHUDTool.showHUD(toView: self.view)
-    
-        let frame = CGRect.init(x: kMARGIN_HORIZONE, y: 104.0, width: kWINDOW_WIDTH - kMARGIN_HORIZONE*2, height: 80.0)
-        let pageControl = KKPageControl.init(frame: frame , count: 5, selectedType: KKPageControlType.LineWithCap, normalType: KKPageControlType.Dot,postionType:KKPageControlPosition.Left)
-        pageControl.delegate = self
-        pageControl.normalColor = kCOLOR_BUTTON_NORMOL
-        pageControl.selectedColor = kCOLOR_SAFELY
-        self.view.addSubview(pageControl)
+        
+        self.view.addSubview(scrollView)
+        self.view.addSubview(infinitView)
     }
     
     
@@ -65,10 +74,7 @@ class HomeViewController: BaseViewController,KKPageControlDelegate {
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: contactsVC, animated: true)
     }
     
-    //MARK:KKPageControlDelegate
-    func clicked(control: KKPageControl) {
-        print("control:",control)
-    }
+    
     
     
     @objc func scanQRcode(){
@@ -81,5 +87,8 @@ class HomeViewController: BaseViewController,KKPageControlDelegate {
         
     }
     
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
+        print(index)
+    }
 
 }
