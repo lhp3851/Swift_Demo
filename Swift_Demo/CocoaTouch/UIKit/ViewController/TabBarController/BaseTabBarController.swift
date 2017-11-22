@@ -34,7 +34,12 @@ class BaseTabBarController: UITabBarController {
         let pofileNav = BaseNavigationViewController.init(rootViewController: pofileVC)
         pofileNav.tabBarItem.itemWithImage(title: "我的", image: "mine_icon_normal", selectedImage: "mine_icon_select")
         
-        self.viewControllers = [homeNav,genealogyNav,traceNav,pofileNav]
+        let testVC = KKDemoViewController()
+        let testNav = BaseNavigationViewController.init(rootViewController: testVC)
+        testNav.tabBarItem.itemWithImage(title: "样例", image: "mine_icon_normal", selectedImage: "mine_icon_select")
+        
+        
+        self.viewControllers = [homeNav,genealogyNav,traceNav,pofileNav,testNav]
     }
     
     

@@ -86,17 +86,21 @@
 		7A9784071F7558B1003F17D1 /* Swift_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784061F7558B1003F17D1 /* Swift_DemoTests.swift */; };
 		7A9784121F7558B1003F17D1 /* Swift_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */; };
 		7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784211F7559E3003F17D1 /* String+Extension.swift */; };
-		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
-		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
-		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
-		D720B4C81FA6D18C00299462 /* refresh_cat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */; };
 		7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */; };
 		7AF669A01FB7ECD300535D9F /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699D1FB7ECD300535D9F /* image1.png */; };
 		7AF669A11FB7ECD300535D9F /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699E1FB7ECD300535D9F /* image2.png */; };
 		7AF669A21FB7ECD300535D9F /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699F1FB7ECD300535D9F /* image3.png */; };
 		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
+		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
+		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
+		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
+		D720B4C81FA6D18C00299462 /* refresh_cat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */; };
 		D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */; };
+		D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */; };
+		D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */; };
+		D7AC7D951FC4077B00F601A9 /* KKBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D941FC4077B00F601A9 /* KKBaseModel.swift */; };
+		D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D971FC40C2400F601A9 /* KKButtonViewController.swift */; };
 		D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */; };
 		E3379564E95FC3840FFD16FB /* Pods_Swift_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */; };
 		FFDDEA213CA2B999E2A13755 /* Pods_Swift_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */; };
@@ -228,6 +232,10 @@
 		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
 		D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@3x.png"; sourceTree = "<group>"; };
 		D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKButton.swift; sourceTree = "<group>"; };
+		D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoViewController.swift; sourceTree = "<group>"; };
+		D7AC7D941FC4077B00F601A9 /* KKBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKBaseModel.swift; sourceTree = "<group>"; };
+		D7AC7D971FC40C2400F601A9 /* KKButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKButtonViewController.swift; sourceTree = "<group>"; };
 		D7E172BE1F9618C700A3E247 /* ProgressHUDTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDTool.swift; sourceTree = "<group>"; };
 		E9B250BE21A70A9982AB8688 /* Pods-Swift_DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoTests/Pods-Swift_DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +426,7 @@
 		7A51C5BA1F912B14002449C6 /* Commen */ = {
 			isa = PBXGroup;
 			children = (
+				D7AC7D8A1FC3DCEE00F601A9 /* Button */,
 				7A08544A1F91330C00CAE1BC /* TabBar */,
 				7A51C5BB1F912B2D002449C6 /* Navigator */,
 			);
@@ -443,6 +452,7 @@
 		7A78189B1F8FC4BD0043254E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D7AC7D961FC40BF300F601A9 /* KKButtonViewController */,
 				7A7818AC1F8FC8630043254E /* NavigationController */,
 				7A7818AB1F8FC8560043254E /* TabBarController */,
 				7A78189D1F8FC50B0043254E /* BaseViewController.swift */,
@@ -556,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				7A9784201F755925003F17D1 /* String */,
+				D7AC7D941FC4077B00F601A9 /* KKBaseModel.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1198,6 +1209,7 @@
 		7A97841F1F755925003F17D1 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				D7AC7D8F1FC3E04D00F601A9 /* Demo */,
 				7A4C11BE1F93094300F02866 /* Account */,
 				7A7818B41F8FCFB90043254E /* Resource */,
 				7A7818A21F8FC7290043254E /* Genealogy */,
@@ -1248,6 +1260,30 @@
 				D720B4C41FA6D18C00299462 /* refresh_cat@3x.png */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		D7AC7D8A1FC3DCEE00F601A9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		D7AC7D8F1FC3E04D00F601A9 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		D7AC7D961FC40BF300F601A9 /* KKButtonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D971FC40C2400F601A9 /* KKButtonViewController.swift */,
+			);
+			path = KKButtonViewController;
 			sourceTree = "<group>";
 		};
 		D7E172BD1F96182300A3E247 /* ProgressHUDTool */ = {
@@ -1642,9 +1678,11 @@
 			files = (
 				7A4C11B51F93069300F02866 /* BaseRequest.swift in Sources */,
 				7A3DB0401FB33CEE00053419 /* KKPageControl.swift in Sources */,
+				D7AC7D951FC4077B00F601A9 /* KKBaseModel.swift in Sources */,
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
 				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,
+				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
@@ -1668,11 +1706,13 @@
 				7A7818A61F8FC7A40043254E /* ProfileViewController.swift in Sources */,
 				7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */,
 				7A4C11B71F93069300F02866 /* ReachAblityTool.swift in Sources */,
+				D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */,
 				7A7C80811F934187007532FA /* BaseTableview.swift in Sources */,
 				7A606F461F98F83D00B47DE8 /* StorePageViewController.swift in Sources */,
 				7A51C5B11F912775002449C6 /* DeviceInfoTool.swift in Sources */,
 				7A08544C1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift in Sources */,
 				7A4C11BD1F9308B200F02866 /* UIWindow+Extesion.swift in Sources */,
+				D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */,
 				7A7C80861F934353007532FA /* ContactsTableViewCell.swift in Sources */,
 				7A7818AA1F8FC7F50043254E /* TraceViewController.swift in Sources */,
 				7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */,

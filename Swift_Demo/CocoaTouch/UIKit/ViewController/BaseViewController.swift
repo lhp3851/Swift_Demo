@@ -198,6 +198,20 @@ extension BaseViewController:SKStoreProductViewControllerDelegate {
     
 }
 
-
+extension BaseViewController {
+    static func getClass(objectName:String) -> BaseViewController {
+        var viewController = BaseViewController()
+        switch objectName {
+        case "UIButton":
+            let VC = KKButtonViewController()
+            VC.vcTitle = objectName
+            viewController = VC
+            break
+        default:
+            print("default ViewController")
+        }
+        return viewController
+    }
+}
 
 
