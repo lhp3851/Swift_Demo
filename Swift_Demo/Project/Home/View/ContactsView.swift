@@ -21,9 +21,11 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
         let view = BaseTableview.init(frame: CGRect.zero, style: .grouped)
         view.delegate = self
         view.dataSource = self
+        view.backgroundColor = kCOLOR_BACKGROUND
         view.sectionIndexColor = kCOLOR_BUTTON_NORMOL
         view.sectionIndexBackgroundColor = kCOLOR_CLEAR
         view.sectionIndexTrackingBackgroundColor = kCOLOR_BUTTON_HEIGHT
+        view.keyboardDismissMode = UIScrollViewKeyboardDismissMode.onDrag
         return view
     }()
     
@@ -72,6 +74,12 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
             return kFIT_INSTANCE.fitHeight(height: 30.0)
         }
         return CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let headView : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        headView.contentView.backgroundColor = kCOLOR_BACKGROUND
+        headView.textLabel?.textColor = kCOLOR_BUTTON_NORMOL
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

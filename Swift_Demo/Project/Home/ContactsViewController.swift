@@ -25,11 +25,24 @@ class ContactsViewController: BaseViewController,UISearchControllerDelegate,UISe
         let VC = UISearchController.init(searchResultsController: nil)
         VC.delegate = self
         VC.searchResultsUpdater = self
-        VC.searchBar.text = "Jerry"
         VC.searchBar.placeholder = "搜索"
-        VC.dimsBackgroundDuringPresentation = true
-        VC.obscuresBackgroundDuringPresentation = true
-        VC.hidesNavigationBarDuringPresentation = false
+        VC.dimsBackgroundDuringPresentation = false
+        VC.searchBar.tintColor = kCOLOR_BUTTON_NORMOL
+        VC.searchBar.setValue("完成", forKeyPath: "_cancelButtonText")
+//        VC.obscuresBackgroundDuringPresentation = false
+//        VC.hidesNavigationBarDuringPresentation = false
+        VC.searchBar.backgroundColor = kCOLOR_BACKGROUND
+        VC.searchBar.barTintColor = kCOLOR_BACKGROUND
+        VC.searchBar.subviews.first?.subviews.first?.removeFromSuperview()
+        let textFiled : UITextField = VC.searchBar.value(forKey: "_searchField") as! UITextField
+        textFiled.setValue("1", forKeyPath: "_placeholderLabel.textAlignment")
+        textFiled.textAlignment = NSTextAlignment.left
+        textFiled.setValue(kCOLOR_BUTTON_HEIGHT, forKeyPath: "_placeholderLabel.textColor")
+        textFiled.font = kFONT_16
+        VC.searchBar.scopeButtonTitles = ["true"]
+        VC.searchBar.showsScopeBar = true
+        VC.searchBar.showsSearchResultsButton = true
+        VC.searchBar.showsBookmarkButton = true
         return VC
     }()
     
@@ -47,7 +60,7 @@ class ContactsViewController: BaseViewController,UISearchControllerDelegate,UISe
         }
         self.view.addSubview(self.contactsView)
         self.setConstraints()
-//        self.definesPresentationContext = true
+        self.definesPresentationContext = true
     }
     
     override func initData() {
@@ -69,19 +82,21 @@ class ContactsViewController: BaseViewController,UISearchControllerDelegate,UISe
     
     // MARK: - UISearchResultsUpdating
     func updateSearchResults(for searchController: UISearchController) {
-        let searchText = searchController.searchBar.text
-        let serachOption : NSPredicate = NSPredicate.init(format: "SELF CONTAINS[c] %@", searchText!)
+        guard let searchText = searchController.searchBar.text else { return }
+        if searchText.isEmpty {
+            return
+        }
+        let searchOption : NSPredicate = NSPredicate.init(format: "SELF CONTAINS[cd] %@", searchText)
         if self.searchList.count > 0  {
             self.searchList.removeAll()
         }
-        
-//        self.searchList = self.dataList.filter({ (contacts) -> Bool in
-//            let loaclContacts : [CNContact] = contacts
-//            for contact in loaclContacts {
-//                if contacts.name
-//            }
-//            return false
-//        })
+
+        self.searchList = self.dataList.filter({ (contacts) -> Bool in
+            for contact:CNContact in contacts {
+                return searchOption.evaluate(with: contact.familyName + contact.givenName)
+            }
+            return false
+        })
         self.reloadDatas(contacts: self.searchList)
     }
     
