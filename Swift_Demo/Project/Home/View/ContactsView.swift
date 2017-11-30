@@ -12,13 +12,7 @@ import Contacts
 class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
    
     var delegate:UITableViewDelegate?
-    var messyDatas = [CNContact]()
-    var datas : [[CNContact]] {
-        get{
-            let temp = self.sortContacts(contacts: self.messyDatas)
-            return temp
-        }
-    }
+    var datas : [[CNContact]] = [[CNContact]]()
     
     var localizedCollation:UILocalizedIndexedCollation = UILocalizedIndexedCollation.current()
     var indexTitiles = Array<String>()
@@ -61,7 +55,7 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.indexTitiles.count
+        return min(self.indexTitiles.count, datas.count)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -116,28 +110,5 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    func sortContacts(contacts:[CNContact]) -> [[CNContact]]{
-        var tempContactsArray = [[CNContact]]()
-        
-        for _ in 0..<self.localizedCollation.sectionTitles.count {
-            let array:[CNContact] = Array()
-            tempContactsArray.append(array)
-        }
-        
-        for contact in contacts {
-            let section = self.localizedCollation.section(for: contact, collationStringSelector: #selector(getter: contact.familyName))
-            var tempArray : [CNContact] = tempContactsArray[section]
-            tempArray.append(contact)
-            tempContactsArray[section] = tempArray
-        }
-        
-        let tempContacts = tempContactsArray
-        for i in 0..<self.indexTitiles.count {
-            let sectionContacts = tempContacts[i]
-            let sortedContactsForSection = self.localizedCollation.sortedArray(from: sectionContacts, collationStringSelector:  #selector(getter: CNContact.familyName))
-            tempContactsArray[i] = sortedContactsForSection as! [CNContact]
-        }
-        return tempContactsArray
-    }
     
 }

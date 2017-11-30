@@ -11,7 +11,7 @@ import UIKit
 class KKBaseModel: NSObject {
 
     static var groupDatas : [[String]] = {
-        let datas = [["UIButton"],["UILabel"],["UITableView"],["UIScrollView"],["UIImageView"]]
+        let datas = [["UIButton"],["UILabel"],["UITableView"],["UIScrollView"],["UIImageView"],["WebView"]]
         
         return datas
     }()

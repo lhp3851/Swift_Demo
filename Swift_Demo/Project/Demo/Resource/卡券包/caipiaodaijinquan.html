@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>彩票代金券</title>
+  <link rel="stylesheet" href="css/caipiaodaijinquan.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/vue2.min.js"></script>
+  <script type="text/javascript" src="js/vue-resource.js"></script>
+</head>
+
+<body>
+  <div id="main">
+
+    <header>
+      <div class="left">
+        <img src="images/back_white_icon@3x.png" alt="">
+      </div>
+      <div class="title">代金券</div>
+      <div class="tright"></div>
+    </header>
+
+    <main>
+      <div class="nav">
+        <p>
+          <a href="#user" class="user">未使用({{anum}})</a>
+        </p>
+        <p>
+          <a href="#auser" class="auser">已使用({{bnum}})</a>
+        </p>
+        <p>
+          <a href="#expired" class="expired">已过期({{cnum}})</a>
+        </p>
+      </div>
+
+      <div id="noused" class="page page-index">
+        <div class="box clearfix" v-for="dom in unused">
+          <div class="left">
+            <p class="num">￥
+              <span>{{dom.ticket_amount}}</span>
+            </p>
+            <p class="plist">彩票兑换券</p>
+          </div>
+          <div class="right">
+            <p class="tit">{{dom.ticket_name}}</p>
+            <p class="splice">有效期至：{{dom.end_date}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="alreadyused" class="page page-product">
+        <div class="box clearfix" v-for="dom in used">
+          <div class="left">
+            <p class="num">￥
+              <span>{{dom.ticket_amount}}</span>
+            </p>
+            <p class="plist">彩票兑换券</p>
+          </div>
+          <div class="right">
+            <p class="tit">{{dom.ticket_name}}</p>
+            <p class="splice">有效期至：{{dom.end_date}}</p>
+            <p class="splice">使用日期：{{dom.ut}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="expired" class="page page-p">
+        <div class="box clearfix" v-for="dom in overdue">
+          <div class="left">
+            <p class="num">￥
+              <span>{{dom.ticket_amount}}</span>
+            </p>
+            <p class="plist">彩票兑换券</p>
+          </div>
+          <div class="right">
+            <p class="tit">{{dom.ticket_name}}</p>
+            <p class="splice">有效期至：{{dom.end_date}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sbox">
+        <span></span>
+        <p class="add">
+          新增
+        </p>
+        <p class="explain">
+          说明
+        </p>
+      </div>
+
+
+
+    </main>
+
+
+  </div>
+</body>
+
+<script type='text/javascript'>
+  var vm = new Vue({
+    data: {
+      unused: [],
+      used: [],
+      overdue:[],
+      anum:0,
+      bnum:0,
+      cnum:0,
+      onfo: true
+    },
+    computed: {
+
+    },
+    beforeCreate: function () {
+
+    },
+    created: function () {
+
+      let mythis = this;
+      if (location.hash == '#user') {
+        unused()
+      } else if (location.hash == '#auser') {
+        used()
+      } else if (location.hash == '#expired') {
+        overdue()
+      }
+      $(window).on('hashchange', function () {
+        if (location.hash == '#user') {
+          unused()
+        } else if (location.hash == '#auser') {
+          used()
+        } else if (location.hash == '#expired') {
+          overdue()
+        }
+      });
+
+      function unused() {
+        mythis.$http.get(
+          'http://192.168.1.200:8008/api/lottery/user/mine/DJQUsable.do?userid=3418785363202465&amount=29&se=6694a8acba78974dea1b398cad443526'
+        ).then(
+          function (res) {
+            var data = JSON.parse(res.data)
+            if (data.errorcode == 0) {
+              this.unused = data.datastr.available
+              this.anum = data.datastr.available.length
+            }
+          })
+      }
+
+      function used() {
+        mythis.$http.get(
+          'http://192.168.1.200:8008/api/lottery/user/mine/DJQUsed.do?userid=3418785363202465&amount=29&se=6694a8acba78974dea1b398cad443526'
+        ).then(
+          function (res) {
+            var data = JSON.parse(res.data)
+            if (data.errorcode == 0) {
+              this.used = data.datastr
+              this.bnum = data.datastr.length
+            }
+          })
+      }
+      function overdue() {
+        mythis.$http.get(
+          'http://192.168.1.200:8008/api/lottery/user/mine/DJQOutDated.do?userid=3418785363202465&amount=29&se=6694a8acba78974dea1b398cad443526'
+        ).then(
+          function (res) {
+            var data = JSON.parse(res.data)
+            if (data.errorcode == 0) {
+              this.overdue = data.datastr
+              this.cnum = data.datastr.length
+            }
+          })
+      }
+    },
+    methods: {
+      radio(ev) {
+        if (ev.target.classList.contains('check')) {
+          $('.radio span').removeClass('active');
+          ev.target.classList.add('active')
+        }
+      },
+      havecheck(index) {
+        let aLit = document.querySelectorAll('.allcheck span')
+        var num = aLit[index].classList.contains('active')
+        if (num) {
+          aLit[index].classList.remove('active')
+        } else {
+          aLit[index].classList.add('active')
+        }
+      }
+
+    }
+  }).$mount('#main')
+
+  if (location.hash == '') {
+    $('.page').hide();
+    location.hash = '#user'
+    $('.page-index').show(100);
+  }
+  $(window).on('hashchange', function () {
+    $('.page').hide(100);
+    if (location.hash == '#user') {
+      $('.page-index').show(100);
+    } else if (location.hash == '#auser') {
+      $('.page-product').show(100);
+    } else if (location.hash == '#expired') {
+      $('.page-p').show(100);
+    }
+  });
+
+  if (location.hash == '#user') {
+    $('.page').hide(100);
+    $('.nav .user').each((index, dom) => {
+      dom.classList.add('active')
+    })
+    $('.page-index').show(100);
+  } else if (location.hash == '#auser') {
+    $('.page').hide();
+    $('.nav .auser').each((index, dom) => {
+      dom.classList.add('active')
+    })
+    $('.page-product').show(100);
+  } else if (location.hash == '#expired') {
+    $('.page').hide();
+    $('.nav .expired').each((index, dom) => {
+      dom.classList.add('active')
+    })
+    $('.page-p').show(100);
+  }
+
+  $('.nav p a').on('click', function (ev) {
+    $('.nav p a').each((index, dom) => {
+      dom.classList.remove('active')
+    })
+    ev.target.classList.add('active')
+  })
+  $(document).on('click', function (ev) {
+    if (ev.target.classList.value == 'tright') {
+      $('.sbox').css('display', 'block')
+    } else {
+      $('.sbox').css('display', 'none')
+    }
+  })
+</script>
+
+</html>

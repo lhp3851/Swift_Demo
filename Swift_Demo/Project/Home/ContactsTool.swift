@@ -12,9 +12,16 @@ import Contacts
 class ContactsTool: NSObject {
 
     
-    typealias CompleteHandler = ([CNContact]) -> ()
+    typealias CompleteHandler = ([[CNContact]]) -> ()
     static var completeHnadler : CompleteHandler?
     
+    var localizedCollation:UILocalizedIndexedCollation = UILocalizedIndexedCollation.current()
+    var indexTitiles = Array<String>()
+    
+    static let share = ContactsTool()
+    private override init() {
+        
+    }
     
     class func accessStatus() -> CNAuthorizationStatus {
         return CNContactStore.authorizationStatus(for: CNEntityType.contacts)
@@ -44,7 +51,7 @@ class ContactsTool: NSObject {
             CNContactStore().requestAccess(for: .contacts) { (complete, error) in
                 if complete {
                     print("授权成功")
-                 self.loadContactsData()
+                   self.loadContactsData()
                 }
                 else{
                     print("授权失败")
@@ -53,7 +60,10 @@ class ContactsTool: NSObject {
             print("第一次授权")
             return
         }
-        self.loadContactsData()
+        
+        DispatchQueue.global().async {
+            self.loadContactsData()//异步获取数据，会快些
+        }
     }
     
     class func loadContactsData() -> Void {
@@ -72,8 +82,7 @@ class ContactsTool: NSObject {
                     CNContactOrganizationNameKey, CNContactJobTitleKey,
                     CNContactDepartmentNameKey, CNContactNoteKey, CNContactPhoneNumbersKey,
                     CNContactEmailAddressesKey, CNContactPostalAddressesKey,
-                    CNContactDatesKey, CNContactInstantMessageAddressesKey
-        ]
+                    CNContactDatesKey, CNContactInstantMessageAddressesKey]
         
         //创建请求对象
         //需要传入一个(keysToFetch: [CNKeyDescriptor]) 包含CNKeyDescriptor类型的数组
@@ -90,10 +99,14 @@ class ContactsTool: NSObject {
         } catch {
             print(error)
         }
-        self.completeHnadler!(contacts)
+        let sortedContacts = ContactsTool.share.sortContacts(contacts: contacts)
+        
+        self.completeHnadler!(sortedContacts)
+        
     }
     
-    class func loadDatas() -> [CNContact] {
+    class func loadDatas() -> [[CNContact]] {
+
         var contacts : [CNContact] = Array()
         
         //获取授权状态
@@ -127,9 +140,32 @@ class ContactsTool: NSObject {
         } catch {
             print(error)
         }
-        return contacts
+        return ContactsTool.share.sortContacts(contacts: contacts)
     }
     
+    func sortContacts(contacts:[CNContact]) -> [[CNContact]]{
+        var tempContactsArray = [[CNContact]]()
+        
+        for _ in 0..<self.localizedCollation.sectionTitles.count {
+            let array:[CNContact] = Array()
+            tempContactsArray.append(array)
+        }
+        
+        for contact in contacts {
+            let section = self.localizedCollation.section(for: contact, collationStringSelector: #selector(getter: contact.familyName))
+            var tempArray : [CNContact] = tempContactsArray[section]
+            tempArray.append(contact)
+            tempContactsArray[section] = tempArray
+        }
+        
+        let tempContacts = tempContactsArray
+        for i in 0..<self.indexTitiles.count {
+            let sectionContacts = tempContacts[i]
+            let sortedContactsForSection = self.localizedCollation.sortedArray(from: sectionContacts, collationStringSelector:  #selector(getter: CNContact.familyName))
+            tempContactsArray[i] = sortedContactsForSection as! [CNContact]
+        }
+        return tempContactsArray
+    }
     
     /// 联系人信息
     ///

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>卡券包</title>
+  <link rel="stylesheet" href="kaquanbao.css">
+  <script src="vue2.min.js"></script>
+  <script src='vue-resource.js'></script>
+</head>
+
+<script>
+    function callCamera() {
+        window.location.href = 'zhaocaimaouser://callCamera';
+    }
+</script>
+
+<body>
+  <div id="main">
+
+
+    <header>
+      <div class="left">
+        <img src="back_white_icon@3x.png" alt="">
+      </div>
+      <div class="title">卡券包</div>
+    </header>
+
+    <main>
+      <p class="nav">彩票兑换券</p>
+      <div class="box clearfix">
+        <img src="dui_icon.png" alt="">
+        <p>彩票兑换券</p>
+        <span>{{dhq.count}}</span>
+      </div>
+
+      <p class="nav">代金券/优惠券</p>
+      <div class="box clearfix">
+        <img src="dai_icon.png" alt="">
+        <p>代金券</p>
+        <span>{{djq.count}}</span>
+      </div>
+      <div class="box clearfix">
+        <img src="you_icon.png" alt="">
+        <p>合作方代金券/优惠券</p>
+        <span>10</span>
+      </div>
+      
+      <div>
+          <input type="button" value="CallCamera" onclick='callCamera()'>
+      </div>
+      
+    </main>
+
+
+  </div>
+  
+ 
+  
+</body>
+
+<script type='text/javascript'>
+  var vm = new Vue({
+    data: {
+      dhq:'',
+      djq:''
+    },
+    computed: {
+                   
+    },
+    created() {
+      this.$http.get(
+        'http://192.168.1.200:8008/api/lottery/user/mine/TicketUsable.do?userid=3418785363202465&amount=29').then(
+        function (res) {
+          var data = JSON.parse(res.data)
+          if (data.errorcode == 0) {
+            this.dhq = data.datastr.find(dom=>{
+              return dom.ticket_action == 'dhq'
+            })
+            this.djq = data.datastr.find(dom=>{
+              return dom.ticket_action == 'djq'
+            })
+            window.onload = function () {
+              if (document.body.offsetHeight < document.documentElement.clientHeight) {
+                document.querySelector('#main').style.height = document.documentElement.clientHeight + 'px';
+              } else {
+                document.querySelector('#main').style.height = document.body.offsetHeight + 'px'
+              }
+            }
+          }
+        })
+    },
+    methods: {
+
+    }
+  }).$mount('#main')
+  
+
+  
+  function setupWebViewJavascriptBridge(callback) {
+      if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+      if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+      window.WVJBCallbacks = [callback];
+      var WVJBIframe = document.createElement('iframe');
+      WVJBIframe.style.display = 'none';
+      WVJBIframe.src = 'https://__bridge_loaded__';
+      document.documentElement.appendChild(WVJBIframe);
+      setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+  }
+
+
+  setupWebViewJavascriptBridge(function(bridge) {
+         bridge.registerHandler('swift log', function(data, responseCallback) {
+                                console.log("JS Echo called with:", data)
+                                responseCallback(data)
+                            })
+         bridge.callHandler('JS log', {'key':'value'}, function responseCallback(responseData) {
+                                console.log("JS received response:", responseData)
+                            })
+    })
+</script>
+
+</html>

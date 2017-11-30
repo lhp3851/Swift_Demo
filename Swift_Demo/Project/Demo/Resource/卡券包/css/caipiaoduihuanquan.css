@@ -1,0 +1,224 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+body{
+    background: #F9F5F4;
+}
+ol ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#main {
+    background: #F9F5F4;
+    padding-bottom: 10px;
+}
+
+header {
+    height: 44px;
+    width: 100%;
+    background: url('../images/Navigation_bar@3x.png') no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    z-index: 111;
+}
+
+header .left {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: url('../images/back_white_icon@3x.png') no-repeat;
+    background-size: 8px 16px;
+}
+header .left img{
+    width: 8px;
+    height: 16px;
+}
+header .title {
+    line-height:44px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+header .tright{
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: url('../images/more_icon@3x.png') no-repeat;
+    background-size: contain
+}
+
+main{
+    margin-top: 95px;
+}
+
+main .nav {
+    background: #fff;
+    height: 40px;
+    z-index: 110;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 44px;
+    border-bottom: 1px solid #ECEAEB;
+}
+
+main .nav p {
+    flex: 1;
+    line-height: 40px;
+    text-align: center;
+    justify-content: center;
+    align-content: center
+}
+main .nav p a{
+    display: inline-block;
+    line-height: 40px;
+    color: #B6B6B6;
+}
+main .nav p a.active {
+    color: #E7794B;
+    border-bottom: 1px solid #E7794B;
+}
+
+
+.box {
+    border-radius: 10px;
+    margin: 11px 10px 0px 10px;
+    font-size: 13px;
+    width: 95%;
+    background: url('../images/dui_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.box .left {
+    height: 90px;
+    text-align: center;
+    width: 30%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+    color: #fff;
+}
+.box .left .num {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+.box .left .plist {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+.box .left .num span {
+    font-size: 32px;
+}
+
+.box .right {
+    width: 62%;
+    float: left;
+    padding: 15px 0px 0px 10px;
+    position: relative;
+}
+
+.box .right .tit {
+    font-size: 16px;
+    color: #6F6F6F;
+    margin: 8px 0px 8px 0px;
+}
+
+.box .right .splice {
+    color: #aeaeae;
+    font-size: 13px;
+    margin:0px;
+}
+
+.box .right .thisbutton {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d4d4d4;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+}
+
+.box .right .thisbutton.active {
+    background: url("../assets/images/check_2@3x.png") no-repeat;
+    background-size: cover;
+    border: 1px solid #f46123;
+}
+
+#alreadyused .box{
+    background: url('../images/used_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+#expired .box{
+    background: url('../images/overdue_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+.sbox{
+    width: 80px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    position: absolute;
+    right: 10px;
+    z-index: 9999;
+    display: none;
+    top: 40px;
+}
+.sbox span{
+    border-bottom: 10px solid rgba(0, 0, 0, 0.7);;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+.sbox .add{
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-align: center
+}
+.sbox .explain{
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

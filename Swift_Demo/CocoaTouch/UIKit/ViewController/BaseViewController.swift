@@ -207,6 +207,11 @@ extension BaseViewController {
             VC.vcTitle = objectName
             viewController = VC
             break
+        case "WebView":
+            let VC = KKWebViewViewController()
+            VC.vcTitle = objectName
+            viewController = VC
+            break
         default:
             print("default ViewController")
         }
