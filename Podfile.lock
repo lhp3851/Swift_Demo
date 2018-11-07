@@ -1,34 +1,33 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Appz (3.0.0)
-  - Charts (3.0.4):
-    - Charts/Core (= 3.0.4)
-  - Charts/Core (3.0.4)
+  - Alamofire (4.7.3)
+  - Appz (3.2.0)
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
   - Instructions (1.0.0)
-  - Kingfisher (4.2.0)
-  - LTMorphingLabel (0.5.5)
+  - Kingfisher (4.10.1)
   - MBProgressHUD (1.0.0)
-  - NVActivityIndicatorView (4.0.0):
-    - NVActivityIndicatorView/Presenter (= 4.0.0)
-  - NVActivityIndicatorView/Presenter (4.0.0)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - ReachabilitySwift (4.1.0)
-  - SDCycleScrollView (1.74):
+  - ReachabilitySwift (4.3.0)
+  - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.2.2):
-    - SDWebImage/Core (= 4.2.2)
-  - SDWebImage/Core (4.2.2)
-  - SnapKit (4.0.0)
-  - SQLite.swift (0.11.4):
-    - SQLite.swift/standard (= 0.11.4)
-  - SQLite.swift/standard (0.11.4)
-  - SwiftyJSON (4.0.0)
-  - SwiftyStoreKit (0.11.0)
-  - XCGLogger (6.0.1):
-    - XCGLogger/Core (= 6.0.1)
-  - XCGLogger/Core (6.0.1):
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SnapKit (4.0.1)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
+  - SwiftyJSON (4.2.0)
+  - SwiftyStoreKit (0.13.3)
+  - XCGLogger (6.0.4):
+    - XCGLogger/Core (= 6.0.4)
+  - XCGLogger/Core (6.0.4):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
@@ -37,7 +36,6 @@ DEPENDENCIES:
   - Charts
   - Instructions (~> 1.0.0)
   - Kingfisher (~> 4.0)
-  - LTMorphingLabel
   - MBProgressHUD (~> 1.0.0)
   - NVActivityIndicatorView
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
@@ -48,34 +46,51 @@ DEPENDENCIES:
   - SwiftyStoreKit
   - XCGLogger (~> 6.0.1)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Appz
+    - Charts
+    - Instructions
+    - Kingfisher
+    - MBProgressHUD
+    - NVActivityIndicatorView
+    - ObjcExceptionBridging
+    - SDCycleScrollView
+    - SDWebImage
+    - SnapKit
+    - SQLite.swift
+    - SwiftyJSON
+    - SwiftyStoreKit
+    - XCGLogger
+
 EXTERNAL SOURCES:
   ReachabilitySwift:
     :git: https://github.com/ashleymills/Reachability.swift
 
 CHECKOUT OPTIONS:
   ReachabilitySwift:
-    :commit: 27407e0eedd5b5dab0a0da9d5a2696fb9821f19b
+    :commit: b9b300d0f5166525b0f368c75a0f35b65d828f3a
     :git: https://github.com/ashleymills/Reachability.swift
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Appz: e5a7e84e1d88f47dc5f4ab889da3405e89c2b667
-  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Appz: 9afca8060886b75002092f4b5b5c238a0ab19bf0
+  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Instructions: 11b6744e572b8cab6f61e9445403cb95fcde68f1
-  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
-  LTMorphingLabel: 86464e41c3394dbf1ad098442ed4dcf8891ba975
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  ReachabilitySwift: adc49b96d6ffa7508266d69df653cea40a2ef912
-  SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
-  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  SwiftyStoreKit: c5cb38110cb01b55b9c5f25d7f69d0083650b2a4
-  XCGLogger: b4ca980580108cfeaf221afe158f5d89c1be22e0
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
+  XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 3811d5cb77a4705c655d6ff3f392218682dd7874
+PODFILE CHECKSUM: 9ceef15b6e7bfff2dd90934c0470cdacccb161fa
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

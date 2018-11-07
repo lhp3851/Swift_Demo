@@ -7,16 +7,16 @@
 </h1>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-3.0.0-blue.svg"/>
+  <img alt="Version" src="https://img.shields.io/badge/version-3.2.0-blue.svg"/>
   <a alt="Travis CI" href="https://travis-ci.org/SwiftKitz/Appz">
     <img alt="Version" src="https://travis-ci.org/SwiftKitz/Appz.svg?branch=master"/>
   </a>
-  <img alt="Swift" src="https://img.shields.io/badge/swift-4.0-orange.svg"/>
+  <img alt="Swift" src="https://img.shields.io/badge/swift-4.2-orange.svg"/>
   <img alt="Platforms" src="https://img.shields.io/badge/platform-ios%20%7C%20watchos%20%7C%20tvos-lightgrey.svg"/>
   <a alt="Carthage Compatible" href="https://github.com/SwiftKitz/Appz#carthage">
     <img alt="Carthage" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"/>
   </a>
-  <img alt="Supported Apps" src="https://img.shields.io/badge/Apps-165-9600cd.svg"/>
+  <img alt="Supported Apps" src="https://img.shields.io/badge/Apps-172-9600cd.svg"/>
 </p>
 
 <p align="center">
@@ -55,8 +55,8 @@ __Transparent web fallback:__
 
 ```swift
 // In case the user doesn't have twitter installed, it will fallback to
-// https://twitter.com/statuses/2
-app.open(Applications.Twitter(), action: .status(id: "2"))
+// https://twitter.com/testUser/statuses/2
+app.open(Applications.Twitter(), action: .status(id: "2",  screenName: "testUser"))
 ```
 
 __Add your applications:__
@@ -131,15 +131,19 @@ App | Actions
 [Diigo][Diigo-link] | Open
 [Documents][Documents-link] | Open
 [Dropbox][Dropbox-link] | Open
+[Duolingo][Duolingo-link] | Open
 [eBay][eBay-link] | Open
 [Echofon][Echofon-link] | Open
 [Epson][Epson-link] | Open
 [Everypost][Everypost-link] | Open
 [EyeEm][EyeEm-link] | Open
 [Facebook][Facebook-link] | Open, Profile, Notification, Feed, Page, Action
+[FaceTime][FaceTime-link] | Video Call
+[FaceTime audio][FaceTime audio-link] | Audio Call
 [Feedly][Feedly-link] | Open
 [FileApp][FileApp-link] | Open
 [FindFriends][FindFriends-link] | Open
+[FindiPhone][FindiPhone-link] | Open
 [Fitbit][Fitbit-link] | Open
 [Flickr][Flickr-link] | Open
 [Flipboard][Flipboard-link] | Open
@@ -168,7 +172,7 @@ App | Actions
 [IMDb][IMDb-link] | Open, Search, Title, Boxoffice, Showtimes, Feature Coming Soon, Feature Best Picture, Feature Born Today, Top rated movies, Most popular movies.
 [iMovie][iMovie-link] | Open
 [INRIXTraffic][INRIXTraffic-link] | Open
-[Instagram][Instagram-link] | Open, Camera, Media, Username, Location, Tag
+[Instagram][Instagram-link] | Open, Camera, Library, Media, Username, Location, Tag
 [Instapaper][Instapaper-link] | Open
 [iShows][iShows-link] | Open
 [iTranslate][iTranslate-link] | Open, Translate
@@ -207,6 +211,7 @@ App | Actions
 [PicCollage][PicCollage-link] | Open
 [Pinterest][Pinterest-link] | Open, UserProfile, Search
 [Pocket][Pocket-link] | Open
+[Podcasts][Podcasts-link] | Open
 [Quora][Quora-link] | Open
 [Radium][Radium-link] | Open
 [RemindersApp][RemindersApp-link] | Open
@@ -231,9 +236,10 @@ App | Actions
 [SunriseCalendar][SunriseCalendar-link] | Open
 [Swarm][Swarm-link] | Open
 [Super-Stickman-Golf-2][Super-Stickman-Golf-2-link] | Open
+[Talabat][Talabat-link] | Open
 [Tango][Tango-link] | Open
 [Ted][Ted-link] | Open
-[Telegram][Telegram-link] | Open, SMS
+[Telegram][Telegram-link] | Open, SMS, openFromID
 [TestFlight][TestFlight-link] | Open
 [Tinder][Tinder-link] | Open
 [Trello][Trello-link] | Open
@@ -247,12 +253,14 @@ App | Actions
 [Ustream][Ustream-link] | Open
 [Viber][Viber-link] | Open Calls Tab, Open Chats Tab
 [Videos][Videos-link] | Open
+[Views][Views-link] | Open
 [Vimeo][Vimeo-link] | Open
 [Vine][Vine-link] | Open, Popular Timelines
 [VIPAccess][VIPAccess-link] | Open
 [Vox][Vox-link] | Open
 [Voxer][Voxer-link] | Open
 [VSCO][VSCO-link] | Open
+[Wallet][Wallet-link] | Open
 [Waze][Waze-link] | Open, NavigateToDirection
 [WeChat][WeChat-link] | Open
 [Weibo][Weibo-link] | Open
@@ -265,11 +273,8 @@ App | Actions
 [Yelp][Yelp-link] | Open, Search, Search Location, Search Category, Search Category Location, Business
 [Youtube][Youtube-link] | Open, Open Video
 [FRIL][FRIL-link] | Open
-[RIDE][RIDE-link] | Open
 
 ## Getting Started
-
-**IMPORTANT:** Kitz repos fully embrace Swift 4.0 and all the changes it brought. You should use `v2.1.1` if you are still using Swift 3.x.
 
 ### Configure Info.plist
 
@@ -297,10 +302,6 @@ For manual installation, you can grab the source directly or through git submodu
 
 + Drop the `Appz.xcodeproj` file as a subproject (make sure `Copy resources` is __not__ enabled)
 + Navigate to your root project settings. Under "Embedded Binaries", click the "+" button and select the `Appz.framework`
-
-### Video Tutorial
-
-This is a [video][video-link] tutorial on how to use Appz📱.
 
 ## Motivation
 
@@ -353,15 +354,19 @@ Appz is released under the MIT license. See LICENSE for details.
 [Diigo-link]: https://www.diigo.com
 [Documents-link]: https://readdle.com/products/documents
 [Dropbox-link]: https://dropbox.com
+[Duolingo-link]: https://www.duolingo.com
 [eBay-link]: http://www.ebay.com
 [Echofon-link]: http://www.echofon.com
 [Epson-link]: https://www.epson.com/cgi-bin/Store/jsp/epson-connect/mobile-printing/iprint-app.do
 [Everypost-link]: http://everypost.me
 [EyeEm-link]: http://pic-collage.com
 [Facebook-link]: https://facebook.com
+[FaceTime-link]:https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/FacetimeLinks/FacetimeLinks.html#//apple_ref/doc/uid/TP40007899-CH2-SW1
+[FaceTime audio-link]: https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/FacetimeLinks/FacetimeLinks.html#//apple_ref/doc/uid/TP40007899-CH2-SW1
 [Feedly-link]: http://feedly.com/i/welcome
 [FileApp-link]: http://fileapp.com
 [FindFriends-link]: http://handleopenurl.com/scheme/find-my-friends
+[FindiPhone-link]: https://itunes.apple.com/us/app/find-my-iphone/id376101648?mt=8
 [Fitbit-link]: https://www.fitbit.com/app
 [Flickr-link]: https://www.flickr.com
 [Flipboard-link]: https://flipboard.com
@@ -386,7 +391,7 @@ Appz is released under the MIT license. See LICENSE for details.
 [GroupeMe-link]: https://groupme.com
 [Heapo-link]: http://heapo.marblzz.com
 [HootSuite-link]: https://hootsuite.com/products/mobile-apps/hootsuite-mobile-app
-[iBooks-link]: http://handleopenurl.com/?id=694
+[iBooks-link]: https://itunes.apple.com/us/app/ibooks/id364709193?mt=8
 [IMDb-link]: http://www.imdb.com
 [iMovie-link]: https://itunes.apple.com/us/app/imovie/id377298193?mt=8
 [INRIXTraffic-link]: http://inrix.com/inrix-traffic-app
@@ -410,7 +415,7 @@ Appz is released under the MIT license. See LICENSE for details.
 [MobileMouse-link]: http://www.mobilemouse.com
 [Mopico-link]: http://mo-pi-co.com
 [Moves-link]: https://www.moves-app.com
-[Music-link]: http://handleopenurl.com/scheme/original-ipod-music-app
+[Music-link]: https://www.reddit.com/r/workflow/comments/3mux7h/ios_url_schemes/
 [MyFitnessPal-link]: https://www.myfitnesspal.com
 [NameShark-link]: http://www.namesharkapp.com
 [Netflix-link]: https://www.netflix.com
@@ -429,10 +434,11 @@ Appz is released under the MIT license. See LICENSE for details.
 [PicCollage-link]: http://pic-collage.com
 [Pinterest-link]: https://www.pinterest.com
 [Pocket-link]: https://getpocket.com/ios/?ep=1
+[Podcasts-link]: https://itunes.apple.com/us/app/podcasts/id525463029?mt=8
 [Quora-link]: https://www.quora.com
 [Radium-link]: http://catpigstudios.com
-[RemindersApp-link]: http://handleopenurl.com/scheme/reminders
-[Remote-link]: http://handleopenurl.com/scheme/remote
+[RemindersApp-link]: https://www.reddit.com/r/workflow/comments/3mux7h/ios_url_schemes/
+[Remote-link]: https://www.reddit.com/r/workflow/comments/3mux7h/ios_url_schemes/
 [Rijnmond-link]: http://www.rijnmond.nl
 [RoboForm-link]: http://www.roboform.com/for-iphone-ipad-ios
 [RunKeeper-link]: https://runkeeper.com/index
@@ -453,6 +459,7 @@ Appz is released under the MIT license. See LICENSE for details.
 [SunriseCalendar-link]: https://calendar.sunrise.am
 [Swarm-link]: https://www.swarmapp.com
 [Super-Stickman-Golf-2-link]: http://www.noodlecake.com/games/super-stickman-golf-2/
+[Talabat-link]: https://www.talabat.com
 [Tango-link]: http://www.tango.me
 [Ted-link]: https://www.ted.com
 [Telegram-link]: https://web.telegram.org
@@ -468,13 +475,15 @@ Appz is released under the MIT license. See LICENSE for details.
 [Unread-link]: http://supertop.co/unread/
 [Ustream-link]: https://www.ustream.tv/platform/watch-everywhere
 [Viber-link]: http://www.viber.com
-[Videos-link]: http://handleopenurl.com/scheme/ipod-video-library
+[Videos-link]: https://www.reddit.com/r/workflow/comments/3mux7h/ios_url_schemes/
+[Views-link]: http://www.saikambampati.com/views
 [Vimeo-link]: https://vimeo.com/everywhere
 [Vine-link]: https://vine.co
-[VIPAccess-link]: https://m.vip.symantec.com/selectediphone.v
+[VIPAccess-link]: https://m.vip.symantec.com
 [Vox-link]: http://coppertino.com/vox/iphone
 [Voxer-link]: http://www.voxer.com
 [VSCO-link]: http://vsco.co/store/app
+[Wallet-link]: https://support.apple.com/en-us/HT204003
 [Waze-link]: https://www.waze.com
 [WeChat-link]: http://forums.macrumors.com/threads/ios-8-widget-customisations-using-launcher.1782093/
 [Weibo-link]: http://weibo.com/login.php
@@ -488,5 +497,4 @@ Appz is released under the MIT license. See LICENSE for details.
 [Yelp-link]: https://m.yelp.com
 [Youtube-link]: https://youtube.com
 [FRIL-link]: https://fril.jp
-[RIDE-link]: https://ride.jp
-[video-link]: https://youtu.be/HYQ4vqkOunE
+[v2.1.1-link]: https://github.com/SwiftKitz/Appz/releases/tag/v2.1.1

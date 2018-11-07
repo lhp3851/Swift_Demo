@@ -109,7 +109,6 @@
 		D7C872A71FC950C800BE53F0 /* caipiaodaijinquan.css in Resources */ = {isa = PBXBuildFile; fileRef = D7C8727F1FC950C700BE53F0 /* caipiaodaijinquan.css */; };
 		D7C872A81FC950C800BE53F0 /* caipiaoduihuanquan.css in Resources */ = {isa = PBXBuildFile; fileRef = D7C872801FC950C700BE53F0 /* caipiaoduihuanquan.css */; };
 		D7C872A91FC950C800BE53F0 /* kaquanbao.css in Resources */ = {isa = PBXBuildFile; fileRef = D7C872811FC950C700BE53F0 /* kaquanbao.css */; };
-		D7C872AA1FC950C800BE53F0 /* back_white_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C872831FC950C700BE53F0 /* back_white_icon@3x.png */; };
 		D7C872AB1FC950C800BE53F0 /* build.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C872841FC950C700BE53F0 /* build.jpg */; };
 		D7C872AC1FC950C800BE53F0 /* check_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C872851FC950C700BE53F0 /* check_2@3x.png */; };
 		D7C872AD1FC950C800BE53F0 /* choose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C872861FC950C700BE53F0 /* choose@3x.png */; };
@@ -119,7 +118,6 @@
 		D7C872B11FC950C800BE53F0 /* dui_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C8728A1FC950C700BE53F0 /* dui_icon.png */; };
 		D7C872B21FC950C800BE53F0 /* enter_icon-@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C8728B1FC950C700BE53F0 /* enter_icon-@3x.png */; };
 		D7C872B31FC950C800BE53F0 /* jiaoyitubiao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C8728C1FC950C700BE53F0 /* jiaoyitubiao.jpg */; };
-		D7C872B41FC950C800BE53F0 /* more_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C8728D1FC950C700BE53F0 /* more_icon@3x.png */; };
 		D7C872B51FC950C800BE53F0 /* Navigation_bar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C8728E1FC950C700BE53F0 /* Navigation_bar@3x.png */; };
 		D7C872B61FC950C800BE53F0 /* order-biaozhi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C8728F1FC950C700BE53F0 /* order-biaozhi.jpg */; };
 		D7C872B71FC950C800BE53F0 /* overdue_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C872901FC950C700BE53F0 /* overdue_bg.png */; };
@@ -285,7 +283,6 @@
 		D7C8727F1FC950C700BE53F0 /* caipiaodaijinquan.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = caipiaodaijinquan.css; sourceTree = "<group>"; };
 		D7C872801FC950C700BE53F0 /* caipiaoduihuanquan.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = caipiaoduihuanquan.css; sourceTree = "<group>"; };
 		D7C872811FC950C700BE53F0 /* kaquanbao.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = kaquanbao.css; sourceTree = "<group>"; };
-		D7C872831FC950C700BE53F0 /* back_white_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_white_icon@3x.png"; sourceTree = "<group>"; };
 		D7C872841FC950C700BE53F0 /* build.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = build.jpg; sourceTree = "<group>"; };
 		D7C872851FC950C700BE53F0 /* check_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_2@3x.png"; sourceTree = "<group>"; };
 		D7C872861FC950C700BE53F0 /* choose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choose@3x.png"; sourceTree = "<group>"; };
@@ -295,7 +292,6 @@
 		D7C8728A1FC950C700BE53F0 /* dui_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dui_icon.png; sourceTree = "<group>"; };
 		D7C8728B1FC950C700BE53F0 /* enter_icon-@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enter_icon-@3x.png"; sourceTree = "<group>"; };
 		D7C8728C1FC950C700BE53F0 /* jiaoyitubiao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jiaoyitubiao.jpg; sourceTree = "<group>"; };
-		D7C8728D1FC950C700BE53F0 /* more_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_icon@3x.png"; sourceTree = "<group>"; };
 		D7C8728E1FC950C700BE53F0 /* Navigation_bar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation_bar@3x.png"; sourceTree = "<group>"; };
 		D7C8728F1FC950C700BE53F0 /* order-biaozhi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "order-biaozhi.jpg"; sourceTree = "<group>"; };
 		D7C872901FC950C700BE53F0 /* overdue_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overdue_bg.png; sourceTree = "<group>"; };
@@ -1416,7 +1412,6 @@
 		D7C872821FC950C700BE53F0 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D7C872831FC950C700BE53F0 /* back_white_icon@3x.png */,
 				D7C872841FC950C700BE53F0 /* build.jpg */,
 				D7C872851FC950C700BE53F0 /* check_2@3x.png */,
 				D7C872861FC950C700BE53F0 /* choose@3x.png */,
@@ -1426,7 +1421,6 @@
 				D7C8728A1FC950C700BE53F0 /* dui_icon.png */,
 				D7C8728B1FC950C700BE53F0 /* enter_icon-@3x.png */,
 				D7C8728C1FC950C700BE53F0 /* jiaoyitubiao.jpg */,
-				D7C8728D1FC950C700BE53F0 /* more_icon@3x.png */,
 				D7C8728E1FC950C700BE53F0 /* Navigation_bar@3x.png */,
 				D7C8728F1FC950C700BE53F0 /* order-biaozhi.jpg */,
 				D7C872901FC950C700BE53F0 /* overdue_bg.png */,
@@ -1489,7 +1483,6 @@
 				7A9783EB1F7558B1003F17D1 /* Frameworks */,
 				7A9783EC1F7558B1003F17D1 /* Resources */,
 				68586588074FBC1D888F5571 /* [CP] Embed Pods Frameworks */,
-				9EEC8B41EACE44135B7A6DEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1508,8 +1501,6 @@
 				7A9783FE1F7558B1003F17D1 /* Sources */,
 				7A9783FF1F7558B1003F17D1 /* Frameworks */,
 				7A9784001F7558B1003F17D1 /* Resources */,
-				2E397778848EDAB1C9515D0B /* [CP] Embed Pods Frameworks */,
-				474F1ADDF6C369D4D1B60C54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1529,8 +1520,6 @@
 				7A9784091F7558B1003F17D1 /* Sources */,
 				7A97840A1F7558B1003F17D1 /* Frameworks */,
 				7A97840B1F7558B1003F17D1 /* Resources */,
-				CF95FADC7DDB7E6A4F2B7C6C /* [CP] Embed Pods Frameworks */,
-				C74E05DA3C6276E8E2EA710E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1550,20 +1539,23 @@
 			attributes = {
 				CLASSPREFIX = KK;
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Jerry;
 				TargetAttributes = {
 					7A9783ED1F7558B1003F17D1 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					7A9784011F7558B1003F17D1 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7A9783ED1F7558B1003F17D1;
 					};
 					7A97840C1F7558B1003F17D1 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7A9783ED1F7558B1003F17D1;
 					};
@@ -1597,7 +1589,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A51C5A31F91232D002449C6 /* home-page_icon_normal@2x.png in Resources */,
-				D7C872B41FC950C800BE53F0 /* more_icon@3x.png in Resources */,
 				D7C872B11FC950C800BE53F0 /* dui_icon.png in Resources */,
 				7A51C5B51F912915002449C6 /* navigation_bar@2x.png in Resources */,
 				7A4C11D41F930B5000F02866 /* back_darkgray_icon@3x.png in Resources */,
@@ -1620,7 +1611,6 @@
 				D7C872B21FC950C800BE53F0 /* enter_icon-@3x.png in Resources */,
 				7A4C11DA1F930B5000F02866 /* lucky_cat_home_page@3x.png in Resources */,
 				D7C872AB1FC950C800BE53F0 /* build.jpg in Resources */,
-				D7C872AA1FC950C800BE53F0 /* back_white_icon@3x.png in Resources */,
 				7A51C5A11F91232D002449C6 /* home-page_icon_select@2x.png in Resources */,
 				D7C872B91FC950C800BE53F0 /* touxiang.jpg in Resources */,
 				7A9783F91F7558B1003F17D1 /* Assets.xcassets in Resources */,
@@ -1719,21 +1709,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2E397778848EDAB1C9515D0B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_DemoTests/Pods-Swift_DemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		353879EDB0DC85A07779FA90 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1752,21 +1727,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		474F1ADDF6C369D4D1B60C54 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_DemoTests/Pods-Swift_DemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		68586588074FBC1D888F5571 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1779,7 +1739,6 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
@@ -1799,7 +1758,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
@@ -1833,51 +1791,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9EEC8B41EACE44135B7A6DEC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Demo/Pods-Swift_Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C74E05DA3C6276E8E2EA710E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF95FADC7DDB7E6A4F2B7C6C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2022,6 +1935,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2029,6 +1943,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2080,6 +1995,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2087,6 +2003,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
