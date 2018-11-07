@@ -7,13 +7,21 @@ PODS:
   - Instructions (1.0.0)
   - Kingfisher (4.10.1)
   - MBProgressHUD (1.0.0)
+  - Moya (10.0.2):
+    - Moya/Core (= 10.0.2)
+  - Moya/Core (10.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
   - NVActivityIndicatorView (4.4.0):
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - ObjectMapper (3.3.0)
   - ReachabilitySwift (4.3.0)
+  - Result (3.2.4)
+  - RxSwift (4.0.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.2):
@@ -23,6 +31,19 @@ PODS:
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
+  - SwifterSwift (4.1.1):
+    - SwifterSwift/AppKit (= 4.1.1)
+    - SwifterSwift/CoreGraphics (= 4.1.1)
+    - SwifterSwift/CoreLocation (= 4.1.1)
+    - SwifterSwift/Foundation (= 4.1.1)
+    - SwifterSwift/SwiftStdlib (= 4.1.1)
+    - SwifterSwift/UIKit (= 4.1.1)
+  - SwifterSwift/AppKit (4.1.1)
+  - SwifterSwift/CoreGraphics (4.1.1)
+  - SwifterSwift/CoreLocation (4.1.1)
+  - SwifterSwift/Foundation (4.1.1)
+  - SwifterSwift/SwiftStdlib (4.1.1)
+  - SwifterSwift/UIKit (4.1.1)
   - SwiftyJSON (4.2.0)
   - SwiftyStoreKit (0.13.3)
   - XCGLogger (6.0.4):
@@ -37,11 +58,15 @@ DEPENDENCIES:
   - Instructions (~> 1.0.0)
   - Kingfisher (~> 4.0)
   - MBProgressHUD (~> 1.0.0)
+  - Moya (~> 10.0.1)
   - NVActivityIndicatorView
+  - ObjectMapper (~> 3.1)
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
+  - RxSwift (~> 4.0.0)
   - SDCycleScrollView (~> 1.73)
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11)
+  - SwifterSwift (~> 4.1.0)
   - SwiftyJSON
   - SwiftyStoreKit
   - XCGLogger (~> 6.0.1)
@@ -54,12 +79,17 @@ SPEC REPOS:
     - Instructions
     - Kingfisher
     - MBProgressHUD
+    - Moya
     - NVActivityIndicatorView
     - ObjcExceptionBridging
+    - ObjectMapper
+    - Result
+    - RxSwift
     - SDCycleScrollView
     - SDWebImage
     - SnapKit
     - SQLite.swift
+    - SwifterSwift
     - SwiftyJSON
     - SwiftyStoreKit
     - XCGLogger
@@ -80,17 +110,22 @@ SPEC CHECKSUMS:
   Instructions: 11b6744e572b8cab6f61e9445403cb95fcde68f1
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+  SwifterSwift: bfcae9d659dfd306d164f13f72cad09198f30723
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 9ceef15b6e7bfff2dd90934c0470cdacccb161fa
+PODFILE CHECKSUM: 5bfbfcfd07064d1b00e4fba64b8bd66b65efa9cd
 
 COCOAPODS: 1.5.3

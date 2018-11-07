@@ -29,6 +29,11 @@ target 'Swift_Demo' do
     #pod 'BluetoothKit', '~> 0.2.0'#
     pod 'Appz' # app Comunication
     pod 'SDCycleScrollView','~> 1.73'
+    
+    pod 'Moya', '~> 10.0.1'
+    pod 'ObjectMapper', '~> 3.1'
+    pod 'SwifterSwift', '~> 4.1.0'
+    pod 'RxSwift', '~> 4.0.0'
 
   target 'Swift_DemoTests' do
     inherit! :search_paths
