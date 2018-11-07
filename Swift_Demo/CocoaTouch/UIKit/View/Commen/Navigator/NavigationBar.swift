@@ -69,7 +69,7 @@ class BarButtonItem: UIBarButtonItem {
     
    
     lazy var phoneItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "call_icon")
+        let image = FilesManagerTool.imageWithNames(imageName: "call_icon", needOffen: false)
         let selector : Selector = #selector(normalSelector)
         let phoneBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItemStyle.done, target: self, action: selector);
         return phoneBarItem;
