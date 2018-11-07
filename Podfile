@@ -23,7 +23,7 @@ target 'Swift_Demo' do
     #pod 'DOFavoriteButton'#有动画效果的button，适用于收藏、喜欢、点赞等
     pod 'LTMorphingLabel'#Label
     #pod 'PageMenu' #
-    pod 'XCGLogger', '~> 6.0.1'
+#    pod 'XCGLogger', '~> 6.0.1'
     #pod 'PermissionScope' #
     pod 'SwiftyStoreKit' #轻量级的APP内购框架
     #pod 'BluetoothKit', '~> 0.2.0'#
