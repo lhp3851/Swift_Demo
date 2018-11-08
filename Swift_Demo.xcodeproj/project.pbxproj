@@ -92,6 +92,7 @@
 		7AF669A21FB7ECD300535D9F /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF6699F1FB7ECD300535D9F /* image3.png */; };
 		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
+		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
 		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
 		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
@@ -266,6 +267,8 @@
 		8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
+		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		D720B4C11FA6D18C00299462 /* pulling@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@2x.gif"; sourceTree = "<group>"; };
 		D720B4C21FA6D18C00299462 /* pulling@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@3x.gif"; sourceTree = "<group>"; };
 		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
@@ -655,6 +658,7 @@
 		7A92DFF91F8E42F3005AC51D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BE1245332194218700F93C30 /* PasteBoardTool */,
 				7A4C11B91F9308B100F02866 /* UIImage+Extention.swift */,
 				7A4C11B81F9308B100F02866 /* UIView+Extention.swift */,
 				7A4C11BA1F9308B200F02866 /* UIWindow+Extesion.swift */,
@@ -669,6 +673,7 @@
 			children = (
 				7A92DFFB1F8E439B005AC51D /* README.md */,
 				7A92DFFC1F8E43DD005AC51D /* Resource */,
+				BE12453621943E8B00F93C30 /* Swift_Demo_README.md */,
 			);
 			path = ReadMe;
 			sourceTree = "<group>";
@@ -1251,7 +1256,7 @@
 				7A51C5AB1F9124DD002449C6 /* Tool */,
 				7A51C5861F9122EB002449C6 /* Resources */,
 				7A92DFFD1F8E457E005AC51D /* CocoaTouch */,
-				7A97841F1F755925003F17D1 /* Module */,
+				7A97841F1F755925003F17D1 /* Modules */,
 				7A92E0001F8E45A2005AC51D /* CoreOS */,
 				7A92DFFF1F8E4597005AC51D /* CoreService */,
 				7A92DFFE1F8E458A005AC51D /* Media */,
@@ -1287,7 +1292,7 @@
 			path = Swift_DemoUITests;
 			sourceTree = "<group>";
 		};
-		7A97841F1F755925003F17D1 /* Module */ = {
+		7A97841F1F755925003F17D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				D7AC7D8F1FC3E04D00F601A9 /* Demo */,
@@ -1298,7 +1303,7 @@
 				7A7818A01F8FC6DA0043254E /* Profile */,
 				7A78189F1F8FC6CC0043254E /* Home */,
 			);
-			path = Module;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		7A9784201F755925003F17D1 /* String */ = {
@@ -1330,6 +1335,14 @@
 				1ADA5051B9B085709EAFD052 /* Pods-Swift_DemoUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE1245332194218700F93C30 /* PasteBoardTool */ = {
+			isa = PBXGroup;
+			children = (
+				BE124534219421F900F93C30 /* KKPasteBoardTool.swift */,
+			);
+			path = PasteBoardTool;
 			sourceTree = "<group>";
 		};
 		D720B4C01FA6D18C00299462 /* Refresh */ = {
@@ -1826,6 +1839,7 @@
 				7A4C11C11F93096D00F02866 /* AccountModel.swift in Sources */,
 				7A4C11991F91F9EA00F02866 /* ContactsViewController.swift in Sources */,
 				7A9783F41F7558B1003F17D1 /* ViewController.swift in Sources */,
+				BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */,
 				7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */,
 				7A51C5AE1F912515002449C6 /* FitTool.swift in Sources */,
 				7A7818B31F8FC94B0043254E /* BaseView.swift in Sources */,
@@ -2051,7 +2065,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2068,7 +2082,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -27,7 +27,8 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
 
     override func initData() {
         super.initData()
-        
+        KKPasteBoardTool.copy(contents: "instance sumian")
+        print(KKPasteBoardTool.getContents())
     }
     
     override func initPannel() {

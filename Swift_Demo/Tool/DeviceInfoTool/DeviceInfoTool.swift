@@ -16,9 +16,6 @@ extension UIDevice {
         return UIScreen.main.scale
     }
     
-
-    
-    
     var PPI :CGFloat  {
         var ppi : CGFloat = 0
         
@@ -31,13 +28,13 @@ extension UIDevice {
         return ppi
     }
     
-        var inche : CGFloat {
-            let bounds = UIScreen.main.nativeBounds
-            
-            let  kinche : CGFloat  = sqrt(pow(bounds.size.width, 2) + pow(bounds.size.height, 2)) / self.PPI
-            
-            return kinche
-        }
+    var inche : CGFloat {
+        let bounds = UIScreen.main.nativeBounds
+        
+        let  kinche : CGFloat  = sqrt(pow(bounds.size.width, 2) + pow(bounds.size.height, 2)) / self.PPI
+        
+        return kinche
+    }
     
     //获取设备具体详细的型号
     var modelName: String {
