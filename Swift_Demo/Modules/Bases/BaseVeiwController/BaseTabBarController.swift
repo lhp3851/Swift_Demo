@@ -18,6 +18,13 @@ class BaseTabBarController: UITabBarController {
     }
 
     func initPannle() -> Void {
+        self.tabBar.shadowImage = UIImage.init(color: kCOLOR_TRANSLUCENT, size: CGSize.init(width: kWINDOW_WIDTH, height: 0.1))
+        self.tabBar.backgroundImage = UIImage.init(color: kCOLOR_WHITE, size: CGSize.init(width: kWINDOW_WIDTH, height: kTAB_BAR_HEIGHT))
+        composeViewControllers()
+    }
+    
+    
+    func composeViewControllers()  {
         let homeVC = HomeViewController()
         let homeNav = BaseNavigationViewController.init(rootViewController: homeVC)
         homeNav.tabBarItem.itemWithImage(title: "首页", image: "home-page_icon_normal", selectedImage: "home-page_icon_select")
@@ -38,10 +45,8 @@ class BaseTabBarController: UITabBarController {
         let testNav = BaseNavigationViewController.init(rootViewController: testVC)
         testNav.tabBarItem.itemWithImage(title: "样例", image: "mine_icon_normal", selectedImage: "mine_icon_select")
         
-        
         self.viewControllers = [homeNav,genealogyNav,traceNav,pofileNav,testNav]
     }
-    
     
     func setItemAttribute() -> Void {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kCOLOR_TABBAR_GRAY], for: UIControlState.normal)

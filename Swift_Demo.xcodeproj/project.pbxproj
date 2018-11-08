@@ -93,6 +93,7 @@
 		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
+		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
 		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
 		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
 		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
@@ -269,6 +270,7 @@
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
+		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
 		D720B4C11FA6D18C00299462 /* pulling@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@2x.gif"; sourceTree = "<group>"; };
 		D720B4C21FA6D18C00299462 /* pulling@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@3x.gif"; sourceTree = "<group>"; };
 		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
@@ -536,9 +538,6 @@
 			isa = PBXGroup;
 			children = (
 				D7AC7D961FC40BF300F601A9 /* KKButtonViewController */,
-				7A7818AC1F8FC8630043254E /* NavigationController */,
-				7A7818AB1F8FC8560043254E /* TabBarController */,
-				7A78189D1F8FC50B0043254E /* BaseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -582,28 +581,10 @@
 			path = Genealogy;
 			sourceTree = "<group>";
 		};
-		7A7818AB1F8FC8560043254E /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				7A7818AD1F8FC8C70043254E /* BaseTabBarController.swift */,
-			);
-			path = TabBarController;
-			sourceTree = "<group>";
-		};
-		7A7818AC1F8FC8630043254E /* NavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				7A7818AF1F8FC9080043254E /* BaseNavigationViewController.swift */,
-			);
-			path = NavigationController;
-			sourceTree = "<group>";
-		};
 		7A7818B11F8FC92F0043254E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D7C872751FC9476100BE53F0 /* WebView */,
-				7A7C80801F934187007532FA /* BaseTableview.swift */,
-				7A7818B21F8FC94B0043254E /* BaseView.swift */,
 				7A51C5BA1F912B14002449C6 /* Commen */,
 				7A3DB03F1FB33CEE00053419 /* KKPageControl.swift */,
 				7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */,
@@ -650,7 +631,6 @@
 			isa = PBXGroup;
 			children = (
 				7A9784201F755925003F17D1 /* String */,
-				D7AC7D941FC4077B00F601A9 /* KKBaseModel.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1295,6 +1275,7 @@
 		7A97841F1F755925003F17D1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BE1245382194452000F93C30 /* Bases */,
 				D7AC7D8F1FC3E04D00F601A9 /* Demo */,
 				7A4C11BE1F93094300F02866 /* Account */,
 				7A7818B41F8FCFB90043254E /* Resource */,
@@ -1345,6 +1326,51 @@
 			path = PasteBoardTool;
 			sourceTree = "<group>";
 		};
+		BE124537219444FD00F93C30 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+				BE12453C219446CE00F93C30 /* KKDemoModel.swift */,
+			);
+			path = Modle;
+			sourceTree = "<group>";
+		};
+		BE1245382194452000F93C30 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				BE12453B219445EA00F93C30 /* BaseVeiwController */,
+				BE12453A219445DE00F93C30 /* BaseView */,
+				BE124539219445D000F93C30 /* BaseModel */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		BE124539219445D000F93C30 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D941FC4077B00F601A9 /* KKBaseModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		BE12453A219445DE00F93C30 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				7A7C80801F934187007532FA /* BaseTableview.swift */,
+				7A7818B21F8FC94B0043254E /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		BE12453B219445EA00F93C30 /* BaseVeiwController */ = {
+			isa = PBXGroup;
+			children = (
+				7A78189D1F8FC50B0043254E /* BaseViewController.swift */,
+				7A7818AF1F8FC9080043254E /* BaseNavigationViewController.swift */,
+				7A7818AD1F8FC8C70043254E /* BaseTabBarController.swift */,
+			);
+			path = BaseVeiwController;
+			sourceTree = "<group>";
+		};
 		D720B4C01FA6D18C00299462 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1367,6 +1393,7 @@
 		D7AC7D8F1FC3E04D00F601A9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BE124537219444FD00F93C30 /* Modle */,
 				D7C872781FC9509900BE53F0 /* Resource */,
 				D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */,
 				D7C872761FC9483600BE53F0 /* KKWebViewViewController.swift */,
@@ -1392,23 +1419,23 @@
 		D7C872781FC9509900BE53F0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D7C872791FC950C700BE53F0 /* 卡券包 */,
+				D7C872791FC950C700BE53F0 /* Cards */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		D7C872791FC950C700BE53F0 /* 卡券包 */ = {
+		D7C872791FC950C700BE53F0 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
 				D7C8727A1FC950C700BE53F0 /* adddaijinquan.html */,
 				D7C8727B1FC950C700BE53F0 /* caipiaodaijinquan.html */,
 				D7C8727C1FC950C700BE53F0 /* caipiaoduihuanquan.html */,
+				D7C872A21FC950C800BE53F0 /* kaquanbao.html */,
 				D7C8727D1FC950C700BE53F0 /* css */,
 				D7C872821FC950C700BE53F0 /* images */,
 				D7C8729D1FC950C700BE53F0 /* js */,
-				D7C872A21FC950C800BE53F0 /* kaquanbao.html */,
 			);
-			path = "卡券包";
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		D7C8727D1FC950C700BE53F0 /* css */ = {
@@ -1863,6 +1890,7 @@
 				7A4C11BD1F9308B200F02866 /* UIWindow+Extesion.swift in Sources */,
 				D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */,
 				7A7C80861F934353007532FA /* ContactsTableViewCell.swift in Sources */,
+				BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */,
 				7A7818AA1F8FC7F50043254E /* TraceViewController.swift in Sources */,
 				7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */,
 				7A606F491F9900DC00B47DE8 /* AppTool.swift in Sources */,

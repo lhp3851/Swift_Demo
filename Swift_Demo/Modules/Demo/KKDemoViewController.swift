@@ -17,7 +17,7 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
         return view
     }()
     
-    var listDatas = KKBaseModel.groupDatas
+    var listDatas = KKDemoModel.groupDatas
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,7 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
 
     override func initData() {
         super.initData()
-        KKPasteBoardTool.copy(contents: "instance sumian")
-        print(KKPasteBoardTool.getContents())
+        
     }
     
     override func initPannel() {
@@ -66,11 +65,13 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listDatas[section].count
+        let subDicItem = self.listDatas[section]
+        let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
+        return item.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.listDatas[section][0]
+        return self.listDatas[section].keys.first
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,17 +80,20 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
         if (cell == nil) {
             cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifier)
         }
-        cell?.textLabel?.text = self.listDatas[indexPath.section][indexPath.row]
+        let subDicItem = self.listDatas[indexPath.section]
+        let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
+        cell?.textLabel?.text = item[indexPath.row]
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let vc = BaseViewController.getClass(objectName: self.listDatas[indexPath.section][indexPath.row])
+        let subDicItem = self.listDatas[indexPath.section]
+        let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
+        let vc = BaseViewController.getClass(objectName: item[indexPath.row])
+        vc.title = item[indexPath.row]
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: vc, animated: true)
     }
-    
     
     
     override func didReceiveMemoryWarning() {
