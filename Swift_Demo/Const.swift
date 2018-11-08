@@ -50,6 +50,10 @@ func kIMAGE_WITH(name:String) -> (UIImage) {
     return image
 }
 
+func kIMAGE_WITH(name:String,needOften:Bool) -> (UIImage) {
+    let image = FilesManagerTool.imageWithNames(imageName: name,needOffen:needOften)
+    return image
+}
 
 
 //颜色
