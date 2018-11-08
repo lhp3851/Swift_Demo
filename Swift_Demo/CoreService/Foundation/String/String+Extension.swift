@@ -68,7 +68,7 @@ extension String {
                 pattern = "."
             }
             let regex: NSRegularExpression = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
-            let matches = regex.matches(in: validateString, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, validateString.characters.count))
+            let matches = regex.matches(in: validateString, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, validateString.count))
             return matches.count > 0
         }
         catch {
@@ -93,7 +93,7 @@ extension String {
             return false
         }
         
-        if (password.characters.count >= 6 && password.characters.count <= 22) {
+        if (password.count >= 6 && password.count <= 22) {
             return true
         }
         
