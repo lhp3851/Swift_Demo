@@ -94,6 +94,8 @@
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
+		BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */; };
+		BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FE21A55A7000B36450 /* SelectorConst.swift */; };
 		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
 		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
 		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
@@ -271,6 +273,8 @@
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
+		BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorViewController.swift; sourceTree = "<group>"; };
+		BE5851FE21A55A7000B36450 /* SelectorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorConst.swift; sourceTree = "<group>"; };
 		D720B4C11FA6D18C00299462 /* pulling@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@2x.gif"; sourceTree = "<group>"; };
 		D720B4C21FA6D18C00299462 /* pulling@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@3x.gif"; sourceTree = "<group>"; };
 		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
@@ -584,6 +588,7 @@
 		7A7818B11F8FC92F0043254E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE5851FB21A5599D00B36450 /* Selector */,
 				D7C872751FC9476100BE53F0 /* WebView */,
 				7A51C5BA1F912B14002449C6 /* Commen */,
 				7A3DB03F1FB33CEE00053419 /* KKPageControl.swift */,
@@ -1364,11 +1369,20 @@
 		BE12453B219445EA00F93C30 /* BaseVeiwController */ = {
 			isa = PBXGroup;
 			children = (
+				BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */,
 				7A78189D1F8FC50B0043254E /* BaseViewController.swift */,
 				7A7818AF1F8FC9080043254E /* BaseNavigationViewController.swift */,
 				7A7818AD1F8FC8C70043254E /* BaseTabBarController.swift */,
 			);
 			path = BaseVeiwController;
+			sourceTree = "<group>";
+		};
+		BE5851FB21A5599D00B36450 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				BE5851FE21A55A7000B36450 /* SelectorConst.swift */,
+			);
+			path = Selector;
 			sourceTree = "<group>";
 		};
 		D720B4C01FA6D18C00299462 /* Refresh */ = {
@@ -1861,6 +1875,7 @@
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
+				BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */,
 				7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */,
 				D7C872771FC9483600BE53F0 /* KKWebViewViewController.swift in Sources */,
 				7A4C11C11F93096D00F02866 /* AccountModel.swift in Sources */,
@@ -1868,6 +1883,7 @@
 				7A9783F41F7558B1003F17D1 /* ViewController.swift in Sources */,
 				BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */,
 				7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */,
+				BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */,
 				7A51C5AE1F912515002449C6 /* FitTool.swift in Sources */,
 				7A7818B31F8FC94B0043254E /* BaseView.swift in Sources */,
 				7A7818AE1F8FC8C70043254E /* BaseTabBarController.swift in Sources */,
