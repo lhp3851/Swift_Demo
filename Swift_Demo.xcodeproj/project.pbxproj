@@ -94,6 +94,11 @@
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
+		BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */; };
+		BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FE21A55A7000B36450 /* SelectorConst.swift */; };
+		BE58520121A560B200B36450 /* KKSelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520021A560B200B36450 /* KKSelectorModel.swift */; };
+		BE58520421A573CA00B36450 /* KKSKTPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520321A573CA00B36450 /* KKSKTPickerView.swift */; };
+		BE58520721A5759900B36450 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = BE58520621A5759900B36450 /* province.json */; };
 		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
 		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
 		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
@@ -271,6 +276,11 @@
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
+		BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorViewController.swift; sourceTree = "<group>"; };
+		BE5851FE21A55A7000B36450 /* SelectorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorConst.swift; sourceTree = "<group>"; };
+		BE58520021A560B200B36450 /* KKSelectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorModel.swift; sourceTree = "<group>"; };
+		BE58520321A573CA00B36450 /* KKSKTPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSKTPickerView.swift; sourceTree = "<group>"; };
+		BE58520621A5759900B36450 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
 		D720B4C11FA6D18C00299462 /* pulling@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@2x.gif"; sourceTree = "<group>"; };
 		D720B4C21FA6D18C00299462 /* pulling@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@3x.gif"; sourceTree = "<group>"; };
 		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
@@ -407,6 +417,7 @@
 		7A51C5861F9122EB002449C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE58520521A5755B00B36450 /* Files */,
 				7A51C5871F9122F9002449C6 /* Images */,
 			);
 			path = Resources;
@@ -584,6 +595,7 @@
 		7A7818B11F8FC92F0043254E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE5851FB21A5599D00B36450 /* Selector */,
 				D7C872751FC9476100BE53F0 /* WebView */,
 				7A51C5BA1F912B14002449C6 /* Commen */,
 				7A3DB03F1FB33CEE00053419 /* KKPageControl.swift */,
@@ -1330,6 +1342,7 @@
 			isa = PBXGroup;
 			children = (
 				BE12453C219446CE00F93C30 /* KKDemoModel.swift */,
+				BE58520021A560B200B36450 /* KKSelectorModel.swift */,
 			);
 			path = Modle;
 			sourceTree = "<group>";
@@ -1371,6 +1384,30 @@
 			path = BaseVeiwController;
 			sourceTree = "<group>";
 		};
+		BE5851FB21A5599D00B36450 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				BE5851FE21A55A7000B36450 /* SelectorConst.swift */,
+			);
+			path = Selector;
+			sourceTree = "<group>";
+		};
+		BE58520221A5738500B36450 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE58520321A573CA00B36450 /* KKSKTPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE58520521A5755B00B36450 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE58520621A5759900B36450 /* province.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		D720B4C01FA6D18C00299462 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1393,9 +1430,11 @@
 		D7AC7D8F1FC3E04D00F601A9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BE58520221A5738500B36450 /* Views */,
 				BE124537219444FD00F93C30 /* Modle */,
 				D7C872781FC9509900BE53F0 /* Resource */,
 				D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */,
+				BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */,
 				D7C872761FC9483600BE53F0 /* KKWebViewViewController.swift */,
 			);
 			path = Demo;
@@ -1711,6 +1750,7 @@
 				D7C872C21FC950C800BE53F0 /* yinhangka.jpg in Resources */,
 				7A4C11E01F930B5000F02866 /* news_icon@3x.png in Resources */,
 				D7C872B71FC950C800BE53F0 /* overdue_bg.png in Resources */,
+				BE58520721A5759900B36450 /* province.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1852,6 +1892,7 @@
 			files = (
 				7A4C11B51F93069300F02866 /* BaseRequest.swift in Sources */,
 				7A3DB0401FB33CEE00053419 /* KKPageControl.swift in Sources */,
+				BE58520121A560B200B36450 /* KKSelectorModel.swift in Sources */,
 				D7AC7D951FC4077B00F601A9 /* KKBaseModel.swift in Sources */,
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
@@ -1861,6 +1902,7 @@
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
+				BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */,
 				7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */,
 				D7C872771FC9483600BE53F0 /* KKWebViewViewController.swift in Sources */,
 				7A4C11C11F93096D00F02866 /* AccountModel.swift in Sources */,
@@ -1868,6 +1910,7 @@
 				7A9783F41F7558B1003F17D1 /* ViewController.swift in Sources */,
 				BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */,
 				7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */,
+				BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */,
 				7A51C5AE1F912515002449C6 /* FitTool.swift in Sources */,
 				7A7818B31F8FC94B0043254E /* BaseView.swift in Sources */,
 				7A7818AE1F8FC8C70043254E /* BaseTabBarController.swift in Sources */,
@@ -1880,6 +1923,7 @@
 				7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */,
 				D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */,
 				7A7818A61F8FC7A40043254E /* ProfileViewController.swift in Sources */,
+				BE58520421A573CA00B36450 /* KKSKTPickerView.swift in Sources */,
 				7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */,
 				7A4C11B71F93069300F02866 /* ReachAblityTool.swift in Sources */,
 				D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */,

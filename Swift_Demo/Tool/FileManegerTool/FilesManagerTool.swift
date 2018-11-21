@@ -30,6 +30,7 @@ class FilesManagerTool: NSObject {
         
     }
     
+    // MARK:  Default Contents Path
     var imagePath : URL?{
        
         get{
@@ -141,6 +142,7 @@ class FilesManagerTool: NSObject {
             return image!
         }
     }
+    // MARK: Contents Path
     
     /// 获取应用程序目录
     ///
@@ -205,7 +207,7 @@ class FilesManagerTool: NSObject {
         return bundleDBPath!
     }
     
-    
+    // MARK:  Create File
     /// 创建文件夹
     ///
     /// - Parameters:
