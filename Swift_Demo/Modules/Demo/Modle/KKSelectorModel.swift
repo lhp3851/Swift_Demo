@@ -19,7 +19,11 @@ enum SelectorType : String{
     case skt
 }
 
-class KKSelectorModel: KKBaseModel {
+protocol KKSelectorModelProtocol {
+    func pickerViewBy(model:Any) -> (UIView.Type)
+}
+
+class KKSelectorModel: KKBaseModel,KKSelectorModelProtocol {
     
     var type: SelectorType!
     
@@ -30,8 +34,17 @@ class KKSelectorModel: KKBaseModel {
         return datas
     }()
     
+    override init() {
+        super.init()
+    }
+    
     init(type:SelectorType,datas:Any) {
         self.type = type
         self.selectorDatas = datas
     }
+    
+    func pickerViewBy(model: Any) -> (UIView.Type) {
+        return KKSKTPickerView.self
+    }
 }
+

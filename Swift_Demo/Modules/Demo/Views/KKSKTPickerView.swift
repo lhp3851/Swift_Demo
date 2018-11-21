@@ -11,10 +11,32 @@ import UIKit
 class KKSKTPickerView: BaseView {
     lazy var pickerView:UIPickerView = {
         let view = UIPickerView()
-        
+        view.delegate = self
+        view.dataSource = self
         return view
     }()
     
+    let datas = KKSKTSelectorModel.datas
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpPannel()
+        setUpConstraints()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init error")
+    }
+    
+    func setUpPannel(){
+        addSubview(pickerView)
+    }
+    
+    func setUpConstraints(){
+        pickerView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
     
 }
 
@@ -33,7 +55,11 @@ extension KKSKTPickerView:UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return self.datas.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.datas[row]
     }
     
 }

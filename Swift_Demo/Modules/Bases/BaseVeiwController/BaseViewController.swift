@@ -17,6 +17,15 @@ class BaseViewController: UIViewController {
     let reachability = Reachability()!
     var isNetWorkReachable = (Reachability()?.connection != .none)
     
+    lazy var translucentView: UIView = {
+        let tempView = UIView.init(frame: UIScreen.main.bounds)
+        tempView.backgroundColor = UIColor.init(hexString: "000000", transparency: 0.5)
+        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(tapTranslucentView(tap:)))
+        tapEvent.delegate = self
+        tempView.addGestureRecognizer(tapEvent)
+        tempView.isHidden = true
+        return tempView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -222,3 +231,11 @@ extension BaseViewController {
 }
 
 
+extension BaseViewController:UIGestureRecognizerDelegate {
+    @objc func tapTranslucentView(tap:UITapGestureRecognizer){
+        if let tapView = tap.view,tapView == self.translucentView {
+            tapView.isHidden = !tapView.isHidden
+            print(tapView)
+        }
+    }
+}

@@ -19,28 +19,46 @@ class KKSelectorViewController: BaseViewController {
         return view
     }()
     
+    lazy var pickerView: KKPickerView = {
+        let temp = KKPickerView.init(frame: CGRect.zero, title: "SKT", datas: "")
+        temp.delegate = self
+        return temp
+    }()
+    
     var listDatas = KKSelectorModel.groupDatas
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setConstraints()
     }
     
     override func initData() {
         super.initData()
-        
     }
     
     override func initPannel() {
         super.initPannel()
-        
         self.view.addSubview(self.listView)
+        if let window = UIWindow.getCurrentWindow() {
+            self.translucentView.addSubview(pickerView)
+            window.addSubview(self.translucentView)
+        }
         
-        self.setConstraints()
     }
     
     func setConstraints() -> Void {
+        pickerView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(400.0)
+        }
+        
         self.listView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            if #available(iOS 11.0, *) {
+                make.edges.equalTo(self.view.safeAreaLayoutGuide.snp.edges)
+            } else {
+                make.edges.equalTo(self.view)
+            }
+//            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
         }
     }
 }
@@ -77,8 +95,14 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
         if let key = listDatas.keys.first {
             let subDicItem = self.listDatas[key]
             let type = subDicItem![indexPath.row]
-            showPicker(type: SelectorType(rawValue: type)!)
+//            showPicker(type: SelectorType(rawValue: type)!)
+            showPickerView()
         }
+    }
+    
+    func showPickerView()  {
+        print(self.translucentView)
+        self.translucentView.isHidden = false
     }
     
     func showPicker(type whitType: SelectorType) {
@@ -100,5 +124,11 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
         default:
             print(whitType)
         }
+    }
+}
+
+extension KKSelectorViewController: KKPickerViewProtocol{
+    func pickDatas(model: Any) {
+        print("model:",model)
     }
 }
