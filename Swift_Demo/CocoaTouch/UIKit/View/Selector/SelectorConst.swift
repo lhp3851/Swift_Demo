@@ -8,12 +8,4 @@
 
 import Foundation
 
-enum SelectorType : UInt{
-    case education
-    case address
-    case date
-    case time
-    case dateAndTime
-    case weight
-    case stature
-}
+

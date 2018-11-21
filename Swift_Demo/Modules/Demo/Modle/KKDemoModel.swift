@@ -13,7 +13,7 @@ class KKDemoModel: KKBaseModel {
         let datas = [["UIView":["UIButton","UILabel","UITableView","UIScrollView","UIImageView","WebView"]],
                      ["Archive":["Archive","File","Plist","UserDefault","SQLite","CoreData","KeyChain"]],
                      ["Animate":["BasicAnimate","FrameAnimate","GroupAnimate"]],
-                     ]
+                     ["Selector":["Selector"]]]
         return datas
     }()
 }
