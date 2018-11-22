@@ -15,6 +15,7 @@ protocol KKPickerViewProtocol:NSObjectProtocol {
 class KKPickerView: BaseView {
 
     weak var delegate:KKPickerViewProtocol?
+    let rowHeight:CGFloat = 55
     
     lazy var titleView:UILabel = {
         let temp = UILabel()
@@ -63,7 +64,7 @@ class KKPickerView: BaseView {
     
     func setUpPannel(){
         self.isUserInteractionEnabled = true
-        self.backgroundColor = kCOLOR_TABBAR_GRAY
+        self.backgroundColor = kCOLOR_BACKGROUND_COLOR
         addSubview(titleView)
         addSubview(selectorBackView)
         addSubview(sendButton)
@@ -73,7 +74,7 @@ class KKPickerView: BaseView {
     func setUpConstraints(){
         titleView.snp.makeConstraints { (make) in
             make.left.right.top.equalToSuperview()
-            make.height.equalTo(44)
+            make.height.equalTo(rowHeight)
         }
         
         selectorBackView.snp.makeConstraints { (make) in
@@ -85,7 +86,7 @@ class KKPickerView: BaseView {
         sendButton.snp.makeConstraints { (make) in
             make.top.equalTo(selectorBackView.snp.bottom).offset(10)
             make.left.right.equalToSuperview()
-            make.height.equalTo(49)
+            make.height.equalTo(rowHeight)
             make.bottom.equalToSuperview()
         }
     }
@@ -97,4 +98,21 @@ class KKPickerView: BaseView {
         }
     }
     
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let view = super.hitTest(point, with: event)
+        let point = self.convert(point, to: self)
+        if self.titleView.point(inside: point, with: event) {
+            return self.titleView
+        }
+        else if self.selectorBackView.point(inside: point, with: event) {
+            return self.selectorBackView
+        }
+        else if self.sendButton.point(inside: point, with: event){
+            return self.sendButton
+        }
+        else{
+            return view
+        }
+    }
 }

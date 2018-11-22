@@ -99,6 +99,8 @@ let kCOLOR_CLEAR = kRGBColorFromHex(rgbValue:0xfffff0,alpha:0.0)       //透明�
 
 let kCOLOR_SEARCH_BAR  = kRGBColorFromHex(rgbValue:0xf0f0f0)     //条栏点击态
 
+let kCOLOR_BACKGROUND_COLOR  = kRGBColorFromHex(rgbValue:0xeaecee)     //tableview 背景色
+
 
 func kRGBColorFromHex(rgbValue: Int) -> (UIColor) {
     return UIColor(red: ((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0,

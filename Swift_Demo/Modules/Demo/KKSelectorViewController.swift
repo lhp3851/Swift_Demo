@@ -11,6 +11,7 @@ import UIKit
 class KKSelectorViewController: BaseViewController {
 
     var vcTitle = NSStringFromClass(KKSelectorViewController.self)
+    let pickerViewHeight:CGFloat = 297
     
     lazy var listView : BaseTableview = {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
@@ -20,6 +21,7 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var pickerView: KKPickerView = {
+        let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
         let temp = KKPickerView.init(frame: CGRect.zero, title: "SKT", datas: "")
         temp.delegate = self
         return temp
@@ -49,7 +51,7 @@ class KKSelectorViewController: BaseViewController {
     func setConstraints() -> Void {
         pickerView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(400.0)
+            make.height.equalTo(pickerViewHeight)
         }
         
         self.listView.snp.makeConstraints { (make) in
@@ -102,7 +104,11 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     
     func showPickerView()  {
         print(self.translucentView)
-        self.translucentView.isHidden = false
+        UIView.animate(withDuration: 1.5, animations: {
+            self.translucentView.isHidden = false
+        }) { (status) in
+            
+        }
     }
     
     func showPicker(type whitType: SelectorType) {
