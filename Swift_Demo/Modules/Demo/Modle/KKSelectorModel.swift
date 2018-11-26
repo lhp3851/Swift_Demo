@@ -20,14 +20,14 @@ enum SelectorType : String{
 }
 
 protocol KKSelectorModelProtocol {
-    func pickerViewBy(model:Any) -> (UIView.Type)
+    func setPickerView() -> (KKPickerSubView)
 }
 
 class KKSelectorModel: KKBaseModel,KKSelectorModelProtocol {
     
-    var type: SelectorType!
-    
     var selectorDatas:Any!
+    
+    var type: SelectorType!
     
     static let groupDatas : [String:[String]] = {
         let datas = ["Selector":["education","address","date","time","dateAndTime","weight","stature","skt"]]
@@ -43,8 +43,8 @@ class KKSelectorModel: KKBaseModel,KKSelectorModelProtocol {
         self.selectorDatas = datas
     }
     
-    func pickerViewBy(model: Any) -> (UIView.Type) {
-        return KKSKTPickerView.self
+    func setPickerView() -> (KKPickerSubView) {
+        return KKPickerSubView()
     }
 }
 

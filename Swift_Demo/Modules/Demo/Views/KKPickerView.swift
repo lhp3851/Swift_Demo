@@ -8,14 +8,27 @@
 
 import UIKit
 
-protocol KKPickerViewProtocol:NSObjectProtocol {
-    func pickDatas(model:Any)
+protocol KKPickerViewDataProtocol:NSObjectProtocol {
+    
+    func updateDatas(model:Any)
+    
 }
+
+protocol KKPickerViewProtocol:NSObjectProtocol {
+    
+    func subViewWith(cellForRowAt indexPath: IndexPath?) -> (UIView)
+    
+}
+
 
 class KKPickerView: BaseView {
 
     weak var delegate:KKPickerViewProtocol?
+    weak var dataSource:KKPickerViewDataProtocol?
+    
     let rowHeight:CGFloat = 55
+    
+    var indexPath: IndexPath?
     
     lazy var titleView:UILabel = {
         let temp = UILabel()
@@ -66,9 +79,20 @@ class KKPickerView: BaseView {
         self.isUserInteractionEnabled = true
         self.backgroundColor = kCOLOR_BACKGROUND_COLOR
         addSubview(titleView)
+        setSubViewes()
         addSubview(selectorBackView)
         addSubview(sendButton)
         setUpConstraints()
+    }
+    
+    func setSubViewes() {
+        if let subDelegate = self.delegate {
+            let temp = subDelegate.subViewWith(cellForRowAt: self.indexPath)
+            selectorBackView.addSubview(temp)
+            temp.snp.makeConstraints { (make) in
+                make.edges.equalToSuperview()
+            }
+        }
     }
     
     func setUpConstraints(){
@@ -92,9 +116,9 @@ class KKPickerView: BaseView {
     }
     
     @objc func sendDatas(sender:UIButton)  {
-        if let senderDelegate = self.delegate {
+        if let senderDelegate = self.dataSource {
             print(sender)
-            senderDelegate.pickDatas(model: model)
+            senderDelegate.updateDatas(model: model)
         }
     }
     

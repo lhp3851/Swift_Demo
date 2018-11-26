@@ -96,6 +96,7 @@
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
+		BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */; };
 		BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */; };
 		BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FE21A55A7000B36450 /* SelectorConst.swift */; };
 		BE58520121A560B200B36450 /* KKSelectorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520021A560B200B36450 /* KKSelectorModel.swift */; };
@@ -280,6 +281,7 @@
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
+		BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerSubView.swift; sourceTree = "<group>"; };
 		BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorViewController.swift; sourceTree = "<group>"; };
 		BE5851FE21A55A7000B36450 /* SelectorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorConst.swift; sourceTree = "<group>"; };
 		BE58520021A560B200B36450 /* KKSelectorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorModel.swift; sourceTree = "<group>"; };
@@ -1402,6 +1404,7 @@
 			children = (
 				BE58520321A573CA00B36450 /* KKSKTPickerView.swift */,
 				7ADBF67D21A5987E004B8896 /* KKPickerView.swift */,
+				BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1942,6 +1945,7 @@
 				7A7C80861F934353007532FA /* ContactsTableViewCell.swift in Sources */,
 				BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */,
 				7A7818AA1F8FC7F50043254E /* TraceViewController.swift in Sources */,
+				BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */,
 				7ADBF67C21A58C8D004B8896 /* KKSKTSelectorModel.swift in Sources */,
 				7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */,
 				7A606F491F9900DC00B47DE8 /* AppTool.swift in Sources */,

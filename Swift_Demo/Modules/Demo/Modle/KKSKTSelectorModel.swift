@@ -12,7 +12,7 @@ class KKSKTSelectorModel: KKSelectorModel {
     static let datas = ["次","小时","元","片"]
     
     
-    override func pickerViewBy(model: Any) -> (UIView.Type) {
-        return KKSKTPickerView.self
+    override func setPickerView() -> (KKPickerSubView) {
+        return KKSKTPickerView()
     }
 }

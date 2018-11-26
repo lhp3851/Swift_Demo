@@ -8,7 +8,8 @@
 
 import UIKit
 
-class KKSKTPickerView: BaseView {
+class KKSKTPickerView: BaseView,KKPickerViewDataProtocol {
+   
     lazy var pickerView:UIPickerView = {
         let view = UIPickerView()
         view.delegate = self
@@ -38,6 +39,10 @@ class KKSKTPickerView: BaseView {
         }
     }
     
+    // MARK:  update pickerView datas
+    func updateDatas(model: Any) {
+        
+    }
 }
 
 

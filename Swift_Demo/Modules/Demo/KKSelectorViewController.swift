@@ -24,6 +24,7 @@ class KKSelectorViewController: BaseViewController {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
         let temp = KKPickerView.init(frame: CGRect.zero, title: "SKT", datas: "")
         temp.delegate = self
+        temp.dataSource = self
         return temp
     }()
     
@@ -95,8 +96,8 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let key = listDatas.keys.first {
-            let subDicItem = self.listDatas[key]
-            let type = subDicItem![indexPath.row]
+//            let subDicItem = self.listDatas[key]
+//            let type = subDicItem![indexPath.row]
 //            showPicker(type: SelectorType(rawValue: type)!)
             showPickerView()
         }
@@ -133,8 +134,18 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     }
 }
 
-extension KKSelectorViewController: KKPickerViewProtocol{
-    func pickDatas(model: Any) {
-        print("model:",model)
+extension KKSelectorViewController: KKPickerViewProtocol,KKPickerViewDataProtocol{
+    func updateDatas(model: Any) {
+        dump(model)
+    }
+    
+    func subViewWith(cellForRowAt indexPath: IndexPath?) -> (UIView) {
+        if let key = listDatas.keys.first,let index = indexPath {
+            let subDicItem = self.listDatas[key]
+            let datas = subDicItem![index.row] as! KKSelectorModelProtocol
+            let view = datas.setPickerView()
+            return view
+        }
+        return UIView()
     }
 }
