@@ -101,6 +101,9 @@ let kCOLOR_SEARCH_BAR  = kRGBColorFromHex(rgbValue:0xf0f0f0)     //条栏点击�
 
 let kCOLOR_BACKGROUND_COLOR  = kRGBColorFromHex(rgbValue:0xeaecee)     //tableview 背景色
 
+let KCOLOR_TINT_COLOR = kRGBColorFromHex(rgbValue:0x6595F4)         //tintcolor
+
+let KCOLOR_SEPERATE_LINE = kRGBColorFromHex(rgbValue:0xedeff0) 
 
 func kRGBColorFromHex(rgbValue: Int) -> (UIColor) {
     return UIColor(red: ((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0,

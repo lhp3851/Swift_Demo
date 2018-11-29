@@ -12,6 +12,8 @@ class KKSelectorViewController: BaseViewController {
 
     var vcTitle = NSStringFromClass(KKSelectorViewController.self)
     let pickerViewHeight:CGFloat = 297
+    var pickerType:SelectorType!
+    var subViewNumber: Int = 1
     
     lazy var listView : BaseTableview = {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
@@ -22,13 +24,13 @@ class KKSelectorViewController: BaseViewController {
     
     lazy var pickerView: KKPickerView = {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        let temp = KKPickerView.init(frame: CGRect.zero, title: "SKT", datas: "")
-        temp.delegate = self
-        temp.dataSource = self
+        let temp = KKPickerView.init(frame: CGRect.zero, type:pickerType, delegate: self, dataSource: self)
+        temp.partNumber = subViewNumber
+        temp.setSubViewes()
         return temp
     }()
     
-    var listDatas = KKSelectorModel.groupDatas
+    var listDatas = KKPickerModel.groupDatas
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,26 +44,28 @@ class KKSelectorViewController: BaseViewController {
     override func initPannel() {
         super.initPannel()
         self.view.addSubview(self.listView)
-        if let window = UIWindow.getCurrentWindow() {
-            self.translucentView.addSubview(pickerView)
-            window.addSubview(self.translucentView)
-        }
-        
     }
     
+    
+    
     func setConstraints() -> Void {
-        pickerView.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(pickerViewHeight)
-        }
-        
         self.listView.snp.makeConstraints { (make) in
             if #available(iOS 11.0, *) {
                 make.edges.equalTo(self.view.safeAreaLayoutGuide.snp.edges)
             } else {
-                make.edges.equalTo(self.view)
+                make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
             }
-//            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+        }
+    }
+    
+    func setUpPickerView() {
+        if let window = UIWindow.getCurrentWindow() {
+            self.translucentView.addSubview(pickerView)
+            window.addSubview(self.translucentView)
+        }
+        pickerView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(pickerViewHeight)
         }
     }
 }
@@ -96,56 +100,56 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let key = listDatas.keys.first {
-//            let subDicItem = self.listDatas[key]
-//            let type = subDicItem![indexPath.row]
-//            showPicker(type: SelectorType(rawValue: type)!)
-            showPickerView()
+            let subDicItem = self.listDatas[key]
+            let type = subDicItem![indexPath.row]
+            showPicker(type: SelectorType(rawValue: type)!)
         }
     }
     
-    func showPickerView()  {
-        print(self.translucentView)
-        UIView.animate(withDuration: 1.5, animations: {
-            self.translucentView.isHidden = false
-        }) { (status) in
-            
+    func showPicker(type withType: SelectorType) {
+        pickerType = withType
+        if withType == SelectorType.stature{
+            subViewNumber = 2
         }
-    }
-    
-    func showPicker(type whitType: SelectorType) {
-        switch  whitType{
-        case .education:
-            print(whitType)
-        case .address:
-            print(whitType)
-        case .date:
-            print(whitType)
-        case .time:
-            print(whitType)
-        case .dateAndTime:
-            print(whitType)
-        case .weight:
-            print(whitType)
-        case .stature:
-            print(whitType)
-        default:
-            print(whitType)
+        else{
+            subViewNumber = 1
         }
+        setUpPickerView()
+        self.translucentView.isHidden = false
     }
 }
 
 extension KKSelectorViewController: KKPickerViewProtocol,KKPickerViewDataProtocol{
-    func updateDatas(model: Any) {
+    func didSelect(model: Any) {
         dump(model)
+        self.translucentView.isHidden = true
     }
     
-    func subViewWith(cellForRowAt indexPath: IndexPath?) -> (UIView) {
-        if let key = listDatas.keys.first,let index = indexPath {
-            let subDicItem = self.listDatas[key]
-            let datas = subDicItem![index.row] as! KKSelectorModelProtocol
-            let view = datas.setPickerView()
-            return view
+    func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView) {
+        switch type {
+        case .skt:
+            let pickerView = KKColumnsPickerView.init(frame: CGRect.zero,component:1)
+            return pickerView
+        case .education:
+            let pickerView = KKEducationPickerView.init(frame: CGRect.zero, component: 1)
+            return pickerView
+        case .address:
+            let pickerView = KKAddressPickerView.init(frame: CGRect.zero, component: 3)
+            return pickerView
+        case .date:
+            let pickerView = KKDatePickerView.init(frame: CGRect.zero)
+            return pickerView
+        case .gender:
+            let pickerView = KKGenderPickerView.init(frame: CGRect.zero)
+            return pickerView
+        case .weight:
+            let pickerView = KKWeightPickerView.init(frame: CGRect.zero,component:2)
+            return pickerView
+        case .stature:
+            let pickerView = KKStaturePickerView.init(frame: CGRect.zero)
+            return pickerView
+        default:
+            return UIView()
         }
-        return UIView()
     }
 }
