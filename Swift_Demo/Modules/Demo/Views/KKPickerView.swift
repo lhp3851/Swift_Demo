@@ -9,13 +9,22 @@
 import UIKit
 
 protocol KKPickerViewProtocol:NSObjectProtocol {
+    
+    func pickerView(view:UIView) -> (UIView & KKPickerViewProtocol)
+    
+}
+
+protocol KKPickerViewDataSource:NSObjectProtocol {
+    
     func pickDatas(model:Any)
+    
 }
 
 class KKPickerView: BaseView {
 
     weak var delegate:KKPickerViewProtocol?
     let rowHeight:CGFloat = 55
+    var model:Any!
     
     lazy var titleView:UILabel = {
         let temp = UILabel()
@@ -45,7 +54,6 @@ class KKPickerView: BaseView {
         return temp
     }()
     
-    var model:Any!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init error")
@@ -89,6 +97,14 @@ class KKPickerView: BaseView {
             make.height.equalTo(rowHeight)
             make.bottom.equalToSuperview()
         }
+    }
+    
+    func getSubView(model:Any) -> (UIView.Type & KKPickerViewProtocol.Type)? {
+        if let sender = self.delegate {
+            let tempView = sender.pickerView(view: <#T##UIView#>)
+            return tempView
+        }
+        return nil
     }
     
     @objc func sendDatas(sender:UIButton)  {
