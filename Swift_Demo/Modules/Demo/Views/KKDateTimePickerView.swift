@@ -1,5 +1,5 @@
 //
-//  KKSKTPickerView.swift
+//  KKDateTimePickerView.swift
 //  Swift_Demo
 //
 //  Created by sumian on 2018/11/28.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KKSKTPickerView: KKPickerSubView {
+class KKDateTimePickerView: KKPickerSubView {
 
     /*
     // Only override draw() if you perform custom drawing.

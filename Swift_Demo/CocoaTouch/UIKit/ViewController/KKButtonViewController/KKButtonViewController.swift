@@ -22,7 +22,6 @@ class KKButtonViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func initData() {
@@ -54,4 +53,22 @@ class KKButtonViewController: BaseViewController {
     }
     
 
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .allButUpsideDown
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        return .landscapeLeft
+    }
+    
+    
+    func setOrientation(orientation:UIDeviceOrientation)  {
+        let ori = NSNumber.init(value: 4)
+        UIDevice.current.setValue(ori, forKey: "orientation")
+    }
+    
 }

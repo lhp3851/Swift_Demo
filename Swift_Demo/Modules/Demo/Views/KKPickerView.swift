@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol KKPickerViewDataProtocol:NSObjectProtocol {
+    
+    func didSelect(model:Any)
+    
+}
+
 protocol KKPickerViewProtocol:NSObjectProtocol {
     
-    func pickerView(view:UIView) -> (UIView & KKPickerViewProtocol)
+    func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView)
     
 }
 
@@ -20,11 +26,32 @@ protocol KKPickerViewDataSource:NSObjectProtocol {
     
 }
 
+
 class KKPickerView: BaseView {
 
     weak var delegate:KKPickerViewProtocol?
+    weak var dataSource:KKPickerViewDataProtocol?
+    
     let rowHeight:CGFloat = 55
     var model:Any!
+    
+    var indexPath: IndexPath?
+    
+    var pickerType:SelectorType?
+    
+    var partNumber:Int = 0
+    
+    var title: String? {
+        didSet{
+            titleView.text = title
+        }
+    }
+    
+    var tap:UITapGestureRecognizer {
+        let guesture = UITapGestureRecognizer.init(target: self, action: #selector(tapGuesture(tap:)))
+        guesture.delegate = self
+        return guesture
+    }
     
     lazy var titleView:UILabel = {
         let temp = UILabel()
@@ -34,6 +61,7 @@ class KKPickerView: BaseView {
         temp.textAlignment = .center
         temp.backgroundColor = kCOLOR_WHITE
         temp.isUserInteractionEnabled = true
+        temp.addGestureRecognizer(self.tap)
         return temp
     }()
     
@@ -51,32 +79,96 @@ class KKPickerView: BaseView {
         let temp = UIView()
         temp.isUserInteractionEnabled = true
         temp.backgroundColor = kCOLOR_WHITE
+        temp.addGestureRecognizer(self.tap)
         return temp
     }()
     
+    var currentModel:Any!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init error")
     }
     
-    init(frame: CGRect,title:String,datas:Any) {
+    init(frame: CGRect,type:SelectorType,delegate:KKPickerViewProtocol?,dataSource:KKPickerViewDataProtocol?) {
         super.init(frame: frame)
+        self.delegate = delegate
+        self.dataSource = dataSource
+        self.pickerType = type
         setUpPannel()
-        initDatas(title: title,datas: datas)
+        initDatas(type: type)
     }
     
-    func initDatas(title:String,datas:Any){
-        titleView.text = title
-        self.model = datas
+    func initDatas(type:SelectorType){
+        let modelTitle = getTitle(type: type)
+        title = modelTitle
+    }
+    
+    func getTitle(type:SelectorType) -> String {
+        var modelTitle = ""
+        switch type {
+        case .education:
+            modelTitle = "教育程度"
+        case .address:
+            modelTitle = "地区"
+        case .date:
+            modelTitle = "出生日期"
+        case .time:
+            modelTitle = "时间"
+        case .dateAndTime:
+            modelTitle = "日期-时间"
+        case .weight:
+            modelTitle = "体重"
+        case .stature:
+            modelTitle = "身高"
+        case .skt:
+            modelTitle = "单位"
+        default:
+            modelTitle = "请选择"
+        }
+        return modelTitle
+    }
+    
+    func getSelectedDatas(type:SelectorType) {
+        switch type {
+        case .education:
+            currentModel = "教育程度"
+        case .address:
+            currentModel = "地区"
+        case .date:
+            currentModel = "出生日期"
+        case .time:
+            currentModel = "时间"
+        case .dateAndTime:
+            currentModel = "日期-时间"
+        case .weight:
+            currentModel = "体重"
+        case .stature:
+            currentModel = "身高"
+        case .skt:
+            currentModel = ""
+        default:
+            currentModel = "请选择"
+        }
     }
     
     func setUpPannel(){
         self.isUserInteractionEnabled = true
         self.backgroundColor = kCOLOR_BACKGROUND_COLOR
+        self.tintColor = KCOLOR_TINT_COLOR
         addSubview(titleView)
         addSubview(selectorBackView)
         addSubview(sendButton)
         setUpConstraints()
+    }
+    
+    func setSubViewes() {
+        if let subDelegate = self.delegate {
+            let temp = subDelegate.subViewWith(cellForRowAt: self.indexPath,type: pickerType!)
+            selectorBackView.addSubview(temp)
+            temp.snp.makeConstraints { (make) in
+                make.edges.equalToSuperview()
+            }
+        }
     }
     
     func setUpConstraints(){
@@ -99,36 +191,35 @@ class KKPickerView: BaseView {
         }
     }
     
-    func getSubView(model:Any) -> (UIView.Type & KKPickerViewProtocol.Type)? {
-        if let sender = self.delegate {
-            let tempView = sender.pickerView(view: <#T##UIView#>)
-            return tempView
-        }
-        return nil
-    }
-    
     @objc func sendDatas(sender:UIButton)  {
-        if let senderDelegate = self.delegate {
-            print(sender)
-            senderDelegate.pickDatas(model: model)
+        if let senderDelegate = self.dataSource {
+            getSelectedDatas(type: pickerType!)
+            senderDelegate.didSelect(model: currentModel)
         }
     }
     
-    
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        let view = super.hitTest(point, with: event)
-        let point = self.convert(point, to: self)
-        if self.titleView.point(inside: point, with: event) {
-            return self.titleView
-        }
-        else if self.selectorBackView.point(inside: point, with: event) {
-            return self.selectorBackView
-        }
-        else if self.sendButton.point(inside: point, with: event){
-            return self.sendButton
-        }
-        else{
-            return view
-        }
+    @objc func tapGuesture(tap:UITapGestureRecognizer){
+        print(tap)
     }
+    
+//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+//        let hitView = super.hitTest(point, with: event)
+//        let convertPoint = self.convert(point, to: self)
+//        if self.titleView.point(inside: convertPoint, with: event) {
+//            return self.titleView
+//        }
+//        else if self.selectorBackView.point(inside: convertPoint, with: event) {
+//            return self.selectorBackView
+//        }
+//        else if self.sendButton.point(inside: convertPoint, with: event){
+//            return self.sendButton
+//        }
+//        else{
+//            return hitView
+//        }
+//    }
+}
+
+extension KKPickerView: UIGestureRecognizerDelegate {
+    
 }
