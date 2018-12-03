@@ -20,6 +20,12 @@ protocol KKPickerViewProtocol:NSObjectProtocol {
     
 }
 
+protocol KKPickerViewDataSource:NSObjectProtocol {
+    
+    func pickDatas(model:Any)
+    
+}
+
 
 class KKPickerView: BaseView {
 
@@ -27,6 +33,7 @@ class KKPickerView: BaseView {
     weak var dataSource:KKPickerViewDataProtocol?
     
     let rowHeight:CGFloat = 55
+    var model:Any!
     
     var indexPath: IndexPath?
     
