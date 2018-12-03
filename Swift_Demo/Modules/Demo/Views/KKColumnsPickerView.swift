@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KKColumnsPickerView: KKPickerSubView {
+class KKColumnsPickerView: UIView {
    
     lazy var pickerView:UIPickerView = {
         let view = UIPickerView()

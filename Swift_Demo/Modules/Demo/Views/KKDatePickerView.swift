@@ -33,11 +33,11 @@ class KKDatePickerView: KKPickerSubView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUpPannel()  {
+    override func setUpPannel()  {
         addSubview(pickerView)
     }
     
-    func addLayOut()  {
+    override func addLayOut()  {
         pickerView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }

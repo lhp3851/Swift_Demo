@@ -63,7 +63,7 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     var unit: String?
     
     static let groupDatas : [String:[String]] = {
-        let datas = ["Selector":["education","gender","address","date","time","dateAndTime","weight","stature","skt","threeColumn"]]
+        let datas = ["Selector":["skt","education","gender","stature","address","date","time","dateAndTime","weight","threeColumn"]]
         return datas
     }()
     

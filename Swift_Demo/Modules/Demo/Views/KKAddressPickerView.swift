@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KKAddressPickerView: KKColumnsPickerView {
+class KKAddressPickerView: KKPickerSubView {
 
     override var datas: [[String]]! {
         get{

@@ -128,26 +128,29 @@ extension KKSelectorViewController: KKPickerViewProtocol,KKPickerViewDataProtoco
     func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView) {
         switch type {
         case .skt:
-            let pickerView = KKColumnsPickerView.init(frame: CGRect.zero,component:1)
+            let pickerView = KKSKTPickerView.init(frame: CGRect.zero)
             return pickerView
         case .education:
-            let pickerView = KKEducationPickerView.init(frame: CGRect.zero, component: 1)
-            return pickerView
-        case .address:
-            let pickerView = KKAddressPickerView.init(frame: CGRect.zero, component: 3)
-            return pickerView
-        case .date:
-            let pickerView = KKDatePickerView.init(frame: CGRect.zero)
+            let pickerView = KKEducationPickerView.init(frame: CGRect.zero)
             return pickerView
         case .gender:
             let pickerView = KKGenderPickerView.init(frame: CGRect.zero)
             return pickerView
+        case .stature:
+            let pickerView = KKStaturePickerView.init(frame: CGRect.zero, needUnits: true)
+            return pickerView
+            
+        case .address:
+            let pickerView = KKAddressPickerView.init(frame: CGRect.zero, needUnits: false)
+            return pickerView
+        case .date:
+            let pickerView = KKDatePickerView.init(frame: CGRect.zero)
+            return pickerView
+       
         case .weight:
             let pickerView = KKWeightPickerView.init(frame: CGRect.zero,component:2)
             return pickerView
-        case .stature:
-            let pickerView = KKStaturePickerView.init(frame: CGRect.zero)
-            return pickerView
+        
         default:
             return UIView()
         }

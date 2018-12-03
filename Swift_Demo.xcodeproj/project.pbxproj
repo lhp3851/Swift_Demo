@@ -115,7 +115,6 @@
 		BE2893D321AE73AB002659C0 /* KKWeightPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893D221AE73AB002659C0 /* KKWeightPickerModel.swift */; };
 		BE2893D521AE73BE002659C0 /* KKStaturePickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893D421AE73BE002659C0 /* KKStaturePickerModel.swift */; };
 		BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893D621AEA373002659C0 /* KKColumnPickerCell.swift */; };
-		BE2893D921AEA373002659C0 /* KKColumnPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893D721AEA373002659C0 /* KKColumnPickerView.swift */; };
 		BE2893DB21AF82D7002659C0 /* KKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893DA21AF82D7002659C0 /* KKLabel.swift */; };
 		BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */; };
 		BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FE21A55A7000B36450 /* SelectorConst.swift */; };
@@ -320,7 +319,6 @@
 		BE2893D221AE73AB002659C0 /* KKWeightPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKWeightPickerModel.swift; sourceTree = "<group>"; };
 		BE2893D421AE73BE002659C0 /* KKStaturePickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKStaturePickerModel.swift; sourceTree = "<group>"; };
 		BE2893D621AEA373002659C0 /* KKColumnPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKColumnPickerCell.swift; sourceTree = "<group>"; };
-		BE2893D721AEA373002659C0 /* KKColumnPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKColumnPickerView.swift; sourceTree = "<group>"; };
 		BE2893DA21AF82D7002659C0 /* KKLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKLabel.swift; sourceTree = "<group>"; };
 		BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorViewController.swift; sourceTree = "<group>"; };
 		BE5851FE21A55A7000B36450 /* SelectorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorConst.swift; sourceTree = "<group>"; };
@@ -1451,7 +1449,6 @@
 			isa = PBXGroup;
 			children = (
 				BE2893D621AEA373002659C0 /* KKColumnPickerCell.swift */,
-				BE2893D721AEA373002659C0 /* KKColumnPickerView.swift */,
 				BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */,
 				BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */,
 				7ADBF67D21A5987E004B8896 /* KKPickerView.swift */,
@@ -1965,7 +1962,6 @@
 				BE2893C721AE72F4002659C0 /* KKEducationPickerModel.swift in Sources */,
 				BE58520121A560B200B36450 /* KKPickerModel.swift in Sources */,
 				D7AC7D951FC4077B00F601A9 /* KKBaseModel.swift in Sources */,
-				BE2893D921AEA373002659C0 /* KKColumnPickerView.swift in Sources */,
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
 				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,

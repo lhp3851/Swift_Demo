@@ -47,6 +47,13 @@ class KKColumnPickerCell: UITableViewCell {
         setStyle()
     }
     
+    func setContentLableEdgeInset()  {
+        if let content = contentLabel.text {
+            let contentWidth = content.width(withConstraniedHeight: 167/3, font: kFONT_15)
+            contentLabel.edgeInsets = UIEdgeInsetsMake(0, 0, 0, contentWidth)
+        }
+    }
+    
     func setStyle()  {
         if isFocoused {
             contentLabel.textColor = KCOLOR_TINT_COLOR

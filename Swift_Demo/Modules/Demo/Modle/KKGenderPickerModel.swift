@@ -9,7 +9,7 @@
 import UIKit
 
 class KKGenderPickerModel: KKPickerModel {
-    var localDatas = ["男","女","其他"]
+    var localDatas = ["","男","女","其他",""]
     
     override var title: String? {
         get {

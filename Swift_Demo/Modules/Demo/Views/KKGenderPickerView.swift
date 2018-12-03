@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KKGenderPickerView: KKColumnsPickerView {
+class KKGenderPickerView: KKPickerSubView {
 
     override var datas: [[String]]! {
         get{

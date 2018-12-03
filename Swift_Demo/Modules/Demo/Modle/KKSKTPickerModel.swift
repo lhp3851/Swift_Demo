@@ -9,13 +9,15 @@
 import UIKit
 
 class KKSKTPickerModel: KKPickerModel {
-    static var localDatas = ["次","小时","元","片"]
+    static var localDatas = ["","次","元","片","小时","分钟",""]
     
     override var datas: Any? {
         get{
             return KKSKTPickerModel.localDatas
         }
-        set{}
+        set{
+            KKSKTPickerModel.localDatas = newValue as! [String]
+        }
     }
     
     override var type: SelectorType? {
@@ -26,6 +28,6 @@ class KKSKTPickerModel: KKPickerModel {
     }
     
     override func setPickerView() -> (KKPickerSubView) {
-        return KKColumnsPickerView.init(frame: CGRect.zero, component: 0)
+        return KKSKTPickerView.init(frame: CGRect.zero)
     }
 }

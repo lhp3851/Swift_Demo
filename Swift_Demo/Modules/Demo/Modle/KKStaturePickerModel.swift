@@ -12,7 +12,7 @@ class KKStaturePickerModel: KKPickerModel {
 
     override var unit: String?{
         get{
-            return "cm"
+            return "　cm"
         }
         set{}
     }
@@ -33,7 +33,7 @@ class KKStaturePickerModel: KKPickerModel {
     
     override var title: String? {
         get {
-            return "cm"
+            return "身高"
         }
         set {}
     }
@@ -56,6 +56,6 @@ class KKStaturePickerModel: KKPickerModel {
     
     
     override func setPickerView() -> (KKPickerSubView) {
-        return KKStaturePickerView()
+        return KKStaturePickerView.init(frame: CGRect.zero)
     }
 }

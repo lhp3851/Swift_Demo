@@ -10,12 +10,14 @@ import UIKit
 
 class KKSKTPickerView: KKPickerSubView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override var datas: [[String]]! {
+        get{
+            var dataSource = [[String]]()
+            let model = KKSKTPickerModel().datas as! [String]
+            dataSource.append(model)
+            return dataSource
+        }
+        set{}
     }
-    */
 
 }
