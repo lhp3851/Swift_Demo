@@ -8,21 +8,11 @@
 
 import UIKit
 
-protocol KKPickerViewDataProtocol:NSObjectProtocol {
-    
-    func didSelect(model:Any)
-    
-}
-
 protocol KKPickerViewProtocol:NSObjectProtocol {
     
     func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView)
     
-}
-
-protocol KKPickerViewDataSource:NSObjectProtocol {
-    
-    func pickDatas(model:Any)
+    func didSelect(model:Any,type:SelectorType)
     
 }
 
@@ -30,7 +20,6 @@ protocol KKPickerViewDataSource:NSObjectProtocol {
 class KKPickerView: BaseView {
 
     weak var delegate:KKPickerViewProtocol?
-    weak var dataSource:KKPickerViewDataProtocol?
     
     let rowHeight:CGFloat = 55
     var model:Any!
@@ -83,72 +72,46 @@ class KKPickerView: BaseView {
         return temp
     }()
     
+    lazy var collectionView:UICollectionView = {
+        let layout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        let temp = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
+        temp.delegate = self
+        temp.dataSource = self
+        temp.register(KKEducationPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "education")
+        return temp
+    }()
+    
+    lazy var horizoneLineTop: UIView = {
+        let temp = UIView()
+        temp.backgroundColor = KCOLOR_SEPERATE_LINE
+        return temp
+    }()
+    
+    lazy var horizoneLineBottom: UIView = {
+        let temp = UIView()
+        temp.backgroundColor = KCOLOR_SEPERATE_LINE
+        return temp
+    }()
+    
     var currentModel:Any!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init error")
     }
     
-    init(frame: CGRect,type:SelectorType,delegate:KKPickerViewProtocol?,dataSource:KKPickerViewDataProtocol?) {
+    init(frame: CGRect,type:SelectorType,delegate:KKPickerViewProtocol?) {
         super.init(frame: frame)
         self.delegate = delegate
-        self.dataSource = dataSource
         self.pickerType = type
         setUpPannel()
         initDatas(type: type)
     }
     
     func initDatas(type:SelectorType){
-        let modelTitle = getTitle(type: type)
-        title = modelTitle
-    }
-    
-    func getTitle(type:SelectorType) -> String {
-        var modelTitle = ""
-        switch type {
-        case .education:
-            modelTitle = "教育程度"
-        case .address:
-            modelTitle = "地区"
-        case .date:
-            modelTitle = "出生日期"
-        case .time:
-            modelTitle = "时间"
-        case .dateAndTime:
-            modelTitle = "日期-时间"
-        case .weight:
-            modelTitle = "体重"
-        case .stature:
-            modelTitle = "身高"
-        case .skt:
-            modelTitle = "单位"
-        default:
-            modelTitle = "请选择"
-        }
-        return modelTitle
-    }
-    
-    func getSelectedDatas(type:SelectorType) {
-        switch type {
-        case .education:
-            currentModel = "教育程度"
-        case .address:
-            currentModel = "地区"
-        case .date:
-            currentModel = "出生日期"
-        case .time:
-            currentModel = "时间"
-        case .dateAndTime:
-            currentModel = "日期-时间"
-        case .weight:
-            currentModel = "体重"
-        case .stature:
-            currentModel = "身高"
-        case .skt:
-            currentModel = ""
-        default:
-            currentModel = "请选择"
-        }
+        title = "选择器"
     }
     
     func setUpPannel(){
@@ -156,9 +119,13 @@ class KKPickerView: BaseView {
         self.backgroundColor = kCOLOR_BACKGROUND_COLOR
         self.tintColor = KCOLOR_TINT_COLOR
         addSubview(titleView)
+        selectorBackView.addSubview(collectionView)
         addSubview(selectorBackView)
+        addSubview(horizoneLineTop)
+        addSubview(horizoneLineBottom)
         addSubview(sendButton)
         setUpConstraints()
+        addBlureTheEdges()
     }
     
     func setSubViewes() {
@@ -172,6 +139,10 @@ class KKPickerView: BaseView {
     }
     
     func setUpConstraints(){
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        
         titleView.snp.makeConstraints { (make) in
             make.left.right.top.equalToSuperview()
             make.height.equalTo(rowHeight)
@@ -183,6 +154,18 @@ class KKPickerView: BaseView {
             make.bottom.equalTo(sendButton.snp.top).offset(-10)
         }
         
+        horizoneLineTop.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(1.0)
+            make.top.equalTo(115)
+        }
+        
+        horizoneLineBottom.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(1.0)
+            make.top.equalTo(horizoneLineTop.snp.bottom).offset(50)
+        }
+        
         sendButton.snp.makeConstraints { (make) in
             make.top.equalTo(selectorBackView.snp.bottom).offset(10)
             make.left.right.equalToSuperview()
@@ -191,35 +174,123 @@ class KKPickerView: BaseView {
         }
     }
     
+    func addBlureTheEdges() {
+        let frame = CGRect.init(x: 0, y: 115, width: kWINDOW_WIDTH, height: 55.5)
+        let fullFrame = CGRect.init(x: 0, y: 65, width: kWINDOW_WIDTH, height: 167)
+        let path = UIBezierPath.init(rect: fullFrame)
+        let reservePath = UIBezierPath.init(roundedRect: frame, cornerRadius: 5.0)
+        path.append(reservePath)
+        path.usesEvenOddFillRule = true
+        
+        let layer = CAShapeLayer.init(layer: collectionView.layer)
+        layer.path = path.cgPath
+        layer.fillColor = kCOLOR_WHITE.cgColor
+        layer.opacity = 0.7
+        layer.fillRule = kCAFillRuleEvenOdd
+        self.layer.addSublayer(layer)
+    }
+    
+    // MARK:  选择数据
     @objc func sendDatas(sender:UIButton)  {
-        if let senderDelegate = self.dataSource {
-            getSelectedDatas(type: pickerType!)
-            senderDelegate.didSelect(model: currentModel)
-        }
+       
     }
     
     @objc func tapGuesture(tap:UITapGestureRecognizer){
         print(tap)
     }
     
-//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-//        let hitView = super.hitTest(point, with: event)
-//        let convertPoint = self.convert(point, to: self)
-//        if self.titleView.point(inside: convertPoint, with: event) {
-//            return self.titleView
-//        }
-//        else if self.selectorBackView.point(inside: convertPoint, with: event) {
-//            return self.selectorBackView
-//        }
-//        else if self.sendButton.point(inside: convertPoint, with: event){
-//            return self.sendButton
-//        }
-//        else{
-//            return hitView
-//        }
-//    }
 }
 
-extension KKPickerView: UIGestureRecognizerDelegate {
+
+extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let identifiler = pickerType?.rawValue ?? "education"
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifiler, for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize.init(width: UIScreen.main.bounds.width / 3, height: self.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+extension KKPickerView: UIGestureRecognizerDelegate {
+    //    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    //        let hitView = super.hitTest(point, with: event)
+    //        let convertPoint = self.convert(point, to: self)
+    //        if self.titleView.point(inside: convertPoint, with: event) {
+    //            return self.titleView
+    //        }
+    //        else if self.selectorBackView.point(inside: convertPoint, with: event) {
+    //            return self.selectorBackView
+    //        }
+    //        else if self.sendButton.point(inside: convertPoint, with: event){
+    //            return self.sendButton
+    //        }
+    //        else{
+    //            return hitView
+    //        }
+    //    }
 }

@@ -8,9 +8,20 @@
 
 import UIKit
 
+protocol KKPickerDataProtocol:NSObjectProtocol {
+    
+    func pickDatas(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> Any?
+    
+}
 
-class KKPickerSubView: BaseView {
+class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
+    var indexPath:IndexPath? = IndexPath.init(row: 0, section: 0)
+    
+    var type:SelectorType?
+    
+    weak var dataSource:KKPickerDataProtocol?
+    
     private let pickerViewHeight:CGFloat = 297
     
     var needUnits:Bool = false
@@ -43,18 +54,6 @@ class KKPickerSubView: BaseView {
         return temp
     }()
     
-    lazy var horizoneLineTop: UIView = {
-        let temp = UIView()
-        temp.backgroundColor = KCOLOR_SEPERATE_LINE
-        return temp
-    }()
-    
-    lazy var horizoneLineBottom: UIView = {
-        let temp = UIView()
-        temp.backgroundColor = KCOLOR_SEPERATE_LINE
-        return temp
-    }()
-    
     
     init() {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
@@ -76,6 +75,14 @@ class KKPickerSubView: BaseView {
         addLayOut()
     }
     
+    init(frame: CGRect,needUnits:Bool,type:SelectorType,indexPath:IndexPath?) {
+        super.init(frame: frame)
+        self.type = type
+        self.indexPath = indexPath
+        setUpPannel()
+        addLayOut()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init error!")
     }
@@ -85,26 +92,11 @@ class KKPickerSubView: BaseView {
         if needUnits {
             addUnitsLable()
         }
-        addSubview(horizoneLineTop)
-        addSubview(horizoneLineBottom)
-        addBlureTheEdges()
     }
     
     func addLayOut()  {
         pickerTableView.snp.makeConstraints { (make) in
             make.left.top.bottom.right.equalToSuperview()
-        }
-        
-        horizoneLineTop.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.height.equalTo(0.5)
-            make.top.equalTo(54.5)
-        }
-        
-        horizoneLineBottom.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.height.equalTo(0.5)
-            make.top.equalTo(horizoneLineTop.snp.bottom).offset(54.5)
         }
     }
     
@@ -149,6 +141,37 @@ class KKPickerSubView: BaseView {
             tempCell.setContentLableEdgeInset()
         }
     }
+    
+    func pickDatas(cellForRowAt indexPath: IndexPath?, type: SelectorType) -> Any? {
+        switch type {
+        case .skt:
+            let model = KKSKTPickerModel()
+            return model
+        case .education:
+            let model = KKEducationPickerModel()
+            return model
+        case .gender:
+            let model = KKGenderPickerModel()
+            return model
+        case .stature:
+            let model = KKStaturePickerModel()
+            return model
+        case .address:
+            let model = KKAddressPickerModel()
+            return model
+        case .date:
+            let model = KKDatePickerModel()
+            return model
+        case .dateAndTime:
+            let model = KKDateTimePickerModel()
+            return model
+        case .weight:
+            let model = KKWeightPickerModel()
+            return model
+        default:
+            return KKPickerModel()
+        }
+    }
 }
 
 
@@ -175,40 +198,40 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
         return cell!
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        changeSelected(scrollView: scrollView)
-    }
+//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        changeSelected(scrollView: scrollView)
+//    }
+//
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        changeSelected(scrollView: scrollView)
+//    }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        changeSelected(scrollView: scrollView)
-    }
-    
-    func changeSelected(scrollView: UIScrollView) {
-        let tableView = scrollView as! UITableView
-        let deltaH = Int(scrollView.contentOffset.y) % 55
-        let lineNumber = Int(scrollView.contentOffset.y / 55.0) + 1
-        
-        if deltaH >= 55/2 {
-            for visualCell in tableView.visibleCells  {
-                let temp = visualCell as! KKColumnPickerCell
-                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
-            }
-            
-            let indexPath = IndexPath.init(row: lineNumber + 1, section: 0)
-            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-            let cell = tableView.cellForRow(at: indexPath) as! KKColumnPickerCell
-            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
-        }
-        else{
-            for visualCell in tableView.visibleCells  {
-                let temp = visualCell as! KKColumnPickerCell
-                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
-            }
-            let indexPath = IndexPath.init(row: lineNumber , section: 0)
-            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-            let cell = tableView.cellForRow(at: indexPath) as! KKColumnPickerCell
-            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
-        }
-    }
+//    func changeSelected(scrollView: UIScrollView) {
+//        let tableView = scrollView as! UITableView
+//        let deltaH = Int(scrollView.contentOffset.y) % 55
+//        let lineNumber = Int(scrollView.contentOffset.y / 55.0) + 1
+//
+//        if deltaH >= 55/2 {
+//            for visualCell in tableView.visibleCells  {
+//                let temp = visualCell as! KKColumnPickerCell
+//                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
+//            }
+//
+//            let indexPath = IndexPath.init(row: lineNumber + 1, section: 0)
+//            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+//            let cell = tableView.cellForRow(at: indexPath) as! KKColumnPickerCell
+//            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+//        }
+//        else{
+//            for visualCell in tableView.visibleCells  {
+//                let temp = visualCell as! KKColumnPickerCell
+//                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
+//            }
+//            let indexPath = IndexPath.init(row: lineNumber , section: 0)
+//            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+//            let cell = tableView.cellForRow(at: indexPath) as! KKColumnPickerCell
+//            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+//        }
+//    }
     
 }

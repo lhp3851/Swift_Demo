@@ -1449,8 +1449,8 @@
 			isa = PBXGroup;
 			children = (
 				BE2893D621AEA373002659C0 /* KKColumnPickerCell.swift */,
-				BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */,
 				BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */,
+				BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */,
 				7ADBF67D21A5987E004B8896 /* KKPickerView.swift */,
 				BE2893B421AE69B7002659C0 /* KKEducationPickerView.swift */,
 				BE2893C421AE7290002659C0 /* KKGenderPickerView.swift */,

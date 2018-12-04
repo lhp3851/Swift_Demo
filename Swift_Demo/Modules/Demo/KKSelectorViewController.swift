@@ -24,9 +24,9 @@ class KKSelectorViewController: BaseViewController {
     
     lazy var pickerView: KKPickerView = {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        let temp = KKPickerView.init(frame: CGRect.zero, type:pickerType, delegate: self, dataSource: self)
+        let temp = KKPickerView.init(frame: CGRect.zero, type:pickerType, delegate: self)
         temp.partNumber = subViewNumber
-        temp.setSubViewes()
+//        temp.setSubViewes()
         return temp
     }()
     
@@ -119,12 +119,8 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     }
 }
 
-extension KKSelectorViewController: KKPickerViewProtocol,KKPickerViewDataProtocol{
-    func didSelect(model: Any) {
-        dump(model)
-        self.translucentView.isHidden = true
-    }
-    
+extension KKSelectorViewController: KKPickerViewProtocol{
+   
     func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView) {
         switch type {
         case .skt:
@@ -139,14 +135,12 @@ extension KKSelectorViewController: KKPickerViewProtocol,KKPickerViewDataProtoco
         case .stature:
             let pickerView = KKStaturePickerView.init(frame: CGRect.zero, needUnits: true)
             return pickerView
-            
         case .address:
             let pickerView = KKAddressPickerView.init(frame: CGRect.zero, needUnits: false)
             return pickerView
         case .date:
             let pickerView = KKDatePickerView.init(frame: CGRect.zero)
             return pickerView
-       
         case .weight:
             let pickerView = KKWeightPickerView.init(frame: CGRect.zero,component:2)
             return pickerView
@@ -154,5 +148,10 @@ extension KKSelectorViewController: KKPickerViewProtocol,KKPickerViewDataProtoco
         default:
             return UIView()
         }
+    }
+    
+    func didSelect(model: Any, type: SelectorType) {
+        dump(model)
+        self.translucentView.isHidden = true
     }
 }
