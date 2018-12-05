@@ -31,6 +31,14 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
         return view
     }()
     
+    lazy var contetLabel:KKLabel = {
+        let frame = CGRect.init(x: 15, y: kNAVIGATION_STATU_BAR_HEIGHT + 20, width: kWINDOW_WIDTH - 30, height: 30)
+        let temp = KKLabel.init(frame: frame)
+        temp.textAlignment = .left
+        temp.backgroundColor = kCOLOR_NOTTOUCH
+        return temp
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,32 +49,21 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
         self.view.backgroundColor = kCOLOR_BACKGROUND
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
         self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
-        
-//        self.view.addSubview(self.activityView)
-//        self.activityView.startAnimating()
-//        ProgressHUDTool.showHUD(toView: self.view)
-        
-        self.view.addSubview(scrollView)
-        self.view.addSubview(infinitView)
+        self.view.addSubview(contetLabel)
     }
     
     
     override func initData() {
         super.initData()
         
-        let chinese : String = "Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。"
+        let chinese : String = "Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\nSwift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\n"
         let index =  chinese.index(of: "是")
         let result = chinese.reversed()
-        print(chinese.startIndex,chinese.endIndex,chinese.characters.count,"index:",index,result)
+        print(chinese.startIndex,chinese.endIndex,chinese.count,"index:",index,result)
         
-        let chinese_suf = chinese.suffix(2)
-        let chinese_pre = chinese.prefix(2)
-        print(chinese_pre,chinese_suf)
-        
-//        let chinese_sub = chinese.substring(to: chinese.startIndex + 3)
-//        for char in chinese.characters {
-//            print(char)
-//        }
+        contetLabel.text = chinese
+//        contetLabel.textWithWidth(width: contetLabel.frame.width)
+        contetLabel.adjustFrame()
     }
     
     @objc func getContacts() {

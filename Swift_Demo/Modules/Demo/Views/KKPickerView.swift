@@ -157,7 +157,7 @@ class KKPickerView: BaseView {
         horizoneLineTop.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.height.equalTo(1.0)
-            make.top.equalTo(115)
+            make.top.equalTo(125)
         }
         
         horizoneLineBottom.snp.makeConstraints { (make) in
@@ -175,7 +175,7 @@ class KKPickerView: BaseView {
     }
     
     func addBlureTheEdges() {
-        let frame = CGRect.init(x: 0, y: 115, width: kWINDOW_WIDTH, height: 55.5)
+        let frame = CGRect.init(x: 0, y: 125, width: kWINDOW_WIDTH, height: 55.5)
         let fullFrame = CGRect.init(x: 0, y: 65, width: kWINDOW_WIDTH, height: 167)
         let path = UIBezierPath.init(rect: fullFrame)
         let reservePath = UIBezierPath.init(roundedRect: frame, cornerRadius: 5.0)
