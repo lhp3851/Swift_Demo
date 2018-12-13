@@ -10,6 +10,18 @@ import UIKit
 
 class KKStaturePickerView: KKPickerSubView {
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    override init(frame: CGRect, needUnits: Bool) {
+        super.init(frame: frame, needUnits: needUnits)
+    }
+    
     override var datas: [[String]]! {
         var dataSource = [[String]]()
         let model = KKStaturePickerModel().datas as! [String]

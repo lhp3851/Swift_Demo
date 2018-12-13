@@ -18,7 +18,16 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
     var indexPath:IndexPath? = IndexPath.init(row: 0, section: 0)
     
-    var type:SelectorType?
+    var type:SelectorType?{
+        didSet{
+            switch type {
+            case .stature?,.weight?:
+                needUnits = true
+            default:
+                needUnits = false
+            }
+        }
+    }
     
     weak var dataSource:KKPickerDataProtocol?
     
@@ -178,7 +187,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.frame.height/3
+        return 167/3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -198,40 +207,46 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
         return cell!
     }
     
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        changeSelected(scrollView: scrollView)
-//    }
-//
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        changeSelected(scrollView: scrollView)
-//    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        changeSelected(scrollView: scrollView)
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        changeSelected(scrollView: scrollView)
+    }
     
-//    func changeSelected(scrollView: UIScrollView) {
-//        let tableView = scrollView as! UITableView
-//        let deltaH = Int(scrollView.contentOffset.y) % 55
-//        let lineNumber = Int(scrollView.contentOffset.y / 55.0) + 1
-//
-//        if deltaH >= 55/2 {
-//            for visualCell in tableView.visibleCells  {
-//                let temp = visualCell as! KKColumnPickerCell
-//                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
-//            }
-//
-//            let indexPath = IndexPath.init(row: lineNumber + 1, section: 0)
-//            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-//            let cell = tableView.cellForRow(at: indexPath) as! KKColumnPickerCell
-//            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
-//        }
-//        else{
-//            for visualCell in tableView.visibleCells  {
-//                let temp = visualCell as! KKColumnPickerCell
-//                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
-//            }
-//            let indexPath = IndexPath.init(row: lineNumber , section: 0)
-//            tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-//            let cell = tableView.cellForRow(at: indexPath) as! KKColumnPickerCell
-//            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
-//        }
-//    }
+    func changeSelected(scrollView: UIScrollView) {
+        let tableView = scrollView as! UITableView
+        let deltaH = Int(scrollView.contentOffset.y) % 55
+        let lineNumber = Int(scrollView.contentOffset.y / 55.0) + 1
+
+        if deltaH >= 55/2 {
+            for visualCell in tableView.visibleCells  {
+                let temp = visualCell as! KKColumnPickerCell
+                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
+            }
+
+            let indexPath = IndexPath.init(row: lineNumber + 1, section: 0)
+            if indexPath.row <= datas[0].count {
+                tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+            }
+            if let cell = tableView.cellForRow(at: indexPath) as? KKColumnPickerCell{
+                cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+            }
+        }
+        else{
+            for visualCell in tableView.visibleCells  {
+                let temp = visualCell as! KKColumnPickerCell
+                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
+            }
+            let indexPath = IndexPath.init(row: lineNumber , section: 0)
+            if indexPath.row <= datas[0].count {
+                tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+            }
+            if let cell = tableView.cellForRow(at: indexPath) as? KKColumnPickerCell{
+                cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+            }
+        }
+    }
     
 }

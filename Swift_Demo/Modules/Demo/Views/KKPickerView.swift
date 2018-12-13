@@ -28,7 +28,7 @@ class KKPickerView: BaseView {
     
     var pickerType:SelectorType?
     
-    var partNumber:Int = 0
+    var partNumber:Int = 1
     
     var title: String? {
         didSet{
@@ -80,7 +80,6 @@ class KKPickerView: BaseView {
         let temp = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         temp.delegate = self
         temp.dataSource = self
-        temp.register(KKEducationPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "education")
         return temp
     }()
     
@@ -120,6 +119,7 @@ class KKPickerView: BaseView {
         self.tintColor = KCOLOR_TINT_COLOR
         addSubview(titleView)
         selectorBackView.addSubview(collectionView)
+        registeCell(type: self.pickerType ?? .education)
         addSubview(selectorBackView)
         addSubview(horizoneLineTop)
         addSubview(horizoneLineBottom)
@@ -157,13 +157,13 @@ class KKPickerView: BaseView {
         horizoneLineTop.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.height.equalTo(1.0)
-            make.top.equalTo(125)
+            make.top.equalTo(120)
         }
         
         horizoneLineBottom.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.height.equalTo(1.0)
-            make.top.equalTo(horizoneLineTop.snp.bottom).offset(50)
+            make.top.equalTo(horizoneLineTop.snp.bottom).offset(54)
         }
         
         sendButton.snp.makeConstraints { (make) in
@@ -175,7 +175,7 @@ class KKPickerView: BaseView {
     }
     
     func addBlureTheEdges() {
-        let frame = CGRect.init(x: 0, y: 125, width: kWINDOW_WIDTH, height: 55.5)
+        let frame = CGRect.init(x: 0, y: 120, width: kWINDOW_WIDTH, height: 56)
         let fullFrame = CGRect.init(x: 0, y: 65, width: kWINDOW_WIDTH, height: 167)
         let path = UIBezierPath.init(rect: fullFrame)
         let reservePath = UIBezierPath.init(roundedRect: frame, cornerRadius: 5.0)
@@ -188,6 +188,44 @@ class KKPickerView: BaseView {
         layer.opacity = 0.7
         layer.fillRule = kCAFillRuleEvenOdd
         self.layer.addSublayer(layer)
+    }
+    
+    func registeCell(type:SelectorType)  {
+        switch type {
+        case .education:
+            partNumber = 1
+            collectionView.register(KKEducationPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "education")
+        case .gender:
+            partNumber = 1
+            collectionView.register(KKGenderPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "gender")
+        case .address:
+            partNumber = 3
+            collectionView.register(KKAddressPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "address")
+        case .time:
+            partNumber = 3
+            collectionView.register(KKTimePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "time")
+        case .date:
+            partNumber = 3
+            collectionView.register(KKDatePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "date")
+        case .dateAndTime:
+            partNumber = 3
+            collectionView.register(KKDateTimePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "dateAndTime")
+        case .weight:
+            partNumber = 2
+            collectionView.register(KKWeightPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "weight")
+        case .stature:
+            partNumber = 1
+            collectionView.register(KKStaturePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "stature")
+        case .skt:
+            partNumber = 1
+            collectionView.register(KKSKTPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "skt")
+        case .threeColumn:
+            partNumber = 3
+            collectionView.register(KKDateTimePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "threeColumn")
+        default:
+            partNumber = 1
+            collectionView.register(KKEducationPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "other")
+        }
     }
     
     // MARK:  选择数据
@@ -204,7 +242,7 @@ class KKPickerView: BaseView {
 
 extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return partNumber
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -219,7 +257,7 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: UIScreen.main.bounds.width / 3, height: self.frame.height)
+        return CGSize.init(width: UIScreen.main.bounds.width / CGFloat(partNumber), height: self.frame.height - 130)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

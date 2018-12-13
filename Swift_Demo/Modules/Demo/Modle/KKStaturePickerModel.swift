@@ -56,6 +56,6 @@ class KKStaturePickerModel: KKPickerModel {
     
     
     override func setPickerView() -> (KKPickerSubView) {
-        return KKStaturePickerView.init(frame: CGRect.zero)
+        return KKStaturePickerView.init(frame: CGRect.zero, needUnits: true)
     }
 }

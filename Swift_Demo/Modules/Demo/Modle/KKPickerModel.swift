@@ -62,6 +62,9 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     //单位
     var unit: String?
     
+    //默认选中的行,以数组的形式提供，因为可能有多列的情况
+    var defaultIndex = [0]
+    
     static let groupDatas : [String:[String]] = {
         let datas = ["Selector":["skt","education","gender","stature","address","date","time","dateAndTime","weight","threeColumn"]]
         return datas

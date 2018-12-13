@@ -13,7 +13,6 @@ class KKSelectorViewController: BaseViewController {
     var vcTitle = NSStringFromClass(KKSelectorViewController.self)
     let pickerViewHeight:CGFloat = 297
     var pickerType:SelectorType!
-    var subViewNumber: Int = 1
     
     lazy var listView : BaseTableview = {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
@@ -25,8 +24,6 @@ class KKSelectorViewController: BaseViewController {
     lazy var pickerView: KKPickerView = {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
         let temp = KKPickerView.init(frame: CGRect.zero, type:pickerType, delegate: self)
-        temp.partNumber = subViewNumber
-//        temp.setSubViewes()
         return temp
     }()
     
@@ -108,12 +105,6 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     
     func showPicker(type withType: SelectorType) {
         pickerType = withType
-        if withType == SelectorType.stature{
-            subViewNumber = 2
-        }
-        else{
-            subViewNumber = 1
-        }
         setUpPickerView()
         self.translucentView.isHidden = false
     }

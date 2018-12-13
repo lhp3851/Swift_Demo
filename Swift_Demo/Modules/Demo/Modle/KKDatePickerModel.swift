@@ -75,6 +75,6 @@ class KKDatePickerModel: KKPickerModel {
     
     
     override func setPickerView() -> (KKPickerSubView) {
-        return KKStaturePickerView.init(frame: CGRect.zero)
+        return KKDatePickerView.init(frame: CGRect.zero)
     }
 }
