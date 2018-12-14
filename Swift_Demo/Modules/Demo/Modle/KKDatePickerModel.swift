@@ -34,7 +34,7 @@ class KKDatePickerModel: KKPickerModel {
         return components.day ?? 01
     }
     
-    var localDatas:[[String]]  {
+    var defaultDatas:[[String]]  {
         get{
             var datas = [[String]]()
             var years:[String] = [String]()
@@ -57,12 +57,12 @@ class KKDatePickerModel: KKPickerModel {
         set {}
     }
     
-    override var datas: Any?  {
+    override var datas: [Any]?  {
         get {
-            return localDatas
+            return defaultDatas
         }
         set{
-            localDatas = newValue as! [[String]]
+            defaultDatas = newValue as! [[String]]
         }
     }
     

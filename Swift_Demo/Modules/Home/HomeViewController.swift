@@ -59,7 +59,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
         let chinese : String = "Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\nSwift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\n"
         let index =  chinese.index(of: "是")
         let result = chinese.reversed()
-        print(chinese.startIndex,chinese.endIndex,chinese.count,"index:",index,result)
+        print(chinese.startIndex,chinese.endIndex,chinese.count,"index:",index!,result)
         
         contetLabel.text = chinese
 //        contetLabel.textWithWidth(width: contetLabel.frame.width)
@@ -70,8 +70,6 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
         let contactsVC = ContactsViewController()
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: contactsVC, animated: true)
     }
-    
-    
     
     
     @objc func scanQRcode(){

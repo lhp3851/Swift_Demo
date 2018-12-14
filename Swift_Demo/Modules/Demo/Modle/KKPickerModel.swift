@@ -51,7 +51,7 @@ protocol KKSelectorModelProtocol {
 
 class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     //选择器数据
-    var datas:Any?
+    var datas:[Any]?
     
     //选择器类型
     var type: SelectorType?
@@ -61,6 +61,11 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     
     //单位
     var unit: String?
+    
+    //是否需要单位
+    var needUnit:Bool {
+        return unit?.isEmpty ?? false
+    }
     
     //默认选中的行,以数组的形式提供，因为可能有多列的情况
     var defaultIndex = [0]
@@ -74,7 +79,7 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
         super.init()
     }
     
-    init(datas:Any) {
+    init(datas:[Any]) {
         super.init()
         self.datas = datas
     }

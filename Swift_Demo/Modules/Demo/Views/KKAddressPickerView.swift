@@ -8,8 +8,7 @@
 
 import UIKit
 
-class KKAddressPickerView: KKPickerSubView {
-
+class KKAddressPickerView: KKPickerSubView {    
     override var datas: [[String]]! {
         get{
             var dataSource = [[String]]()

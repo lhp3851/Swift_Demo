@@ -9,7 +9,7 @@
 import UIKit
 
 class KKAddressPickerModel: KKPickerModel {
-    lazy var localDatas:[[String:Any]] = {
+    lazy var defaultDatas:[[String:Any]] = {
         let path = Bundle.main.path(forResource: "province", ofType: "json")
         let contents = FileManager.default.contents(atPath: path!)
         let address = try! JSONSerialization.jsonObject(with: contents!, options: JSONSerialization.ReadingOptions.allowFragments)
@@ -23,12 +23,12 @@ class KKAddressPickerModel: KKPickerModel {
         set {}
     }
     
-    override var datas: Any?  {
+    override var datas: [Any]?  {
         get {
-            return localDatas
+            return defaultDatas
         }
         set{
-            localDatas = newValue as! [[String : Any]]
+            defaultDatas = newValue as! [[String : Any]]
         }
     }
     

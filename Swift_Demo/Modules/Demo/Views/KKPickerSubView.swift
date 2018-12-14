@@ -18,22 +18,11 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
     var indexPath:IndexPath? = IndexPath.init(row: 0, section: 0)
     
-    var type:SelectorType?{
-        didSet{
-            switch type {
-            case .stature?,.weight?:
-                needUnits = true
-            default:
-                needUnits = false
-            }
-        }
-    }
-    
     weak var dataSource:KKPickerDataProtocol?
     
     private let pickerViewHeight:CGFloat = 297
     
-    var needUnits:Bool = false
+    var model:KKPickerModel?
     
     var datas: [[String]]! {
         var dataSource = [[String]]()
@@ -63,6 +52,9 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         return temp
     }()
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init error!")
+    }
     
     init() {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
@@ -77,28 +69,21 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         addLayOut()
     }
     
-    init(frame: CGRect,needUnits:Bool) {
-        super.init(frame: frame)
-        self.needUnits = needUnits
+    /// 主要使用的初始化方法
+    ///
+    /// - Parameters:
+    ///   - frame: frame
+    ///   - model: 选择器的数据
+    init(frame: CGRect,model:KKPickerModel) {
+        super.init(frame:frame)
+        self.model = model
         setUpPannel()
         addLayOut()
-    }
-    
-    init(frame: CGRect,needUnits:Bool,type:SelectorType,indexPath:IndexPath?) {
-        super.init(frame: frame)
-        self.type = type
-        self.indexPath = indexPath
-        setUpPannel()
-        addLayOut()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init error!")
     }
     
     func setUpPannel()  {
         addSubview(pickerTableView)
-        if needUnits {
+        if let currentModel = model,currentModel.needUnit {
             addUnitsLable()
         }
     }
@@ -146,9 +131,14 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
     }
 
     func setContentEdgeInset(cell:KKColumnPickerCell?)  {
-        if needUnits, let tempCell = cell {
+        if let currentModel = model,currentModel.needUnit, let tempCell = cell {
             tempCell.setContentLableEdgeInset()
         }
+    }
+    
+    /*s初始化的时候，默认选中的索引*/
+    func updateCurrentIndex(index:Int) {
+        
     }
     
     func pickDatas(cellForRowAt indexPath: IndexPath?, type: SelectorType) -> Any? {

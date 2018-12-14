@@ -10,7 +10,7 @@ import UIKit
 
 class KKWeightPickerView: KKColumnsPickerView {
 
-    
+    var model:KKWeightPickerModel?
 
     
     

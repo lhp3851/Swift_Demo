@@ -9,7 +9,7 @@
 import UIKit
 
 class KKEducationPickerModel: KKPickerModel {
-    var localDatas = ["","博士或以上","研究生","本科","大专","高中","初中或以下","其他",""]
+    var defaultDatas = ["","博士或以上","研究生","本科","大专","高中","初中或以下","其他",""]
     
     override var title: String? {
         get {
@@ -18,12 +18,12 @@ class KKEducationPickerModel: KKPickerModel {
         set {}
     }
     
-    override var datas: Any?  {
+    override var datas: [Any]?  {
         get {
-            return localDatas
+            return defaultDatas
         }
         set{
-            localDatas = newValue as! [String]
+            defaultDatas = newValue as! [String]
         }
     }
     

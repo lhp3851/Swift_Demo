@@ -9,14 +9,14 @@
 import UIKit
 
 class KKSKTPickerModel: KKPickerModel {
-    static var localDatas = ["","次","元","片","小时","分钟",""]
+    static var defaultDatas = ["","次","元","片","小时","分钟",""]
     
-    override var datas: Any? {
+    override var datas: [Any]? {
         get{
-            return KKSKTPickerModel.localDatas
+            return KKSKTPickerModel.defaultDatas
         }
         set{
-            KKSKTPickerModel.localDatas = newValue as! [String]
+            KKSKTPickerModel.defaultDatas = newValue as! [String]
         }
     }
     

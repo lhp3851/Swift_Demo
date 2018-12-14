@@ -23,7 +23,8 @@ class KKSelectorViewController: BaseViewController {
     
     lazy var pickerView: KKPickerView = {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        let temp = KKPickerView.init(frame: CGRect.zero, type:pickerType, delegate: self)
+        let model = KKStaturePickerModel()
+        let temp = KKPickerView.init(frame: CGRect.zero, model: model, delegate: self)
         return temp
     }()
     
@@ -112,31 +113,36 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
 
 extension KKSelectorViewController: KKPickerViewProtocol{
    
-    func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView) {
-        switch type {
-        case .skt:
-            let pickerView = KKSKTPickerView.init(frame: CGRect.zero)
-            return pickerView
-        case .education:
-            let pickerView = KKEducationPickerView.init(frame: CGRect.zero)
-            return pickerView
-        case .gender:
-            let pickerView = KKGenderPickerView.init(frame: CGRect.zero)
-            return pickerView
-        case .stature:
-            let pickerView = KKStaturePickerView.init(frame: CGRect.zero, needUnits: true)
-            return pickerView
-        case .address:
-            let pickerView = KKAddressPickerView.init(frame: CGRect.zero, needUnits: false)
-            return pickerView
-        case .date:
-            let pickerView = KKDatePickerView.init(frame: CGRect.zero)
-            return pickerView
-        case .weight:
-            let pickerView = KKWeightPickerView.init(frame: CGRect.zero,component:2)
-            return pickerView
-        
-        default:
+    func subViewWith(model: KKPickerModel, indexPath: IndexPath?) -> (UIView) {
+        if let type = model.type {
+            switch type {
+            case .skt:
+                let pickerView = KKSKTPickerView.init(frame: CGRect.zero)
+                return pickerView
+            case .education:
+                let pickerView = KKEducationPickerView.init(frame: CGRect.zero)
+                return pickerView
+            case .gender:
+                let pickerView = KKGenderPickerView.init(frame: CGRect.zero)
+                return pickerView
+            case .stature:
+                let model = KKStaturePickerModel.init()
+                let pickerView = KKStaturePickerView.init(frame: CGRect.zero,model:model)
+                return pickerView
+            case .address:
+                let pickerView = KKAddressPickerView.init(frame: CGRect.zero)
+                return pickerView
+            case .date:
+                let pickerView = KKDatePickerView.init(frame: CGRect.zero)
+                return pickerView
+            case .weight:
+                let pickerView = KKWeightPickerView.init(frame: CGRect.zero,component:2)
+                return pickerView
+            default:
+                return UIView()
+            }
+        }
+        else{
             return UIView()
         }
     }

@@ -10,8 +10,8 @@ import UIKit
 
 protocol KKPickerViewProtocol:NSObjectProtocol {
     
-    func subViewWith(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> (UIView)
-    
+    func subViewWith(model:KKPickerModel, indexPath: IndexPath?) -> (UIView)
+        
     func didSelect(model:Any,type:SelectorType)
     
 }
@@ -22,13 +22,10 @@ class KKPickerView: BaseView {
     weak var delegate:KKPickerViewProtocol?
     
     let rowHeight:CGFloat = 55
-    var model:Any!
+    
+    var model:KKPickerModel!
     
     var indexPath: IndexPath?
-    
-    var pickerType:SelectorType?
-    
-    var partNumber:Int = 1
     
     var title: String? {
         didSet{
@@ -101,16 +98,16 @@ class KKPickerView: BaseView {
         fatalError("init error")
     }
     
-    init(frame: CGRect,type:SelectorType,delegate:KKPickerViewProtocol?) {
+    init(frame: CGRect,model:KKPickerModel,delegate:KKPickerViewProtocol?) {
         super.init(frame: frame)
         self.delegate = delegate
-        self.pickerType = type
+        self.model = model
         setUpPannel()
-        initDatas(type: type)
+        initDatas(model: model)
     }
     
-    func initDatas(type:SelectorType){
-        title = "选择器"
+    func initDatas(model:KKPickerModel){
+        title = model.title ?? "选择器"
     }
     
     func setUpPannel(){
@@ -119,7 +116,7 @@ class KKPickerView: BaseView {
         self.tintColor = KCOLOR_TINT_COLOR
         addSubview(titleView)
         selectorBackView.addSubview(collectionView)
-        registeCell(type: self.pickerType ?? .education)
+        registeCell(type: self.model.type ?? .education)
         addSubview(selectorBackView)
         addSubview(horizoneLineTop)
         addSubview(horizoneLineBottom)
@@ -130,7 +127,7 @@ class KKPickerView: BaseView {
     
     func setSubViewes() {
         if let subDelegate = self.delegate {
-            let temp = subDelegate.subViewWith(cellForRowAt: self.indexPath,type: pickerType!)
+            let temp = subDelegate.subViewWith(model: model, indexPath: IndexPath.init(row: 0, section: 0))
             selectorBackView.addSubview(temp)
             temp.snp.makeConstraints { (make) in
                 make.edges.equalToSuperview()
@@ -193,38 +190,27 @@ class KKPickerView: BaseView {
     func registeCell(type:SelectorType)  {
         switch type {
         case .education:
-            partNumber = 1
-            collectionView.register(KKEducationPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "education")
+            collectionView.register(KKEducationPickerView.self, forCellWithReuseIdentifier: type.rawValue )
         case .gender:
-            partNumber = 1
-            collectionView.register(KKGenderPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "gender")
+            collectionView.register(KKGenderPickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .address:
-            partNumber = 3
-            collectionView.register(KKAddressPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "address")
+            collectionView.register(KKAddressPickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .time:
-            partNumber = 3
-            collectionView.register(KKTimePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "time")
+            collectionView.register(KKTimePickerView.self, forCellWithReuseIdentifier: type.rawValue )
         case .date:
-            partNumber = 3
-            collectionView.register(KKDatePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "date")
+            collectionView.register(KKDatePickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .dateAndTime:
-            partNumber = 3
-            collectionView.register(KKDateTimePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "dateAndTime")
+            collectionView.register(KKDateTimePickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .weight:
-            partNumber = 2
-            collectionView.register(KKWeightPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "weight")
+            collectionView.register(KKWeightPickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .stature:
-            partNumber = 1
-            collectionView.register(KKStaturePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "stature")
+            collectionView.register(KKStaturePickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .skt:
-            partNumber = 1
-            collectionView.register(KKSKTPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "skt")
+            collectionView.register(KKSKTPickerView.self, forCellWithReuseIdentifier: type.rawValue)
         case .threeColumn:
-            partNumber = 3
-            collectionView.register(KKDateTimePickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "threeColumn")
+            collectionView.register(KKDateTimePickerView.self, forCellWithReuseIdentifier: type.rawValue)
         default:
-            partNumber = 1
-            collectionView.register(KKEducationPickerView.self, forCellWithReuseIdentifier: pickerType?.rawValue ?? "other")
+            collectionView.register(KKEducationPickerView.self, forCellWithReuseIdentifier: type.rawValue)
         }
     }
     
@@ -242,7 +228,7 @@ class KKPickerView: BaseView {
 
 extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return partNumber
+        return self.model.datas?.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -250,14 +236,14 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let identifiler = pickerType?.rawValue ?? "education"
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifiler, for: indexPath)
+        let identifiler = self.model.type?.rawValue ?? "education"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifiler, for: indexPath)
         cell.backgroundColor = UIColor.red
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: UIScreen.main.bounds.width / CGFloat(partNumber), height: self.frame.height - 130)
+        return CGSize.init(width: UIScreen.main.bounds.width / CGFloat(self.model.datas?.count ?? 1), height: self.frame.height - 130)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -18,7 +18,7 @@ class KKStaturePickerModel: KKPickerModel {
     }
     
     
-    var localDatas:[String]  {
+    var defaultDatas:[String]  {
         get{
             var number = [String]()
             number.append("")
@@ -38,12 +38,12 @@ class KKStaturePickerModel: KKPickerModel {
         set {}
     }
     
-    override var datas: Any?  {
+    override var datas: [Any]?  {
         get {
-            return localDatas
+            return defaultDatas
         }
         set{
-            localDatas = newValue as! [String]
+            defaultDatas = newValue as! [String]
         }
     }
     
@@ -56,6 +56,6 @@ class KKStaturePickerModel: KKPickerModel {
     
     
     override func setPickerView() -> (KKPickerSubView) {
-        return KKStaturePickerView.init(frame: CGRect.zero, needUnits: true)
+        return KKStaturePickerView.init(frame: CGRect.zero)
     }
 }
