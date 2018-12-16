@@ -9,6 +9,9 @@
 import UIKit
 
 class KKAddressPickerModel: KKPickerModel {
+    
+    static let share = KKAddressPickerModel()
+    
     lazy var defaultDatas:[[String:Any]] = {
         let path = Bundle.main.path(forResource: "province", ofType: "json")
         let contents = FileManager.default.contents(atPath: path!)
@@ -16,16 +19,38 @@ class KKAddressPickerModel: KKPickerModel {
         return address as! [[String : Any]]
     }()
     
+    lazy var provinces:[String] = {
+        var temp = [String]()
+        temp.append("")
+        for item in defaultDatas {
+            temp.append(item["name"] as! String)
+        }
+        temp.append("")
+        return temp
+    }()
+    
+    var cities:[String] {
+        return getCities()
+    }
+    
+    var area:[String] {
+        return getArea(city: "深圳市", province: "广东省")
+    }
+    
     override var title: String? {
         get {
-            return "教育程度"
+            return "地址"
         }
         set {}
     }
     
     override var datas: [Any]?  {
         get {
-            return defaultDatas
+            var temp = [[String]]()
+            temp.append(provinces)
+            temp.append(cities)
+            temp.append(area)
+            return temp
         }
         set{
             defaultDatas = newValue as! [[String : Any]]
@@ -39,8 +64,44 @@ class KKAddressPickerModel: KKPickerModel {
         set {}
     }
     
+    func getCities(province:String = "广东省") -> [String] {
+        var temp = [String]()
+        temp.append("")
+        for item in defaultDatas {
+            if let provinceItem:String = item["name"] as? String,provinceItem == province {
+                let cityItemes:[[String:Any]] = item["city"] as! [[String:Any]];
+                for cityItem in cityItemes {
+                    temp.append(cityItem["name"] as! String)
+                }
+                break
+            }
+        }
+        temp.append("")
+        return temp
+    }
     
-    override func setPickerView() -> (KKPickerSubView) {
-        return KKAddressPickerView()
+    func getArea(city:String = "深圳市" ,province:String = "广东省") -> [String] {
+        var temp = [String]()
+        temp.append("")
+        for item in defaultDatas {
+            if let provinceItem:String = item["name"] as? String,provinceItem == province {
+                let cityItemes:[[String:Any]] = item["city"] as! [[String:Any]];
+                for cityItem in cityItemes {
+                    if let currentCity:String = cityItem["name"] as? String , city == currentCity {
+                        let areas:[String] = cityItem["area"] as! [String]
+                        for areaItem in areas {
+                            temp.append(areaItem)
+                        }
+                        break
+                    }
+                }
+            }
+        }
+        temp.append("")
+        return temp
+    }
+    
+    override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        return KKAddressPickerView.init(frame: CGRect.zero, model: model)
     }
 }

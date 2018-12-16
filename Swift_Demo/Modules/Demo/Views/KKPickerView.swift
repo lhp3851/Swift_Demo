@@ -9,9 +9,7 @@
 import UIKit
 
 protocol KKPickerViewProtocol:NSObjectProtocol {
-    
-    func subViewWith(model:KKPickerModel, indexPath: IndexPath?) -> (UIView)
-        
+            
     func didSelect(model:Any,type:SelectorType)
     
 }
@@ -94,6 +92,8 @@ class KKPickerView: BaseView {
     
     var currentModel:Any!
     
+    var selectModel:[[String]] = [[""],[""],[""]]
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init error")
     }
@@ -123,16 +123,6 @@ class KKPickerView: BaseView {
         addSubview(sendButton)
         setUpConstraints()
         addBlureTheEdges()
-    }
-    
-    func setSubViewes() {
-        if let subDelegate = self.delegate {
-            let temp = subDelegate.subViewWith(model: model, indexPath: IndexPath.init(row: 0, section: 0))
-            selectorBackView.addSubview(temp)
-            temp.snp.makeConstraints { (make) in
-                make.edges.equalToSuperview()
-            }
-        }
     }
     
     func setUpConstraints(){
@@ -216,7 +206,7 @@ class KKPickerView: BaseView {
     
     // MARK:  选择数据
     @objc func sendDatas(sender:UIButton)  {
-       
+       getSelectDetail(model: model)
     }
     
     @objc func tapGuesture(tap:UITapGestureRecognizer){
@@ -236,9 +226,10 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let identifiler = self.model.type?.rawValue ?? "education"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifiler, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell:KKPickerSubView = collectionView.dequeueReusableCell(withReuseIdentifier: self.model.type?.rawValue ?? "", for: indexPath) as! KKPickerSubView
+        cell.indexPath = indexPath
+        cell.delegate = self
+        cell.model = self.model
         return cell
     }
     
@@ -256,7 +247,21 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
 }
 
 
-
+extension KKPickerView:KKPickerDataProtocol{
+    
+    func pickDatas(model: KKPickerModel) {
+        self.model = model
+    }
+    
+    func getSelectDetail(model:KKPickerModel)  {
+        let index = model.selectIndex
+        let datas:[[String]] = model.datas as! [[String]]
+        let selectItem = datas[index.section][index.row]
+        selectModel[index.section] = [selectItem]
+        print(selectModel)
+    }
+    
+}
 
 
 

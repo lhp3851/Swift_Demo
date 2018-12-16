@@ -9,14 +9,17 @@
 import UIKit
 
 class KKSKTPickerModel: KKPickerModel {
-    static var defaultDatas = ["","次","元","片","小时","分钟",""]
+    
+    static let share = KKSKTPickerModel()
+    
+    static var defaultDatas = [["","次","元","片","小时","分钟",""]]
     
     override var datas: [Any]? {
         get{
             return KKSKTPickerModel.defaultDatas
         }
         set{
-            KKSKTPickerModel.defaultDatas = newValue as! [String]
+            KKSKTPickerModel.defaultDatas = [newValue as! [String]]
         }
     }
     
@@ -27,7 +30,7 @@ class KKSKTPickerModel: KKPickerModel {
         set{}
     }
     
-    override func setPickerView() -> (KKPickerSubView) {
-        return KKSKTPickerView.init(frame: CGRect.zero)
+    override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        return KKSKTPickerView.init(frame: CGRect.zero, model: model)
     }
 }

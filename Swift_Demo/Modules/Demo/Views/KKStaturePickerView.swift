@@ -21,14 +21,6 @@ class KKStaturePickerView: KKPickerSubView {
     override init(frame: CGRect, model: KKPickerModel) {
         super.init(frame: frame, model: model)
     }
-    
-    override var datas: [[String]]! {
-        var dataSource = [[String]]()
-        let model = KKStaturePickerModel().datas as! [String]
-        dataSource.append(model)
-        return dataSource
-    }
-
-
 }
+
 

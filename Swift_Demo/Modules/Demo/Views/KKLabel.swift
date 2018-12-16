@@ -65,8 +65,8 @@ extension KKLabel {
         }
     }
     
-    func adjustFrame()  {//frame:CGRect,font:UIFont
-        if let text = self.text {
+    func adjustFrame()  {
+        if let _ = self.text {
             self.edgeInsets = UIEdgeInsetsMake(10, 10, 0, 5)
             self.numberOfLines = 0
             self.lineBreakMode = .byTruncatingTail

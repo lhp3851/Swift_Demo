@@ -9,6 +9,8 @@
 import UIKit
 
 class KKStaturePickerModel: KKPickerModel {
+    
+    static let share = KKStaturePickerModel()
 
     override var unit: String?{
         get{
@@ -18,15 +20,17 @@ class KKStaturePickerModel: KKPickerModel {
     }
     
     
-    var defaultDatas:[String]  {
+    var defaultDatas:[[String]]  {
         get{
+            var datas = [Any]()
             var number = [String]()
             number.append("")
             for item in stride(from: 120, to: 250, by: 1) {
                 number.append(String(format: "%i", item))
             }
             number.append("")
-            return number
+            datas.append(number)
+            return datas as! [[String]]
         }
         set{}
     }
@@ -43,7 +47,7 @@ class KKStaturePickerModel: KKPickerModel {
             return defaultDatas
         }
         set{
-            defaultDatas = newValue as! [String]
+            defaultDatas = [newValue as! [String]]
         }
     }
     
@@ -55,7 +59,9 @@ class KKStaturePickerModel: KKPickerModel {
     }
     
     
-    override func setPickerView() -> (KKPickerSubView) {
-        return KKStaturePickerView.init(frame: CGRect.zero)
+    override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        
+        return KKStaturePickerView.init(frame: CGRect.zero, model: model)
+        
     }
 }

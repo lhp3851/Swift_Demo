@@ -23,7 +23,7 @@ class KKSelectorViewController: BaseViewController {
     
     lazy var pickerView: KKPickerView = {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        let model = KKStaturePickerModel()
+        let model = KKWeightPickerModel.share
         let temp = KKPickerView.init(frame: CGRect.zero, model: model, delegate: self)
         return temp
     }()
@@ -43,7 +43,6 @@ class KKSelectorViewController: BaseViewController {
         super.initPannel()
         self.view.addSubview(self.listView)
     }
-    
     
     
     func setConstraints() -> Void {
@@ -112,43 +111,10 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
 }
 
 extension KKSelectorViewController: KKPickerViewProtocol{
-   
-    func subViewWith(model: KKPickerModel, indexPath: IndexPath?) -> (UIView) {
-        if let type = model.type {
-            switch type {
-            case .skt:
-                let pickerView = KKSKTPickerView.init(frame: CGRect.zero)
-                return pickerView
-            case .education:
-                let pickerView = KKEducationPickerView.init(frame: CGRect.zero)
-                return pickerView
-            case .gender:
-                let pickerView = KKGenderPickerView.init(frame: CGRect.zero)
-                return pickerView
-            case .stature:
-                let model = KKStaturePickerModel.init()
-                let pickerView = KKStaturePickerView.init(frame: CGRect.zero,model:model)
-                return pickerView
-            case .address:
-                let pickerView = KKAddressPickerView.init(frame: CGRect.zero)
-                return pickerView
-            case .date:
-                let pickerView = KKDatePickerView.init(frame: CGRect.zero)
-                return pickerView
-            case .weight:
-                let pickerView = KKWeightPickerView.init(frame: CGRect.zero,component:2)
-                return pickerView
-            default:
-                return UIView()
-            }
-        }
-        else{
-            return UIView()
-        }
-    }
-    
+
     func didSelect(model: Any, type: SelectorType) {
         dump(model)
         self.translucentView.isHidden = true
     }
+    
 }

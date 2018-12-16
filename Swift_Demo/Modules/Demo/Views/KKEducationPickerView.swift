@@ -10,15 +10,16 @@ import UIKit
 
 class KKEducationPickerView: KKPickerSubView {
     
-    override var datas: [[String]]! {
-        get{
-            var dataSource = [[String]]()
-            let model = KKEducationPickerModel().datas as! [String]
-            dataSource.append(model)
-            return dataSource
-        }
-        set{}
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
-
+    override init(frame: CGRect, model: KKPickerModel) {
+        super.init(frame: frame, model: model)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

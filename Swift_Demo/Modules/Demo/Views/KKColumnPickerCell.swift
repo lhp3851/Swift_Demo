@@ -47,10 +47,17 @@ class KKColumnPickerCell: UITableViewCell {
         setStyle()
     }
     
-    func setContentLableEdgeInset()  {
+    func setContentLableEdgeInset(aligment:NSTextAlignment)  {
         if let content = contentLabel.text {
             let contentWidth = content.width(withConstraniedHeight: 167/3, font: kFONT_15)
-            contentLabel.edgeInsets = UIEdgeInsetsMake(0, 0, 0, contentWidth)
+            switch aligment {
+            case .left:
+                contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth, 0, 0)
+            case .right:
+                contentLabel.edgeInsets = UIEdgeInsetsMake(0, 0, 0, contentWidth)
+            default:
+                contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth/2, 0, contentWidth/2)
+            }
         }
     }
     

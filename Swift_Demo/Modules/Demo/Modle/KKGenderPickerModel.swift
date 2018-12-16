@@ -9,7 +9,10 @@
 import UIKit
 
 class KKGenderPickerModel: KKPickerModel {
-    var defaultDatas = ["","男","女","其他",""]
+    
+    static let share = KKGenderPickerModel()
+    
+    var defaultDatas = [["","男","女","其他",""]]
     
     override var title: String? {
         get {
@@ -23,7 +26,7 @@ class KKGenderPickerModel: KKPickerModel {
             return defaultDatas
         }
         set{
-            defaultDatas = newValue as! [String]
+            defaultDatas = [newValue as! [String]]
         }
     }
     
@@ -35,7 +38,7 @@ class KKGenderPickerModel: KKPickerModel {
     }
     
     
-    override func setPickerView() -> (KKPickerSubView) {
-        return KKGenderPickerView()
+    override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        return KKGenderPickerView.init(frame: CGRect.zero, model: model)
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class KKDatePickerModel: KKPickerModel {
     
+    static let share = KKDatePickerModel()
+    
     var components:DateComponents {
         let calendar = Calendar.init(identifier: .gregorian)
         let components = calendar.dateComponents([.year,.month,.day], from: currentDate)
@@ -28,18 +30,26 @@ class KKDatePickerModel: KKPickerModel {
         return components.month ?? 11
     }
     
-    var monthes:[String] = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+    var monthes:[String] = ["","01","02","03","04","05","06",
+                            "07","08","09","10","11","12",""]
     
     var day:Int {
         return components.day ?? 01
     }
+    
+    var days:[String] = ["","01","02","03","04","05",
+                         "06","07","08","09","10","11",
+                         "12","13","14","15","16","17",
+                         "18","19","20","21","22","23",
+                         "24","25","26","27","28","29",
+                         "30",""]
     
     var defaultDatas:[[String]]  {
         get{
             var datas = [[String]]()
             var years:[String] = [String]()
             years.append("")
-            for item in stride(from: 1950, to: year, by: 1) {
+            for item in stride(from: 1930, to: year, by: 1) {
                 years.append(String(format: "%i", item))
             }
             years.append("")
@@ -74,7 +84,7 @@ class KKDatePickerModel: KKPickerModel {
     }
     
     
-    override func setPickerView() -> (KKPickerSubView) {
-        return KKDatePickerView.init(frame: CGRect.zero)
+    override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        return KKDatePickerView.init(frame: CGRect.zero, model: model)
     }
 }

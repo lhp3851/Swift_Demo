@@ -19,12 +19,6 @@ class KKWebViewViewController: BaseViewController,WKUIDelegate,WKNavigationDeleg
         return view
     }()
     
-    lazy var webview : UIWebView = {
-        let view = UIWebView.init()
-        view.delegate = self
-        return view
-    }()
-    
     var vcTitle = ""
     
     override func viewDidLoad() {
@@ -36,11 +30,7 @@ class KKWebViewViewController: BaseViewController,WKUIDelegate,WKNavigationDeleg
     override func initPannel() {
         super.initPannel()
         self.view.addSubview(self.web)
-        
-        self.view.addSubview(self.webview)
-        
         self.setConstraints()
-        
     }
     
     
@@ -52,25 +42,15 @@ class KKWebViewViewController: BaseViewController,WKUIDelegate,WKNavigationDeleg
         let htmlPath = Bundle.main.path(forResource: "kaquanbao", ofType: "html")
         let htmlContent = try? String.init(contentsOfFile: htmlPath!, encoding: String.Encoding.utf8)
         self.web.loadHTMLString(htmlContent!, baseURL: baseURL)
-        
-        self.webview.loadHTMLString(htmlContent!, baseURL: baseURL)
     }
     
     
     func setConstraints() -> Void {
         self.web.snp.makeConstraints { (make) in
             make.right.left.top.equalTo(0)
-            make.height.equalTo(self.view.frame.size.height/2)
-        }
-        
-        self.webview.snp.makeConstraints { (make) in
-            make.right.left.bottom.equalTo(0)
-            make.top.equalTo(self.web.snp.bottom)
+            make.height.equalTo(self.view.frame.size.height)
         }
     }
-    
-    
-  
     
     // MARK: - WKNavigationDelegate
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!){
@@ -85,8 +65,6 @@ class KKWebViewViewController: BaseViewController,WKUIDelegate,WKNavigationDeleg
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error){
          print(webView.debugDescription,navigation.debugDescription,error)
     }
-
-    
     
     // MARK: - UIWebViewDelegate
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {

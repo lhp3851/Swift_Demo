@@ -9,5 +9,17 @@
 import UIKit
 
 class KKTimePickerView: KKPickerSubView {
-
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    override init(frame: CGRect, model: KKPickerModel) {
+        super.init(frame: frame, model: model)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

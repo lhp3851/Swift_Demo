@@ -9,37 +9,20 @@
 import UIKit
 
 class KKDatePickerView: KKPickerSubView {
-    
-    lazy var pickerView:UIDatePicker = {
-        let temp = UIDatePicker()
-        temp.datePickerMode = .date
-        temp.maximumDate = Date()
-        temp.minimumDate = Date.init(timeIntervalSince1970: 0)
-        temp.locale = Locale.init(identifier: "zh_Hans_CN")
-        temp.timeZone = TimeZone.init(identifier: "CST")
-        temp.calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
-        return temp
-    }()
 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+    }
+    
+    override init(frame: CGRect, model: KKPickerModel) {
+        super.init(frame: frame, model: model)
         setUpPannel()
         addLayOut()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func setUpPannel()  {
-        addSubview(pickerView)
-    }
-    
-    override func addLayOut()  {
-        pickerView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
     }
     
     

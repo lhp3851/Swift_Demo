@@ -9,7 +9,10 @@
 import UIKit
 
 class KKEducationPickerModel: KKPickerModel {
-    var defaultDatas = ["","博士或以上","研究生","本科","大专","高中","初中或以下","其他",""]
+    
+    static let share = KKEducationPickerModel()
+    
+    static var defaultDatas = [["","博士或以上","研究生","本科","大专","高中","初中或以下","其他",""]]
     
     override var title: String? {
         get {
@@ -20,10 +23,14 @@ class KKEducationPickerModel: KKPickerModel {
     
     override var datas: [Any]?  {
         get {
-            return defaultDatas
+            var data = [Any]()
+            for item in KKEducationPickerModel.defaultDatas {
+                data.append(item)
+            }
+            return data as? [[String]]
         }
         set{
-            defaultDatas = newValue as! [String]
+            KKEducationPickerModel.defaultDatas = [newValue as! [String]]
         }
     }
     
@@ -35,7 +42,7 @@ class KKEducationPickerModel: KKPickerModel {
     }
     
     
-    override func setPickerView() -> (KKPickerSubView) {
-        return KKEducationPickerView()
+    override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        return KKEducationPickerView.init(frame: CGRect.zero, model: model)
     }
 }

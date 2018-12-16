@@ -10,30 +10,46 @@ import UIKit
 
 protocol KKPickerDataProtocol:NSObjectProtocol {
     
-    func pickDatas(cellForRowAt indexPath: IndexPath?,type:SelectorType) -> Any?
+    func pickDatas(model:KKPickerModel)
     
 }
 
 class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
-    var indexPath:IndexPath? = IndexPath.init(row: 0, section: 0)
+    var indexPath:IndexPath? = IndexPath.init(row: 1, section: 0) {
+        didSet{
+            if let currentModel = self.model {
+                currentModel.selectIndex = indexPath!
+            }
+        }
+    }
     
-    weak var dataSource:KKPickerDataProtocol?
+    weak var delegate:KKPickerDataProtocol?
     
     private let pickerViewHeight:CGFloat = 297
     
-    var model:KKPickerModel?
+    var model:KKPickerModel? {
+        didSet{
+            if let currentModel = model,currentModel.needUnit {
+                addUnitsLable()
+            }
+        }
+    }
+    
+    override func didMoveToSuperview() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+            self.updateCurrentIndex(index: 1)
+            self.pickDatas(model: self.model!)
+        }
+    }
     
     var datas: [[String]]! {
-        var dataSource = [[String]]()
-        let model = KKStaturePickerModel().datas as! [String]
-        dataSource.append(model)
-        return dataSource
+        return self.model!.datas as? [[String]]
     }
     
     lazy var unitLabel:UILabel = {
         let temp = UILabel()
-        temp.text = KKStaturePickerModel().unit
+        temp.text = model?.unit
         temp.textColor = KCOLOR_TINT_COLOR
         temp.font = kFONT_15
         temp.textAlignment = .left
@@ -56,13 +72,6 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         fatalError("init error!")
     }
     
-    init() {
-        let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        super.init(frame: frame)
-        setUpPannel()
-        addLayOut()
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpPannel()
@@ -83,9 +92,6 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
     
     func setUpPannel()  {
         addSubview(pickerTableView)
-        if let currentModel = model,currentModel.needUnit {
-            addUnitsLable()
-        }
     }
     
     func addLayOut()  {
@@ -130,45 +136,26 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         self.layer.addSublayer(layer)
     }
 
-    func setContentEdgeInset(cell:KKColumnPickerCell?)  {
-        if let currentModel = model,currentModel.needUnit, let tempCell = cell {
-            tempCell.setContentLableEdgeInset()
+    func setContentEdgeInset(cell:KKColumnPickerCell?,alignment:NSTextAlignment)  {
+        if let _ = model, let tempCell = cell {
+            tempCell.setContentLableEdgeInset(aligment: alignment)
         }
     }
     
     /*s初始化的时候，默认选中的索引*/
     func updateCurrentIndex(index:Int) {
-        
+        let index_path = IndexPath.init(row: index, section: 0)
+        let cell:KKColumnPickerCell = self.pickerTableView.cellForRow(at: index_path) as! KKColumnPickerCell
+        cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+        if indexPath!.row <= datas[0].count {
+            self.pickerTableView.scrollToRow(at: index_path, at: .middle, animated: true)
+        }
+        self.indexPath?.row = index
     }
     
-    func pickDatas(cellForRowAt indexPath: IndexPath?, type: SelectorType) -> Any? {
-        switch type {
-        case .skt:
-            let model = KKSKTPickerModel()
-            return model
-        case .education:
-            let model = KKEducationPickerModel()
-            return model
-        case .gender:
-            let model = KKGenderPickerModel()
-            return model
-        case .stature:
-            let model = KKStaturePickerModel()
-            return model
-        case .address:
-            let model = KKAddressPickerModel()
-            return model
-        case .date:
-            let model = KKDatePickerModel()
-            return model
-        case .dateAndTime:
-            let model = KKDateTimePickerModel()
-            return model
-        case .weight:
-            let model = KKWeightPickerModel()
-            return model
-        default:
-            return KKPickerModel()
+    func pickDatas(model:KKPickerModel) {
+        if let localDelegate = self.delegate,let currentModel = self.model {
+            localDelegate.pickDatas(model: currentModel)
         }
     }
 }
@@ -181,7 +168,7 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas[section].count
+        return datas[self.indexPath?.section ?? 0].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -191,9 +178,14 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
             cell = KKColumnPickerCell.init(style: .default, reuseIdentifier: identtifier)
         }
         cell?.selectionStyle = .none
-        let content = datas[0][indexPath.row]
+        let content = datas[self.indexPath?.section ?? 0][indexPath.row]
         cell?.updateDatas(text:content)
-        setContentEdgeInset(cell: cell)
+//        if self.indexPath?.section == 0 {
+//            setContentEdgeInset(cell: cell, alignment: .right)
+//        }
+//        else{
+//            setContentEdgeInset(cell: cell, alignment: .left)
+//        }
         return cell!
     }
     
@@ -218,7 +210,9 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
 
             let indexPath = IndexPath.init(row: lineNumber + 1, section: 0)
             if indexPath.row <= datas[0].count {
+                self.indexPath?.row = indexPath.row
                 tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                pickDatas(model: self.model!)
             }
             if let cell = tableView.cellForRow(at: indexPath) as? KKColumnPickerCell{
                 cell.contentLabel.textColor = KCOLOR_TINT_COLOR
@@ -231,7 +225,9 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
             }
             let indexPath = IndexPath.init(row: lineNumber , section: 0)
             if indexPath.row <= datas[0].count {
+                self.indexPath?.row = indexPath.row
                 tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                pickDatas(model: self.model!)
             }
             if let cell = tableView.cellForRow(at: indexPath) as? KKColumnPickerCell{
                 cell.contentLabel.textColor = KCOLOR_TINT_COLOR

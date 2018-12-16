@@ -46,7 +46,7 @@ enum SelectorType : String{
 }
 
 protocol KKSelectorModelProtocol {
-    func setPickerView() -> (KKPickerSubView)
+    func setPickerView(model:KKPickerModel) -> (KKPickerSubView)
 }
 
 class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
@@ -64,11 +64,17 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     
     //是否需要单位
     var needUnit:Bool {
-        return unit?.isEmpty ?? false
+        if let units = unit {
+            return !units.isEmpty
+        }
+        return false
     }
     
     //默认选中的行,以数组的形式提供，因为可能有多列的情况
     var defaultIndex = [0]
+    
+    //选中的索引
+    var selectIndex = IndexPath.init(row: 1, section: 0)
     
     static let groupDatas : [String:[String]] = {
         let datas = ["Selector":["skt","education","gender","stature","address","date","time","dateAndTime","weight","threeColumn"]]
@@ -84,8 +90,8 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
         self.datas = datas
     }
     
-    func setPickerView() -> (KKPickerSubView) {
-        return KKPickerSubView()
+    func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
+        return KKPickerSubView.init(frame: CGRect.zero, model: KKPickerModel())
     }
 }
 

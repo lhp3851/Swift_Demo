@@ -121,25 +121,24 @@ class FilesManagerTool: NSObject {
     }
     
     class func imageWithNames(imageName:String,needOffen:Bool) -> UIImage {
-        if needOffen {
+        if !needOffen {
             return self.imageWithNames(imageName: imageName)
         }
         else{
-            var name = imageName
-            if UIDevice().retina > 2.0  {
-                name  = imageName + "@3x.png"
+            if let bundle = Bundle.main.path(forResource: imageName, ofType: nil){
+                var image = UIImage(contentsOfFile: bundle)
+                image = image?.withRenderingMode(.alwaysOriginal)
+                if let image = image {
+                    return image
+                }
+                else{// 非2x、3x图片
+                    image = UIImage(named: imageName)
+                    return image!
+                }
             }
             else{
-                name  = imageName + "@2x.png"
+                return UIImage()
             }
-            let bundle = Bundle.main.path(forResource: name, ofType: nil)
-            var image = UIImage(contentsOfFile: bundle!)
-            image = image?.withRenderingMode(.alwaysOriginal)
-            if image == nil {// 非2x、3x图片
-                image = UIImage(named: imageName)
-            }
-            
-            return image!
         }
     }
     // MARK: Contents Path
