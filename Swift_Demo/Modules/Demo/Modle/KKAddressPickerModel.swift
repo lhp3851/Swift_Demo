@@ -53,13 +53,23 @@ class KKAddressPickerModel: KKPickerModel {
             return temp
         }
         set{
-            defaultDatas = newValue as! [[String : Any]]
+            
         }
     }
     
     override var type: SelectorType? {
         get {
             return SelectorType.address
+        }
+        set {}
+    }
+    
+    override var defaultIndex: [Int] {
+        get {
+            let provinceIndex = self.provinces.indices(of: "广东省")
+            let cityIndex = self.cities.indices(of: "深圳市")
+            let areaIndex = self.area.indices(of: "宝安区")
+            return [provinceIndex.first ?? 1,cityIndex.first ?? 1,areaIndex.first ?? 1]
         }
         set {}
     }

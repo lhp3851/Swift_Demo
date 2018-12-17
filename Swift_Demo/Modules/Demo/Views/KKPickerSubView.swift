@@ -16,6 +16,9 @@ protocol KKPickerDataProtocol:NSObjectProtocol {
 
 class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
+    fileprivate var drageEnd = false
+    fileprivate var decelerateEnd = false
+    
     var indexPath:IndexPath? = IndexPath.init(row: 1, section: 0) {
         didSet{
             if let currentModel = self.model {
@@ -37,10 +40,9 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
     }
     
     override func didMoveToSuperview() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-            self.updateCurrentIndex(index: 1)
-            self.pickDatas(model: self.model!)
-        }
+        let index = self.model?.defaultIndex[self.indexPath?.section ?? 0]
+        //self.pickDatas(model: self.model!) // 默认选中的数据,由 defaultIndex 获取
+        self.updateCurrentIndex(index: (index ?? 1))
     }
     
     var datas: [[String]]! {
@@ -136,19 +138,47 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         self.layer.addSublayer(layer)
     }
 
-    func setContentEdgeInset(cell:KKColumnPickerCell?,alignment:NSTextAlignment)  {
-        if let _ = model, let tempCell = cell {
+    func setContentEdgeInset(cell:KKColumnPickerCell?,alignment:NSTextAlignment,space:CGFloat = 0)  {
+        if !isNeedAdjustEdgeInset() {
+            return
+        }
+        if let _ = model, let tempCell = cell,space == 0 {
             tempCell.setContentLableEdgeInset(aligment: alignment)
+        }
+        else{
+            cell?.setContentLableEdgeInset(aligment: alignment, space: space)
+        }
+    }
+    
+    func setUnitEdgeInset()  {
+        
+    }
+    
+    func isNeedAdjustEdgeInset() -> Bool {
+        if let type:SelectorType = self.model?.type {
+            switch type {
+            case .time,.dateAndTime:
+                return true
+            default:
+                return false
+            }
+        }
+        else{
+            return false
         }
     }
     
     /*s初始化的时候，默认选中的索引*/
     func updateCurrentIndex(index:Int) {
-        let index_path = IndexPath.init(row: index, section: 0)
-        let cell:KKColumnPickerCell = self.pickerTableView.cellForRow(at: index_path) as! KKColumnPickerCell
-        cell.contentLabel.textColor = KCOLOR_TINT_COLOR
-        if indexPath!.row <= datas[0].count {
-            self.pickerTableView.scrollToRow(at: index_path, at: .middle, animated: true)
+        let index_path = IndexPath.init(row: index , section: 0)
+        if index_path.row <= datas[0].count {
+            var scroll_index_path = index_path
+            scroll_index_path.row -= 1
+            self.pickerTableView.scrollToRow(at: scroll_index_path, at: .top, animated: false)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            let cell:KKColumnPickerCell = self.pickerTableView.cellForRow(at: index_path) as! KKColumnPickerCell
+            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
         }
         self.indexPath?.row = index
     }
@@ -162,6 +192,10 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
 
 extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 167/3
@@ -180,21 +214,30 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
         cell?.selectionStyle = .none
         let content = datas[self.indexPath?.section ?? 0][indexPath.row]
         cell?.updateDatas(text:content)
-//        if self.indexPath?.section == 0 {
-//            setContentEdgeInset(cell: cell, alignment: .right)
-//        }
-//        else{
-//            setContentEdgeInset(cell: cell, alignment: .left)
-//        }
+        if self.indexPath?.section == 0 {
+            setContentEdgeInset(cell: cell, alignment: .left,space: 75)
+        }
+        else{
+            setContentEdgeInset(cell: cell, alignment: .right,space: 75)
+        }
         return cell!
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        changeSelected(scrollView: scrollView)
+        drageEnd = true
+        if !decelerate {
+            drageEnd = false
+            changeSelected(scrollView: scrollView)
+        }
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        changeSelected(scrollView: scrollView)
+        decelerateEnd = true
+        if (drageEnd && decelerateEnd) {
+            drageEnd = false
+            decelerateEnd = false
+            changeSelected(scrollView: scrollView)
+        }
     }
     
     func changeSelected(scrollView: UIScrollView) {

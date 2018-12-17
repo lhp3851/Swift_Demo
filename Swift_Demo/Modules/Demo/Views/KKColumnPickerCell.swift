@@ -47,9 +47,9 @@ class KKColumnPickerCell: UITableViewCell {
         setStyle()
     }
     
-    func setContentLableEdgeInset(aligment:NSTextAlignment)  {
-        if let content = contentLabel.text {
-            let contentWidth = content.width(withConstraniedHeight: 167/3, font: kFONT_15)
+    func setContentLableEdgeInset(aligment:NSTextAlignment,space:CGFloat = 0)  {
+        if space != 0 {
+            let contentWidth = space
             switch aligment {
             case .left:
                 contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth, 0, 0)
@@ -59,7 +59,22 @@ class KKColumnPickerCell: UITableViewCell {
                 contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth/2, 0, contentWidth/2)
             }
         }
+        else{
+            if let content = contentLabel.text {
+                let contentWidth = content.width(withConstraniedHeight: 167/3, font: kFONT_15)
+                switch aligment {
+                case .left:
+                    contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth, 0, 0)
+                case .right:
+                    contentLabel.edgeInsets = UIEdgeInsetsMake(0, 0, 0, contentWidth)
+                default:
+                    contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth/2, 0, contentWidth/2)
+                }
+            }
+        }
     }
+    
+    
     
     func setStyle()  {
         if isFocoused {

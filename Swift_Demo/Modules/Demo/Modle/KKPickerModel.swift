@@ -49,6 +49,36 @@ protocol KKSelectorModelProtocol {
     func setPickerView(model:KKPickerModel) -> (KKPickerSubView)
 }
 
+//protocol KKPickerViewDataSource {
+//    //num
+//    //title
+//    //default index
+//    // KKPickerDataSourceProtocol at index
+//    // size at index
+//
+//}
+//
+//protocol KKPickerDataSourceProtocol: UITableViewDataSource {
+//    // type
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell//
+//    // selected index
+//    // scroll to index
+//}
+//
+//class KKPickerArrayDataSource:NSObject, KKPickerDataSourceProtocol {
+//    var objs: [Any] = []
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return objs.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+//        return cell
+//    }
+//}
+
+
 class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     //选择器数据
     var datas:[Any]?
@@ -71,7 +101,7 @@ class KKPickerModel: KKBaseModel,KKSelectorModelProtocol {
     }
     
     //默认选中的行,以数组的形式提供，因为可能有多列的情况
-    var defaultIndex = [0]
+    var defaultIndex = [1]
     
     //选中的索引
     var selectIndex = IndexPath.init(row: 1, section: 0)

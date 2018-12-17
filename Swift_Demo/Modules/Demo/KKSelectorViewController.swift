@@ -23,7 +23,7 @@ class KKSelectorViewController: BaseViewController {
     
     lazy var pickerView: KKPickerView = {
         let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        let model = KKWeightPickerModel.share
+        let model = KKAddressPickerModel.share
         let temp = KKPickerView.init(frame: CGRect.zero, model: model, delegate: self)
         return temp
     }()

@@ -75,6 +75,8 @@ class KKPickerView: BaseView {
         let temp = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         temp.delegate = self
         temp.dataSource = self
+        temp.register(KKCollectionFooterReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: KKCollectionFooterReusableView.identifier)
+        temp.backgroundColor = UIColor.white
         return temp
     }()
     
@@ -234,12 +236,47 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         return CGSize.init(width: UIScreen.main.bounds.width / CGFloat(self.model.datas?.count ?? 1), height: self.frame.height - 130)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
         return UIEdgeInsetsMake(0, 0, 0, 0)
+        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+       
+        if let currentModel = self.model,currentModel.type == SelectorType.time {
+            return CGSize.init(width: 7.5, height: 55.5)
+        }
+        else{
+            return CGSize.zero
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        var reusableView :UICollectionReusableView?
+        
+        if kind == UICollectionElementKindSectionFooter {
+            
+            let footer :KKCollectionFooterReusableView = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionElementKindSectionFooter, withReuseIdentifier: KKCollectionFooterReusableView.identifier, for: indexPath) as! KKCollectionFooterReusableView
+
+            reusableView = footer
+            
+        } else if  kind == UICollectionElementKindSectionHeader {
+            
+            let header  = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath)
+            
+            reusableView = header
+        }
+        
+        return reusableView!
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
@@ -251,6 +288,7 @@ extension KKPickerView:KKPickerDataProtocol{
     
     func pickDatas(model: KKPickerModel) {
         self.model = model
+//        updateSubLayerDatas(model: self.model)
     }
     
     func getSelectDetail(model:KKPickerModel)  {
@@ -261,6 +299,25 @@ extension KKPickerView:KKPickerDataProtocol{
         print(selectModel)
     }
     
+    func updateSubLayerDatas(model:KKPickerModel) {
+        if let type:SelectorType = model.type {
+            if type == .address && model.selectIndex.section == 0 {
+                let currentModel:KKAddressPickerModel = model as! KKAddressPickerModel
+                var datas:[[String]] = currentModel.datas as! [[String]]
+                let province = currentModel.provinces[model.selectIndex.row]
+                let cities = currentModel.getCities(province: province)
+                let city = cities[1]
+                let areas = currentModel.getArea(city: city, province: province)
+                datas.remove(at: 2)//移除区域
+                datas.remove(at: 1)//移除城市
+                datas.append(cities)
+                datas.append(areas)
+                currentModel.datas = datas
+                collectionView.reloadData()
+                print("联动数据")
+            }
+        }
+    }
 }
 
 
@@ -306,20 +363,20 @@ extension KKPickerView:KKPickerDataProtocol{
 
 
 extension KKPickerView: UIGestureRecognizerDelegate {
-    //    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-    //        let hitView = super.hitTest(point, with: event)
-    //        let convertPoint = self.convert(point, to: self)
-    //        if self.titleView.point(inside: convertPoint, with: event) {
-    //            return self.titleView
-    //        }
-    //        else if self.selectorBackView.point(inside: convertPoint, with: event) {
-    //            return self.selectorBackView
-    //        }
-    //        else if self.sendButton.point(inside: convertPoint, with: event){
-    //            return self.sendButton
-    //        }
-    //        else{
-    //            return hitView
-    //        }
-    //    }
+//        override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+//            let hitView = super.hitTest(point, with: event)
+//            let convertPoint = self.convert(point, to: self)
+//            if self.titleView.point(inside: convertPoint, with: event) {
+//                return self.titleView
+//            }
+//            else if self.selectorBackView.point(inside: convertPoint, with: event) {
+//                return self.selectorBackView
+//            }
+//            else if self.sendButton.point(inside: convertPoint, with: event){
+//                return self.sendButton
+//            }
+//            else{
+//                return hitView
+//            }
+//        }
 }

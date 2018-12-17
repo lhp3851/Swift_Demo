@@ -41,6 +41,12 @@ class KKEducationPickerModel: KKPickerModel {
         set {}
     }
     
+    override var defaultIndex: [Int] {
+        get {
+            return [0,0,0]
+        }
+        set {}
+    }
     
     override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
         return KKEducationPickerView.init(frame: CGRect.zero, model: model)

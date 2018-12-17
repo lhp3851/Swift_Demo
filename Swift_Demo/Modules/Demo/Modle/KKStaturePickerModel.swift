@@ -58,6 +58,12 @@ class KKStaturePickerModel: KKPickerModel {
         set {}
     }
     
+    override var defaultIndex: [Int] {
+        get {
+            return [0,0,0]
+        }
+        set {}
+    }
     
     override func setPickerView(model: KKPickerModel) -> (KKPickerSubView) {
         
