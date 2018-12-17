@@ -12,7 +12,6 @@ class KKSelectorViewController: BaseViewController {
 
     var vcTitle = NSStringFromClass(KKSelectorViewController.self)
     let pickerViewHeight:CGFloat = 297
-    var pickerType:SelectorType!
     
     lazy var listView : BaseTableview = {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
@@ -22,8 +21,7 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var pickerView: KKPickerView = {
-        let frame = CGRect.init(x: 0, y: kWINDOW_HEIGHT, width: kWINDOW_WIDTH, height: pickerViewHeight)
-        let model = KKAddressPickerModel.share
+        let model = KKTimePickerModel.share
         let temp = KKPickerView.init(frame: CGRect.zero, model: model, delegate: self)
         return temp
     }()
@@ -104,7 +102,6 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func showPicker(type withType: SelectorType) {
-        pickerType = withType
         setUpPickerView()
         self.translucentView.isHidden = false
     }

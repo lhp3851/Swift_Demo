@@ -49,15 +49,21 @@ protocol KKSelectorModelProtocol {
     func setPickerView(model:KKPickerModel) -> (KKPickerSubView)
 }
 
-//protocol KKPickerViewDataSource {
-//    //num
-//    //title
-//    //default index
-//    // KKPickerDataSourceProtocol at index
-//    // size at index
-//
-//}
-//
+protocol KKPickerViewDataSource {
+    //列数
+    var collumns:Int {get set}
+    //选择器标题
+    var title:String {get set}
+    //单位
+    var uinits:String {get set}
+    //默认选中的数据索引
+    var defaultIndex:Int {get set}
+    //选择器子列表size
+    var cellSize:CGSize {get set}
+    //选择器子列表数据源
+    var datas:[Any] {get set}
+}
+
 //protocol KKPickerDataSourceProtocol: UITableViewDataSource {
 //    // type
 //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell//

@@ -31,13 +31,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
     
     private let pickerViewHeight:CGFloat = 297
     
-    var model:KKPickerModel? {
-        didSet{
-            if let currentModel = model,currentModel.needUnit {
-                addUnitsLable()
-            }
-        }
-    }
+    var model:KKPickerModel? 
     
     override func didMoveToSuperview() {
         let index = self.model?.defaultIndex[self.indexPath?.section ?? 0]
@@ -48,18 +42,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
     var datas: [[String]]! {
         return self.model!.datas as? [[String]]
     }
-    
-    lazy var unitLabel:UILabel = {
-        let temp = UILabel()
-        temp.text = model?.unit
-        temp.textColor = KCOLOR_TINT_COLOR
-        temp.font = kFONT_15
-        temp.textAlignment = .left
-        temp.backgroundColor = kCOLOR_WHITE
-        temp.isUserInteractionEnabled = false
-        temp.backgroundColor = kCOLOR_CLEAR
-        return temp
-    }()
+
     
     lazy var pickerTableView: UITableView = {
         let temp = UITableView()
@@ -101,15 +84,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
             make.left.top.bottom.right.equalToSuperview()
         }
     }
-    
-    func addUnitsLable() {
-        addSubview(unitLabel)
-        
-        unitLabel.snp.makeConstraints { (make) in
-            make.right.top.bottom.equalToSuperview()
-            make.width.equalTo(kWINDOW_WIDTH/2)
-        }
-    }
+
     
     func addBlureTheEdges() {
         let frame = CGRect.init(x: 0, y: 54.5, width: kWINDOW_WIDTH, height: 55.5)
@@ -137,43 +112,15 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         layer.type = kCAGradientLayerAxial
         self.layer.addSublayer(layer)
     }
-
-    func setContentEdgeInset(cell:KKColumnPickerCell?,alignment:NSTextAlignment,space:CGFloat = 0)  {
-        if !isNeedAdjustEdgeInset() {
-            return
-        }
-        if let _ = model, let tempCell = cell,space == 0 {
-            tempCell.setContentLableEdgeInset(aligment: alignment)
-        }
-        else{
-            cell?.setContentLableEdgeInset(aligment: alignment, space: space)
-        }
-    }
-    
-    func setUnitEdgeInset()  {
-        
-    }
-    
-    func isNeedAdjustEdgeInset() -> Bool {
-        if let type:SelectorType = self.model?.type {
-            switch type {
-            case .time,.dateAndTime:
-                return true
-            default:
-                return false
-            }
-        }
-        else{
-            return false
-        }
-    }
     
     /*s初始化的时候，默认选中的索引*/
     func updateCurrentIndex(index:Int) {
         let index_path = IndexPath.init(row: index , section: 0)
         if index_path.row <= datas[0].count {
             var scroll_index_path = index_path
-            scroll_index_path.row -= 1
+            if scroll_index_path.row > 1{
+                scroll_index_path.row -= 1
+            }
             self.pickerTableView.scrollToRow(at: scroll_index_path, at: .top, animated: false)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
@@ -214,12 +161,6 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
         cell?.selectionStyle = .none
         let content = datas[self.indexPath?.section ?? 0][indexPath.row]
         cell?.updateDatas(text:content)
-        if self.indexPath?.section == 0 {
-            setContentEdgeInset(cell: cell, alignment: .left,space: 75)
-        }
-        else{
-            setContentEdgeInset(cell: cell, alignment: .right,space: 75)
-        }
         return cell!
     }
     
