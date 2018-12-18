@@ -81,15 +81,61 @@ class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITabl
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
+        if !decelerate {
+            scrollEnded(scrollView: scrollView)
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
+        scrollEnded(scrollView: scrollView)
     }
     
-    //处理选中的颜色修改，
-    //处理默认选中，
-    //处理滚到指定index
+    //滚动结束
+    func scrollEnded(scrollView:UIScrollView)  {
+        let tableView = scrollView as! UITableView
+        let item = dataSource[defaultIndex]
+        let cellHeight = item.cellType(userInfo: nil).cellHeightWithTableViewWidth(tableView.bounds.width, item)
+        let deltaH = Int(scrollView.contentOffset.y) % Int(cellHeight)
+        let lineNumber = Int(scrollView.contentOffset.y / cellHeight) + 1
+        
+        if deltaH >= Int(cellHeight/2) {
+            scrollToIndex(index: lineNumber + 1, tableView: tableView, animated: true)
+            setSelectedItem(index: lineNumber + 1, tableView: tableView)
+        }
+        else{
+            scrollToIndex(index: lineNumber , tableView: tableView, animated: true)
+            setSelectedItem(index: lineNumber , tableView: tableView)
+        }
+    }
+    
+    //选中的颜色修改
+    func setSelectedItem(index:Int,tableView:UITableView)  {
+        let indexPath = IndexPath.init(row: index, section: 0)
+        for cell in tableView.visibleCells {
+            let temp = cell as! RyLabelTableViewCell
+            temp.label.textColor = kCOLOR_TEXT_FIRST
+        }
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? RyLabelTableViewCell {
+             cell.label.textColor = RyUI.color.B3
+        }
+    }
+    
+    //默认选中
+    func scrollToDefaultItem(tableView:UITableView)  {
+        scrollToIndex(index: defaultIndex, tableView: tableView, animated: false)
+        setSelectedItem(index: defaultIndex, tableView: tableView)
+    }
+    
+    //滚到指定index
+    func scrollToIndex(index:Int,tableView:UITableView,animated:Bool) {
+        let indexPath = IndexPath.init(row: index, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .middle, animated: animated)
+        pickeDatas()
+    }
+    
     //（最后再处理选中事件的抛出，用与处理联动）
+    func pickeDatas()  {
+        
+    }
 }
