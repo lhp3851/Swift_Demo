@@ -23,6 +23,7 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupSubview()
         addLayout()
+        selectionStyle = .none
     }
     
     override func update(withData data: RyCellDataBaseProtocol) {
@@ -55,6 +56,7 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
         temp.textAlignment = .center
         temp.textColor = RyUI.color.T2
         temp.font = UIFont.systemFont(ofSize: 18)
+        temp.adjustsFontSizeToFitWidth = true
         return temp
     }()
 }

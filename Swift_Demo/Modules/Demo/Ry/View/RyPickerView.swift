@@ -9,12 +9,33 @@
 import UIKit
 import SnapKit
 
+//[]
+
+protocol RyPickerViewDelegate: NSObjectProtocol {
+    func pickerView(didTapAction pickerView: RyPickerView)
+}
+
 class RyPickerView: UIView {
     
     //就是持有，不weak
     let dataSource: RyPickerViewDataSource
     
+    //delegate 还是要weak
+    weak var delegate: RyPickerViewDelegate?
+    
     var preferredHeight: CGFloat = 55 + 55 + 187
+    
+    var selectedObjs: [RyPickerListable]{
+        var temp = [RyPickerListable]()
+        let count = dataSource.numberOfComponents(in: self)
+        for index in 0..<count {
+            let model = dataSource.pickerView(self, modelForComponent: index)
+            if let item = model.selectedItem(in: self, inComponent: index){
+                temp.append(item)
+            }
+        }
+        return temp
+    }
     
     init(frame: CGRect = CGRect.zero, dataSource: RyPickerViewDataSource) {
         self.dataSource = dataSource
@@ -37,8 +58,13 @@ class RyPickerView: UIView {
         collectionView.reloadData()
     }
     
+    func selectedObj(inComponent component: Int) -> RyPickerListable?{
+        let item = dataSource.pickerView(self, modelForComponent: component)
+        return item.selectedItem(in: self, inComponent: component)
+    }
+    
     @objc func onActionButton(sender: Any){
-        
+        delegate?.pickerView(didTapAction: self)
     }
     
     func setupSubview(){

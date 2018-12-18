@@ -34,6 +34,8 @@ class RyPickerListCollectionViewCell: UICollectionViewCell {
         temp.showsVerticalScrollIndicator = false
         temp.showsHorizontalScrollIndicator = false
         temp.separatorStyle = .none
+        temp.decelerationRate = UIScrollViewDecelerationRateFast
         return temp
     }()
 }
+

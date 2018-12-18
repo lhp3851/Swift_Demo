@@ -50,5 +50,14 @@ protocol RyPickerViewItem {
     
     func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth
     
-    func reload()
+    func reload(in pickerView: RyPickerView, inComponent component: Int)
+    
+    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?
+}
+
+
+protocol RyPickerListable {
+    var objInPicker: Any {get}
+    var rowForObjInPicker: Int {get}
+    var titleInPicker: String {get}
 }

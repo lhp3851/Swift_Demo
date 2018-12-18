@@ -10,13 +10,15 @@ import UIKit
 
 class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
     
-    var dataSource: [RyCellDataBaseProtocol]
+    typealias ListItem = RyPickerListable & RyCellDataBaseProtocol
+    
+    var dataSource: [ListItem]
     
     let itemWidth: RyPickerViewItemWidth
     
     let defaultIndex: Int
     
-    init(dataSource: [RyCellDataBaseProtocol], width: RyPickerViewItemWidth, defaultIndex: Int) {
+    init(dataSource: [ListItem], width: RyPickerViewItemWidth, defaultIndex: Int) {
         self.itemWidth = width
         self.dataSource = dataSource
         self.defaultIndex = defaultIndex
@@ -41,8 +43,12 @@ class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITabl
         return itemWidth
     }
     
-    func reload(){
+    func reload(in pickerView: RyPickerView, inComponent component: Int){
         //
+    }
+    
+    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
+        return nil
     }
     
     //MARK: - UITableViewDataSource

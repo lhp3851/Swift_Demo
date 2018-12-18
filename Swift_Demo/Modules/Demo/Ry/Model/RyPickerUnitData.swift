@@ -36,7 +36,11 @@ class RyPickerUnitData: RyPickerViewItem{
         return itemWidth
     }
     
-    func reload() {
+    func reload(in pickerView: RyPickerView, inComponent component: Int){
         
+    }
+    
+    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
+        return nil
     }
 }
