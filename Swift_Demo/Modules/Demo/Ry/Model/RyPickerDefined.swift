@@ -21,6 +21,26 @@ enum RyPickerViewItemType {
     case list
 }
 
+enum RyPickerViewItemWidth{
+    //比例 （factor： 0 ～ 1）
+    case scale(factor: CGFloat)
+    //固定宽度
+    case fixed(width: CGFloat)
+    //平均分配剩余的
+    case flexible
+    
+    func width(in length: CGFloat) -> CGFloat?{
+        switch self {
+        case .fixed(let width):
+            return width
+        case .scale(let factor):
+            return factor * length
+        case .flexible:
+            return nil
+        }
+    }
+}
+
 protocol RyPickerViewItem {
     var type: RyPickerViewItemType {get}
     
@@ -28,7 +48,7 @@ protocol RyPickerViewItem {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> CGFloat
+    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth
     
     func reload()
 }

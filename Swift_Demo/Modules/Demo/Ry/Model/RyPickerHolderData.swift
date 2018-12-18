@@ -10,12 +10,12 @@ import UIKit
 
 class RyPickerHolderData: RyPickerViewItem{
     
-    let width: CGFloat
+    let itemWidth: RyPickerViewItemWidth
     
     let type: RyPickerViewItemType = .holder
     
-    init(width: CGFloat) {
-        self.width = width
+    init(width: RyPickerViewItemWidth) {
+        self.itemWidth = width
     }
     
     func prepare(withCollection collectionView: UICollectionView) {
@@ -29,8 +29,8 @@ class RyPickerHolderData: RyPickerViewItem{
         return cell
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> CGFloat {
-        return width
+    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth {
+        return itemWidth
     }
     
     func reload() {

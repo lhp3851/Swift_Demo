@@ -10,10 +10,10 @@ import UIKit
 
 extension RyPickerView{
     static var heightPicker: RyPickerView{
-        let lHolder = RyPickerHolderData(width: 100)
-        let listItem = RyPickerListData(dataSource: RyLabelData.itemsForHeight, width: 75, defaultIndex: 0)
-        let unitItem = RyPickerUnitData(width: 35, unit: "cm")
-        let rHolder = RyPickerHolderData(width: 100)
+        let lHolder = RyPickerHolderData(width: .flexible)
+        let listItem = RyPickerListData(dataSource: RyLabelData.itemsForHeight, width: .fixed(width:75), defaultIndex: 0)
+        let unitItem = RyPickerUnitData(width: .fixed(width:35), unit: "cm")
+        let rHolder = RyPickerHolderData(width: .flexible)
         let cfg = RyPickerViewConfiguration(title: "身高", items: [lHolder,listItem,unitItem,rHolder])
         return RyPickerView(dataSource: cfg)
     }

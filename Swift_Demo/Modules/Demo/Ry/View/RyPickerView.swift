@@ -47,6 +47,7 @@ class RyPickerView: UIView {
         addSubview(titleLabel)
         addSubview(actionButton)
         addSubview(topLayerView)
+    
     }
     
     func addLayout(){
@@ -131,8 +132,7 @@ extension RyPickerView: UICollectionViewDelegateFlowLayout, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let model = dataSource.pickerView(self, modelForComponent: indexPath.row)
-        let w = model.preferredWidthForComponent(atBounds: collectionView.bounds)
+        let w = dataSource.pickerView(self, widthForComponent: indexPath.row)
         return CGSize(width: w, height: collectionView.bounds.height)
     }
 

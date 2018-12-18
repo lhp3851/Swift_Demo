@@ -12,12 +12,12 @@ class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITabl
     
     var dataSource: [RyCellDataBaseProtocol]
     
-    let width: CGFloat
+    let itemWidth: RyPickerViewItemWidth
     
     let defaultIndex: Int
     
-    init(dataSource: [RyCellDataBaseProtocol], width: CGFloat, defaultIndex: Int) {
-        self.width = width
+    init(dataSource: [RyCellDataBaseProtocol], width: RyPickerViewItemWidth, defaultIndex: Int) {
+        self.itemWidth = width
         self.dataSource = dataSource
         self.defaultIndex = defaultIndex
     }
@@ -37,8 +37,8 @@ class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITabl
         return cell
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> CGFloat{
-        return width
+    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth{
+        return itemWidth
     }
     
     func reload(){

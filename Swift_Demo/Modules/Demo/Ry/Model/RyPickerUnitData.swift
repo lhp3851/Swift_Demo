@@ -9,14 +9,14 @@
 import UIKit
 
 class RyPickerUnitData: RyPickerViewItem{
-    let width: CGFloat
+    let itemWidth: RyPickerViewItemWidth
     
     let type: RyPickerViewItemType = .unit
     
     let unit: String
     
-    init(width: CGFloat, unit: String) {
-        self.width = width
+    init(width: RyPickerViewItemWidth, unit: String) {
+        self.itemWidth = width
         self.unit = unit
     }
     
@@ -32,8 +32,8 @@ class RyPickerUnitData: RyPickerViewItem{
         return cell
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> CGFloat {
-        return width
+    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth {
+        return itemWidth
     }
     
     func reload() {

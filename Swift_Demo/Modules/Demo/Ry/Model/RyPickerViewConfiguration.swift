@@ -27,7 +27,28 @@ class RyPickerViewConfiguration: RyPickerViewDataSource{
         let itemPreferredWidth = item.preferredWidthForComponent(atBounds: pickerView.bounds)
         //itemPreferredWidth 只是单个cell希望的宽度
         //实际使用宽度可能不是这个值而是比例，所以可以在此做比例转换
-        return itemPreferredWidth
+        switch itemPreferredWidth {
+        case .fixed(let width):
+            return width
+        case .scale(let factor):
+            return pickerView.bounds.width * factor
+        case .flexible:
+            return flexibleWidth(at: pickerView.bounds)
+        }
+    }
+    
+    func flexibleWidth(at bounds: CGRect) -> CGFloat{
+        var aWidth = bounds.width
+        var count: CGFloat = 0
+        for thisItem in items {
+            let widthType = thisItem.preferredWidthForComponent(atBounds: bounds)
+            if let temp = widthType.width(in: bounds.width){
+                aWidth = aWidth - temp
+            }else if case .flexible = widthType{
+                count = count + 1
+            }
+        }
+        return count > 0 ? (aWidth / count) : 0
     }
     
     func pickerView(_ pickerView: RyPickerView, modelForComponent component: Int) -> RyPickerViewItem {
