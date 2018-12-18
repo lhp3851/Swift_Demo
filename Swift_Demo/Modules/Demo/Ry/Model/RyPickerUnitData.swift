@@ -8,10 +8,13 @@
 
 import UIKit
 
-class RyPickerUnitData: RyPickerViewItem{
+class RyPickerUnitData: RyPickerViewBaseData{
+    
     let itemWidth: RyPickerViewItemWidth
     
-    let type: RyPickerViewItemType = .unit
+    override var type: RyPickerViewItemType{
+        return .unit
+    }
     
     let unit: String
     
@@ -20,27 +23,19 @@ class RyPickerUnitData: RyPickerViewItem{
         self.unit = unit
     }
     
-    func prepare(withCollection collectionView: UICollectionView) {
+    override func prepare(withCollection collectionView: UICollectionView) {
         collectionView.register(RyPickerLabelCollectionViewCell.self,
                                 forCellWithReuseIdentifier: RyPickerLabelCollectionViewCell.defaultReuseIdentifier)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RyPickerLabelCollectionViewCell.defaultReuseIdentifier,
                                                       for: indexPath) as! RyPickerLabelCollectionViewCell
         cell.label.text = unit
         return cell
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth {
+    override func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth {
         return itemWidth
-    }
-    
-    func reload(in pickerView: RyPickerView, inComponent component: Int){
-        
-    }
-    
-    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
-        return nil
     }
 }

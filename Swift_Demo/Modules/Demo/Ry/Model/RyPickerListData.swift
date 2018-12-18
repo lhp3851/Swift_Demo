@@ -8,8 +8,8 @@
 
 import UIKit
 
-class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
-    
+class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
+
     typealias ListItem = RyPickerListable & RyCellDataBaseProtocol
     
     var dataSource: [ListItem]
@@ -18,20 +18,23 @@ class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITabl
     
     let defaultIndex: Int
     
+    override var type: RyPickerViewItemType{
+        return .list
+    }
+
     init(dataSource: [ListItem], width: RyPickerViewItemWidth, defaultIndex: Int) {
         self.itemWidth = width
         self.dataSource = dataSource
         self.defaultIndex = defaultIndex
     }
     
-    let type: RyPickerViewItemType = .list
     
-    func prepare(withCollection collectionView: UICollectionView) {
+    override func prepare(withCollection collectionView: UICollectionView) {
         collectionView.register(RyPickerListCollectionViewCell.self,
                                 forCellWithReuseIdentifier: RyPickerListCollectionViewCell.defaultReuseIdentifier)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RyPickerListCollectionViewCell.defaultReuseIdentifier,
                                                       for: indexPath) as! RyPickerListCollectionViewCell
         cell.tableView.dataSource = self
@@ -39,17 +42,18 @@ class RyPickerListData:NSObject, RyPickerViewItem, UITableViewDataSource, UITabl
         return cell
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth{
+    override func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth{
         return itemWidth
     }
     
-    func reload(in pickerView: RyPickerView, inComponent component: Int){
-        //
+    override func reload(in pickerView: RyPickerView, inComponent component: Int){
+        
     }
     
-    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
+    override func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
         return nil
     }
+    
     
     //MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

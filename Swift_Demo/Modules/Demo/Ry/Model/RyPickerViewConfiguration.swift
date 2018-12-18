@@ -8,14 +8,23 @@
 
 import UIKit
 
-class RyPickerViewConfiguration: RyPickerViewDataSource{
-    var items: [RyPickerViewItem] = []
+class RyPickerViewConfiguration:NSObject, RyPickerViewDataSource{
+    var items: [RyPickerViewBaseData] = []
     
     var title: String
     
-    init(title: String, items: [RyPickerViewItem]) {
+    var linkerHandler: RyLinkerScrollBaseHandler?{
+        didSet{
+            for thisItem in items {
+                thisItem.itemScrollDelegate = linkerHandler
+            }
+        }
+    }
+    
+    init(title: String, items: [RyPickerViewBaseData]) {
         self.title = title
         self.items = items
+        super.init()
     }
     
     func numberOfComponents(in pickerView: RyPickerView) -> Int {
@@ -51,13 +60,11 @@ class RyPickerViewConfiguration: RyPickerViewDataSource{
         return count > 0 ? (aWidth / count) : 0
     }
     
-    func pickerView(_ pickerView: RyPickerView, modelForComponent component: Int) -> RyPickerViewItem {
+    func pickerView(_ pickerView: RyPickerView, modelForComponent component: Int) -> RyPickerViewBaseData {
         return items[component]
     }
     
     func titleOfPicker(in pickerView: RyPickerView) -> String? {
         return title
     }
-    
-    //处理联动
 }

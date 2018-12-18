@@ -11,7 +11,7 @@ import UIKit
 protocol RyPickerViewDataSource {
     func numberOfComponents(in pickerView: RyPickerView) -> Int
     func pickerView(_ pickerView: RyPickerView, widthForComponent component: Int) -> CGFloat
-    func pickerView(_ pickerView: RyPickerView, modelForComponent component: Int) -> RyPickerViewItem
+    func pickerView(_ pickerView: RyPickerView, modelForComponent component: Int) -> RyPickerViewBaseData
     func titleOfPicker(in pickerView: RyPickerView) -> String?
 }
 
@@ -41,20 +41,9 @@ enum RyPickerViewItemWidth{
     }
 }
 
-protocol RyPickerViewItem {
-    var type: RyPickerViewItemType {get}
-    
-    func prepare(withCollection collectionView: UICollectionView)
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth
-    
-    func reload(in pickerView: RyPickerView, inComponent component: Int)
-    
-    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?
+protocol RyPickerViewItemScrollDelegate: NSObjectProtocol {
+    func item(_ item: RyPickerViewBaseData, didSelectRow row: Int)
 }
-
 
 protocol RyPickerListable {
     var objInPicker: Any {get}

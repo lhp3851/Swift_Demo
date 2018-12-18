@@ -72,6 +72,9 @@
 		BD4BF10521C8855D00EDE0FC /* RyPickerViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */; };
 		BD4BF10721C888E300EDE0FC /* RyPickerView + sd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10621C888E300EDE0FC /* RyPickerView + sd.swift */; };
 		BD4BF10A21C889C100EDE0FC /* RyLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */; };
+		BD9B379221C8DFC5007A5AD4 /* RyPickerViewBaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B379121C8DFC5007A5AD4 /* RyPickerViewBaseData.swift */; };
+		BD9B379421C8E26E007A5AD4 /* RyLinkerScrollBaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B379321C8E26E007A5AD4 /* RyLinkerScrollBaseHandler.swift */; };
+		BD9B379721C8E5EA007A5AD4 /* RyLinkerScrollHandler_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B379621C8E5EA007A5AD4 /* RyLinkerScrollHandler_Test.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
 		BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */; };
@@ -216,6 +219,9 @@
 		BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerViewConfiguration.swift; sourceTree = "<group>"; };
 		BD4BF10621C888E300EDE0FC /* RyPickerView + sd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + sd.swift"; sourceTree = "<group>"; };
 		BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyLabelTableViewCell.swift; sourceTree = "<group>"; };
+		BD9B379121C8DFC5007A5AD4 /* RyPickerViewBaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerViewBaseData.swift; sourceTree = "<group>"; };
+		BD9B379321C8E26E007A5AD4 /* RyLinkerScrollBaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyLinkerScrollBaseHandler.swift; sourceTree = "<group>"; };
+		BD9B379621C8E5EA007A5AD4 /* RyLinkerScrollHandler_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyLinkerScrollHandler_Test.swift; sourceTree = "<group>"; };
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
@@ -1218,11 +1224,13 @@
 		BD4BF0E921C7A89100EDE0FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD9B379521C8E581007A5AD4 /* LinkerHandler */,
 				BD4BF0F821C8816000EDE0FC /* RyPickerDefined.swift */,
 				BD4BF0FA21C8817B00EDE0FC /* RyPickerListData.swift */,
 				BD4BF10021C882F300EDE0FC /* RyPickerHolderData.swift */,
 				BD4BF10221C883AA00EDE0FC /* RyPickerUnitData.swift */,
 				BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */,
+				BD9B379121C8DFC5007A5AD4 /* RyPickerViewBaseData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1254,6 +1262,15 @@
 				BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */,
 			);
 			path = TabelViewCell;
+			sourceTree = "<group>";
+		};
+		BD9B379521C8E581007A5AD4 /* LinkerHandler */ = {
+			isa = PBXGroup;
+			children = (
+				BD9B379321C8E26E007A5AD4 /* RyLinkerScrollBaseHandler.swift */,
+				BD9B379621C8E5EA007A5AD4 /* RyLinkerScrollHandler_Test.swift */,
+			);
+			path = LinkerHandler;
 			sourceTree = "<group>";
 		};
 		BE1245332194218700F93C30 /* PasteBoardTool */ = {
@@ -1712,6 +1729,7 @@
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
 				BE2893DB21AF82D7002659C0 /* KKLabel.swift in Sources */,
 				BD4BF0F721C87F1900EDE0FC /* RyPickerListCollectionViewCell.swift in Sources */,
+				BD9B379721C8E5EA007A5AD4 /* RyLinkerScrollHandler_Test.swift in Sources */,
 				BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */,
 				7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */,
 				BE2893D521AE73BE002659C0 /* KKStaturePickerModel.swift in Sources */,
@@ -1773,10 +1791,12 @@
 				D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */,
 				7ADBF67E21A5987E004B8896 /* KKPickerView.swift in Sources */,
 				BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */,
+				BD9B379221C8DFC5007A5AD4 /* RyPickerViewBaseData.swift in Sources */,
 				BD4BF10121C882F300EDE0FC /* RyPickerHolderData.swift in Sources */,
 				BD4BF0F421C87E1C00EDE0FC /* RyBaseTableViewCell.swift in Sources */,
 				7A51C5AA1F91249B002449C6 /* Const.swift in Sources */,
 				BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */,
+				BD9B379421C8E26E007A5AD4 /* RyLinkerScrollBaseHandler.swift in Sources */,
 				BD4BF10321C883AA00EDE0FC /* RyPickerUnitData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

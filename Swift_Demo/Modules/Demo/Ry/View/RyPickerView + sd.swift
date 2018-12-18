@@ -15,13 +15,17 @@ extension RyPickerView{
         let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForHeight, width: .fixed(width:75), defaultIndex: 0)
         let unitItem = RyPickerUnitData(width: .fixed(width:35), unit: "cm")
         let rHolder = RyPickerHolderData(width: .flexible)
-        let cfg = RyPickerViewConfiguration(title: "身高", items: [lHolder,listItem,listItem2,unitItem,rHolder])
-        return RyPickerView(dataSource: cfg)
+        let cfg = RyPickerViewConfiguration(title: "身高",
+                                            items: [lHolder,listItem,listItem2,unitItem,rHolder])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler_Test(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
     }
     
 }
 
-fileprivate class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
+class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     var objInPicker: Any
     
     let rowForObjInPicker: Int
@@ -43,6 +47,16 @@ fileprivate class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     static var itemsForHeight: [RyIntData]{
         var temp = [RyIntData]()
         for index in 70..<220 {
+            temp.append(RyIntData(index: index,title: "\(index)"))
+        }
+        temp.insert(RyIntData(index: NSNotFound,title: ""), at: 0)
+        temp.append(RyIntData(index: NSNotFound,title: ""))
+        return temp
+    }
+    
+    static var itemsForTest: [RyIntData]{
+        var temp = [RyIntData]()
+        for index in 1...10 {
             temp.append(RyIntData(index: index,title: "\(index)"))
         }
         temp.insert(RyIntData(index: NSNotFound,title: ""), at: 0)

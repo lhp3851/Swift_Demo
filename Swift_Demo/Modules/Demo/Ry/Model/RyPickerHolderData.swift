@@ -8,36 +8,30 @@
 
 import UIKit
 
-class RyPickerHolderData: RyPickerViewItem{
+class RyPickerHolderData: RyPickerViewBaseData{
+    
+    override var type: RyPickerViewItemType{
+        return .holder
+    }
     
     let itemWidth: RyPickerViewItemWidth
-    
-    let type: RyPickerViewItemType = .holder
     
     init(width: RyPickerViewItemWidth) {
         self.itemWidth = width
     }
     
-    func prepare(withCollection collectionView: UICollectionView) {
+    override func prepare(withCollection collectionView: UICollectionView) {
         collectionView.register(RyPickerHolderCollectionViewCell.self,
                                 forCellWithReuseIdentifier: RyPickerHolderCollectionViewCell.defaultReuseIdentifier)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RyPickerHolderCollectionViewCell.defaultReuseIdentifier,
                                                       for: indexPath)
         return cell
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth {
+    override func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth {
         return itemWidth
-    }
-    
-    func reload(in pickerView: RyPickerView, inComponent component: Int){
-        
-    }
-    
-    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
-        return nil
     }
 }

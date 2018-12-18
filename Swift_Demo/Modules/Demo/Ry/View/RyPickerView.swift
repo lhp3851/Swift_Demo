@@ -9,8 +9,6 @@
 import UIKit
 import SnapKit
 
-//[]
-
 protocol RyPickerViewDelegate: NSObjectProtocol {
     func pickerView(didTapAction pickerView: RyPickerView)
 }
@@ -63,17 +61,22 @@ class RyPickerView: UIView {
         return item.selectedItem(in: self, inComponent: component)
     }
     
+    func reloadComponent(_ component: Int){
+        let item = dataSource.pickerView(self, modelForComponent: component)
+        item.reload(in: self, inComponent: component)
+    }
+    
     @objc func onActionButton(sender: Any){
         delegate?.pickerView(didTapAction: self)
     }
     
     func setupSubview(){
         backgroundColor = RyUI.color.B1
+        titleLabel.text = dataSource.titleOfPicker(in: self)
         addSubview(collectionView)
         addSubview(titleLabel)
         addSubview(actionButton)
         addSubview(topLayerView)
-    
     }
     
     func addLayout(){
