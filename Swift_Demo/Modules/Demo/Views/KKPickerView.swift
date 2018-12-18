@@ -21,7 +21,7 @@ class KKPickerView: BaseView {
     
     let rowHeight:CGFloat = 55
     
-    var model:KKPickerModel!
+    var model:KKPickerViewDataSource!
     
     var indexPath: IndexPath?
     
@@ -100,7 +100,7 @@ class KKPickerView: BaseView {
         fatalError("init error")
     }
     
-    init(frame: CGRect,model:KKPickerModel,delegate:KKPickerViewProtocol?) {
+    init(frame: CGRect,model:KKPickerViewDataSource,delegate:KKPickerViewProtocol?) {
         super.init(frame: frame)
         self.delegate = delegate
         self.model = model
@@ -108,8 +108,8 @@ class KKPickerView: BaseView {
         initDatas(model: model)
     }
     
-    func initDatas(model:KKPickerModel){
-        title = model.title ?? "选择器"
+    func initDatas(model:KKPickerViewDataSource){
+        title = model.title
     }
     
     func setUpPannel(){
@@ -118,7 +118,7 @@ class KKPickerView: BaseView {
         self.tintColor = KCOLOR_TINT_COLOR
         addSubview(titleView)
         selectorBackView.addSubview(collectionView)
-        registeCell(type: self.model.type ?? .education)
+//        registeCell(type: self.model.type ?? .education)
         addSubview(selectorBackView)
         addSubview(horizoneLineTop)
         addSubview(horizoneLineBottom)
@@ -208,7 +208,7 @@ class KKPickerView: BaseView {
     
     // MARK:  选择数据
     @objc func sendDatas(sender:UIButton)  {
-       getSelectDetail(model: model)
+//       getSelectDetail(model: model)
     }
     
     @objc func tapGuesture(tap:UITapGestureRecognizer){
@@ -220,24 +220,25 @@ class KKPickerView: BaseView {
 
 extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return self.model.datas?.count ?? 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.model.datas.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:KKPickerSubView = collectionView.dequeueReusableCell(withReuseIdentifier: self.model.type?.rawValue ?? "", for: indexPath) as! KKPickerSubView
-        cell.indexPath = indexPath
-        cell.delegate = self
-        cell.model = self.model
+        let cell:KKPickerSubView = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath) as! KKPickerSubView
+//        cell.indexPath = indexPath
+//        cell.delegate = self
+//        cell.model = self.model
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize.init(width: UIScreen.main.bounds.width / CGFloat(self.model.datas?.count ?? 1), height: self.frame.height - 130)
+        return CGSize.zero
+//        return CGSize.init(width: UIScreen.main.bounds.width / CGFloat(self.model.datas?.count ?? 1), height: self.frame.height - 130)
         
     }
     
@@ -249,12 +250,12 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
        
-        if let currentModel = self.model,currentModel.type == SelectorType.time {
-            return CGSize.init(width: 7.5, height: 55.5)
-        }
-        else{
+//        if let currentModel = self.model,currentModel.type == SelectorType.time {
+//            return CGSize.init(width: 7.5, height: 55.5)
+//        }
+//        else{
             return CGSize.zero
-        }
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -287,17 +288,17 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
 extension KKPickerView:KKPickerDataProtocol{
     
     func pickDatas(model: KKPickerModel) {
-        self.model = model
+//        self.model = model
 //        updateSubLayerDatas(model: self.model)
     }
     
-    func getSelectDetail(model:KKPickerModel)  {
-        let index = model.selectIndex
-        let datas:[[String]] = model.datas as! [[String]]
-        let selectItem = datas[index.section][index.row]
-        selectModel[index.section] = [selectItem]
-        print(selectModel)
-    }
+//    func getSelectDetail(model:KKPickerViewDataSource)  {
+//        let index = model.selectIndex
+//        let datas:[[String]] = model.datas as! [[String]]
+//        let selectItem = datas[index.section][index.row]
+//        selectModel[index.section] = [selectItem]
+//        print(selectModel)
+//    }
     
     func updateSubLayerDatas(model:KKPickerModel) {
         if let type:SelectorType = model.type {

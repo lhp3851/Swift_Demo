@@ -85,6 +85,8 @@
 		BE58520421A573CA00B36450 /* KKColumnsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */; };
 		BE58520721A5759900B36450 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = BE58520621A5759900B36450 /* province.json */; };
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
+		BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */; };
+		BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */; };
 		D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */; };
 		D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */; };
 		D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */; };
@@ -213,6 +215,8 @@
 		BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKColumnsPickerView.swift; sourceTree = "<group>"; };
 		BE58520621A5759900B36450 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
 		BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKCollectionFooterReusableView.swift; sourceTree = "<group>"; };
+		BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerViewDataSource.swift; sourceTree = "<group>"; };
+		BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTimePickerDataSource.swift; sourceTree = "<group>"; };
 		D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKButton.swift; sourceTree = "<group>"; };
 		D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoViewController.swift; sourceTree = "<group>"; };
@@ -1261,6 +1265,15 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
+		BE97813C21C7B71600E4BCA5 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */,
+				BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		D7AC7D8A1FC3DCEE00F601A9 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1272,6 +1285,7 @@
 		D7AC7D8F1FC3E04D00F601A9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BE97813C21C7B71600E4BCA5 /* DataSource */,
 				BE58520221A5738500B36450 /* Views */,
 				BE124537219444FD00F93C30 /* Modle */,
 				D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */,
@@ -1588,6 +1602,7 @@
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
 				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,
+				BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */,
 				BE2893C321AE6A60002659C0 /* KKSKTPickerView.swift in Sources */,
 				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
@@ -1652,6 +1667,7 @@
 				7A7818A41F8FC7870043254E /* HomeViewController.swift in Sources */,
 				D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */,
 				7ADBF67E21A5987E004B8896 /* KKPickerView.swift in Sources */,
+				BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */,
 				7A51C5AA1F91249B002449C6 /* Const.swift in Sources */,
 				BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */,
 			);

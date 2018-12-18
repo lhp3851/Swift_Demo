@@ -22,7 +22,7 @@ class KKSelectorViewController: BaseViewController {
     
     lazy var pickerView: KKPickerView = {
         let model = KKTimePickerModel.share
-        let temp = KKPickerView.init(frame: CGRect.zero, model: model, delegate: self)
+        let temp = KKPickerView.init(frame: CGRect.zero, model: model as! KKPickerViewDataSource, delegate: self)
         return temp
     }()
     
