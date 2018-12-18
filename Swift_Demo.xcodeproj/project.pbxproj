@@ -57,6 +57,21 @@
 		7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */; };
 		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
+		BD4BF0EB21C7AA3500EDE0FC /* RyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0EA21C7AA3500EDE0FC /* RyPickerView.swift */; };
+		BD4BF0EE21C7AB7500EDE0FC /* RyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0ED21C7AB7500EDE0FC /* RyUI.swift */; };
+		BD4BF0F021C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0EF21C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift */; };
+		BD4BF0F321C87E1C00EDE0FC /* RyCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0F121C87E1C00EDE0FC /* RyCellProtocol.swift */; };
+		BD4BF0F421C87E1C00EDE0FC /* RyBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0F221C87E1C00EDE0FC /* RyBaseTableViewCell.swift */; };
+		BD4BF0F721C87F1900EDE0FC /* RyPickerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0F621C87F1900EDE0FC /* RyPickerListCollectionViewCell.swift */; };
+		BD4BF0F921C8816000EDE0FC /* RyPickerDefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0F821C8816000EDE0FC /* RyPickerDefined.swift */; };
+		BD4BF0FB21C8817B00EDE0FC /* RyPickerListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0FA21C8817B00EDE0FC /* RyPickerListData.swift */; };
+		BD4BF0FD21C8829700EDE0FC /* RyPickerLabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0FC21C8829700EDE0FC /* RyPickerLabelCollectionViewCell.swift */; };
+		BD4BF0FF21C882DA00EDE0FC /* RyPickerHolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0FE21C882DA00EDE0FC /* RyPickerHolderCollectionViewCell.swift */; };
+		BD4BF10121C882F300EDE0FC /* RyPickerHolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10021C882F300EDE0FC /* RyPickerHolderData.swift */; };
+		BD4BF10321C883AA00EDE0FC /* RyPickerUnitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10221C883AA00EDE0FC /* RyPickerUnitData.swift */; };
+		BD4BF10521C8855D00EDE0FC /* RyPickerViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */; };
+		BD4BF10721C888E300EDE0FC /* RyPickerView + sd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10621C888E300EDE0FC /* RyPickerView + sd.swift */; };
+		BD4BF10A21C889C100EDE0FC /* RyLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
 		BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */; };
@@ -184,6 +199,21 @@
 		8CF317D031AD79B885BC3BE5 /* Pods_Swift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963A96E68C221814DF36B279 /* Pods_Swift_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD4BF0EA21C7AA3500EDE0FC /* RyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerView.swift; sourceTree = "<group>"; };
+		BD4BF0ED21C7AB7500EDE0FC /* RyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyUI.swift; sourceTree = "<group>"; };
+		BD4BF0EF21C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + TopLayerView.swift"; sourceTree = "<group>"; };
+		BD4BF0F121C87E1C00EDE0FC /* RyCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyCellProtocol.swift; sourceTree = "<group>"; };
+		BD4BF0F221C87E1C00EDE0FC /* RyBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyBaseTableViewCell.swift; sourceTree = "<group>"; };
+		BD4BF0F621C87F1900EDE0FC /* RyPickerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerListCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD4BF0F821C8816000EDE0FC /* RyPickerDefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerDefined.swift; sourceTree = "<group>"; };
+		BD4BF0FA21C8817B00EDE0FC /* RyPickerListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerListData.swift; sourceTree = "<group>"; };
+		BD4BF0FC21C8829700EDE0FC /* RyPickerLabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerLabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD4BF0FE21C882DA00EDE0FC /* RyPickerHolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerHolderCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD4BF10021C882F300EDE0FC /* RyPickerHolderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerHolderData.swift; sourceTree = "<group>"; };
+		BD4BF10221C883AA00EDE0FC /* RyPickerUnitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerUnitData.swift; sourceTree = "<group>"; };
+		BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerViewConfiguration.swift; sourceTree = "<group>"; };
+		BD4BF10621C888E300EDE0FC /* RyPickerView + sd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + sd.swift"; sourceTree = "<group>"; };
+		BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyLabelTableViewCell.swift; sourceTree = "<group>"; };
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
@@ -1160,6 +1190,68 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BD4BF0E721C7A88700EDE0FC /* Ry */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BF0EC21C7AB6400EDE0FC /* Other */,
+				BD4BF0E921C7A89100EDE0FC /* Model */,
+				BD4BF0E821C7A88D00EDE0FC /* View */,
+			);
+			path = Ry;
+			sourceTree = "<group>";
+		};
+		BD4BF0E821C7A88D00EDE0FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BF0F521C87F0100EDE0FC /* Cell */,
+				BD4BF0EA21C7AA3500EDE0FC /* RyPickerView.swift */,
+				BD4BF0EF21C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift */,
+				BD4BF10621C888E300EDE0FC /* RyPickerView + sd.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD4BF0E921C7A89100EDE0FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BF0F821C8816000EDE0FC /* RyPickerDefined.swift */,
+				BD4BF0FA21C8817B00EDE0FC /* RyPickerListData.swift */,
+				BD4BF10021C882F300EDE0FC /* RyPickerHolderData.swift */,
+				BD4BF10221C883AA00EDE0FC /* RyPickerUnitData.swift */,
+				BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD4BF0EC21C7AB6400EDE0FC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BF0F221C87E1C00EDE0FC /* RyBaseTableViewCell.swift */,
+				BD4BF0F121C87E1C00EDE0FC /* RyCellProtocol.swift */,
+				BD4BF0ED21C7AB7500EDE0FC /* RyUI.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BD4BF0F521C87F0100EDE0FC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BF10821C8899F00EDE0FC /* TabelViewCell */,
+				BD4BF0F621C87F1900EDE0FC /* RyPickerListCollectionViewCell.swift */,
+				BD4BF0FC21C8829700EDE0FC /* RyPickerLabelCollectionViewCell.swift */,
+				BD4BF0FE21C882DA00EDE0FC /* RyPickerHolderCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BD4BF10821C8899F00EDE0FC /* TabelViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */,
+			);
+			path = TabelViewCell;
+			sourceTree = "<group>";
+		};
 		BE1245332194218700F93C30 /* PasteBoardTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1272,6 +1364,7 @@
 		D7AC7D8F1FC3E04D00F601A9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BD4BF0E721C7A88700EDE0FC /* Ry */,
 				BE58520221A5738500B36450 /* Views */,
 				BE124537219444FD00F93C30 /* Modle */,
 				D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */,
@@ -1586,8 +1679,10 @@
 				BE58520121A560B200B36450 /* KKPickerModel.swift in Sources */,
 				D7AC7D951FC4077B00F601A9 /* KKBaseModel.swift in Sources */,
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
+				BD4BF0FB21C8817B00EDE0FC /* RyPickerListData.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
 				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,
+				BD4BF0EB21C7AA3500EDE0FC /* RyPickerView.swift in Sources */,
 				BE2893C321AE6A60002659C0 /* KKSKTPickerView.swift in Sources */,
 				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
@@ -1595,15 +1690,18 @@
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
 				BE2893B721AE69D0002659C0 /* KKDatePickerView.swift in Sources */,
+				BD4BF0FF21C882DA00EDE0FC /* RyPickerHolderCollectionViewCell.swift in Sources */,
 				BE2893D121AE738F002659C0 /* KKDateTimePickerModel.swift in Sources */,
 				BE2893BD21AE6A08002659C0 /* KKWeightPickerView.swift in Sources */,
 				BE2893CF21AE737C002659C0 /* KKTimePickerModel.swift in Sources */,
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
 				BE2893DB21AF82D7002659C0 /* KKLabel.swift in Sources */,
+				BD4BF0F721C87F1900EDE0FC /* RyPickerListCollectionViewCell.swift in Sources */,
 				BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */,
 				7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */,
 				BE2893D521AE73BE002659C0 /* KKStaturePickerModel.swift in Sources */,
 				D7C872771FC9483600BE53F0 /* KKWebViewViewController.swift in Sources */,
+				BD4BF0F021C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift in Sources */,
 				7A4C11C11F93096D00F02866 /* AccountModel.swift in Sources */,
 				7A4C11991F91F9EA00F02866 /* ContactsViewController.swift in Sources */,
 				7A9783F41F7558B1003F17D1 /* ViewController.swift in Sources */,
@@ -1617,8 +1715,10 @@
 				7A7818A81F8FC7BB0043254E /* GenealogyViewController.swift in Sources */,
 				BE2893B921AE69E1002659C0 /* KKTimePickerView.swift in Sources */,
 				BE2893D321AE73AB002659C0 /* KKWeightPickerModel.swift in Sources */,
+				BD4BF10721C888E300EDE0FC /* RyPickerView + sd.swift in Sources */,
 				BE2893BB21AE69F6002659C0 /* KKDateTimePickerView.swift in Sources */,
 				7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */,
+				BD4BF0FD21C8829700EDE0FC /* RyPickerLabelCollectionViewCell.swift in Sources */,
 				7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */,
 				7A4C11BC1F9308B200F02866 /* UIImage+Extention.swift in Sources */,
 				7A9783F21F7558B1003F17D1 /* AppDelegate.swift in Sources */,
@@ -1627,13 +1727,18 @@
 				D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */,
 				7A7818A61F8FC7A40043254E /* ProfileViewController.swift in Sources */,
 				BE58520421A573CA00B36450 /* KKColumnsPickerView.swift in Sources */,
+				BD4BF10A21C889C100EDE0FC /* RyLabelTableViewCell.swift in Sources */,
+				BD4BF10521C8855D00EDE0FC /* RyPickerViewConfiguration.swift in Sources */,
 				BE2893C521AE7290002659C0 /* KKGenderPickerView.swift in Sources */,
 				7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */,
 				7A4C11B71F93069300F02866 /* ReachAblityTool.swift in Sources */,
+				BD4BF0F321C87E1C00EDE0FC /* RyCellProtocol.swift in Sources */,
 				D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */,
 				BE2893C921AE7315002659C0 /* KKGenderPickerModel.swift in Sources */,
 				7A7C80811F934187007532FA /* BaseTableview.swift in Sources */,
+				BD4BF0F921C8816000EDE0FC /* RyPickerDefined.swift in Sources */,
 				BE2893BF21AE6A2F002659C0 /* KKStaturePickerView.swift in Sources */,
+				BD4BF0EE21C7AB7500EDE0FC /* RyUI.swift in Sources */,
 				7A606F461F98F83D00B47DE8 /* StorePageViewController.swift in Sources */,
 				7A51C5B11F912775002449C6 /* DeviceInfoTool.swift in Sources */,
 				7A08544C1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift in Sources */,
@@ -1652,8 +1757,11 @@
 				7A7818A41F8FC7870043254E /* HomeViewController.swift in Sources */,
 				D7E172BF1F9618C700A3E247 /* ProgressHUDTool.swift in Sources */,
 				7ADBF67E21A5987E004B8896 /* KKPickerView.swift in Sources */,
+				BD4BF10121C882F300EDE0FC /* RyPickerHolderData.swift in Sources */,
+				BD4BF0F421C87E1C00EDE0FC /* RyBaseTableViewCell.swift in Sources */,
 				7A51C5AA1F91249B002449C6 /* Const.swift in Sources */,
 				BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */,
+				BD4BF10321C883AA00EDE0FC /* RyPickerUnitData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
