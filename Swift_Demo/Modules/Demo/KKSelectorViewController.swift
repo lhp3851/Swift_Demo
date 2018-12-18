@@ -26,6 +26,11 @@ class KKSelectorViewController: BaseViewController {
         return temp
     }()
     
+    lazy var ryPickerView:RyPickerView = {
+        let temp = RyPickerView.heightPicker
+        return temp
+    }()
+    
     var listDatas = KKPickerModel.groupDatas
     
     override func viewDidLoad() {
@@ -59,6 +64,17 @@ class KKSelectorViewController: BaseViewController {
             window.addSubview(self.translucentView)
         }
         pickerView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(pickerViewHeight)
+        }
+    }
+    
+    func showPickerView()  {
+        if let window = UIWindow.getCurrentWindow() {
+            self.translucentView.addSubview(ryPickerView)
+            window.addSubview(self.translucentView)
+        }
+        ryPickerView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(pickerViewHeight)
         }
@@ -102,7 +118,8 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func showPicker(type withType: SelectorType) {
-        setUpPickerView()
+//        setUpPickerView()
+        showPickerView()
         self.translucentView.isHidden = false
     }
 }
