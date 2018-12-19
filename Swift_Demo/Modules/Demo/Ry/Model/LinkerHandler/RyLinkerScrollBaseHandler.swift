@@ -12,7 +12,7 @@ class RyLinkerScrollBaseHandler: NSObject, RyPickerViewItemScrollDelegate {
     
     private(set) weak var configuration: RyPickerViewConfiguration?
     
-    private(set) weak var pickerView: RyPickerView?
+    private(set) var pickerView: RyPickerView?
     
     init(configuration: RyPickerViewConfiguration, pickerView: RyPickerView) {
         self.configuration = configuration

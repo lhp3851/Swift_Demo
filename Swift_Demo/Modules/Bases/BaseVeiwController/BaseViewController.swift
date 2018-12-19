@@ -251,4 +251,8 @@ extension BaseViewController:UIGestureRecognizerDelegate {
             print(tapView)
         }
     }
+    
+    
+   
 }
+

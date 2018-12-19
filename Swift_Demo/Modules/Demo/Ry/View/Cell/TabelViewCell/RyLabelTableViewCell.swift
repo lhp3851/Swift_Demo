@@ -33,8 +33,19 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
         }
     }
     
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-        
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected {
+            label.textColor = RyUI.color.B3
+        }
+        else{
+            label.textColor = RyUI.color.T2
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        setSelected(false, animated: false)
     }
 
     required init?(coder aDecoder: NSCoder) {

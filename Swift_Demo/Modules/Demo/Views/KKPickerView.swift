@@ -15,7 +15,7 @@ protocol KKPickerViewProtocol:NSObjectProtocol {
 }
 
 
-class KKPickerView: BaseView {
+class KKPickerView: BaseView,UIGestureRecognizerDelegate {
 
     weak var delegate:KKPickerViewProtocol?
     
@@ -215,6 +215,23 @@ class KKPickerView: BaseView {
         print(tap)
     }
     
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let hitView = super.hitTest(point, with: event)
+        let convertPoint = self.convert(point, to: self)
+        if self.titleView.point(inside: convertPoint, with: event) {
+            return self.titleView
+        }
+        else if self.selectorBackView.point(inside: convertPoint, with: event) {
+            return self.selectorBackView
+        }
+        else if self.sendButton.point(inside: convertPoint, with: event){
+            return self.sendButton
+        }
+        else{
+            return hitView
+        }
+    }
+    
 }
 
 
@@ -363,21 +380,4 @@ extension KKPickerView:KKPickerDataProtocol{
 
 
 
-extension KKPickerView: UIGestureRecognizerDelegate {
-//        override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-//            let hitView = super.hitTest(point, with: event)
-//            let convertPoint = self.convert(point, to: self)
-//            if self.titleView.point(inside: convertPoint, with: event) {
-//                return self.titleView
-//            }
-//            else if self.selectorBackView.point(inside: convertPoint, with: event) {
-//                return self.selectorBackView
-//            }
-//            else if self.sendButton.point(inside: convertPoint, with: event){
-//                return self.sendButton
-//            }
-//            else{
-//                return hitView
-//            }
-//        }
-}
+

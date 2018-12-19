@@ -117,11 +117,11 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
         let indexPath = IndexPath.init(row: index, section: 0)
         for cell in tableView.visibleCells {
             let temp = cell as! RyLabelTableViewCell
-            temp.label.textColor = kCOLOR_TEXT_FIRST
+            temp.setSelected(false, animated: false)
         }
         
         if let cell = tableView.cellForRow(at: indexPath) as? RyLabelTableViewCell {
-             cell.label.textColor = RyUI.color.B3
+             cell.setSelected(true, animated: true)
         }
     }
     
@@ -135,11 +135,11 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
     func scrollToIndex(index:Int,tableView:UITableView,animated:Bool) {
         let indexPath = IndexPath.init(row: index, section: 0)
         tableView.scrollToRow(at: indexPath, at: .middle, animated: animated)
-        pickeDatas()
+        pickeDatas(index: index)
     }
     
     //（最后再处理选中事件的抛出，用与处理联动）
-    func pickeDatas()  {
-        
+    func pickeDatas(index:Int)  {
+        itemScrollDelegate?.item(self, didSelectRow: index)
     }
 }

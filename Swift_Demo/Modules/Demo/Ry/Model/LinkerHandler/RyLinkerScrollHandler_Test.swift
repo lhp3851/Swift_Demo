@@ -13,8 +13,7 @@ class RyLinkerScrollHandler_Test: RyLinkerScrollBaseHandler {
     override func item(_ item: RyPickerViewBaseData, didSelectRow row: Int) {
         guard let cfg = configuration,
             let pickerView = pickerView,
-            let index = index(of: item),
-            index == 1 else {
+            let index = index(of: item) else {
             return
         }
         guard let selectedObj = item.selectedItem(in: pickerView, inComponent: index) else {
