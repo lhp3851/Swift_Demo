@@ -66,6 +66,18 @@ class RyPickerView: UIView {
         item.reload(in: self, inComponent: component)
     }
     
+    func scrollTo(indexPath:IndexPath)  {
+        let index = IndexPath.init(row: indexPath.section, section: 0)
+        let cell:RyPickerListCollectionViewCell = collectionView.cellForItem(at: index) as! RyPickerListCollectionViewCell
+        let tableView = cell.tableView
+        let datasource:RyPickerViewConfiguration = self.dataSource as! RyPickerViewConfiguration
+        let datalist:RyPickerListData = datasource.items[indexPath.section] as! RyPickerListData
+        datalist.scrollToIndex(index: indexPath.row, tableView: tableView, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.26) {
+            datalist.setSelectedItem(index: indexPath.row, tableView: tableView)
+        }
+    }
+    
     @objc func onActionButton(sender: Any){
         delegate?.pickerView(didTapAction: self)
     }

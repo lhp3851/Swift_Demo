@@ -27,6 +27,7 @@ class RyPickerListCollectionViewCell: UICollectionViewCell {
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+//        tableView.frame = self.frame
     }
     
     lazy var tableView: UITableView = {

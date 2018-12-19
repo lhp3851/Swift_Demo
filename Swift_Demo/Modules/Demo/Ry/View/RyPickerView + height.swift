@@ -46,7 +46,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     static var itemsForHeight: [RyIntData]{
         var temp = [RyIntData]()
         for index in 70...250 {
-            temp.append(RyIntData(index: index,title: "\(index)"))
+            temp.append(RyIntData(index: index - 70,title: "\(index)"))
         }
         return temp
     }

@@ -99,17 +99,9 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
         let tableView = scrollView as! UITableView
         let item = dataSource[defaultIndex]
         let cellHeight = item.cellType(userInfo: nil).cellHeightWithTableViewWidth(tableView.bounds.width, item)
-        let deltaH = Int(scrollView.contentOffset.y) % Int(cellHeight)
-        let lineNumber = Int(scrollView.contentOffset.y / cellHeight) + 1
-        
-        if deltaH >= Int(cellHeight/2) {
-            scrollToIndex(index: lineNumber + 1, tableView: tableView, animated: true)
-            setSelectedItem(index: lineNumber + 1, tableView: tableView)
-        }
-        else{
-            scrollToIndex(index: lineNumber , tableView: tableView, animated: true)
-            setSelectedItem(index: lineNumber , tableView: tableView)
-        }
+        let lineNumber = Int(round(scrollView.contentOffset.y / cellHeight)) + 1
+        scrollToIndex(index: lineNumber , tableView: tableView, animated: true)
+        setSelectedItem(index: lineNumber , tableView: tableView)
     }
     
     //选中的颜色修改
