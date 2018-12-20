@@ -9,6 +9,8 @@
 import UIKit
 
 class KKSelectorViewController: BaseViewController {
+    
+    typealias Handler = (TimeInterval) -> ()
 
     var vcTitle = NSStringFromClass(KKSelectorViewController.self)
     let pickerViewHeight:CGFloat = 297
@@ -27,7 +29,7 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.heightPicker
+        let temp = RyPickerView.recordMedichinePicker
         return temp
     }()
     
@@ -69,7 +71,7 @@ class KKSelectorViewController: BaseViewController {
         }
     }
     
-    func showPickerView()  {
+    func showPickerView(handler:Handler)  {
         if let window = UIWindow.getCurrentWindow() {
             self.translucentView.addSubview(ryPickerView)
             window.addSubview(self.translucentView)
@@ -78,6 +80,7 @@ class KKSelectorViewController: BaseViewController {
             make.left.right.bottom.equalToSuperview()
             make.height.equalTo(pickerViewHeight)
         }
+        handler(0.26)
     }
 }
 
@@ -118,12 +121,13 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func showPicker(type withType: SelectorType) {
-        showPickerView()
         self.translucentView.isHidden = false
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            let indexPath = IndexPath.init(row: 91, section: 1)
-//            self.ryPickerView.scrollTo(indexPath: indexPath)
-//        }
+        showPickerView { (delay) in
+//            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+//                let indexPath = IndexPath.init(row: 91, section: 1)
+//                self.ryPickerView.scrollTo(indexPath: indexPath)
+//            })
+        }
     }
 }
 

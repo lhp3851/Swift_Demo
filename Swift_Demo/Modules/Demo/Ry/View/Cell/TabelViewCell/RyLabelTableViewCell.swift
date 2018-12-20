@@ -63,7 +63,7 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
     }
     
     override class func cellHeightWithTableViewWidth(_ width: CGFloat, _ cellData: RyCellDataBaseProtocol?) -> CGFloat{
-        return 55
+        return 167/3
     }
     
     lazy var label: UILabel = {

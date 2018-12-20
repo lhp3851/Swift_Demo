@@ -1,0 +1,485 @@
+//
+//  RyPickerView + sd.swift
+//  Swift_Demo
+//
+//  Created by sumianiOS1 on 2018/12/18.
+//  Copyright © 2018年 Jerry. All rights reserved.
+//
+
+import UIKit
+
+extension RyPickerView{
+    static var heightPicker: RyPickerView{
+        let lHolder = RyPickerHolderData(width: .flexible)
+        let listItem = RyPickerListData(dataSource: RyIntData.itemsForHeight, width: .fixed(width:75), defaultIndex: 90)
+        let unitItem = RyPickerUnitData(width: .fixed(width:35), unit: "cm")
+        let rHolder = RyPickerHolderData(width: .flexible)
+        let cfg = RyPickerViewConfiguration(title: "身高",
+                                            items: [lHolder,listItem,unitItem,rHolder])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var educationPicker: RyPickerView{
+        let listItem = RyPickerListData(dataSource: RyIntData.itemsForEducation, width: .flexible, defaultIndex: 4)
+        let cfg = RyPickerViewConfiguration(title: "教育程度",items: [listItem])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var genderPicker: RyPickerView{
+        let listItem = RyPickerListData(dataSource: RyIntData.itemsForGender, width: .flexible, defaultIndex: 1)
+        let cfg = RyPickerViewConfiguration(title: "性别",items: [listItem])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var date2Picker: RyPickerView{
+        let lHolder = RyPickerHolderData(width: .flexible)
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForDateYear, width: .fixed(width:75), defaultIndex: 1)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForDateMonth, width: .fixed(width:75), defaultIndex: 1)
+        let rHolder = RyPickerHolderData(width: .flexible)
+        let cfg = RyPickerViewConfiguration(title: "日期",
+                                            items: [lHolder,listItem1,listItem2,rHolder])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var date3Picker: RyPickerView{
+        let lHolder = RyPickerHolderData(width: .flexible)
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForDateYear, width: .fixed(width:75), defaultIndex: 1)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForDateMonth, width: .fixed(width:75), defaultIndex: 1)
+        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForDateDay, width: .fixed(width:75), defaultIndex: 1)
+        let rHolder = RyPickerHolderData(width: .flexible)
+        let cfg = RyPickerViewConfiguration(title: "日期",
+                                            items: [lHolder,listItem1,listItem2,listItem3,rHolder])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var timePicker: RyPickerView{
+        let lHolder = RyPickerHolderData(width: .flexible)
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForTimeHoure, width: .fixed(width:75), defaultIndex: 1)
+        let unitItem = RyPickerUnitData(width: .fixed(width:35), unit: ":")
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForTimeMinute, width: .fixed(width:75), defaultIndex: 1)
+        let rHolder = RyPickerHolderData(width: .flexible)
+        let cfg = RyPickerViewConfiguration(title: "时间",
+                                            items: [lHolder,listItem1,unitItem,listItem2, rHolder])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var dateTimePicker: RyPickerView{
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForDateAndTimeMonthAndDay, width: .fixed(width:150), defaultIndex: 1)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForTimeHoure, width: .fixed(width:75), defaultIndex: 1)
+        let unitItem = RyPickerUnitData(width: .fixed(width:35), unit: ":")
+        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForTimeMinute, width: .flexible, defaultIndex: 1)
+        let cfg = RyPickerViewConfiguration(title: "日期",items: [listItem1,listItem2,unitItem,listItem3])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var addressPicker: RyPickerView{
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForAdressProvince, width: .fixed(width:125), defaultIndex: 1)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForAdressCity, width: .fixed(width:125), defaultIndex: 1)
+        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForAdressArea, width: .fixed(width:125), defaultIndex: 1)
+        let cfg = RyPickerViewConfiguration(title: "地址",items: [listItem1,listItem2,listItem3])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyAddressLinkScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var weightPicker: RyPickerView{
+        let lHolder = RyPickerHolderData(width: .flexible)
+        let listItemInt = RyPickerListData(dataSource: RyIntData.Weight.IntPart, width: .fixed(width:75), defaultIndex: 1)
+        let unitItemleft = RyPickerUnitData(width: .fixed(width:35), unit: ".")
+        let listItem = RyPickerListData(dataSource: RyIntData.Weight.fractionalPart, width: .fixed(width:75), defaultIndex: 1)
+        let unitItemRight = RyPickerUnitData(width: .fixed(width:35), unit: "kg")
+        let rHolder = RyPickerHolderData(width: .flexible)
+        let cfg = RyPickerViewConfiguration(title: "体重",
+                                            items: [lHolder,listItemInt,unitItemleft,listItem,unitItemRight,rHolder])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+    
+    static var recordMedichinePicker: RyPickerView{
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForRecordMedichine, width: .fixed(width:125), defaultIndex: 1)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForRecordSKT, width: .fixed(width:125), defaultIndex: 1)
+        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForRecordTimePoint, width: .fixed(width:125), defaultIndex: 1)
+        let cfg = RyPickerViewConfiguration(title: "服药记录",items: [listItem1,listItem2,listItem3])
+        let temp = RyPickerView(dataSource: cfg)
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        cfg.linkerHandler = linkerHandler
+        return temp
+    }
+}
+
+class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
+    var objInPicker: Any
+    
+    let rowForObjInPicker: Int
+    
+    let titleInPicker: String
+    
+    var ryltvc_title: String{
+        return titleInPicker
+    }
+    
+    var identifier: String?
+    
+    init(index: Int, title: String) {
+        objInPicker = index
+        rowForObjInPicker = index
+        self.titleInPicker = title
+    }
+    
+    static var first:RyIntData {
+        return RyIntData.init(index: 0, title: "")
+    }
+    
+    static var last:RyIntData {
+        return RyIntData.init(index: -1, title: "")
+    }
+    
+    static var itemsForHeight: [RyIntData]{
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for index in 70...250 {
+            temp.append(RyIntData(index: index - 69,title: "\(index)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    struct Weight {
+        static var IntPart: [RyIntData] {
+            var temp = [RyIntData]()
+            temp.append(RyIntData.first)
+            for index in 20...250 {
+                temp.append(RyIntData(index: index - 19,title: "\(index)"))
+            }
+            temp.append(RyIntData.last)
+            return temp
+        }
+        
+        static var fractionalPart: [RyIntData]{
+            var temp = [RyIntData]()
+            temp.append(RyIntData.first)
+            let sequnce = stride(from: 0.0, to: 1.0, by: 0.1)
+            for (idx,obj) in sequnce.enumerated() {
+                temp.append(RyIntData.init(index: idx, title: String(format: "%.1f", obj)))
+            }
+            temp.append(RyIntData.last)
+            return temp
+        }
+    }
+    
+    static var itemsForEducation:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.educations.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForGender:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.genders.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForDateYear:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Dates.years.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForDateMonth:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Dates.monthes.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForDateDay:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Dates.days.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForDateAndTimeMonthAndDay:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (idx,obj) in RyDefualtData.Dates.monthes.enumerated() {
+            for (index,object) in RyDefualtData.Dates.days.enumerated() {
+                temp.append(RyIntData(index: idx * RyDefualtData.Dates.days.count + index + 1,title: "\(obj)-\(object)"))
+            }
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    
+    static var itemsForTimeHoure:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Times.houres.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForTimeMinute:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Times.minutes.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForAdressProvince:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Addresses.provinces.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForAdressCity:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Addresses.cities.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForAdressArea:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.Addresses.areas.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForRecordMedichine:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.RecordForMedicine.medichines.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForRecordSKT:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.RecordForMedicine.skt.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+    static var itemsForRecordTimePoint:[RyIntData] {
+        var temp = [RyIntData]()
+        temp.append(RyIntData.last)
+        for (index,object) in RyDefualtData.RecordForMedicine.timePoints.enumerated() {
+            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+        }
+        temp.append(RyIntData.last)
+        return temp
+    }
+    
+}
+
+class RyDefualtData {
+   
+    static let educations = ["博士或以上","研究生","本科","大专","高中","初中或以下","其他"]
+    
+    static let genders = ["男","女","其他"]
+    
+    struct Dates {
+        static var components:DateComponents {
+            let calendar = Calendar.init(identifier: .gregorian)
+            let components = calendar.dateComponents([.year,.month,.day], from: currentDate)
+            return components
+        }
+        
+        static var currentDate:Date {
+            return Date()
+        }
+        
+        static var year:Int {
+            return components.year ?? 2018
+        }
+        
+        static var month:Int {
+            return components.month ?? 01
+        }
+        
+        static var day:Int {
+            return components.day ?? 01
+        }
+        
+        static var years:[String] {
+            var temp = [String]()
+            for item in stride(from: 1930, to: year + 1, by: 1) {
+                temp.append(String(format: "%i", item))
+            }
+            return temp
+        }
+        
+        static let monthes:[String] = ["01","02","03","04","05","06",
+                                       "07","08","09","10","11","12"]
+        
+        static let days:[String] = ["01","02","03","04","05",
+                                     "06","07","08","09","10","11",
+                                     "12","13","14","15","16","17",
+                                     "18","19","20","21","22","23",
+                                     "24","25","26","27","28","29",
+                                     "30"]
+        
+        static func getDays(year:String,month:String) {
+//            Calendar.current.range(of: Calendar.Component.day, in: Calendar.Component, for: <#T##Date#>)
+        }
+        
+    }
+    
+    struct Times {
+        static let houres:[String] = ["00","01","02","03","04",
+                                       "05","06","07","08","09","10",
+                                       "11","12","13","14","15","16",
+                                       "17","18","19","20","21","22",
+                                       "23"]
+        
+        static let minutes:[String] = ["00","01","02","03","04",
+                                        "05","06","07","08","09","10",
+                                        "11","12","13","14","15","16",
+                                        "17","18","19","20","21","22",
+                                        "23","24","25","26","27","28",
+                                        "29","30","31","32","33","34",
+                                        "35","36","37","38","39","40",
+                                        "41","42","43","44","45","46",
+                                        "47","48","49","50","51","52",
+                                        "53","54","55","56","57","58",
+                                        "59"]
+    }
+    
+    struct DatesAndTimes {
+        static var dates:Dates?
+        static var times:Times?
+    }
+    
+    struct Addresses {
+        static var defaultDatas:[[String:Any]] {
+            let path = Bundle.main.path(forResource: "province", ofType: "json")
+            let contents = FileManager.default.contents(atPath: path!)
+            let address = try! JSONSerialization.jsonObject(with: contents!, options: JSONSerialization.ReadingOptions.allowFragments)
+            return address as! [[String : Any]]
+        }
+        
+        static var provinces:[String] = {
+            var temp = [String]()
+            for item in defaultDatas {
+                temp.append(item["name"] as! String)
+            }
+            return temp
+        }()
+        
+        static var cities:[String] {
+            return getCities()
+        }
+        
+        static var areas:[String] {
+            return getArea(city: "深圳市", province: "广东省")
+        }
+        
+        static func getCities(province:String = "广东省") -> [String] {
+            var temp = [String]()
+            for item in defaultDatas {
+                if let provinceItem:String = item["name"] as? String,provinceItem == province {
+                    let cityItemes:[[String:Any]] = item["city"] as! [[String:Any]];
+                    for cityItem in cityItemes {
+                        temp.append(cityItem["name"] as! String)
+                    }
+                    break
+                }
+            }
+            return temp
+        }
+        
+        static func getArea(city:String = "深圳市" ,province:String = "广东省") -> [String] {
+            var temp = [String]()
+            for item in defaultDatas {
+                if let provinceItem:String = item["name"] as? String,provinceItem == province {
+                    let cityItemes:[[String:Any]] = item["city"] as! [[String:Any]];
+                    for cityItem in cityItemes {
+                        if let currentCity:String = cityItem["name"] as? String , city == currentCity {
+                            let areas:[String] = cityItem["area"] as! [String]
+                            for areaItem in areas {
+                                temp.append(areaItem)
+                            }
+                            break
+                        }
+                    }
+                }
+            }
+            return temp
+        }
+    }
+    
+    struct RecordForMedicine {
+        
+        static var medichines = ["艾斯错轮","笑啥片","其他"]
+        
+        static var skt = ["1片","1.25片","3/4片"]
+        
+        static var timePoints = ["早饭前","早饭后","午饭前","午饭后","晚饭前","晚饭后"]
+        
+    }
+    
+}

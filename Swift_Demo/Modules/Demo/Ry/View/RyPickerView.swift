@@ -21,7 +21,7 @@ class RyPickerView: UIView {
     //delegate 还是要weak
     weak var delegate: RyPickerViewDelegate?
     
-    var preferredHeight: CGFloat = 55 + 55 + 187
+    var preferredHeight: CGFloat = 55 + 55 + 185
     
     var selectedObjs: [RyPickerListable]{
         var temp = [RyPickerListable]()
@@ -72,11 +72,10 @@ class RyPickerView: UIView {
         let tableView = cell.tableView
         let datasource:RyPickerViewConfiguration = self.dataSource as! RyPickerViewConfiguration
         let datalist:RyPickerListData = datasource.items[indexPath.section] as! RyPickerListData
-        datalist.scrollToIndex(index: indexPath.row, tableView: tableView, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.26) {
-            datalist.setSelectedItem(index: indexPath.row, tableView: tableView)
-        }
+        datalist.scrollToIndex(index: indexPath.row, tableView: tableView, animated: false)
     }
+    
+    
     
     @objc func onActionButton(sender: Any){
         delegate?.pickerView(didTapAction: self)

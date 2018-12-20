@@ -27,7 +27,6 @@ class RyPickerListCollectionViewCell: UICollectionViewCell {
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-//        tableView.frame = self.frame
     }
     
     lazy var tableView: UITableView = {
@@ -35,6 +34,7 @@ class RyPickerListCollectionViewCell: UICollectionViewCell {
         temp.showsVerticalScrollIndicator = false
         temp.showsHorizontalScrollIndicator = false
         temp.separatorStyle = .none
+        temp.estimatedRowHeight = self.frame.height / 3
         temp.decelerationRate = UIScrollViewDecelerationRateFast
         return temp
     }()

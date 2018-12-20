@@ -28,7 +28,7 @@ class RyPickerHolderData: RyPickerViewBaseData{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RyPickerHolderCollectionViewCell.defaultReuseIdentifier,
                                                       for: indexPath)
-        cell.backgroundColor = RyUI.color.B1
+//        cell.backgroundColor = RyUI.color.B1
         return cell
     }
     

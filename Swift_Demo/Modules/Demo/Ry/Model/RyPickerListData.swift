@@ -80,10 +80,6 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
         return item.cellType(userInfo: nil).cellHeightWithTableViewWidth(tableView.bounds.width, item)
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.setHighlighted(false, animated: false)
-    }
-    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
             scrollEnded(scrollView: scrollView)
@@ -101,7 +97,6 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
         let cellHeight = item.cellType(userInfo: nil).cellHeightWithTableViewWidth(tableView.bounds.width, item)
         let lineNumber = Int(round(scrollView.contentOffset.y / cellHeight)) + 1
         scrollToIndex(index: lineNumber , tableView: tableView, animated: true)
-        setSelectedItem(index: lineNumber , tableView: tableView)
     }
     
     //选中的颜色修改
@@ -120,14 +115,16 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
     //默认选中
     func scrollToDefaultItem(tableView:UITableView)  {
         scrollToIndex(index: defaultIndex, tableView: tableView, animated: false)
-        setSelectedItem(index: defaultIndex, tableView: tableView)
     }
     
     //滚到指定index
-    func scrollToIndex(index:Int,tableView:UITableView,animated:Bool) {
+    func scrollToIndex(index:Int,tableView:UITableView,animated:Bool = false) {
         let indexPath = IndexPath.init(row: index, section: 0)
         tableView.scrollToRow(at: indexPath, at: .middle, animated: animated)
-        pickeDatas(index: index)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+            self.setSelectedItem(index: index, tableView: tableView)
+            self.pickeDatas(index: index)
+        }
     }
     
     //（最后再处理选中事件的抛出，用与处理联动）

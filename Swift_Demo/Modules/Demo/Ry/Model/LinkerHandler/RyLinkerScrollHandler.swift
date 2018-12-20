@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RyLinkerScrollHandler_Test: RyLinkerScrollBaseHandler {
+class RyLinkerScrollHandler: RyLinkerScrollBaseHandler {
     //item对应的列,有选中行为
     override func item(_ item: RyPickerViewBaseData, didSelectRow row: Int) {
         guard let cfg = configuration,
