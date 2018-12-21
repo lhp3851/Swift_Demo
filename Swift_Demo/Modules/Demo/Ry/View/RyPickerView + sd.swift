@@ -365,48 +365,59 @@ class RyDefualtData {
             return components.day ?? 01
         }
         
-        static var years:[String] {
-            var temp = [String]()
+        static var years:[Int] {
+            var temp = [Int]()
             for item in stride(from: 1930, to: year + 1, by: 1) {
-                temp.append(String(format: "%i", item))
+                temp.append(item)
             }
             return temp
         }
         
-        static let monthes:[String] = ["01","02","03","04","05","06",
-                                       "07","08","09","10","11","12"]
+        static var monthes:[Int] {
+            var temp = [Int]()
+            for item in 0...12 {
+                temp.append(item)
+            }
+            return temp
+        }
         
-        static let days:[String] = ["01","02","03","04","05",
-                                     "06","07","08","09","10","11",
-                                     "12","13","14","15","16","17",
-                                     "18","19","20","21","22","23",
-                                     "24","25","26","27","28","29",
-                                     "30"]
+        static var days:[Int] {
+            var temp = [Int]()
+            for item in 0...30 {
+                temp.append(item)
+            }
+            return temp
+        }
         
-        static func getDays(year:String,month:String) {
-//            Calendar.current.range(of: Calendar.Component.day, in: Calendar.Component, for: <#T##Date#>)
+        static func getDays(year:String,month:String) -> Range<Int>? {
+            let formatter: DateFormatter = {
+                let temp = DateFormatter()
+                temp.dateFormat = "yyyy-MM"
+                temp.timeZone = TimeZone.current
+                return temp
+            }()
+            let date = formatter.date(from: "\(year)-\(month)") ?? Date()
+            return Calendar.current.range(of: Calendar.Component.day, in: Calendar.Component.month, for: date)
         }
         
     }
     
     struct Times {
-        static let houres:[String] = ["00","01","02","03","04",
-                                       "05","06","07","08","09","10",
-                                       "11","12","13","14","15","16",
-                                       "17","18","19","20","21","22",
-                                       "23"]
+        static var houres:[Int] {
+            var temp = [Int]()
+            for item in 0..<24 {
+                temp.append(item)
+            }
+            return temp
+        }
         
-        static let minutes:[String] = ["00","01","02","03","04",
-                                        "05","06","07","08","09","10",
-                                        "11","12","13","14","15","16",
-                                        "17","18","19","20","21","22",
-                                        "23","24","25","26","27","28",
-                                        "29","30","31","32","33","34",
-                                        "35","36","37","38","39","40",
-                                        "41","42","43","44","45","46",
-                                        "47","48","49","50","51","52",
-                                        "53","54","55","56","57","58",
-                                        "59"]
+        static var minutes:[Int] {
+            var temp = [Int]()
+            for item in 0..<60 {
+                temp.append(item)
+            }
+            return temp
+        }
     }
     
     struct DatesAndTimes {
