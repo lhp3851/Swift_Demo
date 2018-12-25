@@ -47,11 +47,13 @@ class RyPickerListData:RyPickerViewBaseData, UITableViewDataSource, UITableViewD
     }
     
     override func reload(in pickerView: RyPickerView, inComponent component: Int){
-        
+//        let indexpath = IndexPath.init(row: component, section: 0)
+//        let cell:RyPickerListCollectionViewCell = pickerView.collectionView.cellForItem(at: indexpath) as! RyPickerListCollectionViewCell
+//        cell.tableView.reloadData()
     }
     
     override func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
-        return nil
+        return dataSource[component]
     }
     
     

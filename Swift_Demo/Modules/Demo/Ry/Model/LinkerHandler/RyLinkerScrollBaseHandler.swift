@@ -30,7 +30,7 @@ class RyLinkerScrollBaseHandler: NSObject, RyPickerViewItemScrollDelegate {
         }
         let items = configuration.items
         for (index,thisItem) in items.enumerated() {
-            if ObjectIdentifier(thisItem) > ObjectIdentifier(item){
+            if ObjectIdentifier(thisItem) == ObjectIdentifier(item){
                 return index
             }
         }

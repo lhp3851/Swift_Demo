@@ -17,7 +17,7 @@ extension RyPickerView{
         let cfg = RyPickerViewConfiguration(title: "身高",
                                             items: [lHolder,listItem,unitItem,rHolder])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -26,7 +26,7 @@ extension RyPickerView{
         let listItem = RyPickerListData(dataSource: RyIntData.itemsForEducation, width: .flexible, defaultIndex: 4)
         let cfg = RyPickerViewConfiguration(title: "教育程度",items: [listItem])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -35,7 +35,7 @@ extension RyPickerView{
         let listItem = RyPickerListData(dataSource: RyIntData.itemsForGender, width: .flexible, defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "性别",items: [listItem])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -48,7 +48,7 @@ extension RyPickerView{
         let cfg = RyPickerViewConfiguration(title: "日期",
                                             items: [lHolder,listItem1,listItem2,rHolder])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -62,7 +62,7 @@ extension RyPickerView{
         let cfg = RyPickerViewConfiguration(title: "日期",
                                             items: [lHolder,listItem1,listItem2,listItem3,rHolder])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -76,7 +76,7 @@ extension RyPickerView{
         let cfg = RyPickerViewConfiguration(title: "时间",
                                             items: [lHolder,listItem1,unitItem,listItem2, rHolder])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -88,7 +88,7 @@ extension RyPickerView{
         let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForTimeMinute, width: .flexible, defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "日期",items: [listItem1,listItem2,unitItem,listItem3])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -99,7 +99,7 @@ extension RyPickerView{
         let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForAdressArea, width: .fixed(width:125), defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "地址",items: [listItem1,listItem2,listItem3])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyAddressLinkScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyAddressLinkScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -114,7 +114,7 @@ extension RyPickerView{
         let cfg = RyPickerViewConfiguration(title: "体重",
                                             items: [lHolder,listItemInt,unitItemleft,listItem,unitItemRight,rHolder])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
@@ -125,7 +125,7 @@ extension RyPickerView{
         let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForRecordTimePoint, width: .fixed(width:125), defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "服药记录",items: [listItem1,listItem2,listItem3])
         let temp = RyPickerView(dataSource: cfg)
-        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: RyPickerView(dataSource: cfg))
+        let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)
         cfg.linkerHandler = linkerHandler
         return temp
     }
