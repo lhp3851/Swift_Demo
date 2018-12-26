@@ -29,7 +29,7 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.addressPicker
+        let temp = RyPickerView.heightPicker
         return temp
     }()
     
@@ -123,10 +123,10 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     func showPicker(type withType: SelectorType) {
         self.translucentView.isHidden = false
         showPickerView { (delay) in
-//            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-//                let indexPath = IndexPath.init(row: 91, section: 1)
-//                self.ryPickerView.scrollTo(indexPath: indexPath)
-//            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+                let indexPath = IndexPath.init(row: 91, section: 1)
+                self.ryPickerView.scrollTo(indexPath: indexPath)
+            })
         }
     }
 }

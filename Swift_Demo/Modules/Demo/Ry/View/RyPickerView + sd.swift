@@ -94,7 +94,7 @@ extension RyPickerView{
     }
     
     static var addressPicker: RyPickerView{
-        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForAdressProvince, width: .fixed(width:125), defaultIndex: 1)
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForAdressProvince, width: .fixed(width:125), defaultIndex: 19)
         let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForAdressCity, width: .fixed(width:125), defaultIndex: 1)
         let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForAdressArea, width: .fixed(width:125), defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "地址",items: [listItem1,listItem2,listItem3])
@@ -160,7 +160,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForHeight: [RyIntData]{
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for index in 70...250 {
             temp.append(RyIntData(index: index - 69,title: "\(index)"))
         }
@@ -193,7 +193,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForEducation:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.educations.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -203,7 +203,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForGender:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.genders.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -213,7 +213,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForDateYear:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Dates.years.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -223,7 +223,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForDateMonth:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Dates.monthes.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -233,7 +233,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForDateDay:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Dates.days.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -243,7 +243,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForDateAndTimeMonthAndDay:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (idx,obj) in RyDefualtData.Dates.monthes.enumerated() {
             for (index,object) in RyDefualtData.Dates.days.enumerated() {
                 temp.append(RyIntData(index: idx * RyDefualtData.Dates.days.count + index + 1,title: "\(obj)-\(object)"))
@@ -256,7 +256,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForTimeHoure:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Times.houres.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -266,7 +266,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForTimeMinute:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Times.minutes.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -276,7 +276,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForAdressProvince:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Addresses.provinces.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -286,7 +286,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForAdressCity:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Addresses.cities.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -296,7 +296,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForAdressArea:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.Addresses.areas.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -306,7 +306,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForRecordMedichine:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.RecordForMedicine.medichines.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -316,7 +316,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForRecordSKT:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.RecordForMedicine.skt.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }
@@ -326,7 +326,7 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
     
     static var itemsForRecordTimePoint:[RyIntData] {
         var temp = [RyIntData]()
-        temp.append(RyIntData.last)
+        temp.append(RyIntData.first)
         for (index,object) in RyDefualtData.RecordForMedicine.timePoints.enumerated() {
             temp.append(RyIntData(index: index + 1,title: "\(object)"))
         }

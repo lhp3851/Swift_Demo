@@ -21,14 +21,33 @@ class RyPickerView: UIView {
     //delegate 还是要weak
     weak var delegate: RyPickerViewDelegate?
     
-    var preferredHeight: CGFloat = 55 + 55 + 185
+    var preferredHeight: CGFloat = 55 + 55 + 187
+    
+    var defaultSelectedIndexes:[Int] {
+        var temp:[Int] = []
+        let cfg : RyPickerViewConfiguration = self.dataSource as! RyPickerViewConfiguration
+        for item in cfg.items {
+            if item.isKind(of: RyPickerListData.self){
+                let model:RyPickerListData = item as! RyPickerListData
+                let index = model.defaultIndex
+                temp.append(index)
+            }
+            else{
+                temp.append(0)
+            }
+        }
+        return temp
+    }
+    
+    var selectedIndexes: [Int] = []
     
     var selectedObjs: [RyPickerListable]{
         var temp = [RyPickerListable]()
         let count = dataSource.numberOfComponents(in: self)
         for index in 0..<count {
             let model = dataSource.pickerView(self, modelForComponent: index)
-            if let item = model.selectedItem(in: self, inComponent: index){
+            let selectedIndex = self.selectedIndexes[index]
+            if let item = model.selectedItem(in: self, inComponent: selectedIndex){
                 temp.append(item)
             }
         }
@@ -38,6 +57,7 @@ class RyPickerView: UIView {
     init(frame: CGRect = CGRect.zero, dataSource: RyPickerViewDataSource) {
         self.dataSource = dataSource
         super.init(frame: frame)
+        self.selectedIndexes = self.defaultSelectedIndexes
         setupSubview()
         addLayout()
         prepare()
@@ -68,11 +88,12 @@ class RyPickerView: UIView {
     
     func scrollTo(indexPath:IndexPath)  {
         let index = IndexPath.init(row: indexPath.section, section: 0)
-        let cell:RyPickerListCollectionViewCell = collectionView.cellForItem(at: index) as! RyPickerListCollectionViewCell
-        let tableView = cell.tableView
-        let datasource:RyPickerViewConfiguration = self.dataSource as! RyPickerViewConfiguration
-        let datalist:RyPickerListData = datasource.items[indexPath.section] as! RyPickerListData
-        datalist.scrollToIndex(index: indexPath.row, tableView: tableView, animated: false)
+        if let cell:RyPickerListCollectionViewCell = collectionView.cellForItem(at: index) as? RyPickerListCollectionViewCell {
+            let tableView = cell.tableView
+            let datasource:RyPickerViewConfiguration = self.dataSource as! RyPickerViewConfiguration
+            let datalist:RyPickerListData = datasource.items[indexPath.section] as! RyPickerListData
+            datalist.scrollToIndex(index: indexPath.row, tableView: tableView, animated: false)
+        }
     }
     
     
