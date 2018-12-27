@@ -94,9 +94,9 @@ extension RyPickerView{
     }
     
     static var addressPicker: RyPickerView{
-        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForAdressProvince, width: .fixed(width:125), defaultIndex: 19)
-        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForAdressCity, width: .fixed(width:125), defaultIndex: 1)
-        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForAdressArea, width: .fixed(width:125), defaultIndex: 1)
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForAdressProvince, width: .flexible, defaultIndex: 19)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForAdressCity, width: .flexible, defaultIndex: 1)
+        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForAdressArea, width: .flexible, defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "地址",items: [listItem1,listItem2,listItem3])
         let temp = RyPickerView(dataSource: cfg)
         let linkerHandler = RyAddressLinkScrollHandler(configuration: cfg, pickerView: temp)
@@ -120,9 +120,9 @@ extension RyPickerView{
     }
     
     static var recordMedichinePicker: RyPickerView{
-        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForRecordMedichine, width: .fixed(width:125), defaultIndex: 1)
-        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForRecordSKT, width: .fixed(width:125), defaultIndex: 1)
-        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForRecordTimePoint, width: .fixed(width:125), defaultIndex: 1)
+        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForRecordMedichine, width: .flexible, defaultIndex: 1)
+        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForRecordSKT, width: .flexible, defaultIndex: 1)
+        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForRecordTimePoint, width: .flexible, defaultIndex: 1)
         let cfg = RyPickerViewConfiguration(title: "服药记录",items: [listItem1,listItem2,listItem3])
         let temp = RyPickerView(dataSource: cfg)
         let linkerHandler = RyLinkerScrollHandler(configuration: cfg, pickerView: temp)

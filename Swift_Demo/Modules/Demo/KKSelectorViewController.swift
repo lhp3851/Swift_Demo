@@ -121,13 +121,14 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func showPicker(type withType: SelectorType) {
-        self.translucentView.isHidden = false
-        showPickerView { (delay) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-                let indexPath = IndexPath.init(row: 19, section: 0)
-                self.ryPickerView.scrollTo(indexPath: indexPath)
-            })
-        }
+//        self.translucentView.isHidden = false
+//        showPickerView { (delay) in
+////            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+////                let indexPath = IndexPath.init(row: 91, section: 1)
+////                self.ryPickerView.scrollTo(indexPath: indexPath)
+////            })
+//        }
+        ryPickerView.show()
     }
 }
 
