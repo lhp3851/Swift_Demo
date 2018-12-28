@@ -13,7 +13,6 @@ extension RyPickerView: UIGestureRecognizerDelegate{
         guard let keyWindow = UIApplication.shared.keyWindow else {
             return
         }
-        setupBgView()
         bgView.frame = keyWindow.bounds
         bgView.alpha = 0.5
         bgView.addSubview(self)
@@ -44,34 +43,13 @@ extension RyPickerView: UIGestureRecognizerDelegate{
         hide()
     }
     
-    static let bgView: UIView = {
-        let temp = UIView()
-        temp.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        return temp
-    }()
 
-    fileprivate static var isTapSet: Bool = false
-    
-    fileprivate func setupBgView(){
-        if RyPickerView.isTapSet{
-            return
-        }
-        RyPickerView.isTapSet = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(onBgViewTap(sender:)))
-        tap.delegate = self
-        bgView.addGestureRecognizer(tap)
-    }
-    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         let location = touch.location(in: bgView)
         if frame.contains(location){
             return false
         }
         return true
-    }
-    
-    fileprivate var bgView: UIView{
-        return RyPickerView.bgView
     }
 }
 

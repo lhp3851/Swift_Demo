@@ -29,7 +29,9 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.addressPicker
+        let temp = RyPickerView.recordMedichinePicker
+        temp.selected(titles: ["阿普唑仑（佳乐定）", "4片", "午饭前／后"])
+        temp.delegate = self
         return temp
     }()
     
@@ -61,26 +63,26 @@ class KKSelectorViewController: BaseViewController {
     }
     
     func setUpPickerView() {
-        if let window = UIWindow.getCurrentWindow() {
-            self.translucentView.addSubview(pickerView)
-            window.addSubview(self.translucentView)
-        }
-        pickerView.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(pickerViewHeight)
-        }
+//        if let window = UIWindow.getCurrentWindow() {
+//            self.translucentView.addSubview(pickerView)
+//            window.addSubview(self.translucentView)
+//        }
+//        pickerView.snp.makeConstraints { (make) in
+//            make.left.right.bottom.equalToSuperview()
+//            make.height.equalTo(pickerViewHeight)
+//        }
     }
     
     func showPickerView(handler:Handler)  {
-        if let window = UIWindow.getCurrentWindow() {
-            self.translucentView.addSubview(ryPickerView)
-            window.addSubview(self.translucentView)
-        }
-        ryPickerView.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(pickerViewHeight)
-        }
-        handler(0.26)
+//        if let window = UIWindow.getCurrentWindow() {
+//            self.translucentView.addSubview(ryPickerView)
+//            window.addSubview(self.translucentView)
+//        }
+//        ryPickerView.snp.makeConstraints { (make) in
+//            make.left.right.bottom.equalToSuperview()
+//            make.height.equalTo(pickerViewHeight)
+//        }
+//        handler(0.26)
     }
 }
 
@@ -135,8 +137,18 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
 extension KKSelectorViewController: KKPickerViewProtocol{
 
     func didSelect(model: Any, type: SelectorType) {
-        dump(model)
-        self.translucentView.isHidden = true
+//        dump(model)
+//        self.translucentView.isHidden = true
     }
     
+}
+
+
+extension KKSelectorViewController:RyPickerViewDelegate {
+    func pickerView(didTapAction pickerView: RyPickerView){
+        let temp = pickerView.selectedObjs.map { (thiObj) -> String in
+            return thiObj.titleInPicker
+        }
+        print(temp)
+    }
 }

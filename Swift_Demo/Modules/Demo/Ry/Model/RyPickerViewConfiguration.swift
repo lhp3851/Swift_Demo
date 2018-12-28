@@ -13,13 +13,14 @@ class RyPickerViewConfiguration:NSObject, RyPickerViewDataSource{
     
     var title: String
     
-    var linkerHandler: RyLinkerScrollBaseHandler?{
-        didSet{
-            for thisItem in items {
-                thisItem.itemScrollDelegate = linkerHandler
-            }
+    lazy var totalItemWidths:[RyPickerViewItemWidth] = {
+        var temp = [RyPickerViewItemWidth]()
+        for thisItem in items {
+            let itemPreferredWidth = thisItem.preferredWidthForComponent()
+            temp.append(contentsOf: itemPreferredWidth)
         }
-    }
+        return temp
+    }()
     
     init(title: String, items: [RyPickerViewBaseData]) {
         self.title = title
@@ -32,39 +33,22 @@ class RyPickerViewConfiguration:NSObject, RyPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: RyPickerView, widthForComponent component: Int) -> CGFloat {
-        let item = items[component]
-        let itemPreferredWidth = item.preferredWidthForComponent(atBounds: pickerView.bounds)
+        let itemPreferredWidth = items[component].preferredWidthForComponent()
         //itemPreferredWidth 只是单个cell希望的宽度
         //实际使用宽度可能不是这个值而是比例，所以可以在此做比例转换
-        switch itemPreferredWidth {
-        case .fixed(let width):
-            return width
-        case .scale(let factor):
-            return pickerView.bounds.width * factor
-        case .flexible:
-            return flexibleWidth(at: pickerView.bounds)
-        }
+        return itemPreferredWidth.totalWidth(in: pickerView.bounds.width, widths: totalItemWidths)
     }
     
-    func flexibleWidth(at bounds: CGRect) -> CGFloat{
-        var aWidth = bounds.width
-        var count: CGFloat = 0
-        for thisItem in items {
-            let widthType = thisItem.preferredWidthForComponent(atBounds: bounds)
-            if let temp = widthType.width(in: bounds.width){
-                aWidth = aWidth - temp
-            }else if case .flexible = widthType{
-                count = count + 1
-            }
-        }
-        return count > 0 ? (aWidth / count) : 0
-    }
-    
-    func pickerView(_ pickerView: RyPickerView, modelForComponent component: Int) -> RyPickerViewBaseData {
-        return items[component]
+    func pickerView(_ pickerView: RyPickerView, itemViewForComponent component: Int) -> RyPickerItemBaseView{
+        let temp = items[component].pickerItemView(at: pickerView.bounds)
+        return temp
     }
     
     func titleOfPicker(in pickerView: RyPickerView) -> String? {
         return title
+    }
+    
+    func pickerView(_ pickerView: RyPickerView, widthForItemWidth itemWidth: RyPickerViewItemWidth) -> CGFloat {
+        return itemWidth.width(in: pickerView.bounds.width, widths: totalItemWidths)
     }
 }
