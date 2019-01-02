@@ -10,7 +10,14 @@ import UIKit
 
 extension RyPickerView{
     static var medicationRecord: RyPickerView{
-        
+        let cfg = RyPickerViewConfiguration.medicationRecord
+        let temp = RyPickerView.init(dataSource: cfg)
+        return temp
+    }
+}
+
+extension RyPickerViewConfiguration{
+    static var medicationRecord: RyPickerViewConfiguration{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
         let listItem1 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordMedichine,
@@ -20,8 +27,7 @@ extension RyPickerView{
         let listItem3 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordTimePoint,
                                          widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "服药记录",items: [listItem1,listItem2,listItem3])
-        let temp = RyPickerView(dataSource: cfg)
-        return temp
+        return cfg
     }
 }
 

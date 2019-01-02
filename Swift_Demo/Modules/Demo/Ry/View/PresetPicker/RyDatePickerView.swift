@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension RyPickerView{
+    static func date(startDate: Date, endDate: Date) -> RyPickerView{
+        return RyDatePickerView(frame: CGRect.zero, startDate: startDate, endDate: endDate)
+    }
+}
+
 class RyDatePickerView: RyPickerView {
     
     let dateDataSource: RyDatePickerDataSource
@@ -20,14 +26,10 @@ class RyDatePickerView: RyPickerView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func scroll(to date: Date){
-        
-    }
 }
 
 
-class RyDatePickerDataSource:NSObject, RyPickerViewDataSource {
+class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
     
     var startDate: Date
     
@@ -69,18 +71,18 @@ class RyDatePickerDataSource:NSObject, RyPickerViewDataSource {
         minuteItemView.delegate = self
     }
     
-    func numberOfComponents(in pickerView: RyPickerView) -> Int {
+    func numberOfComponents(in pickerView: RyPickerContentView) -> Int {
         return 2
     }
     
-    func pickerView(_ pickerView: RyPickerView, widthForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: RyPickerContentView, widthForComponent component: Int) -> CGFloat {
         if component == 0{
             return hourItemView.widthContainer.widths.totalWidth(in: pickerView.bounds.width, widths: totalItemWidths)
         }
         return minuteItemView.widthContainer.widths.totalWidth(in: pickerView.bounds.width, widths: totalItemWidths)
     }
     
-    func pickerView(_ pickerView: RyPickerView, itemViewForComponent component: Int) -> RyPickerItemBaseView {
+    func pickerView(_ pickerView: RyPickerContentView, itemViewForComponent component: Int) -> RyPickerItemBaseView {
         if component == 0{
             return hourItemView
         }else{
@@ -88,11 +90,11 @@ class RyDatePickerDataSource:NSObject, RyPickerViewDataSource {
         }
     }
     
-    func titleOfPicker(in pickerView: RyPickerView) -> String? {
+    func titleOfPicker(in pickerView: RyPickerContentView) -> String? {
         return nil
     }
     
-    func pickerView(_ pickerView: RyPickerView, widthForItemWidth itemWidth: RyPickerViewItemWidth) -> CGFloat {
+    func pickerView(_ pickerView: RyPickerContentView, widthForItemWidth itemWidth: RyPickerViewItemWidth) -> CGFloat {
         return itemWidth.width(in: pickerView.bounds.width, widths: totalItemWidths)
     }
     

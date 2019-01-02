@@ -11,7 +11,14 @@ import UIKit
 extension RyPickerView{
     
     static var nightWakeupRecord: RyPickerView{
-        
+        let cfg = RyPickerViewConfiguration.nightWakeupRecord
+        let temp = RyPickerView.init(dataSource: cfg)
+        return temp
+    }
+}
+
+extension RyPickerViewConfiguration{
+    static var nightWakeupRecord: RyPickerViewConfiguration{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
         let listItem1 = RyPickerListData(dataSource: RyPikerRowData.itemsForWakeupTimes,
@@ -19,8 +26,7 @@ extension RyPickerView{
         let listItem2 = RyPickerListData(dataSource: RyPikerRowData.itemsForWakeupDuration,
                                          widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "夜醒次数及总时长",items: [listItem1,listItem2])
-        let temp = RyPickerView(dataSource: cfg)
-        return temp
+        return cfg
     }
 }
 

@@ -29,8 +29,7 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.nightWakeupRecord
-//        let temp = RyDatePickerView(frame: CGRect.zero, startDate: Date(), endDate: Date())
+        let temp = RyPickerView.drugsEver
         temp.delegate = self
         return temp
     }()

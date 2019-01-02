@@ -65,12 +65,7 @@ class RyPickerItemListView: RyPickerItemBaseView {
     }
     
     override func reload(andFixAtTitle title: String?){
-        
-        guard let title = title else {
-            tableView.reloadData()
-            return
-        }
-        let index = firstIndex(ofTitle: title) ?? 0
+        let index = firstIndex(ofTitle: title ?? "") ?? 0
         tableView.alpha = 0
         scrollToRow(at: index, animated: false, isNeedReload: true, isSendAction: false) { (_) in
             self.tableView.alpha = 1

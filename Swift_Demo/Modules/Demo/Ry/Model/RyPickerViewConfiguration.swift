@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RyPickerViewConfiguration:NSObject, RyPickerViewDataSource{
+class RyPickerViewConfiguration:NSObject, RyPickerContentViewDataSource{
     var items: [RyPickerViewBaseData] = []
     
     var title: String
@@ -28,27 +28,27 @@ class RyPickerViewConfiguration:NSObject, RyPickerViewDataSource{
         super.init()
     }
     
-    func numberOfComponents(in pickerView: RyPickerView) -> Int {
+    func numberOfComponents(in pickerView: RyPickerContentView) -> Int {
         return items.count
     }
     
-    func pickerView(_ pickerView: RyPickerView, widthForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: RyPickerContentView, widthForComponent component: Int) -> CGFloat {
         let itemPreferredWidth = items[component].preferredWidthForComponent()
         //itemPreferredWidth 只是单个cell希望的宽度
         //实际使用宽度可能不是这个值而是比例，所以可以在此做比例转换
         return itemPreferredWidth.totalWidth(in: pickerView.bounds.width, widths: totalItemWidths)
     }
     
-    func pickerView(_ pickerView: RyPickerView, itemViewForComponent component: Int) -> RyPickerItemBaseView{
+    func pickerView(_ pickerView: RyPickerContentView, itemViewForComponent component: Int) -> RyPickerItemBaseView{
         let temp = items[component].pickerItemView(at: pickerView.bounds)
         return temp
     }
     
-    func titleOfPicker(in pickerView: RyPickerView) -> String? {
+    func titleOfPicker(in pickerView: RyPickerContentView) -> String? {
         return title
     }
     
-    func pickerView(_ pickerView: RyPickerView, widthForItemWidth itemWidth: RyPickerViewItemWidth) -> CGFloat {
+    func pickerView(_ pickerView: RyPickerContentView, widthForItemWidth itemWidth: RyPickerViewItemWidth) -> CGFloat {
         return itemWidth.width(in: pickerView.bounds.width, widths: totalItemWidths)
     }
 }

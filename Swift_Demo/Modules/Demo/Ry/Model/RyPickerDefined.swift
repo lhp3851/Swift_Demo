@@ -10,14 +10,6 @@ import UIKit
 
 typealias RyListItem = RyPickerListable & RyCellDataBaseProtocol
 
-protocol RyPickerViewDataSource {
-    func numberOfComponents(in pickerView: RyPickerView) -> Int
-    func pickerView(_ pickerView: RyPickerView, widthForComponent component: Int) -> CGFloat
-    func pickerView(_ pickerView: RyPickerView, itemViewForComponent component: Int) -> RyPickerItemBaseView
-    func titleOfPicker(in pickerView: RyPickerView) -> String?
-    func pickerView(_ pickerView: RyPickerView, widthForItemWidth itemWidth: RyPickerViewItemWidth) -> CGFloat
-}
-
 enum RyPickerViewItemType {
     case holder
     case unit
@@ -132,3 +124,4 @@ protocol RyPickerListable {
     var rowForObjInPicker: Int {get}
     var titleInPicker: String {get}
 }
+

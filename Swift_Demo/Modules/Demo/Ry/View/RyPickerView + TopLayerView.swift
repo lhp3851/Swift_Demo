@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension RyPickerView{
+extension RyPickerContentView{
     class TopLayerView: UIView {
         override init(frame: CGRect) {
             super.init(frame: frame)

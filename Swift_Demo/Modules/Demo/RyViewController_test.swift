@@ -20,7 +20,7 @@ class RyViewController_test: UIViewController {
     }
 
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.recordMedichinePicker
+        let temp = RyPickerView.medicationRecord
         return temp
     }()
 }

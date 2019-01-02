@@ -10,7 +10,15 @@ import UIKit
 
 extension RyPickerView{
     static var napRecord: RyPickerView{
-        return nightWakeupRecord
+        let cfg = RyPickerViewConfiguration.napRecord
+        cfg.title = "白天小睡次数及总时长"
+        let temp = RyPickerView.init(dataSource: cfg)
+        return temp
     }
 }
 
+extension RyPickerViewConfiguration{
+    static var napRecord: RyPickerViewConfiguration{
+        return nightWakeupRecord
+    }
+}
