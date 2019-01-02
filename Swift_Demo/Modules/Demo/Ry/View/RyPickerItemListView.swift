@@ -60,6 +60,14 @@ class RyPickerItemListView: RyPickerItemBaseView {
         setupSubview()
     }
     
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        if window == nil{
+            return
+        }
+        self.setSelectedItem(index: currentIndex)
+    }
+    
     override func reload() {
         tableView.reloadData()
     }
