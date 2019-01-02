@@ -77,6 +77,23 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
         minuteItemView.delegate = self
     }
     
+    func reload(andFixAtDate date: Date) {
+        let minute = Calendar.current.component(.minute, from: date)
+        let num = hourItemView.tableView.numberOfRows(inSection: 0)
+        var todoIndex: Int? = nil
+        for index in 0..<num{
+            let indexPath = IndexPath(row: index, section: 0)
+            let item = hourItemView.dataSouce?.pickerItemListView(hourItemView, cellDataForRowAt: indexPath)
+            if let thisDate = item?.objInPicker as? Date,
+                thisDate == date{
+                todoIndex = index
+                break
+            }
+        }
+        hourItemView.reload(andFixAtIndex: todoIndex ?? 0, completion: nil)
+        minuteItemView.reload(andFixAtTitle: String(format: "%02d", minute))
+    }
+    
     func numberOfComponents(in pickerView: RyPickerContentView) -> Int {
         return 2
     }

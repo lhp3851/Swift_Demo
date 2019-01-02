@@ -65,6 +65,10 @@ class RyPickerItemBaseView: UIView {
         
     }
     
+    func reload(andFixAtIndex index: Int, completion:(()->Void)? = nil){
+        
+    }
+    
     func scroll(to index: Int, animated: Bool, isSendAction: Bool = true){
         
     }
