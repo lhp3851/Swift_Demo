@@ -75,6 +75,11 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
             label.textColor = RyUI.color.T2
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = nil
+    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

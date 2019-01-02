@@ -9,7 +9,8 @@
 import UIKit
 
 protocol RyPickerItemBaseViewDelegate: NSObjectProtocol {
-    func itemBaseView(_ itemBaseView: RyPickerItemBaseView, didSelectRow row: Int)
+    func itemBaseView(_ itemBaseView: RyPickerItemBaseView, didSelectRow row: Int, preSelectedRow: RyPickerListable?)
+    func itemBaseViewWillBeginDragging(_ itemBaseView: RyPickerItemBaseView)
 }
 
 protocol RyPickerItemBaseViewLayoutDelegate: NSObjectProtocol {
@@ -27,7 +28,15 @@ class RyPickerItemBaseView: UIView {
         return 0
     }
     
+    var currentIndex: Int{
+        return 0
+    }
+    
     var selectedObj: RyListItem?{
+        return nil
+    }
+    
+    var currentObj: RyListItem?{
         return nil
     }
     
@@ -49,6 +58,10 @@ class RyPickerItemBaseView: UIView {
     }
     
     func reload(){
+        
+    }
+    
+    func reload(andFixAtTitle title: String?){
         
     }
     

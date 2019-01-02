@@ -30,7 +30,7 @@ class RyPickerView: UIView {
         let count = dataSource.numberOfComponents(in: self)
         for index in 0..<count {
             let itemView = dataSource.pickerView(self, itemViewForComponent: index)
-            if let obj = itemView.selectedObj{
+            if let obj = itemView.currentObj{
                 temp.append(obj)
             }
         }
@@ -46,6 +46,11 @@ class RyPickerView: UIView {
     
     func reload(){
         titleLabel.text = dataSource.titleOfPicker(in: self)
+        let count = dataSource.numberOfComponents(in: self)
+        for index in 0..<count {
+            let itemView = dataSource.pickerView(self, itemViewForComponent: index)
+            itemView.reload()
+        }
     }
     
     func selectedObj(inComponent component: Int) -> RyPickerListable?{
@@ -62,6 +67,16 @@ class RyPickerView: UIView {
             itemView.scroll(to: thisTitle, animated: false, isSendAction: false)
         }
     }
+    
+    func selected(indexs: [Int]){
+        for (index, thisIndex) in indexs.enumerated() {
+            if index >= dataSource.numberOfComponents(in: self){
+                break
+            }
+            let itemView = dataSource.pickerView(self, itemViewForComponent: index)
+            itemView.scroll(to: thisIndex, animated: false, isSendAction: false)
+        }
+    }
 
     func reloadComponent(_ component: Int){
         let itemView = dataSource.pickerView(self, itemViewForComponent: component)
@@ -76,6 +91,10 @@ class RyPickerView: UIView {
     func selectRow(_ row: Int, inComponent component: Int, animated: Bool){
         let itemView = dataSource.pickerView(self, itemViewForComponent: component)
         itemView.scroll(to: row, animated: animated)
+    }
+    
+    func itemView(forComponent component: Int) -> RyPickerItemBaseView{
+        return dataSource.pickerView(self, itemViewForComponent: component)
     }
     
     @objc func onActionButton(sender: Any){

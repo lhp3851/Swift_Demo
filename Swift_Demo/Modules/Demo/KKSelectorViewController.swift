@@ -29,8 +29,8 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.recordMedichinePicker
-        temp.selected(titles: ["阿普唑仑（佳乐定）", "4片", "午饭前／后"])
+        let temp = RyPickerView.nightWakeupRecord
+//        let temp = RyDatePickerView(frame: CGRect.zero, startDate: Date(), endDate: Date())
         temp.delegate = self
         return temp
     }()
@@ -149,6 +149,17 @@ extension KKSelectorViewController:RyPickerViewDelegate {
         let temp = pickerView.selectedObjs.map { (thiObj) -> String in
             return thiObj.titleInPicker
         }
+        
+        let temp2 = pickerView.selectedObjs.map { (thiObj) -> Any in
+            return thiObj.objInPicker
+        }
         print(temp)
+        print(temp2)
+        
+//        let dataSource = ryPickerView.dataSource as! RyDatePickerDataSource
+//        dataSource.startDate = Calendar.current.date(bySettingHour: 14, minute: 40, second: 0, of: Date())!
+//        dataSource.endDate = Calendar.current.date(bySettingHour: 23, minute: 10, second: 0, of: Date())!
+//        pickerView.itemView(forComponent: 0).reload(andFixAtTitle: "21")
+//        pickerView.itemView(forComponent: 1).reload(andFixAtTitle: "10")
     }
 }

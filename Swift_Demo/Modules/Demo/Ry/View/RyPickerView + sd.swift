@@ -33,7 +33,7 @@ extension RyPickerView{
 //
     static var genderPicker: RyPickerView{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
-        let listItem = RyPickerListData(dataSource: RyIntData.itemsForGender, widthContainer: container)
+        let listItem = RyPickerListData(dataSource: RyPikerRowData.itemsForGender, widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "性别",items: [listItem])
         let temp = RyPickerView(dataSource: cfg)
         return temp
@@ -106,7 +106,7 @@ extension RyPickerView{
     static var weightPicker: RyPickerView{
         var items: [RyPickerViewBaseData] = []
         items.append({
-            let intPart = RyIntData.Weight.IntPart
+            let intPart = RyPikerRowData.Weight.IntPart
             intPart.forEach({ (thisObj) in
                 thisObj.postion = .right(.fixed(width: 75))
             })
@@ -114,7 +114,7 @@ extension RyPickerView{
                                     widthContainer: RyListWidthContainer(.zero, [.flexible, .fixed(width: 75)], .zero))
         }())
         items.append({
-            let temp = RyPickerListData(dataSource: RyIntData.Weight.fractionalPart,
+            let temp = RyPickerListData(dataSource: RyPikerRowData.Weight.fractionalPart,
                                     widthContainer: RyListWidthContainer(.fixed(width: 35), .fixed(width: 75), .fixed(width: 35)),
                                     inset: RyPickerInset(.zero, .flexible))
             temp.header = "."
@@ -131,11 +131,11 @@ extension RyPickerView{
         
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
-        let listItem1 = RyPickerListData(dataSource: RyIntData.itemsForRecordMedichine,
+        let listItem1 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordMedichine,
                                          widthContainer: container)
-        let listItem2 = RyPickerListData(dataSource: RyIntData.itemsForRecordSKT,
+        let listItem2 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordSKT,
                                          widthContainer: container)
-        let listItem3 = RyPickerListData(dataSource: RyIntData.itemsForRecordTimePoint,
+        let listItem3 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordTimePoint,
                                          widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "服药记录",items: [listItem1,listItem2,listItem3])
         let temp = RyPickerView(dataSource: cfg)
@@ -143,7 +143,7 @@ extension RyPickerView{
     }
 }
 
-class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
+class RyPikerRowData: RyLabelCellDataProtocol, RyPickerListable{
     var ryltvc_position: RyLabelTableViewCell.Position{
         return postion
     }
@@ -169,155 +169,147 @@ class RyIntData: RyLabelCellDataProtocol, RyPickerListable{
         self.titleInPicker = title
     }
     
-    static var first:RyIntData {
-        return RyIntData.init(index: 0, title: "")
-    }
-    
-    static var last:RyIntData {
-        return RyIntData.init(index: -1, title: "")
-    }
-    
-    static var itemsForHeight: [RyIntData]{
-        var temp = [RyIntData]()
+    static var itemsForHeight: [RyPikerRowData]{
+        var temp = [RyPikerRowData]()
         for index in 70...250 {
-            temp.append(RyIntData(index: index - 69,title: "\(index)"))
+            temp.append(RyPikerRowData(index: index - 69,title: "\(index)"))
         }
         return temp
     }
     
     struct Weight {
-        static var IntPart: [RyIntData] {
-            var temp = [RyIntData]()
+        static var IntPart: [RyPikerRowData] {
+            var temp = [RyPikerRowData]()
             for index in 20...250 {
-                temp.append(RyIntData(index: index - 19,title: "\(index)"))
+                temp.append(RyPikerRowData(index: index - 19,title: "\(index)"))
             }
             return temp
         }
         
-        static var fractionalPart: [RyIntData]{
-            var temp = [RyIntData]()
+        static var fractionalPart: [RyPikerRowData]{
+            var temp = [RyPikerRowData]()
             let sequnce = stride(from: 0, to: 10, by: 1)
             for (idx,obj) in sequnce.enumerated() {
-                temp.append(RyIntData.init(index: idx, title: String(format: "%d", obj)))
+                temp.append(RyPikerRowData.init(index: idx, title: String(format: "%d", obj)))
             }
             return temp
         }
     }
     
-    static var itemsForEducation:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForEducation:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.educations.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForGender:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForGender:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.genders.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForDateYear:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForDateYear:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Dates.years.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForDateMonth:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForDateMonth:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Dates.monthes.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForDateDay:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForDateDay:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Dates.days.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForDateAndTimeMonthAndDay:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForDateAndTimeMonthAndDay:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (idx,obj) in RyDefualtData.Dates.monthes.enumerated() {
             for (index,object) in RyDefualtData.Dates.days.enumerated() {
-                temp.append(RyIntData(index: idx * RyDefualtData.Dates.days.count + index + 1,title: "\(obj)-\(object)"))
+                temp.append(RyPikerRowData(index: idx * RyDefualtData.Dates.days.count + index + 1,title: "\(obj)-\(object)"))
             }
         }
         return temp
     }
     
     
-    static var itemsForTimeHoure:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForTimeHoure:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Times.houres.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForTimeMinute:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForTimeMinute:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Times.minutes.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForAdressProvince:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForAdressProvince:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Addresses.provinces.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForAdressCity:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForAdressCity:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Addresses.cities.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForAdressArea:[RyIntData] {
-        var temp = [RyIntData]()
+    static var itemsForAdressArea:[RyPikerRowData] {
+        var temp = [RyPikerRowData]()
         for (index,object) in RyDefualtData.Addresses.areas.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
+            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForRecordMedichine:[RyIntData] {
-        var temp = [RyIntData]()
-        for (index,object) in RyDefualtData.RecordForMedicine.medichines.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
-        }
-        return temp
-    }
-    
-    static var itemsForRecordSKT:[RyIntData] {
-        var temp = [RyIntData]()
-        for (index,object) in RyDefualtData.RecordForMedicine.skt.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
-        }
-        return temp
-    }
-    
-    static var itemsForRecordTimePoint:[RyIntData] {
-        var temp = [RyIntData]()
-        for (index,object) in RyDefualtData.RecordForMedicine.timePoints.enumerated() {
-            temp.append(RyIntData(index: index + 1,title: "\(object)"))
-        }
-        return temp
-    }
+//    static var itemsForRecordMedichine:[RyPikerRowData] {
+//        var temp = [RyPikerRowData]()
+//        for (index,object) in RyDefualtData.RecordForMedicine.medichines.enumerated() {
+//            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
+//        }
+//        return temp
+//    }
+//
+//    static var itemsForRecordSKT:[RyPikerRowData] {
+//        var temp = [RyPikerRowData]()
+//        for (index,object) in RyDefualtData.RecordForMedicine.skt.enumerated() {
+//            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
+//        }
+//        return temp
+//    }
+//
+//    static var itemsForRecordTimePoint:[RyPikerRowData] {
+//        var temp = [RyPikerRowData]()
+//        for (index,object) in RyDefualtData.RecordForMedicine.timePoints.enumerated() {
+//            temp.append(RyPikerRowData(index: index + 1,title: "\(object)"))
+//        }
+//        return temp
+//    }
     
 }
 

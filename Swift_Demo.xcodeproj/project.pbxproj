@@ -72,6 +72,10 @@
 		BD9B37B321D1BF6E007A5AD4 /* RyPickerView + show.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37B221D1BF6E007A5AD4 /* RyPickerView + show.swift */; };
 		BD9B37B521D475C6007A5AD4 /* RyPickerItemBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37B421D475C6007A5AD4 /* RyPickerItemBaseView.swift */; };
 		BD9B37B921D49CA1007A5AD4 /* RyPickerItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37B821D49CA1007A5AD4 /* RyPickerItemListView.swift */; };
+		BD9B37BE21D7174A007A5AD4 /* RyPickerView + MedicationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37BD21D7174A007A5AD4 /* RyPickerView + MedicationRecord.swift */; };
+		BD9B37C021D71F04007A5AD4 /* RyPickerView + NightWakeupRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37BF21D71F04007A5AD4 /* RyPickerView + NightWakeupRecord.swift */; };
+		BD9B37C221D7232F007A5AD4 /* RyPikerView + NapRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37C121D7232F007A5AD4 /* RyPikerView + NapRecord.swift */; };
+		BD9B37C421D7413B007A5AD4 /* RyDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37C321D7413A007A5AD4 /* RyDatePickerView.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
 		BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */; };
@@ -216,6 +220,10 @@
 		BD9B37B221D1BF6E007A5AD4 /* RyPickerView + show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + show.swift"; sourceTree = "<group>"; };
 		BD9B37B421D475C6007A5AD4 /* RyPickerItemBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerItemBaseView.swift; sourceTree = "<group>"; };
 		BD9B37B821D49CA1007A5AD4 /* RyPickerItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerItemListView.swift; sourceTree = "<group>"; };
+		BD9B37BD21D7174A007A5AD4 /* RyPickerView + MedicationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + MedicationRecord.swift"; sourceTree = "<group>"; };
+		BD9B37BF21D71F04007A5AD4 /* RyPickerView + NightWakeupRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + NightWakeupRecord.swift"; sourceTree = "<group>"; };
+		BD9B37C121D7232F007A5AD4 /* RyPikerView + NapRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPikerView + NapRecord.swift"; sourceTree = "<group>"; };
+		BD9B37C321D7413A007A5AD4 /* RyDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyDatePickerView.swift; sourceTree = "<group>"; };
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
@@ -1207,6 +1215,7 @@
 		BD4BF0E821C7A88D00EDE0FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD9B37BC21D716B6007A5AD4 /* PresetPicker */,
 				BD4BF0F521C87F0100EDE0FC /* Cell */,
 				BD4BF0EA21C7AA3500EDE0FC /* RyPickerView.swift */,
 				BD4BF0EF21C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift */,
@@ -1253,6 +1262,17 @@
 				BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */,
 			);
 			path = TabelViewCell;
+			sourceTree = "<group>";
+		};
+		BD9B37BC21D716B6007A5AD4 /* PresetPicker */ = {
+			isa = PBXGroup;
+			children = (
+				BD9B37BD21D7174A007A5AD4 /* RyPickerView + MedicationRecord.swift */,
+				BD9B37BF21D71F04007A5AD4 /* RyPickerView + NightWakeupRecord.swift */,
+				BD9B37C121D7232F007A5AD4 /* RyPikerView + NapRecord.swift */,
+				BD9B37C321D7413A007A5AD4 /* RyDatePickerView.swift */,
+			);
+			path = PresetPicker;
 			sourceTree = "<group>";
 		};
 		BE1245332194218700F93C30 /* PasteBoardTool */ = {
@@ -1703,7 +1723,9 @@
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
 				BE2893C121AE6A46002659C0 /* KKAddressPickerView.swift in Sources */,
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
+				BD9B37BE21D7174A007A5AD4 /* RyPickerView + MedicationRecord.swift in Sources */,
 				7A7C80891F9343AE007532FA /* Headers.swift in Sources */,
+				BD9B37C421D7413B007A5AD4 /* RyDatePickerView.swift in Sources */,
 				BE2893B721AE69D0002659C0 /* KKDatePickerView.swift in Sources */,
 				BE2893D121AE738F002659C0 /* KKDateTimePickerModel.swift in Sources */,
 				BE2893BD21AE6A08002659C0 /* KKWeightPickerView.swift in Sources */,
@@ -1727,6 +1749,7 @@
 				BE2893B521AE69B7002659C0 /* KKEducationPickerView.swift in Sources */,
 				7A7818AE1F8FC8C70043254E /* BaseTabBarController.swift in Sources */,
 				7A7818A81F8FC7BB0043254E /* GenealogyViewController.swift in Sources */,
+				BD9B37C021D71F04007A5AD4 /* RyPickerView + NightWakeupRecord.swift in Sources */,
 				BE2893B921AE69E1002659C0 /* KKTimePickerView.swift in Sources */,
 				BD9B37B521D475C6007A5AD4 /* RyPickerItemBaseView.swift in Sources */,
 				BE2893D321AE73AB002659C0 /* KKWeightPickerModel.swift in Sources */,
@@ -1735,6 +1758,7 @@
 				7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */,
 				7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */,
 				7A4C11BC1F9308B200F02866 /* UIImage+Extention.swift in Sources */,
+				BD9B37C221D7232F007A5AD4 /* RyPikerView + NapRecord.swift in Sources */,
 				7A9783F21F7558B1003F17D1 /* AppDelegate.swift in Sources */,
 				7A37032B1F950FCC00F519F3 /* ProfileViewes.swift in Sources */,
 				7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */,

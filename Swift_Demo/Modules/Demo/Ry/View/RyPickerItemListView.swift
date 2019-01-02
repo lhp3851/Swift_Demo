@@ -25,22 +25,30 @@ class RyPickerItemListView: RyPickerItemBaseView {
     
     private(set) var isInit = false
     
-    private var currentIndex: Int{
-        if tableView.bounds.height <= 1{
-            return _endSelectedIndex
+    private(set) var canInit = true
+    
+    override var currentIndex: Int{
+        if !isInit{
+            return endSelectedIndex
         }
         let cellHeight = tableView.bounds.height / 3.0
         let temp = Int(round(tableView.contentOffset.y / cellHeight)) + 1
         return validIndex(of: temp)
     }
     
-    private var _endSelectedIndex: Int = 0
+    private var _preSelectedObj: RyListItem?
+    
+    private var endSelectedIndex: Int = 0
     
     override var selectedIndex: Int{
-        return currentIndex
+        return endSelectedIndex
     }
     
     override var selectedObj: RyListItem?{
+        return dataSouce?.pickerItemListView(self, cellDataForRowAt: IndexPath(row: selectedIndex, section: 0))
+    }
+    
+    override var currentObj: RyListItem?{
         return dataSouce?.pickerItemListView(self, cellDataForRowAt: IndexPath(row: currentIndex, section: 0))
     }
     
@@ -48,26 +56,29 @@ class RyPickerItemListView: RyPickerItemBaseView {
         self.widthContainer = widthContainer
         self.inset = inset
         super.init(frame: frame)
-        _endSelectedIndex = selectedIndex
+        endSelectedIndex = selectedIndex
         setupSubview()
-    }
-    
-    override func scroll(to index: Int, animated: Bool, isSendAction: Bool = true){
-        let todoIndex = validIndex(of: index)
-        if !isInit {
-            _endSelectedIndex = todoIndex
-        }
-        let indexPath = IndexPath.init(row: todoIndex, section: 0)
-        UIView.animate(withDuration: animated ? 0.3 : 0 , animations: {
-            self.scrollToRow(at: indexPath, animated: animated, isSendAction: isSendAction)
-        }) { (_) in
-            self.setSelectedItem(index: todoIndex)
-            self.pickeDatas(index: todoIndex)
-        }
     }
     
     override func reload() {
         tableView.reloadData()
+    }
+    
+    override func reload(andFixAtTitle title: String?){
+        
+        guard let title = title else {
+            tableView.reloadData()
+            return
+        }
+        let index = firstIndex(ofTitle: title) ?? 0
+        tableView.alpha = 0
+        scrollToRow(at: index, animated: false, isNeedReload: true, isSendAction: false) { (_) in
+            self.tableView.alpha = 1
+        }
+    }
+    
+    override func scroll(to index: Int, animated: Bool, isSendAction: Bool = true){
+        scrollToRow(at: index, animated: animated, isNeedReload: false, isSendAction: isSendAction, completion: nil)
     }
     
     override func scroll(to title: String, animated: Bool, isSendAction: Bool = true){
@@ -104,13 +115,47 @@ class RyPickerItemListView: RyPickerItemBaseView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func scrollToRow(at indexPath: IndexPath, animated: Bool, isSendAction: Bool){
-        if isSendAction{
-            tableView.scrollToRow(at: indexPath, at: .middle, animated: animated)
+    private func scrollToRow(at index: Int,
+                             animated: Bool,
+                             isNeedReload: Bool,
+                             isSendAction: Bool,
+                             completion:((Bool)->Void)? = nil){
+        let todoIndex = validIndex(of: index)
+        if !isInit {
+            endSelectedIndex = todoIndex
+            completion?(false)
+            return
+        }
+        endSelectedIndex = todoIndex
+        let indexPath = IndexPath(row: todoIndex, section: 0)
+        
+        func handler(_ finish: @escaping ()->Void){
+            UIView.animate(withDuration: animated ? 0.3 : 0.00, animations: {
+                if isSendAction{
+                    self.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
+                }else{
+                    let offSetY = CGFloat(todoIndex-1) * (self.tableView.bounds.height / 3.0)
+                    self.tableView.setContentOffset(CGPoint(x: 0, y: offSetY),
+                                                    animated: false)
+                    self.setSelectedItem(index: index)
+                }
+            }, completion: { _ in
+                finish()
+            })
+        }
+        _preSelectedObj = dataSouce?.pickerItemListView(self, cellDataForRowAt: indexPath)
+        if isNeedReload{
+            UIView.animate(withDuration: 0.00, animations: {
+                self.tableView.reloadData()
+            }) { (_) in
+                handler({
+                    completion?(true)
+                })
+            }
         }else{
-            let offSetY = CGFloat(indexPath.row-1) * (self.tableView.bounds.height / 3.0)
-            self.tableView.setContentOffset(CGPoint(x: 0, y: offSetY),
-                                            animated: animated)
+            handler({
+                completion?(true)
+            })
         }
     }
     
@@ -136,16 +181,23 @@ class RyPickerItemListView: RyPickerItemBaseView {
         if h < 0.1 || isInit{
             return
         }
-        isInit = true
-        if _endSelectedIndex == 0{
+        if !canInit{
             return
         }
-        UIView.animate(withDuration: 0.01, animations: {
+        canInit = false
+        if endSelectedIndex == 0{
+            self.isInit = true
+            return
+        }
+        let todoIndex = endSelectedIndex
+        UIView.animate(withDuration: 0.00, animations: {
             self.tableView.reloadData()
         }) { (_) in
-            self.scrollToRow(at: IndexPath(row: self._endSelectedIndex, section: 0),
-                             animated: false,
-                             isSendAction: false)
+            let offSetY = CGFloat(todoIndex-1) * (self.tableView.bounds.height / 3.0)
+            self.tableView.setContentOffset(CGPoint(x: 0, y: offSetY),
+                                            animated: false)
+            self.setSelectedItem(index: todoIndex)
+            self.isInit = true
         }
     }
     
@@ -200,11 +252,14 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
         if let temp = cell as? RyBaseTableViewCell{
             temp.update(withData: item)
         }
+        if _preSelectedObj == nil, endSelectedIndex == indexPath.row{
+            _preSelectedObj = item
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.setSelected(indexPath.row == _endSelectedIndex, animated: false)
+        cell.setSelected(indexPath.row == endSelectedIndex, animated: false)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -221,19 +276,16 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
         scrollEnded()
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        delegate?.itemBaseViewWillBeginDragging(self)
+    }
+    
     //滚动结束
     func scrollEnded()  {
         let index = currentIndex
-        _endSelectedIndex = index
-        let indexPath = IndexPath.init(row: index, section: 0)
-        let cellHeight = (tableView.bounds.height/3.0)
-        let duration = (abs(tableView.contentOffset.y - CGFloat(index) * cellHeight) / cellHeight) * 0.3
-        print("scrollEnded: \(indexPath.row)")
-        UIView.animate(withDuration: TimeInterval(duration), animations: {
-            self.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
-        }) { (_) in
-            self.setSelectedItem(index: index)
-            self.pickeDatas(index: index)
+        let preSelectedObj = _preSelectedObj
+        scrollToRow(at: index, animated: true, isNeedReload: false, isSendAction: false) { (_) in
+            self.pickeDatas(index: index, preSelectedRow: preSelectedObj)
         }
     }
     
@@ -251,8 +303,10 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
     }
     
     //（最后再处理选中事件的抛出，用与处理联动）
-    func pickeDatas(index:Int)  {
-        
+    func pickeDatas(index:Int, preSelectedRow: RyPickerListable?)  {
+        self.delegate?.itemBaseView(self,
+                                    didSelectRow: index,
+                                    preSelectedRow: preSelectedRow)
     }
 }
 
