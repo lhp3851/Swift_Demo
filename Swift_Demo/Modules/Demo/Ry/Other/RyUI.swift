@@ -46,4 +46,25 @@ struct RyUI {
     }
 }
 
-
+enum RyGenderType: String {
+    case secrecy = "secrecy"
+    case male    = "male"
+    case female  = "female"
+    
+    var description : String {
+        switch self {
+        case .secrecy: return "保密";
+        case .male: return "男";
+        case .female: return "女";
+        }
+    }
+    
+    var description2 : String {
+        switch self {
+        case .secrecy:
+            return "未填写"
+        case .male, .female:
+            return description
+        }
+    }
+}

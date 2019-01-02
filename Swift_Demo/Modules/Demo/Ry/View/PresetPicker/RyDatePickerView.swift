@@ -9,7 +9,7 @@
 import UIKit
 
 extension RyPickerView{
-    static func date(startDate: Date, endDate: Date) -> RyPickerView{
+    static func date(startDate: Date, endDate: Date) -> RyDatePickerView{
         return RyDatePickerView(frame: CGRect.zero, startDate: startDate, endDate: endDate)
     }
 }
@@ -29,12 +29,18 @@ class RyDatePickerView: RyPickerView {
 }
 
 
+protocol RyDatePickerSourceDelegate: NSObjectProtocol {
+    func datePickerDataSource(_ dataSoure: RyDatePickerDataSource,
+                              didSelectedDateChanged selectedDate: Date)
+}
+
 class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
     
     var startDate: Date
     
     var endDate: Date
     
+    weak var delegate: RyDatePickerSourceDelegate?
     
     private(set) var selectedMinute: Int?
     
@@ -103,13 +109,16 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
 
 extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
     var zeroStartDate: Date{
-        let hour = Calendar.current.component(.hour, from: startDate)
-        return Calendar.current.date(bySettingHour: hour, minute: 0, second: 0, of: startDate)!
+        return zeroDate(with: startDate)
     }
     
     var zeroEndDate: Date{
-        let hour = Calendar.current.component(.hour, from: endDate)
-        return Calendar.current.date(bySettingHour: hour, minute: 0, second: 0, of: endDate)!
+        return zeroDate(with: endDate)
+    }
+    
+    func zeroDate(with date: Date) -> Date{
+        let hour = Calendar.current.component(.hour, from: date)
+        return Calendar.current.date(bySettingHour: hour, minute: 0, second: 0, of: date)!
     }
     
     func numberOfRows(in itemListView: RyPickerItemListView) -> Int {
@@ -145,16 +154,16 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
                                              value: indexPath.row,
                                              to: startDate) ?? startDate
             let hour = Calendar.current.component(Calendar.Component.hour, from: temp)
-            let item = RyPikerRowData(index: indexPath.row, title: "\(hour)")
+            let item = RyPickerRowData(index: indexPath.row, title: String(format: "%02d", hour))
             item.objInPicker = temp
             item.postion = .right(RyPickerViewItemWidth.fixed(width: 75))
             return item
         }
         guard let hourDate = hourItemView.selectedObj?.objInPicker as? Date else{
-            return RyPikerRowData(index: 0, title: "-")
+            return RyPickerRowData(index: 0, title: "-")
         }
         
-        var markDate = zeroStartDate
+        var markDate = zeroDate(with: hourDate)
         if Calendar.current.compare(hourDate, to: startDate, toGranularity: Calendar.Component.hour) == .orderedSame{
             markDate = startDate
         }
@@ -163,7 +172,7 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
                                          value: indexPath.row * 5,
                                          to: markDate) ?? markDate
         let minute = Calendar.current.component(.minute, from: temp)
-        let item = RyPikerRowData(index: indexPath.row, title: "\(minute)")
+        let item = RyPickerRowData(index: indexPath.row, title: String(format: "%02d", minute))
         item.objInPicker = temp
         item.postion = .left(RyPickerViewItemWidth.fixed(width: 75))
         return item
@@ -188,6 +197,16 @@ extension RyDatePickerDataSource: RyPickerItemBaseViewDelegate{
         if row == preSelectedRow?.rowForObjInPicker{
             return
         }
+        
+        func handleDelegate(){
+            if let temp = minuteItemView.selectedObj?.objInPicker as? Date{
+                delegate?.datePickerDataSource(self, didSelectedDateChanged: temp)
+            }
+        }
+        
+        if itemBaseView == minuteItemView{
+            handleDelegate()
+        }
 
         if itemBaseView == hourItemView{
             var title: String? = nil
@@ -195,7 +214,9 @@ extension RyDatePickerDataSource: RyPickerItemBaseViewDelegate{
             if let selectedMinute = selectedMinute{
                 title = "\(selectedMinute)"
             }
-            minuteItemView.reload(andFixAtTitle: title)
+            minuteItemView.reload(andFixAtTitle: title) {
+                handleDelegate()
+            }
         }
 
     }

@@ -121,9 +121,9 @@ extension RyPickerView: UIGestureRecognizerDelegate{
 extension RyPickerView{
     static func picker(with titles:[String], pickerTitle: String) -> RyPickerView{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
-        var items: [RyPikerRowData] = []
+        var items: [RyPickerRowData] = []
         for (index, thisTitle) in titles.enumerated() {
-            items.append(RyPikerRowData(index: index, title: thisTitle, obj: thisTitle))
+            items.append(RyPickerRowData(index: index, title: thisTitle, obj: thisTitle))
         }
         let listItem = RyPickerListData(dataSource: items,
                                         widthContainer: container)

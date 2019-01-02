@@ -80,13 +80,13 @@ class RyBirthdatePikerDataSource: NSObject, RyPickerContentViewDataSource {
 extension RyBirthdatePikerDataSource: RyPickerItemListViewDataSource{
     func numberOfRows(in itemListView: RyPickerItemListView) -> Int {
         if itemListView == yearItemView{
-            return RyPikerRowData.itemsForBirthdate.year.count
+            return RyPickerRowData.itemsForBirthdate.year.count
         }
         if itemListView == monthItemView{
-            if yearItemView.selectedObj?.rowForObjInPicker == (RyPikerRowData.itemsForBirthdate.year.count - 1){
-                return RyPikerRowData.itemsForBirthdate.currentYearMonthPart.count
+            if yearItemView.selectedObj?.rowForObjInPicker == (RyPickerRowData.itemsForBirthdate.year.count - 1){
+                return RyPickerRowData.itemsForBirthdate.currentYearMonthPart.count
             }else{
-                return RyPikerRowData.itemsForBirthdate.month.count
+                return RyPickerRowData.itemsForBirthdate.month.count
             }
         }
         return 0
@@ -95,18 +95,18 @@ extension RyBirthdatePikerDataSource: RyPickerItemListViewDataSource{
     func pickerItemListView(_ pickerItemListView: RyPickerItemListView,
                             cellDataForRowAt indexPath: IndexPath) -> RyListItem {
         if pickerItemListView == yearItemView{
-            return RyPikerRowData.itemsForBirthdate.year[indexPath.row]
+            return RyPickerRowData.itemsForBirthdate.year[indexPath.row]
         }
         if pickerItemListView == monthItemView{
-            let currentYearMonthPart = RyPikerRowData.itemsForBirthdate.currentYearMonthPart
-            if yearItemView.selectedObj?.rowForObjInPicker == (RyPikerRowData.itemsForBirthdate.year.count - 1),
+            let currentYearMonthPart = RyPickerRowData.itemsForBirthdate.currentYearMonthPart
+            if yearItemView.selectedObj?.rowForObjInPicker == (RyPickerRowData.itemsForBirthdate.year.count - 1),
                 indexPath.row < currentYearMonthPart.count{
-                return RyPikerRowData.itemsForBirthdate.currentYearMonthPart[indexPath.row]
+                return RyPickerRowData.itemsForBirthdate.currentYearMonthPart[indexPath.row]
             }else{
-                return RyPikerRowData.itemsForBirthdate.month[indexPath.row]
+                return RyPickerRowData.itemsForBirthdate.month[indexPath.row]
             }
         }
-        return RyPikerRowData(index: 0, title: "")
+        return RyPickerRowData(index: 0, title: "")
     }
 }
 
@@ -126,33 +126,33 @@ extension RyBirthdatePikerDataSource: RyPickerItemBaseViewDelegate{
     
 }
 
-extension RyPikerRowData{
+extension RyPickerRowData{
     struct itemsForBirthdate {
-        static var year: [RyPikerRowData]{
-            var temp = [RyPikerRowData]()
+        static var year: [RyPickerRowData]{
+            var temp = [RyPickerRowData]()
             let currentYear = Calendar.current.component(.year, from: Date())
             for (index, value) in (1920...currentYear).enumerated() {
-                let aData = RyPikerRowData(index: index, title: "\(value)", obj: value)
+                let aData = RyPickerRowData(index: index, title: "\(value)", obj: value)
                 aData.postion = .right(.fixed(width: 75))
                 temp.append(aData)
             }
             return temp
         }
-        static var month: [RyPikerRowData]{
-            var temp = [RyPikerRowData]()
+        static var month: [RyPickerRowData]{
+            var temp = [RyPickerRowData]()
             for (index, value) in (1...12).enumerated() {
-                temp.append(RyPikerRowData(index: index,
+                temp.append(RyPickerRowData(index: index,
                                            title: String(format: "%02d", value),
                                            obj: value,
                                            postion: .left(.fixed(width: 75))))
             }
             return temp
         }
-        static var currentYearMonthPart: [RyPikerRowData]{
-            var temp = [RyPikerRowData]()
+        static var currentYearMonthPart: [RyPickerRowData]{
+            var temp = [RyPickerRowData]()
             let currentMonth = Calendar.current.component(.month, from: Date())
             for (index, value) in (1...currentMonth).enumerated() {
-                temp.append(RyPikerRowData(index: index,
+                temp.append(RyPickerRowData(index: index,
                                            title: String(format: "%02d", value),
                                            obj: value,
                                            postion: .left(.fixed(width: 75))))

@@ -21,28 +21,28 @@ extension RyPickerViewConfiguration{
     static var nightWakeupRecord: RyPickerViewConfiguration{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
-        let listItem1 = RyPickerListData(dataSource: RyPikerRowData.itemsForWakeupTimes,
+        let listItem1 = RyPickerListData(dataSource: RyPickerRowData.itemsForWakeupTimes,
                                          widthContainer: container)
-        let listItem2 = RyPickerListData(dataSource: RyPikerRowData.itemsForWakeupDuration,
+        let listItem2 = RyPickerListData(dataSource: RyPickerRowData.itemsForWakeupDuration,
                                          widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "夜醒次数及总时长",items: [listItem1,listItem2])
         return cfg
     }
 }
 
-extension RyPikerRowData{
-    fileprivate static var itemsForWakeupTimes:[RyPikerRowData] {
-        var temp = [RyPikerRowData]()
+extension RyPickerRowData{
+    fileprivate static var itemsForWakeupTimes:[RyPickerRowData] {
+        var temp = [RyPickerRowData]()
         for index in 1...20 {
-            temp.append(RyPikerRowData(index: index,title: "\(index)次"))
+            temp.append(RyPickerRowData(index: index,title: "\(index)次"))
         }
         return temp
     }
     
-    fileprivate static var itemsForWakeupDuration:[RyPikerRowData] {
-        var temp = [RyPikerRowData]()
+    fileprivate static var itemsForWakeupDuration:[RyPickerRowData] {
+        var temp = [RyPickerRowData]()
         for (index,duration) in stride(from: 5, through: 360, by: 5).enumerated() {
-            let aData = RyPikerRowData(index: index,title: "\(duration)分钟")
+            let aData = RyPickerRowData(index: index,title: "\(duration)分钟")
             aData.objInPicker = duration
             temp.append(aData)
         }

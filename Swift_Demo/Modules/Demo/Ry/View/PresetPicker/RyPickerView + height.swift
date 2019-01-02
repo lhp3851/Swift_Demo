@@ -22,18 +22,18 @@ extension RyPickerViewConfiguration{
     static var height: RyPickerViewConfiguration{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
-        let listItem = RyPickerListData(dataSource: RyPikerRowData.itemsForHeight,
+        let listItem = RyPickerListData(dataSource: RyPickerRowData.itemsForHeight,
                                          widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "身高",items: [listItem])
         return cfg
     }
 }
 
-extension RyPikerRowData{
-    static var itemsForHeight: [RyPikerRowData]{
-        var temp = [RyPikerRowData]()
+extension RyPickerRowData{
+    static var itemsForHeight: [RyPickerRowData]{
+        var temp = [RyPickerRowData]()
         for (index, value) in (30...240).enumerated() {
-            temp.append(RyPikerRowData(index: index,title: "\(value)", obj: value))
+            temp.append(RyPickerRowData(index: index,title: "\(value)", obj: value))
         }
         return temp
     }

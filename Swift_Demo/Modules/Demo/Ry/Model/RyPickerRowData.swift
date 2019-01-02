@@ -9,7 +9,7 @@
 import Foundation
 
 
-class RyPikerRowData: RyLabelCellDataProtocol, RyPickerListable{
+class RyPickerRowData: RyLabelCellDataProtocol, RyPickerListable{
     var objInPicker: Any
     
     let rowForObjInPicker: Int

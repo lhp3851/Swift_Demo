@@ -61,7 +61,7 @@ class RyPickerItemBaseView: UIView {
         
     }
     
-    func reload(andFixAtTitle title: String?){
+    func reload(andFixAtTitle title: String?, completion:(()->Void)? = nil){
         
     }
     

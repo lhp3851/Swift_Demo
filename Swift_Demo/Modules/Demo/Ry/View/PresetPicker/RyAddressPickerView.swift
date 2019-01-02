@@ -80,17 +80,17 @@ class RyAddressPickerDataSource: NSObject, RyPickerContentViewDataSource {
 extension RyAddressPickerDataSource: RyPickerItemListViewDataSource{
     func numberOfRows(in itemListView: RyPickerItemListView) -> Int {
         if itemListView == provincesItemView{
-            return RyPikerRowData.Addresses.provinces.count
+            return RyPickerRowData.Addresses.provinces.count
         }
         
         if itemListView == cityItemView, let p = provincesItemView.selectedObj?.titleInPicker{
-            return RyPikerRowData.Addresses.getCities(province: p).count
+            return RyPickerRowData.Addresses.getCities(province: p).count
         }
         
         if itemListView == areaItemView,
             let p = provincesItemView.selectedObj?.titleInPicker,
             let c = cityItemView.selectedObj?.titleInPicker{
-            return RyPikerRowData.Addresses.getArea(city: c, province: p).count
+            return RyPickerRowData.Addresses.getArea(city: c, province: p).count
         }
         return 0
     }
@@ -99,11 +99,11 @@ extension RyAddressPickerDataSource: RyPickerItemListViewDataSource{
                             cellDataForRowAt indexPath: IndexPath) -> RyListItem {
         var value = String()
         if pickerItemListView == provincesItemView{
-            value = RyPikerRowData.Addresses.provinces[indexPath.row]
+            value = RyPickerRowData.Addresses.provinces[indexPath.row]
         }
         
         if pickerItemListView == cityItemView, let p = provincesItemView.selectedObj?.titleInPicker{
-            let city = RyPikerRowData.Addresses.getCities(province: p)
+            let city = RyPickerRowData.Addresses.getCities(province: p)
             if indexPath.row < city.count{
                 value = city[indexPath.row]
             }
@@ -112,12 +112,12 @@ extension RyAddressPickerDataSource: RyPickerItemListViewDataSource{
         if pickerItemListView == areaItemView,
             let p = provincesItemView.selectedObj?.titleInPicker,
             let c = cityItemView.selectedObj?.titleInPicker{
-            let area = RyPikerRowData.Addresses.getArea(city: c, province: p)
+            let area = RyPickerRowData.Addresses.getArea(city: c, province: p)
             if indexPath.row < area.count{
                 value = area[indexPath.row]
             }
         }
-        let item = RyPikerRowData(index: indexPath.row, title: value, obj: value)
+        let item = RyPickerRowData(index: indexPath.row, title: value, obj: value)
         return item
     }
     
@@ -144,28 +144,28 @@ extension RyAddressPickerDataSource: RyPickerItemBaseViewDelegate{
     }
 }
 
-extension RyPikerRowData{
+extension RyPickerRowData{
     struct itemsForAddresses {
-        static var provinces: [RyPikerRowData] = {
-            var temp = [RyPikerRowData]()
+        static var provinces: [RyPickerRowData] = {
+            var temp = [RyPickerRowData]()
             for (index, value) in Addresses.provinces.enumerated() {
-                temp.append(RyPikerRowData(index: index, title: value, obj: value))
+                temp.append(RyPickerRowData(index: index, title: value, obj: value))
             }
             return temp
         }()
         
-        static var city: [RyPikerRowData] = {
-            var temp = [RyPikerRowData]()
+        static var city: [RyPickerRowData] = {
+            var temp = [RyPickerRowData]()
             for (index, value) in Addresses.cities.enumerated() {
-                temp.append(RyPikerRowData(index: index, title: value, obj: value))
+                temp.append(RyPickerRowData(index: index, title: value, obj: value))
             }
             return temp
         }()
         
-        static var area: [RyPikerRowData] = {
-            var temp = [RyPikerRowData]()
+        static var area: [RyPickerRowData] = {
+            var temp = [RyPickerRowData]()
             for (index, value) in Addresses.areas.enumerated() {
-                temp.append(RyPikerRowData(index: index, title: value, obj: value))
+                temp.append(RyPickerRowData(index: index, title: value, obj: value))
             }
             return temp
         }()

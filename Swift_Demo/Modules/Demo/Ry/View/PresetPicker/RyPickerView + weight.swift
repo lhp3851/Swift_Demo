@@ -21,7 +21,7 @@ extension RyPickerViewConfiguration{
     static var weight: RyPickerViewConfiguration{
         var items: [RyPickerViewBaseData] = []
         items.append({
-            let intPart = RyPikerRowData.itemsForWeight.integer
+            let intPart = RyPickerRowData.itemsForWeight.integer
             intPart.forEach({ (thisObj) in
                 thisObj.postion = .right(.fixed(width: 75))
             })
@@ -29,7 +29,7 @@ extension RyPickerViewConfiguration{
                                     widthContainer: RyListWidthContainer(.zero, [.flexible, .fixed(width: 75)], .zero))
             }())
         items.append({
-            let temp = RyPickerListData(dataSource: RyPikerRowData.itemsForWeight.fractional,
+            let temp = RyPickerListData(dataSource: RyPickerRowData.itemsForWeight.fractional,
                                         widthContainer: RyListWidthContainer(.fixed(width: 35), .fixed(width: 75), .fixed(width: 35)),
                                         inset: RyPickerInset(.zero, .flexible))
             temp.header = "."
@@ -42,20 +42,20 @@ extension RyPickerViewConfiguration{
     }
 }
 
-extension RyPikerRowData{
+extension RyPickerRowData{
     struct itemsForWeight {
-        static var integer: [RyPikerRowData] {
-            var temp = [RyPikerRowData]()
+        static var integer: [RyPickerRowData] {
+            var temp = [RyPickerRowData]()
             for (index, value) in (20...200).enumerated() {
-                temp.append(RyPikerRowData(index: index, title: "\(value)", obj: value))
+                temp.append(RyPickerRowData(index: index, title: "\(value)", obj: value))
             }
             return temp
         }
         
-        static var fractional: [RyPikerRowData]{
-            var temp = [RyPikerRowData]()
+        static var fractional: [RyPickerRowData]{
+            var temp = [RyPickerRowData]()
             for (index, value) in (0...9).enumerated() {
-                temp.append(RyPikerRowData(index: index, title: "\(value)", obj: value))
+                temp.append(RyPickerRowData(index: index, title: "\(value)", obj: value))
             }
             return temp
         }

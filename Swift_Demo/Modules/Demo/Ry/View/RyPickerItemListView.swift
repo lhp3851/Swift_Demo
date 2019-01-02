@@ -63,20 +63,20 @@ class RyPickerItemListView: RyPickerItemBaseView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         if window == nil{
-            return
+            self.scrollToRow(at: currentIndex, animated: false, isNeedReload: false, isSendAction: false)
         }
-        self.setSelectedItem(index: currentIndex)
     }
     
     override func reload() {
         tableView.reloadData()
     }
     
-    override func reload(andFixAtTitle title: String?){
+    override func reload(andFixAtTitle title: String?, completion:(()->Void)? = nil){
         let index = firstIndex(ofTitle: title ?? "") ?? 0
         tableView.alpha = 0
         scrollToRow(at: index, animated: false, isNeedReload: true, isSendAction: false) { (_) in
             self.tableView.alpha = 1
+            completion?()
         }
     }
     
@@ -188,10 +188,6 @@ class RyPickerItemListView: RyPickerItemBaseView {
             return
         }
         canInit = false
-        if endSelectedIndex == 0{
-            self.isInit = true
-            return
-        }
         let todoIndex = endSelectedIndex
         UIView.animate(withDuration: 0.00, animations: {
             self.tableView.reloadData()

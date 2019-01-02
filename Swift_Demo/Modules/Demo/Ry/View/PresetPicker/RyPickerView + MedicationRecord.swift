@@ -20,38 +20,38 @@ extension RyPickerViewConfiguration{
     static var medicationRecord: RyPickerViewConfiguration{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
-        let listItem1 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordMedichine,
+        let listItem1 = RyPickerListData(dataSource: RyPickerRowData.itemsForRecordMedichine,
                                          widthContainer: container)
-        let listItem2 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordSKT,
+        let listItem2 = RyPickerListData(dataSource: RyPickerRowData.itemsForRecordSKT,
                                          widthContainer: container)
-        let listItem3 = RyPickerListData(dataSource: RyPikerRowData.itemsForRecordTimePoint,
+        let listItem3 = RyPickerListData(dataSource: RyPickerRowData.itemsForRecordTimePoint,
                                          widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "服药记录",items: [listItem1,listItem2,listItem3])
         return cfg
     }
 }
 
-extension RyPikerRowData{
-    static var itemsForRecordMedichine:[RyPikerRowData] {
-        var temp = [RyPikerRowData]()
+extension RyPickerRowData{
+    static var itemsForRecordMedichine:[RyPickerRowData] {
+        var temp = [RyPickerRowData]()
         for (index,object) in RecordForMedicine.medichines.enumerated() {
-            temp.append(RyPikerRowData(index: index,title: "\(object)"))
+            temp.append(RyPickerRowData(index: index,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForRecordSKT:[RyPikerRowData] {
-        var temp = [RyPikerRowData]()
+    static var itemsForRecordSKT:[RyPickerRowData] {
+        var temp = [RyPickerRowData]()
         for (index,object) in RecordForMedicine.skt.enumerated() {
-            temp.append(RyPikerRowData(index: index,title: "\(object)"))
+            temp.append(RyPickerRowData(index: index,title: "\(object)"))
         }
         return temp
     }
     
-    static var itemsForRecordTimePoint:[RyPikerRowData] {
-        var temp = [RyPikerRowData]()
+    static var itemsForRecordTimePoint:[RyPickerRowData] {
+        var temp = [RyPickerRowData]()
         for (index,object) in RecordForMedicine.timePoints.enumerated() {
-            temp.append(RyPikerRowData(index: index,title: "\(object)"))
+            temp.append(RyPickerRowData(index: index,title: "\(object)"))
         }
         return temp
     }

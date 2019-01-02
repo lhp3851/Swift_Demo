@@ -21,19 +21,19 @@ extension RyPickerViewConfiguration{
     static var education: RyPickerViewConfiguration{
         let container = RyListWidthContainer(.zero, .flexible, .zero)
         
-        let listItem = RyPickerListData(dataSource: RyPikerRowData.itemsForEducation,
+        let listItem = RyPickerListData(dataSource: RyPickerRowData.itemsForEducation,
                                         widthContainer: container)
         let cfg = RyPickerViewConfiguration(title: "教育程度",items: [listItem])
         return cfg
     }
 }
 
-extension RyPikerRowData{
-    static var itemsForEducation: [RyPikerRowData]{
-        var temp = [RyPikerRowData]()
+extension RyPickerRowData{
+    static var itemsForEducation: [RyPickerRowData]{
+        var temp = [RyPickerRowData]()
         let educations = ["博士或以上","研究生","本科","大专","高中","初中或以下","其他"]
         for (index, value) in educations.enumerated() {
-            temp.append(RyPikerRowData(index: index,title: value, obj: value))
+            temp.append(RyPickerRowData(index: index,title: value, obj: value))
         }
         return temp
     }
