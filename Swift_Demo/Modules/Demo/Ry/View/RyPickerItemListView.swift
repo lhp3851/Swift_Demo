@@ -210,7 +210,6 @@ class RyPickerItemListView: RyPickerItemBaseView {
         temp.textColor = RyUI.color.B3
         temp.font = UIFont.systemFont(ofSize: 18)
         temp.adjustsFontSizeToFitWidth = true
-        temp.backgroundColor = UIColor.yellow
         return temp
     }()
     
@@ -232,7 +231,6 @@ class RyPickerItemListView: RyPickerItemBaseView {
         temp.textColor = RyUI.color.B3
         temp.font = UIFont.systemFont(ofSize: 18)
         temp.adjustsFontSizeToFitWidth = true
-        temp.backgroundColor = UIColor.red
         return temp
     }()
 

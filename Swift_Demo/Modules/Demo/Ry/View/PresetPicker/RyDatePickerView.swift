@@ -66,11 +66,15 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
         return temp
     }()
     
+    var calendar: Calendar{
+        return Calendar.current
+    }
+    
     init(startDate: Date, endDate: Date) {
         self.startDate = startDate
         self.endDate = endDate
-        selectedMinute = Calendar.current.component(.minute, from: startDate)
         super.init()
+        selectedMinute = calendar.component(.minute, from: startDate)
         hourItemView.dataSouce = self
         hourItemView.delegate = self
         minuteItemView.dataSouce = self
@@ -78,14 +82,14 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
     }
     
     func reload(andFixAtDate date: Date) {
-        let minute = Calendar.current.component(.minute, from: date)
+        let minute = calendar.component(.minute, from: date)
         let num = hourItemView.tableView.numberOfRows(inSection: 0)
         var todoIndex: Int? = nil
         for index in 0..<num{
             let indexPath = IndexPath(row: index, section: 0)
             let item = hourItemView.dataSouce?.pickerItemListView(hourItemView, cellDataForRowAt: indexPath)
             if let thisDate = item?.objInPicker as? Date,
-                thisDate == date{
+                calendar.compare(thisDate, to: date, toGranularity: .hour) == .orderedSame{
                 todoIndex = index
                 break
             }
@@ -134,15 +138,15 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
     }
     
     func zeroDate(with date: Date) -> Date{
-        let hour = Calendar.current.component(.hour, from: date)
-        return Calendar.current.date(bySettingHour: hour, minute: 0, second: 0, of: date)!
+        let hour = calendar.component(.hour, from: date)
+        return calendar.date(bySettingHour: hour, minute: 0, second: 0, of: date)!
     }
     
     func numberOfRows(in itemListView: RyPickerItemListView) -> Int {
         if itemListView == hourItemView{
-            let temp = Calendar.current.dateComponents([.hour, .minute], from: zeroStartDate, to: zeroEndDate)
+            let temp = calendar.dateComponents([.hour, .minute], from: zeroStartDate, to: zeroEndDate)
             var hour = temp.hour ?? 0
-            if Calendar.current.component(.minute, from: endDate) > 0{
+            if calendar.component(.minute, from: endDate) > 0{
                 hour = hour + 1
             }
             return hour
@@ -152,12 +156,12 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
         }
         var start = 0
         var end = 55
-        if Calendar.current.compare(hourDate, to: startDate, toGranularity: Calendar.Component.hour) == .orderedSame{
-            start = Calendar.current.component(Calendar.Component.minute, from: startDate)
+        if calendar.compare(hourDate, to: startDate, toGranularity: Calendar.Component.hour) == .orderedSame{
+            start = calendar.component(Calendar.Component.minute, from: startDate)
         }
         
-        if Calendar.current.compare(hourDate, to: endDate, toGranularity: Calendar.Component.hour) == .orderedSame{
-            end = Calendar.current.component(Calendar.Component.minute, from: endDate)
+        if calendar.compare(hourDate, to: endDate, toGranularity: Calendar.Component.hour) == .orderedSame{
+            end = calendar.component(Calendar.Component.minute, from: endDate)
         }
         let num = (end - start)/5 + 1
         print("num \(num)")
@@ -167,10 +171,10 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
     func pickerItemListView(_ pickerItemListView: RyPickerItemListView,
                             cellDataForRowAt indexPath: IndexPath) -> RyListItem{
         if pickerItemListView == hourItemView{
-            let temp = Calendar.current.date(byAdding: .hour,
+            let temp = calendar.date(byAdding: .hour,
                                              value: indexPath.row,
                                              to: startDate) ?? startDate
-            let hour = Calendar.current.component(Calendar.Component.hour, from: temp)
+            let hour = calendar.component(Calendar.Component.hour, from: temp)
             let item = RyPickerRowData(index: indexPath.row, title: String(format: "%02d", hour))
             item.objInPicker = temp
             item.postion = .right(RyPickerViewItemWidth.fixed(width: 75))
@@ -181,14 +185,14 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
         }
         
         var markDate = zeroDate(with: hourDate)
-        if Calendar.current.compare(hourDate, to: startDate, toGranularity: Calendar.Component.hour) == .orderedSame{
+        if calendar.compare(hourDate, to: startDate, toGranularity: Calendar.Component.hour) == .orderedSame{
             markDate = startDate
         }
         
-        let temp = Calendar.current.date(byAdding: .minute,
+        let temp = calendar.date(byAdding: .minute,
                                          value: indexPath.row * 5,
                                          to: markDate) ?? markDate
-        let minute = Calendar.current.component(.minute, from: temp)
+        let minute = calendar.component(.minute, from: temp)
         let item = RyPickerRowData(index: indexPath.row, title: String(format: "%02d", minute))
         item.objInPicker = temp
         item.postion = .left(RyPickerViewItemWidth.fixed(width: 75))
@@ -203,7 +207,7 @@ extension RyDatePickerDataSource: RyPickerItemBaseViewDelegate{
             return
         }
         if let temp = minuteItemView.selectedObj?.objInPicker as? Date{
-            selectedMinute = Calendar.current.component(.minute, from: temp)
+            selectedMinute = calendar.component(.minute, from: temp)
         }else{
             selectedMinute = nil
         }
