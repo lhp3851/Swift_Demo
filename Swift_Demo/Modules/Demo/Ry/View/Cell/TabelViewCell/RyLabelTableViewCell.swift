@@ -24,6 +24,7 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
         case expand
         case left(RyPickerViewItemWidth)
         case right(RyPickerViewItemWidth)
+        case offset(RyPickerViewItemWidth,leftOrRight: Bool)
         static func == (lhs: RyLabelTableViewCell.Position, rhs: RyLabelTableViewCell.Position) -> Bool {
             switch lhs {
             case .expand:
@@ -38,6 +39,11 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
                 return false
             case .right(let lWidth):
                 if case let .right(rWidth) = rhs, rWidth == lWidth{
+                    return true
+                }
+                return false
+            case let .offset(lOffset, lFlag):
+                if case let .offset(rOffset, rFlag) = rhs, rOffset == lOffset, lFlag == rFlag{
                     return true
                 }
                 return false
@@ -102,6 +108,10 @@ class RyLabelTableViewCell: RyBaseTableViewCell {
         case .right(let widthItem):
             let labelWidth = widthItem.width(in: w, flexibleWidth: w)
             label.frame = CGRect(x: w-labelWidth, y: 0, width: labelWidth, height: h)
+        case let.offset(offsetItem, flag):
+            let offsetWidth = offsetItem.width(in: w, flexibleWidth: w)
+            let labelWidth = w - offsetWidth
+            label.frame = CGRect(x: flag ? 0 : offsetWidth, y: 0, width: labelWidth, height: h)
         }
     }
     

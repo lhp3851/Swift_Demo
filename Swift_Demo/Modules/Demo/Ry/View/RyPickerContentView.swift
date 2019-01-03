@@ -39,6 +39,7 @@ class RyPickerContentView: UIView, RyPickerItemBaseViewLayoutDelegate {
         self.dataSource = dataSource
         super.init(frame: frame)
         setupSubview()
+        addLayout()
     }
     
     func reload(){
@@ -101,6 +102,15 @@ class RyPickerContentView: UIView, RyPickerItemBaseViewLayoutDelegate {
             itemView.layoutDelegate = self
             contentView.addSubview(itemView)
         }
+        topLayerView.addSubview(unitLabel)
+    }
+    
+    func addLayout(){
+        unitLabel.snp.makeConstraints { (make) in
+            make.top.bottom.equalToSuperview()
+            make.left.equalTo(topLayerView.snp.centerX).offset(17.5)
+            make.width.equalTo(35)
+        }
     }
     
     func frameOfContentView(in bounds: CGRect) -> CGRect{
@@ -131,6 +141,14 @@ class RyPickerContentView: UIView, RyPickerItemBaseViewLayoutDelegate {
     lazy var contentView:UIView = {
         let temp = UIView()
         temp.backgroundColor = UIColor.white
+        return temp
+    }()
+    
+    lazy var unitLabel: UILabel = {
+        let temp = UILabel()
+        temp.font = UIFont.systemFont(ofSize: 18)
+        temp.textAlignment = .center
+        temp.textColor = RyUI.color.B3
         return temp
     }()
     

@@ -12,6 +12,7 @@ extension RyPickerView{
     static var height: RyPickerView{
         let cfg = RyPickerViewConfiguration.height
         let temp = RyPickerView.init(dataSource: cfg)
+        temp.unitLabel.text = "cm"
         temp.selected(titles: ["170"])
         return temp
     }
@@ -33,7 +34,9 @@ extension RyPickerRowData{
     static var itemsForHeight: [RyPickerRowData]{
         var temp = [RyPickerRowData]()
         for (index, value) in (30...240).enumerated() {
-            temp.append(RyPickerRowData(index: index,title: "\(value)", obj: value))
+            let item = RyPickerRowData(index: index,title: "\(value)", obj: value)
+            item.postion = .offset(.fixed(width: 17.5), leftOrRight: true)
+            temp.append(item)
         }
         return temp
     }
