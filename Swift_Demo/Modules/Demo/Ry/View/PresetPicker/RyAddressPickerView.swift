@@ -134,7 +134,7 @@ extension RyAddressPickerDataSource: RyPickerItemBaseViewDelegate{
             areaItemView.reload(andFixAtTitle: areaItemView.selectedObj?.titleInPicker)
         }
         
-        if itemBaseView == cityItemView, areaItemView.selectedObj?.rowForObjInPicker != preSelectedRow?.rowForObjInPicker{
+        if itemBaseView == cityItemView, cityItemView.selectedObj?.rowForObjInPicker != preSelectedRow?.rowForObjInPicker{
             areaItemView.reload(andFixAtTitle: areaItemView.selectedObj?.titleInPicker)
         }
     }
