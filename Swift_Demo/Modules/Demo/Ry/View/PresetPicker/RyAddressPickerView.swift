@@ -172,12 +172,12 @@ extension RyPickerRowData{
     }
     
     struct Addresses {
-        static var defaultDatas:[[String:Any]] {
+        static var defaultDatas:[[String:Any]] = {
             let path = Bundle.main.path(forResource: "province", ofType: "json")
             let contents = FileManager.default.contents(atPath: path!)
             let address = try! JSONSerialization.jsonObject(with: contents!, options: JSONSerialization.ReadingOptions.allowFragments)
             return address as! [[String : Any]]
-        }
+        }()
         
         static var provinces:[String] = {
             var temp = [String]()
