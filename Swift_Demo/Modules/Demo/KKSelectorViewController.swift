@@ -29,7 +29,7 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.drugsEver
+        let temp = RyPickerView.address
         temp.delegate = self
         return temp
     }()

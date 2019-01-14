@@ -219,7 +219,7 @@ class RyPickerItemListView: RyPickerItemBaseView {
         temp.showsHorizontalScrollIndicator = false
         temp.separatorStyle = .none
         temp.estimatedRowHeight = 0
-//        temp.decelerationRate = UIScrollViewDecelerationRateFast
+        temp.decelerationRate = UIScrollViewDecelerationRateFast
         temp.dataSource = self
         temp.delegate = self
         return temp
