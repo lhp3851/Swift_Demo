@@ -9,48 +9,56 @@
 import UIKit
 
 class KKSelectorViewController: BaseViewController {
-    
+
     typealias Handler = (TimeInterval) -> ()
 
     var vcTitle = NSStringFromClass(KKSelectorViewController.self)
     let pickerViewHeight:CGFloat = 297
-    
+
     lazy var listView : BaseTableview = {
         let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
         view.delegate = self
         view.dataSource = self
         return view
     }()
-    
+
     lazy var pickerView: KKPickerView = {
         let model = KKTimePickerModel.share
         let temp = KKPickerView.init(frame: CGRect.zero, model: model as! KKPickerViewDataSource, delegate: self)
         return temp
     }()
-    
+
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.address
+        let startDate = Date()
+        let endDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
+        let temp = RyPickerView.date(startDate: startDate, endDate: endDate)
+//        let items = (0...100).map({ (thisI) -> String in
+//            return "\(thisI)"
+//        })
+//        let temp = RyPickerView.picker(with: items, pickerTitle: "")
+//        let temp = RyPickerView.address
         temp.delegate = self
+//        temp.dateDataSource.delegate = self
         return temp
     }()
-    
+
     var listDatas = KKPickerModel.groupDatas
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setConstraints()
     }
-    
+
     override func initData() {
         super.initData()
     }
-    
+
     override func initPannel() {
         super.initPannel()
         self.view.addSubview(self.listView)
     }
-    
-    
+
+
     func setConstraints() -> Void {
         self.listView.snp.makeConstraints { (make) in
             if #available(iOS 11.0, *) {
@@ -60,7 +68,7 @@ class KKSelectorViewController: BaseViewController {
             }
         }
     }
-    
+
     func setUpPickerView() {
 //        if let window = UIWindow.getCurrentWindow() {
 //            self.translucentView.addSubview(pickerView)
@@ -71,7 +79,7 @@ class KKSelectorViewController: BaseViewController {
 //            make.height.equalTo(pickerViewHeight)
 //        }
     }
-    
+
     func showPickerView(handler:Handler)  {
 //        if let window = UIWindow.getCurrentWindow() {
 //            self.translucentView.addSubview(ryPickerView)
@@ -94,11 +102,11 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
         }
         return 0
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return listDatas.keys.first
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "identifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
@@ -111,7 +119,7 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
         }
         return cell!
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let key = listDatas.keys.first {
@@ -120,7 +128,7 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
             showPicker(type: SelectorType(rawValue: type)!)
         }
     }
-    
+
     func showPicker(type withType: SelectorType) {
 //        self.translucentView.isHidden = false
 //        showPickerView { (delay) in
@@ -130,6 +138,8 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
 ////            })
 //        }
         ryPickerView.show()
+//        let vc = RyViewController_test()
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -139,7 +149,7 @@ extension KKSelectorViewController: KKPickerViewProtocol{
 //        dump(model)
 //        self.translucentView.isHidden = true
     }
-    
+
 }
 
 
@@ -148,17 +158,24 @@ extension KKSelectorViewController:RyPickerViewDelegate {
         let temp = pickerView.selectedObjs.map { (thiObj) -> String in
             return thiObj.titleInPicker
         }
-        
+
         let temp2 = pickerView.selectedObjs.map { (thiObj) -> Any in
             return thiObj.objInPicker
         }
         print(temp)
         print(temp2)
-        
+
+//        (pickerView as? RyDatePickerView)?.dateDataSource.reload(andFixAtDate: Date())
 //        let dataSource = ryPickerView.dataSource as! RyDatePickerDataSource
 //        dataSource.startDate = Calendar.current.date(bySettingHour: 14, minute: 40, second: 0, of: Date())!
 //        dataSource.endDate = Calendar.current.date(bySettingHour: 23, minute: 10, second: 0, of: Date())!
 //        pickerView.itemView(forComponent: 0).reload(andFixAtTitle: "21")
 //        pickerView.itemView(forComponent: 1).reload(andFixAtTitle: "10")
+    }
+}
+
+extension KKSelectorViewController: RyDatePickerSourceDelegate{
+    func datePickerDataSource(_ dataSoure: RyDatePickerDataSource, didSelectedDateChanged selectedDate: Date) {
+        print("didSelectedDateChanged \(selectedDate)")
     }
 }

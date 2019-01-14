@@ -111,6 +111,10 @@ extension RyBirthdatePikerDataSource: RyPickerItemListViewDataSource{
 }
 
 extension RyBirthdatePikerDataSource: RyPickerItemBaseViewDelegate{
+    func itemBaseViewDidScroll(_ itemBaseView: RyPickerItemBaseView) {
+        
+    }
+    
     func itemBaseView(_ itemBaseView: RyPickerItemBaseView, didSelectRow row: Int, preSelectedRow: RyPickerListable?) {
         if itemBaseView == monthItemView{
             return

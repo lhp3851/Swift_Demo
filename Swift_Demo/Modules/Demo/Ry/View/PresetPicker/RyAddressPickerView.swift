@@ -124,6 +124,10 @@ extension RyAddressPickerDataSource: RyPickerItemListViewDataSource{
 }
 
 extension RyAddressPickerDataSource: RyPickerItemBaseViewDelegate{
+    func itemBaseViewDidScroll(_ itemBaseView: RyPickerItemBaseView) {
+        
+    }
+    
     func itemBaseView(_ itemBaseView: RyPickerItemBaseView, didSelectRow row: Int, preSelectedRow: RyPickerListable?) {
         if itemBaseView == areaItemView{
             return
@@ -134,7 +138,7 @@ extension RyAddressPickerDataSource: RyPickerItemBaseViewDelegate{
             areaItemView.reload(andFixAtTitle: areaItemView.selectedObj?.titleInPicker)
         }
         
-        if itemBaseView == cityItemView, areaItemView.selectedObj?.rowForObjInPicker != preSelectedRow?.rowForObjInPicker{
+        if itemBaseView == cityItemView, cityItemView.selectedObj?.rowForObjInPicker != preSelectedRow?.rowForObjInPicker{
             areaItemView.reload(andFixAtTitle: areaItemView.selectedObj?.titleInPicker)
         }
     }
@@ -172,12 +176,12 @@ extension RyPickerRowData{
     }
     
     struct Addresses {
-        static var defaultDatas:[[String:Any]] {
+        static var defaultDatas:[[String:Any]] = {
             let path = Bundle.main.path(forResource: "province", ofType: "json")
             let contents = FileManager.default.contents(atPath: path!)
             let address = try! JSONSerialization.jsonObject(with: contents!, options: JSONSerialization.ReadingOptions.allowFragments)
             return address as! [[String : Any]]
-        }
+        }()
         
         static var provinces:[String] = {
             var temp = [String]()

@@ -6,16 +6,35 @@
 //  Copyright © 2019年 Jerry. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-class RyPickerRowData: RyLabelCellDataProtocol, RyPickerListable{
+class RyPickerRowData: RyPickerListable{
     var objInPicker: Any
     
     let rowForObjInPicker: Int
     
     let titleInPicker: String
     
+    var identifier: String?
+    
+    var postion: RyLabelTableViewCell.Position
+    
+    var cellType: (UITableViewCell & RyCellProtocol).Type
+    
+    init(index: Int, title: String, obj: Any? = nil,
+         postion: RyLabelTableViewCell.Position = .expand,
+         cellType: (UITableViewCell & RyCellProtocol).Type = RyLabelTableViewCell.self) {
+        objInPicker = index
+        rowForObjInPicker = index
+        self.cellType = cellType
+        self.objInPicker = obj ?? index
+        self.postion = postion
+        self.titleInPicker = title
+    }
+}
+
+extension RyPickerRowData:RyLabelCellDataProtocol, RyRoundLabelCellDataProtocol{
     var ryltvc_title: String{
         return titleInPicker
     }
@@ -24,15 +43,7 @@ class RyPickerRowData: RyLabelCellDataProtocol, RyPickerListable{
         return postion
     }
     
-    var identifier: String?
-    
-    var postion: RyLabelTableViewCell.Position
-    
-    init(index: Int, title: String, obj: Any? = nil, postion: RyLabelTableViewCell.Position = .expand) {
-        objInPicker = index
-        rowForObjInPicker = index
-        self.objInPicker = obj ?? index
-        self.postion = postion
-        self.titleInPicker = title
+    func cellType(userInfo: [String : Any]?) -> (UITableViewCell & RyCellProtocol).Type {
+        return cellType
     }
 }

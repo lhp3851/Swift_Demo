@@ -27,6 +27,10 @@ class RyPickerItemListView: RyPickerItemBaseView {
     
     private(set) var canInit = true
     
+    private var lastOffsetY = CGFloat()
+    private var lastMTime = CACurrentMediaTime()
+    private var isUp = true
+    
     override var currentIndex: Int{
         if !isInit{
             return endSelectedIndex
@@ -126,6 +130,8 @@ class RyPickerItemListView: RyPickerItemBaseView {
                              animated: Bool,
                              isNeedReload: Bool,
                              isSendAction: Bool,
+                             duration: TimeInterval = 0.3,
+                             options: UIView.AnimationOptions = [],
                              completion:((Bool)->Void)? = nil){
         let todoIndex = validIndex(of: index)
         if !isInit {
@@ -137,18 +143,18 @@ class RyPickerItemListView: RyPickerItemBaseView {
         let indexPath = IndexPath(row: todoIndex, section: 0)
         
         func handler(_ finish: @escaping ()->Void){
-            UIView.animate(withDuration: animated ? 0.3 : 0.00, animations: {
+            UIView.animate(withDuration: animated ? duration : 0.00, delay: 0, options: options, animations: {
                 if isSendAction{
                     self.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
                 }else{
                     let offSetY = CGFloat(todoIndex-1) * (self.tableView.bounds.height / 3.0)
                     self.tableView.setContentOffset(CGPoint(x: 0, y: offSetY),
                                                     animated: false)
-                    self.setSelectedItem(index: index)
                 }
-            }, completion: { _ in
+            }) { (_) in
+                self.setSelectedItem(index: index)
                 finish()
-            })
+            }
         }
         _preSelectedObj = dataSouce?.pickerItemListView(self, cellDataForRowAt: indexPath)
         if isNeedReload{
@@ -268,24 +274,60 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            scrollEnded()
+        let offsetY = scrollView.contentOffset.y
+        let flag = (offsetY < -(scrollView.contentInset.top))
+            || (offsetY > (scrollView.contentSize.height + scrollView.contentInset.bottom))
+        if !decelerate || flag{
+            endScroll(toIndex: currentIndex)
         }
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        scrollEnded()
+    func endScroll(withV v: CGFloat){
+        let cellHeight = tableView.bounds.height / 3.0
+        let result = tableView.contentOffset.y / cellHeight
+        var todoIndex: CGFloat = round(result)
+        if abs(todoIndex - result) > 0.01{
+            if isUp{
+                todoIndex = ceil(abs(result))
+            }else{
+                todoIndex = floor(abs(result))
+            }
+            if result < 0{
+                todoIndex = todoIndex * -1
+            }
+        }
+        let duration = abs(todoIndex - result) / (v) * 20
+        endScroll(toIndex: validIndex(of: Int(todoIndex) + 1),
+                  duration: TimeInterval(duration),
+                  options: [.curveLinear,.allowUserInteraction])
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        lastOffsetY = scrollView.contentOffset.y
+        lastMTime = CACurrentMediaTime()
         delegate?.itemBaseViewWillBeginDragging(self)
     }
     
-    //滚动结束
-    func scrollEnded()  {
-        let index = currentIndex
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let now = CACurrentMediaTime()
+        let new = scrollView.contentOffset.y
+        let v = abs(lastOffsetY - new) / CGFloat(now - lastMTime)
+        if new > lastOffsetY{
+            isUp = true
+        }else if new < lastOffsetY{
+            isUp = false
+        }
+        if v < 30 , !scrollView.isTracking{
+            endScroll(withV : v)
+        }
+        lastOffsetY = new
+        lastMTime = now
+        delegate?.itemBaseViewDidScroll(self)
+    }
+    
+    func endScroll(toIndex index: Int, duration: TimeInterval = 0.3, options: UIView.AnimationOptions = []){
         let preSelectedObj = _preSelectedObj
-        scrollToRow(at: index, animated: true, isNeedReload: false, isSendAction: false) { (_) in
+        scrollToRow(at: index, animated: true, isNeedReload: false, isSendAction: false, duration: duration, options: options) { (_) in
             self.pickeDatas(index: index, preSelectedRow: preSelectedObj)
         }
     }
