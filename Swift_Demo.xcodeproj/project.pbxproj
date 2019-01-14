@@ -66,6 +66,7 @@
 		BD4BF0FB21C8817B00EDE0FC /* RyPickerListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF0FA21C8817B00EDE0FC /* RyPickerListData.swift */; };
 		BD4BF10521C8855D00EDE0FC /* RyPickerViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */; };
 		BD4BF10A21C889C100EDE0FC /* RyLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */; };
+		BD67D04321E8493E001577F1 /* RyRoundLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67D04221E8493E001577F1 /* RyRoundLabelTableViewCell.swift */; };
 		BD9B379221C8DFC5007A5AD4 /* RyPickerViewBaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B379121C8DFC5007A5AD4 /* RyPickerViewBaseData.swift */; };
 		BD9B37B121D1BD93007A5AD4 /* RyViewController_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37B021D1BD93007A5AD4 /* RyViewController_test.swift */; };
 		BD9B37B521D475C6007A5AD4 /* RyPickerItemBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37B421D475C6007A5AD4 /* RyPickerItemBaseView.swift */; };
@@ -83,6 +84,7 @@
 		BD9B37D421DC8540007A5AD4 /* RyBirthdatePikerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37D321DC8540007A5AD4 /* RyBirthdatePikerView.swift */; };
 		BD9B37D621DC8E03007A5AD4 /* RyPickerRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37D521DC8E03007A5AD4 /* RyPickerRowData.swift */; };
 		BD9B37D821DC917F007A5AD4 /* RyPickerView + drugsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B37D721DC917F007A5AD4 /* RyPickerView + drugsEvent.swift */; };
+		BD9B38A021DEF558007A5AD4 /* areas2.json in Resources */ = {isa = PBXBuildFile; fileRef = BD9B389F21DEF557007A5AD4 /* areas2.json */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
 		BE12453D219446CE00F93C30 /* KKDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12453C219446CE00F93C30 /* KKDemoModel.swift */; };
 		BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893AE21ABFC27002659C0 /* KKPickerSubView.swift */; };
@@ -221,6 +223,7 @@
 		BD4BF0FA21C8817B00EDE0FC /* RyPickerListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerListData.swift; sourceTree = "<group>"; };
 		BD4BF10421C8855D00EDE0FC /* RyPickerViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerViewConfiguration.swift; sourceTree = "<group>"; };
 		BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyLabelTableViewCell.swift; sourceTree = "<group>"; };
+		BD67D04221E8493E001577F1 /* RyRoundLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyRoundLabelTableViewCell.swift; sourceTree = "<group>"; };
 		BD9B379121C8DFC5007A5AD4 /* RyPickerViewBaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerViewBaseData.swift; sourceTree = "<group>"; };
 		BD9B37B021D1BD93007A5AD4 /* RyViewController_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyViewController_test.swift; sourceTree = "<group>"; };
 		BD9B37B421D475C6007A5AD4 /* RyPickerItemBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerItemBaseView.swift; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		BD9B37D321DC8540007A5AD4 /* RyBirthdatePikerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyBirthdatePikerView.swift; sourceTree = "<group>"; };
 		BD9B37D521DC8E03007A5AD4 /* RyPickerRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyPickerRowData.swift; sourceTree = "<group>"; };
 		BD9B37D721DC917F007A5AD4 /* RyPickerView + drugsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RyPickerView + drugsEvent.swift"; sourceTree = "<group>"; };
+		BD9B389F21DEF557007A5AD4 /* areas2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = areas2.json; sourceTree = "<group>"; };
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
 		BE12453C219446CE00F93C30 /* KKDemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoModel.swift; sourceTree = "<group>"; };
@@ -1274,6 +1278,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4BF10921C889C100EDE0FC /* RyLabelTableViewCell.swift */,
+				BD67D04221E8493E001577F1 /* RyRoundLabelTableViewCell.swift */,
 			);
 			path = TabelViewCell;
 			sourceTree = "<group>";
@@ -1392,6 +1397,7 @@
 		BE58520521A5755B00B36450 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD9B389F21DEF557007A5AD4 /* areas2.json */,
 				BE58520621A5759900B36450 /* province.json */,
 			);
 			path = Files;
@@ -1582,6 +1588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A9783FC1F7558B1003F17D1 /* LaunchScreen.storyboard in Resources */,
+				BD9B38A021DEF558007A5AD4 /* areas2.json in Resources */,
 				7A9783F91F7558B1003F17D1 /* Assets.xcassets in Resources */,
 				7A4C11A51F9242A600F02866 /* InfoPlist.strings in Resources */,
 				7A9783F71F7558B1003F17D1 /* Main.storyboard in Resources */,
@@ -1799,6 +1806,7 @@
 				D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */,
 				BE2893C921AE7315002659C0 /* KKGenderPickerModel.swift in Sources */,
 				7A7C80811F934187007532FA /* BaseTableview.swift in Sources */,
+				BD67D04321E8493E001577F1 /* RyRoundLabelTableViewCell.swift in Sources */,
 				BD4BF0F921C8816000EDE0FC /* RyPickerDefined.swift in Sources */,
 				BD9B37D421DC8540007A5AD4 /* RyBirthdatePikerView.swift in Sources */,
 				BD9B37D821DC917F007A5AD4 /* RyPickerView + drugsEvent.swift in Sources */,

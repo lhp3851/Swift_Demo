@@ -21,10 +21,26 @@ class RyDatePickerView: RyPickerView {
     init(frame: CGRect, startDate: Date, endDate: Date) {
         dateDataSource = RyDatePickerDataSource(startDate: startDate, endDate: endDate)
         super.init(frame: frame, dataSource: dateDataSource)
+        symbolItem.pickerItemView.layoutDelegate = self
+    }
+    
+    override func setupSubview() {
+        super.setupSubview()
+        contentView.addSubview(symbolItem.pickerItemView)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let itemWidth = symbolItem.pickerItemView.widthForItemWidth(symbolItem.preferredWidthForComponent())
+        symbolItem.pickerItemView.frame = CGRect(x: 0, y: 0, width: itemWidth, height: contentView.frame.height)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    var symbolItem: RyPickerListData {
+        return dateDataSource.symbolItem
     }
 }
 
@@ -47,7 +63,7 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
     let hourItemView: RyPickerItemListView = {
         let temp = RyPickerItemListView(frame: CGRect.zero,
                                         widthContainer: RyListWidthContainer(.zero,
-                                                                             [.flexible, .fixed(width: 75)],
+                                                                             [.flexible,.fixed(width: 40),.fixed(width: 75)],
                                                                              .fixed(width: 35)),
                                         inset: .zero)
         temp.footerLabel.text = ":"
@@ -59,6 +75,29 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
                                                                                  [.flexible, .fixed(width: 75)],
                                                                                  .zero),
                                             inset: .zero)
+    
+    let symbolItem: RyPickerListData = {
+        let widthContainer = RyListWidthContainer(.zero,
+                                                  [.flexible, .fixed(width: 40)],
+                                                  .zero)
+        let titles = ["昨夜", "今天"]
+        var items: [RyListItem] = []
+        for (index,thisTitle) in titles.enumerated(){
+            items.append(RyPickerRowData(index: index,
+                                         title: thisTitle,
+                                         obj: thisTitle,
+                                         postion: .right(RyPickerViewItemWidth.fixed(width: 40)),
+                                         cellType: RyRoundLabelTableViewCell.self))
+        }
+        let temp = RyPickerListData(dataSource: items, widthContainer: widthContainer)
+        temp.pickerItemView.isUserInteractionEnabled = false
+        temp.pickerItemView.tableView.tag = 99
+        return temp
+    }()
+    
+    var symbolItemView: RyPickerItemListView{
+        return symbolItem.pickerItemView
+    }
     
     lazy var totalItemWidths:[RyPickerViewItemWidth] = {
         var temp = hourItemView.widthContainer.widths
@@ -202,6 +241,27 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
 
 
 extension RyDatePickerDataSource: RyPickerItemBaseViewDelegate{
+    func itemBaseViewDidScroll(_ itemBaseView: RyPickerItemBaseView) {
+        if itemBaseView != hourItemView{
+            return
+        }
+        adjustSymbolItemView()
+    }
+    
+    func adjustSymbolItemView(){
+        guard let hourDate = hourItemView.currentObj?.objInPicker as? Date else{
+            return
+        }
+        let inSameDayAs = Calendar.current.isDate(hourDate, inSameDayAs: endDate)
+        if inSameDayAs, symbolItem.pickerItemView.selectedIndex != 1{
+            symbolItem.pickerItemView.scroll(to: 1, animated: true)
+        }
+        
+        if !inSameDayAs, symbolItem.pickerItemView.selectedIndex != 0{
+            symbolItem.pickerItemView.scroll(to: 0, animated: true)
+        }
+    }
+    
     func itemBaseViewWillBeginDragging(_ itemBaseView: RyPickerItemBaseView) {
         if itemBaseView != hourItemView{
             return

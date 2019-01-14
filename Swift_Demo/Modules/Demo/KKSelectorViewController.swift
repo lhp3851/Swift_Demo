@@ -29,8 +29,16 @@ class KKSelectorViewController: BaseViewController {
     }()
     
     lazy var ryPickerView:RyPickerView = {
-        let temp = RyPickerView.drugsEver
+        let startDate = Date()
+        let endDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
+        let temp = RyPickerView.date(startDate: startDate, endDate: endDate)
+//        let items = (0...100).map({ (thisI) -> String in
+//            return "\(thisI)"
+//        })
+//        let temp = RyPickerView.picker(with: items, pickerTitle: "")
+//        let temp = RyPickerView.address
         temp.delegate = self
+//        temp.dateDataSource.delegate = self
         return temp
     }()
     
@@ -130,6 +138,8 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
 ////            })
 //        }
         ryPickerView.show()
+//        let vc = RyViewController_test()
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -155,10 +165,17 @@ extension KKSelectorViewController:RyPickerViewDelegate {
         print(temp)
         print(temp2)
         
+//        (pickerView as? RyDatePickerView)?.dateDataSource.reload(andFixAtDate: Date())
 //        let dataSource = ryPickerView.dataSource as! RyDatePickerDataSource
 //        dataSource.startDate = Calendar.current.date(bySettingHour: 14, minute: 40, second: 0, of: Date())!
 //        dataSource.endDate = Calendar.current.date(bySettingHour: 23, minute: 10, second: 0, of: Date())!
 //        pickerView.itemView(forComponent: 0).reload(andFixAtTitle: "21")
 //        pickerView.itemView(forComponent: 1).reload(andFixAtTitle: "10")
+    }
+}
+
+extension KKSelectorViewController: RyDatePickerSourceDelegate{
+    func datePickerDataSource(_ dataSoure: RyDatePickerDataSource, didSelectedDateChanged selectedDate: Date) {
+        print("didSelectedDateChanged \(selectedDate)")
     }
 }

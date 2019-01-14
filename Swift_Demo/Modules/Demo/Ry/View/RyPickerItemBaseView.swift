@@ -11,6 +11,7 @@ import UIKit
 protocol RyPickerItemBaseViewDelegate: NSObjectProtocol {
     func itemBaseView(_ itemBaseView: RyPickerItemBaseView, didSelectRow row: Int, preSelectedRow: RyPickerListable?)
     func itemBaseViewWillBeginDragging(_ itemBaseView: RyPickerItemBaseView)
+    func itemBaseViewDidScroll(_ itemBaseView: RyPickerItemBaseView)
 }
 
 protocol RyPickerItemBaseViewLayoutDelegate: NSObjectProtocol {

@@ -150,9 +150,9 @@ class RyPickerItemListView: RyPickerItemBaseView {
                     let offSetY = CGFloat(todoIndex-1) * (self.tableView.bounds.height / 3.0)
                     self.tableView.setContentOffset(CGPoint(x: 0, y: offSetY),
                                                     animated: false)
-                    self.setSelectedItem(index: index)
                 }
             }) { (_) in
+                self.setSelectedItem(index: index)
                 finish()
             }
         }
@@ -322,6 +322,7 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
         }
         lastOffsetY = new
         lastMTime = now
+        delegate?.itemBaseViewDidScroll(self)
     }
     
     func endScroll(toIndex index: Int, duration: TimeInterval = 0.3, options: UIView.AnimationOptions = []){
