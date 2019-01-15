@@ -24,6 +24,10 @@ class RyDatePickerView: RyPickerView {
         symbolItem.pickerItemView.layoutDelegate = self
     }
     
+    func reload(andFixAtDate date: Date) {
+        dateDataSource.reload(andFixAtDate: date)
+    }
+    
     override func setupSubview() {
         super.setupSubview()
         contentView.addSubview(symbolItem.pickerItemView)
@@ -135,6 +139,7 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
         }
         hourItemView.reload(andFixAtIndex: todoIndex ?? 0, completion: nil)
         minuteItemView.reload(andFixAtTitle: String(format: "%02d", minute))
+        adjustSymbolItemView()
     }
     
     func numberOfComponents(in pickerView: RyPickerContentView) -> Int {

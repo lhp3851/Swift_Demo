@@ -225,7 +225,6 @@ class RyPickerItemListView: RyPickerItemBaseView {
         temp.showsHorizontalScrollIndicator = false
         temp.separatorStyle = .none
         temp.estimatedRowHeight = 0
-        temp.decelerationRate = UIScrollViewDecelerationRateFast
         temp.dataSource = self
         temp.delegate = self
         return temp
@@ -277,7 +276,7 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
         let offsetY = scrollView.contentOffset.y
         let flag = (offsetY < -(scrollView.contentInset.top))
             || (offsetY > (scrollView.contentSize.height + scrollView.contentInset.bottom))
-        if !decelerate || flag{
+        if !decelerate || !flag{
             endScroll(toIndex: currentIndex)
         }
     }
@@ -317,7 +316,7 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
         }else if new < lastOffsetY{
             isUp = false
         }
-        if v < 30 , !scrollView.isTracking{
+        if v < 30 , !scrollView.isTracking, isInit{
             endScroll(withV : v)
         }
         lastOffsetY = new
