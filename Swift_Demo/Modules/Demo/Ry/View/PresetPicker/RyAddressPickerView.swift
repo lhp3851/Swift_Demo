@@ -18,6 +18,30 @@ class RyAddressPickerView: RyPickerView {
 
     let addressDataSource: RyAddressPickerDataSource
     
+    override func selected(titles: [String]) {
+        if titles.count >= 1{
+            addressDataSource.provincesItemView.reload(andFixAtTitle: titles[0])
+        }
+        if titles.count >= 2{
+            addressDataSource.cityItemView.reload(andFixAtTitle: titles[1])
+        }
+        if titles.count >= 3{
+            addressDataSource.areaItemView.reload(andFixAtTitle: titles[2])
+        }
+    }
+    
+    override func selected(indexs: [Int]) {
+        if indexs.count >= 1{
+            addressDataSource.provincesItemView.reload(andFixAtIndex: indexs[0])
+        }
+        if indexs.count >= 2{
+            addressDataSource.cityItemView.reload(andFixAtIndex: indexs[1])
+        }
+        if indexs.count >= 3{
+            addressDataSource.areaItemView.reload(andFixAtIndex: indexs[2])
+        }
+    }
+    
     init(frame: CGRect) {
         addressDataSource = RyAddressPickerDataSource()
         super.init(frame: frame, dataSource: addressDataSource)

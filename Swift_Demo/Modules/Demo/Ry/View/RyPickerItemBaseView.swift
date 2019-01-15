@@ -33,6 +33,10 @@ class RyPickerItemBaseView: UIView {
         return 0
     }
     
+    var isDraging: Bool{
+        return false
+    }
+    
     var selectedObj: RyListItem?{
         return nil
     }

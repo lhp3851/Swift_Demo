@@ -21,6 +21,12 @@ class RyPickerView: RyPickerContentView {
     var preferredHeight: CGFloat = 55 + 55 + 187
     
     @objc func onActionButton(sender: Any){
+        let count = dataSource.numberOfComponents(in: self)
+        for index in 0..<count{
+            if dataSource.pickerView(self, itemViewForComponent: index).isDraging{
+                return
+            }
+        }
         delegate?.pickerView(didTapAction: self)
     }
     
