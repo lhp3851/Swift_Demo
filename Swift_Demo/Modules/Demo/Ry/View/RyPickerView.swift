@@ -85,11 +85,13 @@ extension RyPickerView: UIGestureRecognizerDelegate{
             return
         }
         bgView.frame = keyWindow.bounds
+        bgView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         bgView.alpha = 0.5
         bgView.addSubview(self)
         frame = CGRect(x: 0, y: keyWindow.bounds.height,
                        width: keyWindow.bounds.size.width,
                        height: preferredHeight)
+        autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         let h = preferredHeight
         keyWindow.addSubview(bgView)
         UIView.animate(withDuration: 0.3) {
