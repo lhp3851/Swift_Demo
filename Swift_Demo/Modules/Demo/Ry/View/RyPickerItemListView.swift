@@ -225,7 +225,7 @@ class RyPickerItemListView: RyPickerItemBaseView {
         temp.showsHorizontalScrollIndicator = false
         temp.separatorStyle = .none
         temp.estimatedRowHeight = 0
-        temp.decelerationRate = UIScrollViewDecelerationRateFast
+//        temp.decelerationRate = UIScrollViewDecelerationRateFast
         temp.dataSource = self
         temp.delegate = self
         return temp
@@ -292,11 +292,12 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
             }else{
                 todoIndex = floor(abs(result))
             }
-            if result < 0{
+            if result < 0 {
                 todoIndex = todoIndex * -1
             }
         }
         let duration = abs(todoIndex - result) / (v) * 20
+        print("duration:",duration,todoIndex,result)
         endScroll(toIndex: validIndex(of: Int(todoIndex) + 1),
                   duration: TimeInterval(duration),
                   options: [.curveLinear,.allowUserInteraction])
@@ -318,7 +319,8 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
             isUp = false
         }
         if v < 30 , !scrollView.isTracking{
-            endScroll(withV : v)
+            endScroll(withV : max(v, 25))
+            print("方向：",isUp,"速率：",v)
         }
         lastOffsetY = new
         lastMTime = now
@@ -351,6 +353,8 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
                                     didSelectRow: index,
                                     preSelectedRow: preSelectedRow)
     }
+    
+   
 }
 
 

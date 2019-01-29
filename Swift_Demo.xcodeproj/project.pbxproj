@@ -115,7 +115,6 @@
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
 		BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */; };
 		BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */; };
-		BEFBC84721DE13F80026CD01 /* areas.json in Resources */ = {isa = PBXBuildFile; fileRef = BEFBC84621DE13F80026CD01 /* areas.json */; };
 		D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */; };
 		D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */; };
 		D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */; };
@@ -1131,6 +1130,7 @@
 				B089644429E6E6B35281124B /* Pods */,
 				E1E4B08A8B5DBAD3F02C1C14 /* Frameworks */,
 				7A92DFFA1F8E437F005AC51D /* ReadMe */,
+				BED5CCCB21EC2C1D00240CB9 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1414,6 +1414,14 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		BED5CCCB21EC2C1D00240CB9 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BEFBC84621DE13F80026CD01 /* areas.json */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		D7AC7D8A1FC3DCEE00F601A9 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1596,7 +1604,6 @@
 				7A9783F71F7558B1003F17D1 /* Main.storyboard in Resources */,
 				7A7818B91F8FD0B70043254E /* Profile.png in Resources */,
 				7A4C11AB1F92432700F02866 /* Localizable.strings in Resources */,
-				BEFBC84721DE13F80026CD01 /* areas.json in Resources */,
 				BE58520721A5759900B36450 /* province.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

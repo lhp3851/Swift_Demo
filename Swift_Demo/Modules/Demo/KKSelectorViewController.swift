@@ -28,16 +28,19 @@ class KKSelectorViewController: BaseViewController {
         return temp
     }()
 
-    lazy var ryPickerView:RyPickerView = {
+    lazy var ryPickerView:RyDatePickerView = {
         let startDate = Date()
         let endDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
         let temp = RyPickerView.date(startDate: startDate, endDate: endDate)
+        temp.delegate = self
+
+//        let temp = RyPickerView.height
 //        let items = (0...100).map({ (thisI) -> String in
 //            return "\(thisI)"
 //        })
 //        let temp = RyPickerView.picker(with: items, pickerTitle: "")
 //        let temp = RyPickerView.address
-        temp.delegate = self
+//        temp.delegate = self
 //        temp.dateDataSource.delegate = self
         return temp
     }()
@@ -164,6 +167,7 @@ extension KKSelectorViewController:RyPickerViewDelegate {
         }
         print(temp)
         print(temp2)
+        
 
 //        (pickerView as? RyDatePickerView)?.dateDataSource.reload(andFixAtDate: Date())
 //        let dataSource = ryPickerView.dataSource as! RyDatePickerDataSource

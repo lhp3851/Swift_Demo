@@ -274,7 +274,7 @@ extension RyDatePickerDataSource: RyPickerItemBaseViewDelegate{
     }
     
     func itemBaseView(_ itemBaseView: RyPickerItemBaseView, didSelectRow row: Int, preSelectedRow: RyPickerListable?) {
-        print("didSelectRow \(row)")
+//        print("didSelectRow \(row)")
         if row == preSelectedRow?.rowForObjInPicker{
             return
         }

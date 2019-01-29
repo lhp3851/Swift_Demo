@@ -12,64 +12,6 @@ import SDCycleScrollView
 
 class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     
-    struct Addresses {
-        static var defaultDatas:[[String:Any]] = {
-            let path = Bundle.main.path(forResource: "areas", ofType: "json")
-            let contents = FileManager.default.contents(atPath: path!)
-            let address = try! JSONSerialization.jsonObject(with: contents!, options: JSONSerialization.ReadingOptions.allowFragments)
-            return address as! [[String : Any]]
-        }()
-        
-        static var provinces:[String] = {
-            var temp = [String]()
-            for item in defaultDatas {
-                temp.append(item["name"] as! String)
-            }
-            return temp
-        }()
-        
-        static var cities:[String] {
-            return getCities()
-        }
-        
-        static var areas:[String] {
-            return getArea(city: "北京市", province: "北京市")
-        }
-        
-        static func getCities(province:String = "北京市") -> [String] {
-            var temp = [String]()
-            for item in defaultDatas {
-                if let provinceItem:String = item["name"] as? String,provinceItem == province {
-                    let cityItemes:[[String:Any]] = item["city"] as! [[String:Any]];
-                    for cityItem in cityItemes {
-                        temp.append(cityItem["name"] as! String)
-                    }
-                    break
-                }
-            }
-            return temp
-        }
-        
-        static func getArea(city:String = "深圳市" ,province:String = "广东省") -> [String] {
-            var temp = [String]()
-            for item in defaultDatas {
-                if let provinceItem:String = item["name"] as? String,provinceItem == province {
-                    let cityItemes:[[String:Any]] = item["city"] as! [[String:Any]];
-                    for cityItem in cityItemes {
-                        if let currentCity:String = cityItem["name"] as? String , city == currentCity {
-                            let areas:[String] = cityItem["area"] as! [String]
-                            for areaItem in areas {
-                                temp.append(areaItem)
-                            }
-                            break
-                        }
-                    }
-                }
-            }
-            return temp
-        }
-    }
-    
     lazy var activityView:NVActivityIndicatorView = {
         let view = ProgressHUDTool.activityView
         return view
