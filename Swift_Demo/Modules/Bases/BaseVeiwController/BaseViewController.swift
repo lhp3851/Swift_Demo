@@ -37,8 +37,8 @@ class BaseViewController: UIViewController {
     
     func defualtSetting() -> Void {
         self.edgesForExtendedLayout = UIRectEdge.all
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.extendedLayoutIncludesOpaqueBars = false
+        self.automaticallyAdjustsScrollViewInsets = true
+        self.extendedLayoutIncludesOpaqueBars = true
     }
     
     func initPannel () -> Void {
@@ -236,6 +236,10 @@ extension BaseViewController {
             let VC = KKSelectorViewController()
             VC.vcTitle = objectName
             viewController = VC
+        case "UITableView":
+            let VC = KKTableViewController()
+            VC.title = objectName
+            viewController = VC
         default:
             print("default ViewController")
         }
@@ -251,8 +255,5 @@ extension BaseViewController:UIGestureRecognizerDelegate {
             print(tapView)
         }
     }
-    
-    
-   
 }
 

@@ -31,6 +31,28 @@ class BaseNavigationViewController: UINavigationController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+}
 
+
+extension UINavigationController{
+    override open var shouldAutorotate: Bool {
+        if let ryVC = viewControllers.last{
+            return ryVC.shouldAutorotate
+        }
+        return false
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if let ryVC = viewControllers.last{
+            return ryVC.supportedInterfaceOrientations
+        }
+        return .portrait
+    }
+    
+    override open var preferredStatusBarStyle: UIStatusBarStyle{
+        if let ryVC = viewControllers.last{
+            return ryVC.preferredStatusBarStyle
+        }
+        return super.preferredStatusBarStyle
+    }
 }

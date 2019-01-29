@@ -113,6 +113,7 @@
 		BE58520121A560B200B36450 /* KKPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520021A560B200B36450 /* KKPickerModel.swift */; };
 		BE58520421A573CA00B36450 /* KKColumnsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */; };
 		BE58520721A5759900B36450 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = BE58520621A5759900B36450 /* province.json */; };
+		BE833B1121FFEB9B008ED5A0 /* KKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */; };
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
 		BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */; };
 		BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */; };
@@ -272,6 +273,7 @@
 		BE58520021A560B200B36450 /* KKPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerModel.swift; sourceTree = "<group>"; };
 		BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKColumnsPickerView.swift; sourceTree = "<group>"; };
 		BE58520621A5759900B36450 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
+		BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTableViewController.swift; sourceTree = "<group>"; };
 		BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKCollectionFooterReusableView.swift; sourceTree = "<group>"; };
 		BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerViewDataSource.swift; sourceTree = "<group>"; };
 		BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTimePickerDataSource.swift; sourceTree = "<group>"; };
@@ -1419,7 +1421,6 @@
 		BED5CCCB21EC2C1D00240CB9 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				BEFBC84621DE13F80026CD01 /* areas.json */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1443,6 +1444,7 @@
 				BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */,
 				D7C872761FC9483600BE53F0 /* KKWebViewViewController.swift */,
 				BD9B37B021D1BD93007A5AD4 /* RyViewController_test.swift */,
+				BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1816,6 +1818,7 @@
 				7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */,
 				7A4C11B71F93069300F02866 /* ReachAblityTool.swift in Sources */,
 				BD4BF0F321C87E1C00EDE0FC /* RyCellProtocol.swift in Sources */,
+				BE833B1121FFEB9B008ED5A0 /* KKTableViewController.swift in Sources */,
 				D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */,
 				BE2893C921AE7315002659C0 /* KKGenderPickerModel.swift in Sources */,
 				7A7C80811F934187007532FA /* BaseTableview.swift in Sources */,
