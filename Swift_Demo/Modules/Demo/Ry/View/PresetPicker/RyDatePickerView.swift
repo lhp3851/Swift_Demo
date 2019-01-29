@@ -24,6 +24,28 @@ class RyDatePickerView: RyPickerView {
         symbolItem.pickerItemView.layoutDelegate = self
     }
     
+    func reload(andFixAtDate date: Date) {
+        dateDataSource.reload(andFixAtDate: date)
+    }
+    
+    override func selected(titles: [String]) {
+        if titles.count >= 1{
+            dateDataSource.hourItemView.reload(andFixAtTitle: titles[0])
+        }
+        if titles.count >= 2{
+            dateDataSource.minuteItemView.reload(andFixAtTitle: titles[1])
+        }
+    }
+    
+    override func selected(indexs: [Int]) {
+        if indexs.count >= 1{
+            dateDataSource.hourItemView.reload(andFixAtIndex: indexs[0])
+        }
+        if indexs.count >= 2{
+            dateDataSource.minuteItemView.reload(andFixAtIndex: indexs[1])
+        }
+    }
+    
     override func setupSubview() {
         super.setupSubview()
         contentView.addSubview(symbolItem.pickerItemView)
@@ -135,6 +157,7 @@ class RyDatePickerDataSource:NSObject, RyPickerContentViewDataSource {
         }
         hourItemView.reload(andFixAtIndex: todoIndex ?? 0, completion: nil)
         minuteItemView.reload(andFixAtTitle: String(format: "%02d", minute))
+        adjustSymbolItemView()
     }
     
     func numberOfComponents(in pickerView: RyPickerContentView) -> Int {
@@ -203,7 +226,6 @@ extension RyDatePickerDataSource: RyPickerItemListViewDataSource{
             end = calendar.component(Calendar.Component.minute, from: endDate)
         }
         let num = (end - start)/5 + 1
-        print("num \(num)")
         return num
     }
     

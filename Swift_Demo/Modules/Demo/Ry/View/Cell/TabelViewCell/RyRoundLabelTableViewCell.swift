@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RyRoundLabelCellDataProtocol: RyLabelCellDataProtocol{
-
+    
 }
 
 extension RyRoundLabelCellDataProtocol{
@@ -19,6 +19,12 @@ extension RyRoundLabelCellDataProtocol{
 }
 
 class RyRoundLabelTableViewCell: RyLabelTableViewCell {
+    
+    override func update(withData data: RyCellDataBaseProtocol) {
+        super.update(withData: data)
+        updateLabelBgViewFrame()
+    }
+    
     override func setupSubview() {
         super.setupSubview()
         contentView.insertSubview(labelBgView, belowSubview: label)
@@ -34,6 +40,10 @@ class RyRoundLabelTableViewCell: RyLabelTableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        updateLabelBgViewFrame()
+    }
+    
+    func updateLabelBgViewFrame(){
         var textSize = label.sizeThatFits(label.frame.size)
         textSize = CGSize(width: textSize.width + 8, height: textSize.height + 4)
         labelBgView.center = label.center
