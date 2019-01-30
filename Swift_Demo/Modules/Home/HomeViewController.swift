@@ -11,6 +11,7 @@ import NVActivityIndicatorView
 import SDCycleScrollView
 
 class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
+    
     lazy var activityView:NVActivityIndicatorView = {
         let view = ProgressHUDTool.activityView
         return view

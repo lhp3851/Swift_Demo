@@ -10,35 +10,47 @@ import UIKit
 
 class RyPickerViewBaseData: NSObject {
     
+    weak var itemScrollDelegate: RyPickerViewItemScrollDelegate?
+
     var type: RyPickerViewItemType{
         return .holder
     }
     
-    weak var itemScrollDelegate: RyPickerViewItemScrollDelegate?
+    var component: Int = 0
     
-    func prepare(withCollection collectionView: UICollectionView){
-        collectionView.register(UICollectionViewCell.self,
-                                forCellWithReuseIdentifier: UICollectionViewCell.defaultReuseIdentifier)
+    var selectIndex: Int{
+        return 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.defaultReuseIdentifier,
-                                                      for: indexPath)
-        return cell
+    func preferredWidthForComponent() -> [RyPickerViewItemWidth]{
+        return []
     }
     
-    func preferredWidthForComponent(atBounds bounds: CGRect) -> RyPickerViewItemWidth{
-        return .flexible
-    }
-    
-    func reload(in pickerView: RyPickerView, inComponent component: Int){
+    func reload(){
         
     }
     
-    func selectedItem(in pickerView: RyPickerView, inComponent component: Int) -> RyPickerListable?{
-        
-        return nil
-        
+    func selectedItem() -> RyPickerListable{
+        return HolderListData(row: 0)
     }
     
+    func pickerItemView(at bounds: CGRect) -> RyPickerItemBaseView{
+        return RyPickerItemBaseView(frame: bounds)
+    }
+    
+    private struct HolderListData: RyPickerListable{
+        var objInPicker: Any
+        
+        var rowForObjInPicker: Int
+        
+        var titleInPicker: String
+        
+        init(row: Int) {
+            self.objInPicker = row
+            self.titleInPicker = ""
+            self.rowForObjInPicker = row
+        }
+    }
 }
+
+

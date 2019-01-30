@@ -57,5 +57,28 @@ class BaseTabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
         
     }
+}
 
+
+extension UITabBarController{
+    override open var preferredStatusBarStyle: UIStatusBarStyle{
+        if let ryVC = selectedViewController{
+            return ryVC.preferredStatusBarStyle
+        }
+        return super.preferredStatusBarStyle
+    }
+    
+    override open var shouldAutorotate: Bool {
+        if let ryVC = selectedViewController{
+            return ryVC.shouldAutorotate
+        }
+        return false
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if let ryVC = selectedViewController{
+            return ryVC.supportedInterfaceOrientations
+        }
+        return .portrait
+    }
 }
