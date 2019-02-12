@@ -5,6 +5,7 @@ PODS:
     - Charts/Core (= 3.2.1)
   - Charts/Core (3.2.1)
   - Instructions (1.0.0)
+  - JProjects-Swift-Lib (0.1.01)
   - Kingfisher (4.10.1)
   - MBProgressHUD (1.0.0)
   - Moya (10.0.2):
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - Appz
   - Charts
   - Instructions (~> 1.0.0)
+  - JProjects-Swift-Lib (~> 0.1.01)
   - Kingfisher (~> 4.0)
   - MBProgressHUD (~> 1.0.0)
   - Moya (~> 10.0.1)
@@ -65,13 +67,15 @@ DEPENDENCIES:
   - RxSwift (~> 4.0.0)
   - SDCycleScrollView (~> 1.73)
   - SnapKit (~> 4.0.0)
-  - SQLite.swift (~> 0.11)
+  - SQLite.swift (~> 0.11.5)
   - SwifterSwift (~> 4.1.0)
   - SwiftyJSON
   - SwiftyStoreKit
   - XCGLogger (~> 6.0.1)
 
 SPEC REPOS:
+  http://gitlab.lhp.com:9090/iOS/JProjects.git:
+    - JProjects-Swift-Lib
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Appz
@@ -108,6 +112,7 @@ SPEC CHECKSUMS:
   Appz: 9afca8060886b75002092f4b5b5c238a0ab19bf0
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Instructions: 11b6744e572b8cab6f61e9445403cb95fcde68f1
+  JProjects-Swift-Lib: 5b97ba640c00b4af0171c8aa6fe5982854f659da
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
@@ -126,6 +131,6 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: 5bfbfcfd07064d1b00e4fba64b8bd66b65efa9cd
+PODFILE CHECKSUM: a206b5199e0200ec253997ffe3cd8cb4648ec59a
 
 COCOAPODS: 1.5.3
