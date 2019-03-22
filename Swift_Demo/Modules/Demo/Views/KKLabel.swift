@@ -9,26 +9,8 @@
 import UIKit
 
 class KKLabel: UILabel {
-
     
-    
-    override var numberOfLines: Int {
-        get {
-            if super.numberOfLines == 1 {
-                return 0
-            }
-            else{
-                return super.numberOfLines
-            }
-        }
-        set{
-            if newValue != super.numberOfLines {
-                super.numberOfLines = newValue
-            }
-        }
-    }
-    
-    var edgeInsets: UIEdgeInsets? = UIEdgeInsets.zero
+    var edgeInsets: UIEdgeInsets? = UIEdgeInsetsMake(10, 10, -10, 10)
    
     override func draw(_ rect: CGRect) {
         super.drawText(in: UIEdgeInsetsInsetRect(rect, self.edgeInsets!))
@@ -47,10 +29,6 @@ class KKLabel: UILabel {
             return self.frame
         }
     }
-}
-
-
-extension KKLabel {
     
     func textWithWidth(width:CGFloat) {
         if let text = self.text,!text.isEmpty {
@@ -62,18 +40,16 @@ extension KKLabel {
                          NSAttributedStringKey.kern:margin] as [NSAttributedStringKey : Any]
             let attrText = NSMutableAttributedString.init(string: text, attributes: attrs)
             self.attributedText = attrText
+            self.sizeToFit()
         }
     }
     
     func adjustFrame()  {
         if let _ = self.text {
-            self.edgeInsets = UIEdgeInsetsMake(10, 10, 0, 5)
             self.numberOfLines = 0
             self.lineBreakMode = .byTruncatingTail
-            let maxSize = CGSize.init(width: kWINDOW_WIDTH - 30, height: kWINDOW_HEIGHT - kNAVIGATION_STATU_BAR_HEIGHT - kTAB_BAR_HEIGHT - 30)
-            let expectSize = self.sizeThatFits(maxSize)
-            self.frame = CGRect.init(x: 15, y: 15, width: expectSize.width, height: expectSize.height)
+            self.sizeToFit()
         }
     }
-    
 }
+

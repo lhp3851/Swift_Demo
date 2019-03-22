@@ -8,11 +8,16 @@
 
 import UIKit
 
-class BaseNavigationViewController: UINavigationController {
-
+class BaseNavigationViewController: UINavigationController,UIGestureRecognizerDelegate,UINavigationControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        delegate = self
+        let target = interactivePopGestureRecognizer?.delegate
+        let pan = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
+        pan.delegate = self;
+        view.addGestureRecognizer(pan)
+        interactivePopGestureRecognizer?.isEnabled = false
         self.initNavigationBar()
     }
 
@@ -26,6 +31,19 @@ class BaseNavigationViewController: UINavigationController {
         UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedStringKey.foregroundColor:kCOLOR_WHITE,NSAttributedStringKey.font:kFONT_18]}()
         UINavigationBar.appearance().backIndicatorImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animatedVC = KKAnimateViewController()
+        animatedVC.operation = operation
+        return animatedVC
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        if childViewControllers.count == 0 {
+            return false
+        }
+        return true
     }
     
     override func didReceiveMemoryWarning() {
