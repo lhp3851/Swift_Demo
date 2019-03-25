@@ -116,6 +116,7 @@
 		BE58520421A573CA00B36450 /* KKColumnsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */; };
 		BE58520721A5759900B36450 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = BE58520621A5759900B36450 /* province.json */; };
 		BE833B1121FFEB9B008ED5A0 /* KKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */; };
+		BE8FB7912248EA7A006E6C34 /* KKAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */; };
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
 		BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */; };
 		BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */; };
@@ -278,6 +279,7 @@
 		BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKColumnsPickerView.swift; sourceTree = "<group>"; };
 		BE58520621A5759900B36450 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
 		BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTableViewController.swift; sourceTree = "<group>"; };
+		BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKCollectionFooterReusableView.swift; sourceTree = "<group>"; };
 		BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerViewDataSource.swift; sourceTree = "<group>"; };
 		BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTimePickerDataSource.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 			children = (
 				7A7C80821F9342AF007532FA /* View */,
 				7A7818A31F8FC7870043254E /* HomeViewController.swift */,
+				BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */,
 				7A4C11981F91F9EA00F02866 /* ContactsViewController.swift */,
 				7A4C11E41F93230D00F02866 /* ContactsTool.swift */,
 				D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */,
@@ -1771,6 +1774,7 @@
 				BD4BF0EB21C7AA3500EDE0FC /* RyPickerView.swift in Sources */,
 				BE2893C321AE6A60002659C0 /* KKSKTPickerView.swift in Sources */,
 				BE30D683221A4C3200434F36 /* KKTranstionViewController.swift in Sources */,
+				BE8FB7912248EA7A006E6C34 /* KKAutoLayoutViewController.swift in Sources */,
 				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
 				BD9B37C621DC546A007A5AD4 /* RyPickerContentView.swift in Sources */,
@@ -2059,11 +2063,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7548TS27JY;
+				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lhp.pro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -2079,11 +2083,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7548TS27JY;
+				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lhp.pro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

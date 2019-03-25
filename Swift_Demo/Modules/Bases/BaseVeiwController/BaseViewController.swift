@@ -239,6 +239,10 @@ extension BaseViewController {
             let VC = KKTableViewController()
             VC.title = objectName
             viewController = VC
+        case "AutoLayout":
+            let VC = KKAutoLayoutViewController()
+            VC.title = objectName
+            viewController = VC
         default:
             print("default ViewController")
         }

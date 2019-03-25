@@ -33,7 +33,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     }()
     
     lazy var contetLabel:KKLabel = {
-        let frame = CGRect.init(x: 15, y: kNAVIGATION_STATU_BAR_HEIGHT + 20, width: kWINDOW_WIDTH - 30, height: 30)
+        let frame = CGRect.init(x: 15, y: 15, width: kWINDOW_WIDTH - 30, height: 30)
         let temp = KKLabel.init(frame: frame)
         temp.textAlignment = .left
         temp.backgroundColor = kCOLOR_NOTTOUCH
@@ -65,8 +65,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
         print(chinese.startIndex,chinese.endIndex,chinese.count,"index:",index!,result)
         
         contetLabel.text = chinese
-        contetLabel.textWithWidth(width: contetLabel.frame.width)
-//        contetLabel.adjustFrame()
+        contetLabel.adjustFrame()
     }
     
     @objc func getContacts() {

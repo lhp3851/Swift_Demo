@@ -30,6 +30,9 @@ class KKLabel: UILabel {
         }
     }
     
+    /// 内容均匀分布，文字间隔一致
+    ///
+    /// - Parameter width: 固定宽度
     func textWithWidth(width:CGFloat) {
         if let text = self.text,!text.isEmpty {
             let textWidth = text.width(withConstraniedHeight: .greatestFiniteMagnitude, font: self.font)
@@ -49,6 +52,37 @@ class KKLabel: UILabel {
             self.numberOfLines = 0
             self.lineBreakMode = .byTruncatingTail
             self.sizeToFit()
+        }
+    }
+    
+    
+    /// 测试 内容边界计算方法
+    ///
+    /// - Parameter btn: UIButton
+    func testSizeFit(btn:UIButton)  {
+        btn.isSelected = !btn.isSelected
+        if btn.isSelected {
+            let size = btn.sizeThatFits(CGSize.init(width: 80, height: 150))
+            let titleSize = btn.titleLabel?.text!.boundingRect(with: size,
+                                                               options: .usesLineFragmentOrigin,
+                                                               attributes: [NSAttributedStringKey.font : btn.titleLabel?.font],
+                                                               context: nil)
+            let rect = btn.titleLabel?.textRect(forBounds: btn.frame, limitedToNumberOfLines: 2)
+            
+            print("btn.frame:",btn.frame,
+                  "fontSize:",btn.titleLabel?.font.lineHeight,
+                  "size:",size,
+                  "rect:",rect,
+                  "titleSize:",titleSize)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                btn.frame = rect ?? btn.frame
+            }
+        }
+        else{
+            print("before btn.frame:",btn.frame)
+            btn.sizeToFit()
+            print("after btn.frame:",btn.frame)
         }
     }
 }

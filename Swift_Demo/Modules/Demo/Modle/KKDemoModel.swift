@@ -10,7 +10,7 @@ import UIKit
 
 class KKDemoModel: KKBaseModel {
     static var groupDatas : [[String:Any]] = {
-        let datas = [["UIView":["UIButton","UILabel","UITableView","UIScrollView","UIImageView","WebView"]],
+        let datas = [["UIView":["UIButton","UILabel","UITableView","UIScrollView","UIImageView","WebView","AutoLayout"]],
                      ["Archive":["Archive","File","Plist","UserDefault","SQLite","CoreData","KeyChain"]],
                      ["Animate":["BasicAnimate","FrameAnimate","GroupAnimate","TranstionAnimate"]],
                      ["Selector":["Selector"]]]

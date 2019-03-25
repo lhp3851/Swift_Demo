@@ -17,7 +17,7 @@ let kMARGIN_HORIZONE : CGFloat = 16.0  //统一水平边距
 let kNAVIGATION_BAR_HEIGHT : CGFloat = UIApplication.shared.keyWindow?.rootViewController?.navigationController?.navigationBar.frame.height ?? 44.0
 let kSTATU_BAR_HEIGHT  : CGFloat     = UIApplication.shared.statusBarFrame.height
 let kTAB_BAR_HEIGHT : CGFloat        = UIApplication.shared.keyWindow?.rootViewController?.tabBarController?.tabBar.frame.height ?? 49.0
-let kNAVIGATION_STATU_BAR_HEIGHT = kNAVIGATION_BAR_HEIGHT + kSTATU_BAR_HEIGHT
+let kNAVIGATION_STATU_BAR_HEIGHT     = kNAVIGATION_BAR_HEIGHT + kSTATU_BAR_HEIGHT
 let kSUB_VC_BOUNDS   =  kFIT_INSTANCE.fitFrame(frame: CGRect.init(x: 0, y: 0, width: 275.0, height: 250.0))
 
 /// 字符串常量:三方资源key等
