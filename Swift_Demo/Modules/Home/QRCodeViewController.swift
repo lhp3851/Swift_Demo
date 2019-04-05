@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDelegate {
+class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     lazy var device :AVCaptureDevice = {
         let device = AVCaptureDevice.default(for: AVMediaType.video)
@@ -47,14 +47,30 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
         return preview
     }()
     
+    
+    lazy var rightItem:UIBarButtonItem = {
+        let item = UIBarButtonItem.init(image: FilesManagerTool.imageWithNames(imageName: "sweep_icon"),
+                                        style: .done,
+                                        target: self,
+                                        action: #selector(getImage(sender:)))
+        return item
+    }()
+    
+    lazy var pickerVC:UIImagePickerController = {
+        let vc = UIImagePickerController()
+        vc.allowsEditing = true
+        vc.delegate = self
+        vc.sourceType = .photoLibrary
+        return vc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func initPannel() {
         super.initPannel()
-        
+        navigationItem.rightBarButtonItem = rightItem
     }
     
     override func initData() {
@@ -75,6 +91,12 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
         
     }
     
+    @objc func getImage(sender:UIBarButtonItem){
+        present(pickerVC, animated: true) {
+            
+        }
+    }
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection){
         
         if metadataObjects.count > 0 {
@@ -86,14 +108,36 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
         }
     }
     
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
     
-
-   
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+       
+        let image = info[UIImagePickerControllerEditedImage]
+        fetchImageInfo(image: image as! UIImage) { (reslut) in
+            print("reslut:",reslut ?? "thereis no intresting datas")
+            self.pickerVC.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        pickerVC.dismiss(animated: true, completion: nil)
+    }
+    
+    func fetchImageInfo(image:UIImage,complemention:@escaping (String?) -> Void) {
+        let detector = CIDetector.init(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])
+        guard let data = UIImagePNGRepresentation(image) else {return}
+        guard let ciImage = CIImage.init(data: data) else {return}
+        let features = detector?.features(in: ciImage)
+        if let result:CIQRCodeFeature = features?.first as? CIQRCodeFeature {
+            let vc =  UIAlertController.init(title: "二维码内容" , message: result.messageString ?? "", preferredStyle: .alert)
+            let action = UIAlertAction.init(title: "OK", style: .default) { (action) in
+                complemention(result.messageString)
+            }
+            vc.addAction(action)
+           pickerVC.present(vc, animated: true, completion: nil)
+        }
+    }
 }

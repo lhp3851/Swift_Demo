@@ -29,7 +29,6 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.defualtSetting()
         self.initPannel()
         self.initData()
         self.listenNetWork()
@@ -238,6 +237,10 @@ extension BaseViewController {
             viewController = VC
         case "UITableView":
             let VC = KKTableViewController()
+            VC.title = objectName
+            viewController = VC
+        case "AutoLayout":
+            let VC = KKAutoLayoutViewController()
             VC.title = objectName
             viewController = VC
         default:

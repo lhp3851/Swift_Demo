@@ -9,26 +9,8 @@
 import UIKit
 
 class KKLabel: UILabel {
-
     
-    
-    override var numberOfLines: Int {
-        get {
-            if super.numberOfLines == 1 {
-                return 0
-            }
-            else{
-                return super.numberOfLines
-            }
-        }
-        set{
-            if newValue != super.numberOfLines {
-                super.numberOfLines = newValue
-            }
-        }
-    }
-    
-    var edgeInsets: UIEdgeInsets? = UIEdgeInsets.zero
+    var edgeInsets: UIEdgeInsets? = UIEdgeInsetsMake(10, 10, -10, 10)
    
     override func draw(_ rect: CGRect) {
         super.drawText(in: UIEdgeInsetsInsetRect(rect, self.edgeInsets!))
@@ -47,11 +29,10 @@ class KKLabel: UILabel {
             return self.frame
         }
     }
-}
-
-
-extension KKLabel {
     
+    /// 内容均匀分布，文字间隔一致
+    ///
+    /// - Parameter width: 固定宽度
     func textWithWidth(width:CGFloat) {
         if let text = self.text,!text.isEmpty {
             let textWidth = text.width(withConstraniedHeight: .greatestFiniteMagnitude, font: self.font)
@@ -62,18 +43,47 @@ extension KKLabel {
                          NSAttributedStringKey.kern:margin] as [NSAttributedStringKey : Any]
             let attrText = NSMutableAttributedString.init(string: text, attributes: attrs)
             self.attributedText = attrText
+            self.sizeToFit()
         }
     }
     
     func adjustFrame()  {
         if let _ = self.text {
-            self.edgeInsets = UIEdgeInsetsMake(10, 10, 0, 5)
             self.numberOfLines = 0
             self.lineBreakMode = .byTruncatingTail
-            let maxSize = CGSize.init(width: kWINDOW_WIDTH - 30, height: kWINDOW_HEIGHT - kNAVIGATION_STATU_BAR_HEIGHT - kTAB_BAR_HEIGHT - 30)
-            let expectSize = self.sizeThatFits(maxSize)
-            self.frame = CGRect.init(x: 15, y: 15, width: expectSize.width, height: expectSize.height)
+            self.sizeToFit()
         }
     }
     
+    
+    /// 测试 内容边界计算方法
+    ///
+    /// - Parameter btn: UIButton
+    func testSizeFit(btn:UIButton)  {
+        btn.isSelected = !btn.isSelected
+        if btn.isSelected {
+            let size = btn.sizeThatFits(CGSize.init(width: 80, height: 150))
+            let titleSize = btn.titleLabel?.text!.boundingRect(with: size,
+                                                               options: .usesLineFragmentOrigin,
+                                                               attributes: [NSAttributedStringKey.font : btn.titleLabel?.font],
+                                                               context: nil)
+            let rect = btn.titleLabel?.textRect(forBounds: btn.frame, limitedToNumberOfLines: 2)
+            
+            print("btn.frame:",btn.frame,
+                  "fontSize:",btn.titleLabel?.font.lineHeight,
+                  "size:",size,
+                  "rect:",rect,
+                  "titleSize:",titleSize)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                btn.frame = rect ?? btn.frame
+            }
+        }
+        else{
+            print("before btn.frame:",btn.frame)
+            btn.sizeToFit()
+            print("after btn.frame:",btn.frame)
+        }
+    }
 }
+

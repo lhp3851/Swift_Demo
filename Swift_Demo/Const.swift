@@ -14,15 +14,15 @@ let kWINDOW_WIDTH  = (min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.
 let kWINDOW_HEIGHT = (max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height))
 
 let kMARGIN_HORIZONE : CGFloat = 16.0  //统一水平边距
-let kNAVIGATION_BAR_HEIGHT : CGFloat = 44.0
-let kSTATU_BAR_HEIGHT  : CGFloat     = 20.0
-let kTAB_BAR_HEIGHT : CGFloat        = 49.0
-let kNAVIGATION_STATU_BAR_HEIGHT = kNAVIGATION_BAR_HEIGHT + kSTATU_BAR_HEIGHT
+let kNAVIGATION_BAR_HEIGHT : CGFloat = UIApplication.shared.keyWindow?.rootViewController?.navigationController?.navigationBar.frame.height ?? 44.0
+let kSTATU_BAR_HEIGHT  : CGFloat     = UIApplication.shared.statusBarFrame.height
+let kTAB_BAR_HEIGHT : CGFloat        = UIApplication.shared.keyWindow?.rootViewController?.tabBarController?.tabBar.frame.height ?? 49.0
+let kNAVIGATION_STATU_BAR_HEIGHT     = kNAVIGATION_BAR_HEIGHT + kSTATU_BAR_HEIGHT
 let kSUB_VC_BOUNDS   =  kFIT_INSTANCE.fitFrame(frame: CGRect.init(x: 0, y: 0, width: 275.0, height: 250.0))
 
 /// 字符串常量:三方资源key等
-let kSERVICE_PHONE = "18588255659" //客服电话
-let kAPP_VERSION   = "kAPP_VERSION"// APP 版本号
+let kSERVICE_PHONE  = "18588255659" //客服电话
+let kAPP_VERSION    = "kAPP_VERSION"// APP 版本号
 let kBAI_DU_MAP_KEY = "g0GMA2RuGOlSZhwPlO29Up1GDTjSZTZ3"//百度地图key
 
 ///系统

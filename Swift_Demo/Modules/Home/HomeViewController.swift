@@ -33,10 +33,12 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     }()
     
     lazy var contetLabel:KKLabel = {
-        let frame = CGRect.init(x: 15, y: kNAVIGATION_STATU_BAR_HEIGHT + 20, width: kWINDOW_WIDTH - 30, height: 30)
+        let frame = CGRect.init(x: 15, y: 15, width: kWINDOW_WIDTH - 30, height: 30)
         let temp = KKLabel.init(frame: frame)
         temp.textAlignment = .left
         temp.backgroundColor = kCOLOR_NOTTOUCH
+        temp.numberOfLines = 0
+        temp.lineBreakMode = NSLineBreakMode.byClipping
         return temp
     }()
     
@@ -57,13 +59,12 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     override func initData() {
         super.initData()
         
-        let chinese : String = "Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\nSwift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\n"
+        let chinese : String = "Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\n"
         let index =  chinese.index(of: "是")
         let result = chinese.reversed()
         print(chinese.startIndex,chinese.endIndex,chinese.count,"index:",index!,result)
         
         contetLabel.text = chinese
-//        contetLabel.textWithWidth(width: contetLabel.frame.width)
         contetLabel.adjustFrame()
     }
     

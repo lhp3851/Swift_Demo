@@ -108,12 +108,15 @@
 		BE2893D521AE73BE002659C0 /* KKStaturePickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893D421AE73BE002659C0 /* KKStaturePickerModel.swift */; };
 		BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893D621AEA373002659C0 /* KKColumnPickerCell.swift */; };
 		BE2893DB21AF82D7002659C0 /* KKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2893DA21AF82D7002659C0 /* KKLabel.swift */; };
+		BE30D683221A4C3200434F36 /* KKTranstionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30D682221A4C3200434F36 /* KKTranstionViewController.swift */; };
+		BE30D685221A4E0700434F36 /* KKAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30D684221A4E0700434F36 /* KKAnimateViewController.swift */; };
 		BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */; };
 		BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5851FE21A55A7000B36450 /* SelectorConst.swift */; };
 		BE58520121A560B200B36450 /* KKPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520021A560B200B36450 /* KKPickerModel.swift */; };
 		BE58520421A573CA00B36450 /* KKColumnsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */; };
 		BE58520721A5759900B36450 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = BE58520621A5759900B36450 /* province.json */; };
 		BE833B1121FFEB9B008ED5A0 /* KKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */; };
+		BE8FB7912248EA7A006E6C34 /* KKAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */; };
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
 		BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */; };
 		BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */; };
@@ -268,12 +271,15 @@
 		BE2893D421AE73BE002659C0 /* KKStaturePickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKStaturePickerModel.swift; sourceTree = "<group>"; };
 		BE2893D621AEA373002659C0 /* KKColumnPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKColumnPickerCell.swift; sourceTree = "<group>"; };
 		BE2893DA21AF82D7002659C0 /* KKLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKLabel.swift; sourceTree = "<group>"; };
+		BE30D682221A4C3200434F36 /* KKTranstionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTranstionViewController.swift; sourceTree = "<group>"; };
+		BE30D684221A4E0700434F36 /* KKAnimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKAnimateViewController.swift; sourceTree = "<group>"; };
 		BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSelectorViewController.swift; sourceTree = "<group>"; };
 		BE5851FE21A55A7000B36450 /* SelectorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorConst.swift; sourceTree = "<group>"; };
 		BE58520021A560B200B36450 /* KKPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerModel.swift; sourceTree = "<group>"; };
 		BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKColumnsPickerView.swift; sourceTree = "<group>"; };
 		BE58520621A5759900B36450 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
 		BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTableViewController.swift; sourceTree = "<group>"; };
+		BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKCollectionFooterReusableView.swift; sourceTree = "<group>"; };
 		BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerViewDataSource.swift; sourceTree = "<group>"; };
 		BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTimePickerDataSource.swift; sourceTree = "<group>"; };
@@ -462,6 +468,7 @@
 			children = (
 				7A7C80821F9342AF007532FA /* View */,
 				7A7818A31F8FC7870043254E /* HomeViewController.swift */,
+				BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */,
 				7A4C11981F91F9EA00F02866 /* ContactsViewController.swift */,
 				7A4C11E41F93230D00F02866 /* ContactsTool.swift */,
 				D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */,
@@ -1365,6 +1372,7 @@
 				7A78189D1F8FC50B0043254E /* BaseViewController.swift */,
 				7A7818AF1F8FC9080043254E /* BaseNavigationViewController.swift */,
 				7A7818AD1F8FC8C70043254E /* BaseTabBarController.swift */,
+				BE30D684221A4E0700434F36 /* KKAnimateViewController.swift */,
 			);
 			path = BaseVeiwController;
 			sourceTree = "<group>";
@@ -1445,6 +1453,7 @@
 				D7C872761FC9483600BE53F0 /* KKWebViewViewController.swift */,
 				BD9B37B021D1BD93007A5AD4 /* RyViewController_test.swift */,
 				BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */,
+				BE30D682221A4C3200434F36 /* KKTranstionViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1764,6 +1773,8 @@
 				BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */,
 				BD4BF0EB21C7AA3500EDE0FC /* RyPickerView.swift in Sources */,
 				BE2893C321AE6A60002659C0 /* KKSKTPickerView.swift in Sources */,
+				BE30D683221A4C3200434F36 /* KKTranstionViewController.swift in Sources */,
+				BE8FB7912248EA7A006E6C34 /* KKAutoLayoutViewController.swift in Sources */,
 				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
 				BD9B37C621DC546A007A5AD4 /* RyPickerContentView.swift in Sources */,
@@ -1790,6 +1801,7 @@
 				BD4BF0F021C7AC6900EDE0FC /* RyPickerView + TopLayerView.swift in Sources */,
 				7A4C11C11F93096D00F02866 /* AccountModel.swift in Sources */,
 				7A4C11991F91F9EA00F02866 /* ContactsViewController.swift in Sources */,
+				BE30D685221A4E0700434F36 /* KKAnimateViewController.swift in Sources */,
 				7A9783F41F7558B1003F17D1 /* ViewController.swift in Sources */,
 				BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */,
 				7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */,
@@ -2049,6 +2061,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;
@@ -2068,6 +2081,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
 				INFOPLIST_FILE = Swift_Demo/Info.plist;

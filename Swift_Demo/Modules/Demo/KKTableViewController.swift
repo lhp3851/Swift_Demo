@@ -52,24 +52,21 @@ class KKTableViewController: BaseViewController {
         }
     }
     
-    lazy var _bgImageView:UIImageView = {
-        let subviews = navigationController?.navigationBar.subviews
-        let temp = subviews!.first
-        return temp as? UIImageView ?? UIImageView()
-    }()
+    var backGroundView:UIView {
+        let subViewes:[UIView] = (navigationController?.navigationBar.subviews) ?? [UIView()]
+        let view = subViewes.first
+        view?.backgroundColor = UIColor.orange
+        return view!
+    }
     
-    lazy var fakeNavi:UINavigationBar = {
-        let temp:UINavigationBar = navigationController?.navigationBar.copy() as! UINavigationBar
-        temp.alpha = 1.0
-        return temp
-    }()
+    var isdragged:Bool = false
     
     var listDatas = KKDemoModel.groupDatas
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,20 +78,18 @@ class KKTableViewController: BaseViewController {
         super.viewWillDisappear(animated)
         navigationBar(translucent: false)
     }
+
     
     override func initData() {
         
         super.initData()
-        
+
     }
     
     override func initPannel() {
         super.initPannel()
-        
-        self.view.addSubview(self.listView)
-        
-        self.setConstraints()
-        
+        view.addSubview(self.listView)
+        setConstraints()
 //        adjustSafeArea()
     }
     
@@ -106,7 +101,7 @@ class KKTableViewController: BaseViewController {
     
     func adjustSafeArea() {
         if #available(iOS 11.0, *) {
-//            listView.contentInsetAdjustmentBehavior = .never
+            listView.contentInsetAdjustmentBehavior = .never
         }
         else{
             self.defualtSetting()
@@ -119,23 +114,25 @@ class KKTableViewController: BaseViewController {
     
     func navigationBar(translucent:Bool) {
         if translucent {
-            navigationController?.navigationBar.isTranslucent = true
-            navigationController?.navigationBar.backgroundColor = UIColor.clear
             navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationController?.navigationBar.shadowImage = UIImage()
-            navigationController?.navigationBar.isOpaque = false
+            backGroundView.backgroundColor = UIColor.orange
+            backGroundView.alpha = 1.0
         }
         else{
-            navigationController?.navigationBar.isTranslucent = false
-            navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+            var image = kIMAGE_WITH(name: "navigation_bar", needOften: false)
+            image = image.withRenderingMode(.alwaysTemplate)
+            navigationController?.navigationBar.setBackgroundImage(image, for: .default)
             navigationController?.navigationBar.shadowImage = nil
-            navigationController?.navigationBar.isOpaque = true
+            backGroundView.alpha = 1.0
+            backGroundView.backgroundColor = UIColor.orange
         }
     }
     
     func setBackgroundAlpha(alpha:CGFloat){
         if let navigationBar = navigationController?.navigationBar,
-           let barBackgroundView = navigationBar.subviews.first{
+           let barBackgroundView = navigationBar.subviews.first
+        {
             if #available(iOS 11.0, *){
                 if navigationBar.isTranslucent{
                     for view in barBackgroundView.subviews {
@@ -235,26 +232,25 @@ extension KKTableViewController {
 //        }
 //    }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.y
-        let alpha = (offset - knavi_status_bar_height)/(headHeight - knavi_status_bar_height)
-        if offset > knavi_status_bar_height {
-            navigationController?.navigationBar.isTranslucent = false
-            navigationController?.navigationBar.barTintColor = UIColor.orange
-            navigationController?.navigationBar.tintColor = UIColor.orange
-            statusStyle = .default
-//            scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        }
-        else if (offset > 0 && offset < knavi_status_bar_height){
-            navigationController?.navigationBar.isTranslucent = true
-            navigationController?.navigationBar.barTintColor = UIColor.clear
-            navigationController?.navigationBar.tintColor = UIColor.clear
-            statusStyle = .lightContent
-//            scrollView.contentInset = UIEdgeInsetsMake(-knavi_status_bar_height, 0, 0, 0)
-        }
-        else{
-            print("offset:",offset)
-        }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isdragged = true
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        if !isdragged {
+            return
+        }
+        let alpha = (offset - knavi_status_bar_height)/(headHeight - knavi_status_bar_height)
+        if offset >= knavi_status_bar_height {
+            statusStyle = .default
+            backGroundView.alpha = alpha
+            listView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        }
+        else if (offset > 0 && offset < knavi_status_bar_height){
+            statusStyle = .lightContent
+            backGroundView.alpha = 0
+            listView.contentInset = UIEdgeInsetsMake(-knavi_status_bar_height, 0, 0, 0)
+        }
+    }
 }
