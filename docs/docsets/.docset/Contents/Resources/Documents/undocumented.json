@@ -1,0 +1,187 @@
+{
+  "warnings": [
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Bases/BaseVeiwController/BaseNavigationViewController.swift",
+      "line": 56,
+      "symbol": "UINavigationController.shouldAutorotate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Bases/BaseVeiwController/BaseNavigationViewController.swift",
+      "line": 63,
+      "symbol": "UINavigationController.supportedInterfaceOrientations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Bases/BaseVeiwController/BaseNavigationViewController.swift",
+      "line": 70,
+      "symbol": "UINavigationController.preferredStatusBarStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Bases/BaseVeiwController/BaseTabBarController.swift",
+      "line": 64,
+      "symbol": "UITabBarController.preferredStatusBarStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Bases/BaseVeiwController/BaseTabBarController.swift",
+      "line": 71,
+      "symbol": "UITabBarController.shouldAutorotate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Bases/BaseVeiwController/BaseTabBarController.swift",
+      "line": 78,
+      "symbol": "UITabBarController.supportedInterfaceOrientations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerRowData.swift",
+      "line": null,
+      "symbol": "RyPickerRowData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerRowData.swift",
+      "line": null,
+      "symbol": "RyPickerRowData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerRowData.swift",
+      "line": null,
+      "symbol": "RyPickerRowData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerRowData.swift",
+      "line": null,
+      "symbol": "RyPickerRowData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerRowData.swift",
+      "line": null,
+      "symbol": "RyPickerRowData",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerViewConfiguration.swift",
+      "line": null,
+      "symbol": "RyPickerViewConfiguration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerViewConfiguration.swift",
+      "line": null,
+      "symbol": "RyPickerViewConfiguration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerViewConfiguration.swift",
+      "line": null,
+      "symbol": "RyPickerViewConfiguration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerViewConfiguration.swift",
+      "line": null,
+      "symbol": "RyPickerViewConfiguration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerViewConfiguration.swift",
+      "line": null,
+      "symbol": "RyPickerViewConfiguration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/Model/RyPickerViewConfiguration.swift",
+      "line": null,
+      "symbol": "RyPickerViewConfiguration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo/Swift_Demo/Modules/Demo/Ry/View/RyPickerView.swift",
+      "line": null,
+      "symbol": "RyPickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Volumes/Ubuntu-Kyli/GitHub/Swift_Demo"
+}
