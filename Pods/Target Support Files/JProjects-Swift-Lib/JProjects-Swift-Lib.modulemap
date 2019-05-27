@@ -1,6 +1,0 @@
-framework module JProjects_Swift_Lib {
-  umbrella header "JProjects-Swift-Lib-umbrella.h"
-
-  export *
-  module * { export * }
-}

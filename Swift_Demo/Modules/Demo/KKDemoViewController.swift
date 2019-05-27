@@ -51,7 +51,7 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     
     //MARK: 功能方法
     @objc func demo() -> Void {
-        print("demo~")
+        
     }
     
     

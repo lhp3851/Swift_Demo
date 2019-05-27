@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
@@ -19,9 +21,18 @@ class ViewController: UIViewController {
     }
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(WeekDays.Tuesday.hashValue,WeekDays.Tuesday.rawValue)
+        
+        _ = self.rx.observe(CGRect.self, "view.frame")
+            .subscribe(onNext: { frame in
+                print("--- 视图尺寸发生变化 ---")
+                print(frame!)
+                print("\n")
+            })
+
     }
 
     

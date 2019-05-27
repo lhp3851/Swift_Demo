@@ -13,6 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var contentLabel:UITextView = {
+        let infoLabel = UITextView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        infoLabel.backgroundColor = .gray
+        infoLabel.textColor = .white
+        infoLabel.isEditable = false
+        UIApplication.shared.keyWindow?.addSubview(infoLabel)
+        return infoLabel
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,6 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = rootVC
         
+        DispatchQueue.global().async {
+            crashHandle(crashContentAction: { (crashInfo) in
+                print(crashInfo.count)
+                for info in crashInfo{
+                    DispatchQueue.main.async {
+                        self.contentLabel.text = info
+                    }
+                }
+            })
+        }
+        #if DEBUG
+        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
+        #endif
         return true
     }
 
