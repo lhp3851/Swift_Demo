@@ -4,6 +4,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
+inhibit_all_warnings!
 
 target 'Swift_Demo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -40,6 +41,7 @@ target 'Swift_Demo' do
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
 #    pod 'JProjects-Swift-Lib', '~> 0.1.01'
+    pod 'matrix-wechat'
 
   target 'Swift_DemoTests' do
     inherit! :search_paths

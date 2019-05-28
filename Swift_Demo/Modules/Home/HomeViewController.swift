@@ -10,7 +10,45 @@ import UIKit
 import NVActivityIndicatorView
 import SDCycleScrollView
 
-class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
+class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimationDelegate {
+    
+    lazy var rotateAnimate: CABasicAnimation = {
+        let rotateAnimate = CABasicAnimation.init()
+        rotateAnimate.keyPath = "transform.rotation.y"
+        rotateAnimate.duration = 1.0
+        rotateAnimate.toValue = Float.pi
+        rotateAnimate.repeatCount = 3
+        rotateAnimate.isRemovedOnCompletion = false
+        return rotateAnimate
+    }()
+    
+    lazy var rotateZAnimate:  CABasicAnimation = {
+        let rotateAnimate = CABasicAnimation.init()
+        rotateAnimate.duration = 1.0
+        rotateAnimate.toValue = 100
+        rotateAnimate.repeatCount = 3
+        rotateAnimate.isRemovedOnCompletion = false
+        return rotateAnimate
+    }()
+    
+    
+    lazy var  groupAnimate:CAAnimationGroup =  {
+        let groupAnimate = CAAnimationGroup.init()
+        groupAnimate.beginTime = CFAbsoluteTimeGetCurrent() + 3
+        groupAnimate.animations = [rotateAnimate,rotateZAnimate]
+        groupAnimate.delegate = self
+        groupAnimate.duration = 10
+        return groupAnimate
+    }()
+    
+    lazy var animateView:UIView = {
+        let temp = UIView()
+        let frame = CGRect.init(x: 0, y: 0, width: 120, height: 180)
+        temp.frame = frame
+        temp.center = self.view.center
+        temp.backgroundColor = UIColor.red
+        return temp
+    }()
     
     lazy var activityView:NVActivityIndicatorView = {
         let view = ProgressHUDTool.activityView
@@ -44,7 +82,8 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        animateView.layer.add(groupAnimate, forKey: "group_animate")
+        animateView.layer.add(rotateZAnimate, forKey: "rotate_animate")
     }
 
     override func initPannel() {
@@ -53,6 +92,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
         self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
         self.view.addSubview(contetLabel)
+        self.view.addSubview(animateView)
     }
     
     
@@ -90,11 +130,17 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate {
     func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
         print(index)
     }
-    
-    @objc func injected(){
-        
-        print("I've been injected: \(self)")
-        
-    }
 
+    @objc func injected(){
+         print("I've been injected: \(self)")
+    }
+    
+    func animationDidStart(_ anim: CAAnimation) {
+        print("animate start")
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        print("animate stop")
+    }
+    
 }

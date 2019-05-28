@@ -6,6 +6,15 @@ PODS:
   - Charts/Core (3.2.1)
   - Instructions (1.0.0)
   - Kingfisher (4.10.1)
+  - matrix-wechat (0.5.1):
+    - matrix-wechat/matrixARC (= 0.5.1)
+    - matrix-wechat/matrixNonARC1 (= 0.5.1)
+    - matrix-wechat/matrixNonARC2 (= 0.5.1)
+  - matrix-wechat/matrixARC (0.5.1):
+    - matrix-wechat/matrixNonARC1
+  - matrix-wechat/matrixNonARC1 (0.5.1)
+  - matrix-wechat/matrixNonARC2 (0.5.1):
+    - matrix-wechat/matrixARC
   - MBProgressHUD (1.0.0)
   - Moya (10.0.2):
     - Moya/Core (= 10.0.2)
@@ -62,6 +71,7 @@ DEPENDENCIES:
   - Charts
   - Instructions (~> 1.0.0)
   - Kingfisher (~> 4.0)
+  - matrix-wechat
   - MBProgressHUD (~> 1.0.0)
   - Moya (~> 10.0.1)
   - NVActivityIndicatorView
@@ -84,6 +94,7 @@ SPEC REPOS:
     - Charts
     - Instructions
     - Kingfisher
+    - matrix-wechat
     - MBProgressHUD
     - Moya
     - NVActivityIndicatorView
@@ -117,6 +128,7 @@ SPEC CHECKSUMS:
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   Instructions: 11b6744e572b8cab6f61e9445403cb95fcde68f1
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  matrix-wechat: 87e227259bb07bd56b76c0f7f1081bf9593b1eec
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
@@ -136,6 +148,6 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
   XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
 
-PODFILE CHECKSUM: b23548ed7e76fa7a74f08ed9cb789174d162cf68
+PODFILE CHECKSUM: d32325657cd358ef64cd15e8dd7e9098019a4627
 
 COCOAPODS: 1.6.2
