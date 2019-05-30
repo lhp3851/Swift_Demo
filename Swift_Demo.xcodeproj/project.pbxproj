@@ -29,6 +29,7 @@
 		7A51C5B11F912775002449C6 /* DeviceInfoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5B01F912775002449C6 /* DeviceInfoTool.swift */; };
 		7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5B81F912949002449C6 /* FilesManagerTool.swift */; };
 		7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5BC1F912B2D002449C6 /* NavigationBar.swift */; };
+		7A5999AE229C3A7A004515C8 /* KKContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */; };
 		7A606F461F98F83D00B47DE8 /* StorePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A606F451F98F83D00B47DE8 /* StorePageViewController.swift */; };
 		7A606F491F9900DC00B47DE8 /* AppTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A606F481F9900DC00B47DE8 /* AppTool.swift */; };
 		7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78189D1F8FC50B0043254E /* BaseViewController.swift */; };
@@ -52,8 +53,11 @@
 		7A9784071F7558B1003F17D1 /* Swift_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784061F7558B1003F17D1 /* Swift_DemoTests.swift */; };
 		7A9784121F7558B1003F17D1 /* Swift_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */; };
 		7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784211F7559E3003F17D1 /* String+Extension.swift */; };
+		7A988AC7228D9ACC0071C524 /* KKGenericsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A988AC6228D9ACC0071C524 /* KKGenericsTool.swift */; };
+		7A988AC9228FCCF90071C524 /* KKKeyPathObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A988AC8228FCCF90071C524 /* KKKeyPathObject.swift */; };
 		7ADBF67C21A58C8D004B8896 /* KKSKTPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBF67B21A58C8D004B8896 /* KKSKTPickerModel.swift */; };
 		7ADBF67E21A5987E004B8896 /* KKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBF67D21A5987E004B8896 /* KKPickerView.swift */; };
+		7AEB0655229ED90C00869A3F /* KKPromisKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEB0654229ED90C00869A3F /* KKPromisKitViewController.swift */; };
 		7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */; };
 		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
@@ -181,6 +185,7 @@
 		7A51C5B01F912775002449C6 /* DeviceInfoTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoTool.swift; sourceTree = "<group>"; };
 		7A51C5B81F912949002449C6 /* FilesManagerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesManagerTool.swift; sourceTree = "<group>"; };
 		7A51C5BC1F912B2D002449C6 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKContactsManager.swift; sourceTree = "<group>"; };
 		7A606F451F98F83D00B47DE8 /* StorePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePageViewController.swift; sourceTree = "<group>"; };
 		7A606F481F9900DC00B47DE8 /* AppTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTool.swift; sourceTree = "<group>"; };
 		7A78189D1F8FC50B0043254E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -211,8 +216,11 @@
 		7A9784111F7558B1003F17D1 /* Swift_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_DemoUITests.swift; sourceTree = "<group>"; };
 		7A9784131F7558B1003F17D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A9784211F7559E3003F17D1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7A988AC6228D9ACC0071C524 /* KKGenericsTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKGenericsTool.swift; sourceTree = "<group>"; };
+		7A988AC8228FCCF90071C524 /* KKKeyPathObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKKeyPathObject.swift; sourceTree = "<group>"; };
 		7ADBF67B21A58C8D004B8896 /* KKSKTPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSKTPickerModel.swift; sourceTree = "<group>"; };
 		7ADBF67D21A5987E004B8896 /* KKPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerView.swift; sourceTree = "<group>"; };
+		7AEB0654229ED90C00869A3F /* KKPromisKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPromisKitViewController.swift; sourceTree = "<group>"; };
 		7AF669931FB7DF2800535D9F /* KKInfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKInfiniteScrollView.swift; sourceTree = "<group>"; };
 		7AF669A51FB820B100535D9F /* KKScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKScrollView.swift; sourceTree = "<group>"; };
 		7AF669A71FB828ED00535D9F /* KKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKImageView.swift; sourceTree = "<group>"; };
@@ -395,6 +403,7 @@
 		7A51C5AB1F9124DD002449C6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7A988AC5228D9A970071C524 /* Generics */,
 				7A606F471F9900C000B47DE8 /* App */,
 				D7E172BD1F96182300A3E247 /* ProgressHUDTool */,
 				7A4C11B11F93069300F02866 /* NetWorkTool */,
@@ -447,6 +456,14 @@
 			path = Navigator;
 			sourceTree = "<group>";
 		};
+		7A5999AF229ED875004515C8 /* PromisKit */ = {
+			isa = PBXGroup;
+			children = (
+				7AEB0654229ED90C00869A3F /* KKPromisKitViewController.swift */,
+			);
+			path = PromisKit;
+			sourceTree = "<group>";
+		};
 		7A606F471F9900C000B47DE8 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +489,7 @@
 				7A4C11981F91F9EA00F02866 /* ContactsViewController.swift */,
 				7A4C11E41F93230D00F02866 /* ContactsTool.swift */,
 				D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */,
+				7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1219,6 +1237,15 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		7A988AC5228D9A970071C524 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				7A988AC6228D9ACC0071C524 /* KKGenericsTool.swift */,
+				7A988AC8228FCCF90071C524 /* KKKeyPathObject.swift */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
 		B089644429E6E6B35281124B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1444,16 +1471,17 @@
 		D7AC7D8F1FC3E04D00F601A9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BE97813C21C7B71600E4BCA5 /* DataSource */,
-				BD4BF0E721C7A88700EDE0FC /* Ry */,
-				BE58520221A5738500B36450 /* Views */,
-				BE124537219444FD00F93C30 /* Modle */,
 				D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */,
 				BE5851FC21A559DF00B36450 /* KKSelectorViewController.swift */,
-				D7C872761FC9483600BE53F0 /* KKWebViewViewController.swift */,
-				BD9B37B021D1BD93007A5AD4 /* RyViewController_test.swift */,
 				BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */,
 				BE30D682221A4C3200434F36 /* KKTranstionViewController.swift */,
+				D7C872761FC9483600BE53F0 /* KKWebViewViewController.swift */,
+				BD9B37B021D1BD93007A5AD4 /* RyViewController_test.swift */,
+				BE97813C21C7B71600E4BCA5 /* DataSource */,
+				BE124537219444FD00F93C30 /* Modle */,
+				7A5999AF229ED875004515C8 /* PromisKit */,
+				BD4BF0E721C7A88700EDE0FC /* Ry */,
+				BE58520221A5738500B36450 /* Views */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1681,19 +1709,23 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Demo/Pods-Swift_Demo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Demo/Pods-Swift_Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Appz/Appz.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
+				"${BUILT_PRODUCTS_DIR}/JProjects-Swift-Lib/JProjects_Swift_Lib.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -1711,14 +1743,18 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Appz.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JProjects_Swift_Lib.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -1732,7 +1768,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Demo/Pods-Swift_Demo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_Demo/Pods-Swift_Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		79155DEDBECF97852D13B309 /* [CP] Check Pods Manifest.lock */ = {
@@ -1770,6 +1806,7 @@
 				BD4BF0FB21C8817B00EDE0FC /* RyPickerListData.swift in Sources */,
 				7A7818B01F8FC9080043254E /* BaseNavigationViewController.swift in Sources */,
 				7A37032E1F9518FB00F519F3 /* ProfileModle.swift in Sources */,
+				7A988AC7228D9ACC0071C524 /* KKGenericsTool.swift in Sources */,
 				BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */,
 				BD4BF0EB21C7AA3500EDE0FC /* RyPickerView.swift in Sources */,
 				BE2893C321AE6A60002659C0 /* KKSKTPickerView.swift in Sources */,
@@ -1817,6 +1854,7 @@
 				BE2893D321AE73AB002659C0 /* KKWeightPickerModel.swift in Sources */,
 				BE2893BB21AE69F6002659C0 /* KKDateTimePickerView.swift in Sources */,
 				7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */,
+				7A988AC9228FCCF90071C524 /* KKKeyPathObject.swift in Sources */,
 				7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */,
 				7A4C11BC1F9308B200F02866 /* UIImage+Extention.swift in Sources */,
 				BD9B37C221D7232F007A5AD4 /* RyPikerView + NapRecord.swift in Sources */,
@@ -1855,6 +1893,7 @@
 				BE2893AF21ABFC27002659C0 /* KKPickerSubView.swift in Sources */,
 				7ADBF67C21A58C8D004B8896 /* KKSKTPickerModel.swift in Sources */,
 				7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */,
+				7AEB0655229ED90C00869A3F /* KKPromisKitViewController.swift in Sources */,
 				7A606F491F9900DC00B47DE8 /* AppTool.swift in Sources */,
 				7A4C11B61F93069300F02866 /* NetWorkTool.swift in Sources */,
 				BE2893CD21AE736B002659C0 /* KKDatePickerModel.swift in Sources */,
@@ -1865,6 +1904,7 @@
 				BD9B37B121D1BD93007A5AD4 /* RyViewController_test.swift in Sources */,
 				BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */,
 				BD9B379221C8DFC5007A5AD4 /* RyPickerViewBaseData.swift in Sources */,
+				7A5999AE229C3A7A004515C8 /* KKContactsManager.swift in Sources */,
 				BD4BF0F421C87E1C00EDE0FC /* RyBaseTableViewCell.swift in Sources */,
 				7A51C5AA1F91249B002449C6 /* Const.swift in Sources */,
 				BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */,

@@ -1,9 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 
-#source 'http://gitlab.lhp.com:9090/iOS/JProjects.git'
+source 'http://gitlab.lhp.com:9090/iOS/JProjects.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '9.0'
+inhibit_all_warnings!
 
 target 'Swift_Demo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -37,18 +38,18 @@ target 'Swift_Demo' do
     pod 'Moya', '~> 10.0.1'
     pod 'ObjectMapper', '~> 3.1'
     pod 'SwifterSwift', '~> 4.1.0'
-    pod 'RxSwift', '~> 4.0.0'
-    #pod 'JProjects-Swift-Lib', '~> 0.1.01'
+    pod 'RxSwift', '~> 5'
+    pod 'RxCocoa', '~> 5'
+    pod 'JProjects-Swift-Lib', '~> 0.1.01'
     pod 'matrix-wechat'
+    pod 'PromiseKit', '~> 6.8'
 
   target 'Swift_DemoTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
   target 'Swift_DemoUITests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end

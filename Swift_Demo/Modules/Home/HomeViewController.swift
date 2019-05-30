@@ -106,6 +106,10 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
         
         contetLabel.text = chinese
         contetLabel.adjustFrame()
+        
+        let tool = KKGenericsTool()
+        tool.stackTest()
+        tool.protocolTeslt()
     }
     
     @objc func getContacts() {

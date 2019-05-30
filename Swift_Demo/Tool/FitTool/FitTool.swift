@@ -11,9 +11,7 @@ import UIKit
 class FitTool: NSObject {
 
     static let shareInstance = FitTool()
-    private override init() {
-        
-    }
+    private override init() {}
     
     let kBASE_HEIGHT:CGFloat = 667.0
     let kBASE_WIDTH:CGFloat  = 375.0
