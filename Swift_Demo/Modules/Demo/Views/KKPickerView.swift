@@ -75,7 +75,7 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
         let temp = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         temp.delegate = self
         temp.dataSource = self
-        temp.register(KKCollectionFooterReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: KKCollectionFooterReusableView.identifier)
+        temp.register(KKCollectionFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: KKCollectionFooterReusableView.identifier)
         temp.backgroundColor = UIColor.white
         return temp
     }()
@@ -175,7 +175,7 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
         layer.path = path.cgPath
         layer.fillColor = kCOLOR_WHITE.cgColor
         layer.opacity = 0.7
-        layer.fillRule = kCAFillRuleEvenOdd
+        layer.fillRule = CAShapeLayerFillRule.evenOdd
         self.layer.addSublayer(layer)
     }
     
@@ -261,7 +261,7 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         
     }
     
@@ -279,15 +279,15 @@ extension KKPickerView: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         
         var reusableView :UICollectionReusableView?
         
-        if kind == UICollectionElementKindSectionFooter {
+        if kind == UICollectionView.elementKindSectionFooter {
             
-            let footer :KKCollectionFooterReusableView = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionElementKindSectionFooter, withReuseIdentifier: KKCollectionFooterReusableView.identifier, for: indexPath) as! KKCollectionFooterReusableView
+            let footer :KKCollectionFooterReusableView = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionView.elementKindSectionFooter, withReuseIdentifier: KKCollectionFooterReusableView.identifier, for: indexPath) as! KKCollectionFooterReusableView
 
             reusableView = footer
             
-        } else if  kind == UICollectionElementKindSectionHeader {
+        } else if  kind == UICollectionView.elementKindSectionHeader {
             
-            let header  = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath)
+            let header  = collectionView.dequeueReusableSupplementaryView(ofKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath)
             
             reusableView = header
         }

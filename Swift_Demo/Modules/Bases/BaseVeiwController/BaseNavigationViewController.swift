@@ -28,19 +28,19 @@ class BaseNavigationViewController: UINavigationController,UIGestureRecognizerDe
         UINavigationBar.appearance().barStyle = UIBarStyle.black
         UINavigationBar.appearance().tintColor = kCOLOR_BUTTON_NORMOL
         UINavigationBar.appearance().barTintColor = kCOLOR_CLEAR
-        UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedStringKey.foregroundColor:kCOLOR_WHITE,NSAttributedStringKey.font:kFONT_18]}()
+        UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedString.Key.foregroundColor:kCOLOR_WHITE,NSAttributedString.Key.font:kFONT_18]}()
         UINavigationBar.appearance().backIndicatorImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
     }
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let animatedVC = KKAnimateViewController()
         animatedVC.operation = operation
         return animatedVC
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        if childViewControllers.count == 0 {
+        if children.count == 0 {
             return false
         }
         return true

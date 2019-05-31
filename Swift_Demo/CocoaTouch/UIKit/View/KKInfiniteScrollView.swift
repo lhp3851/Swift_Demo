@@ -67,7 +67,7 @@ class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
             })
             imageView.image = kIMAGE_WITH(name: imageName)
             imageView.isUserInteractionEnabled = true
-            imageView.contentMode = UIViewContentMode.redraw
+            imageView.contentMode = UIView.ContentMode.redraw
             self.addSubview(imageView)
         }
 

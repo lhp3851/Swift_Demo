@@ -10,7 +10,7 @@ import UIKit
 
 class KKAnimateViewController: NSObject,UIViewControllerAnimatedTransitioning {
     
-    var operation: UINavigationControllerOperation = UINavigationControllerOperation.none
+    var operation: UINavigationController.Operation = UINavigationController.Operation.none
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.26
@@ -36,7 +36,7 @@ class KKAnimateViewController: NSObject,UIViewControllerAnimatedTransitioning {
         }
         else{
             fromViewEndFrame.origin.x = fromViewStartFame.size.width
-            containerView.sendSubview(toBack: toView)
+            containerView.sendSubviewToBack(toView)
         }
         
         fromView?.frame = fromViewStartFame

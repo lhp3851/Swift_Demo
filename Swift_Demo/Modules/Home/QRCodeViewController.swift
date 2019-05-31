@@ -113,9 +113,12 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
        
-        let image = info[UIImagePickerControllerEditedImage]
+        let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)]
         fetchImageInfo(image: image as! UIImage) { (reslut) in
             print("reslut:",reslut ?? "thereis no intresting datas")
             self.pickerVC.dismiss(animated: true, completion: nil)
@@ -128,7 +131,7 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
     
     func fetchImageInfo(image:UIImage,complemention:@escaping (String?) -> Void) {
         let detector = CIDetector.init(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])
-        guard let data = UIImagePNGRepresentation(image) else {return}
+        guard let data = image.pngData() else {return}
         guard let ciImage = CIImage.init(data: data) else {return}
         let features = detector?.features(in: ciImage)
         if let result:CIQRCodeFeature = features?.first as? CIQRCodeFeature {
@@ -140,4 +143,14 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
            pickerVC.present(vc, animated: true, completion: nil)
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

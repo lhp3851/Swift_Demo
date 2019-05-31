@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableview: UITableView {
 
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super .init(frame: frame, style: style)
         self.estimatedRowHeight = 0;
         self.estimatedSectionHeaderHeight = 0;

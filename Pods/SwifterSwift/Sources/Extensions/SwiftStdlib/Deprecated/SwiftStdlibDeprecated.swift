@@ -55,7 +55,7 @@ extension String {
 	/// - Returns: first index of substring in string (if applicable).
 	@available(*, deprecated: 4.1.0, message: "Please use string.index(of: Character) or string.range(of: StringProtocol) instead.")
 	public func firstIndex(of string: String) -> Int? {
-		return map({ String($0) }).index(of: string)
+		return map({ String($0) }).firstIndex(of: string)
 	}
 	
 	//

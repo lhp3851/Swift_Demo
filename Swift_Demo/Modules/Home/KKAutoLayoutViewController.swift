@@ -32,39 +32,39 @@ class KKAutoLayoutViewController: BaseViewController {
     
     lazy var topConstraint:NSLayoutConstraint = {
         return NSLayoutConstraint.init(item: btn,
-                                       attribute: NSLayoutAttribute.top,
-                                       relatedBy: NSLayoutRelation.equal,
+                                       attribute: NSLayoutConstraint.Attribute.top,
+                                       relatedBy: NSLayoutConstraint.Relation.equal,
                                        toItem: view,
-                                       attribute: NSLayoutAttribute.top,
+                                       attribute: NSLayoutConstraint.Attribute.top,
                                        multiplier: 1,
                                        constant: 180)
     }()
     
     lazy var centerXContraint:NSLayoutConstraint = {
         return NSLayoutConstraint.init(item: btn,
-                                       attribute: NSLayoutAttribute.centerX,
-                                       relatedBy: NSLayoutRelation.equal,
+                                       attribute: NSLayoutConstraint.Attribute.centerX,
+                                       relatedBy: NSLayoutConstraint.Relation.equal,
                                        toItem: view,
-                                       attribute: NSLayoutAttribute.centerX,
+                                       attribute: NSLayoutConstraint.Attribute.centerX,
                                        multiplier: 1,
                                        constant: 1)
     }()
     
     lazy var leftConstraint:NSLayoutConstraint = {
         return NSLayoutConstraint.init(item: btn,
-                                       attribute: NSLayoutAttribute.left,
-                                       relatedBy: NSLayoutRelation.equal,
+                                       attribute: NSLayoutConstraint.Attribute.left,
+                                       relatedBy: NSLayoutConstraint.Relation.equal,
                                        toItem: view,
-                                       attribute: NSLayoutAttribute.left,
+                                       attribute: NSLayoutConstraint.Attribute.left,
                                        multiplier: 1, constant: 15)
     }()
     
     lazy var rightConstraint:NSLayoutConstraint = {
         return NSLayoutConstraint.init(item: btn,
-                                       attribute: NSLayoutAttribute.right,
-                                       relatedBy: NSLayoutRelation.equal,
+                                       attribute: NSLayoutConstraint.Attribute.right,
+                                       relatedBy: NSLayoutConstraint.Relation.equal,
                                        toItem: view,
-                                       attribute: NSLayoutAttribute.right,
+                                       attribute: NSLayoutConstraint.Attribute.right,
                                        multiplier: 1,
                                        constant: -15)
     }()
@@ -86,7 +86,7 @@ class KKAutoLayoutViewController: BaseViewController {
         let hViews = ["label": label, "btn": btn]
         let hVFL = "H:[label]-middleSpace-[btn]-rightSpace-|"
         let hConstraints:[NSLayoutConstraint] = NSLayoutConstraint.constraints(withVisualFormat: hVFL,
-                                                          options: NSLayoutFormatOptions.directionLeadingToTrailing,
+                                                          options: NSLayoutConstraint.FormatOptions.directionLeadingToTrailing,
                                                           metrics: hMetrics,
                                                           views: hViews)
         
@@ -94,7 +94,7 @@ class KKAutoLayoutViewController: BaseViewController {
         let viewes = ["label": label, "btn": btn]
         let vfls = "V:|-topSpace-[label]-[btn(height)]"
         let vConstraints:[NSLayoutConstraint] = NSLayoutConstraint.constraints(withVisualFormat: vfls,
-                                                          options: NSLayoutFormatOptions(),
+                                                          options: NSLayoutConstraint.FormatOptions(),
                                                           metrics: metrics,
                                                           views: viewes)
 //        label.superview!.addConstraints(hConstraints + vConstraints)

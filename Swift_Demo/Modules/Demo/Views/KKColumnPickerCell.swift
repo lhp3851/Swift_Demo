@@ -22,7 +22,7 @@ class KKColumnPickerCell: UITableViewCell {
         return label
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setPannel()
         setConstraints()
@@ -52,11 +52,11 @@ class KKColumnPickerCell: UITableViewCell {
             let contentWidth = space
             switch aligment {
             case .left:
-                contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth, 0, 0)
+                contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: contentWidth, bottom: 0, right: 0)
             case .right:
-                contentLabel.edgeInsets = UIEdgeInsetsMake(0, 0, 0, contentWidth)
+                contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: contentWidth)
             default:
-                contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth/2, 0, contentWidth/2)
+                contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: contentWidth/2, bottom: 0, right: contentWidth/2)
             }
         }
         else{
@@ -64,11 +64,11 @@ class KKColumnPickerCell: UITableViewCell {
                 let contentWidth = content.width(withConstraniedHeight: 167/3, font: kFONT_15)
                 switch aligment {
                 case .left:
-                    contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth, 0, 0)
+                    contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: contentWidth, bottom: 0, right: 0)
                 case .right:
-                    contentLabel.edgeInsets = UIEdgeInsetsMake(0, 0, 0, contentWidth)
+                    contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: contentWidth)
                 default:
-                    contentLabel.edgeInsets = UIEdgeInsetsMake(0, contentWidth/2, 0, contentWidth/2)
+                    contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: contentWidth/2, bottom: 0, right: contentWidth/2)
                 }
             }
         }

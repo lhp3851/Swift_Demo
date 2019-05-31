@@ -100,7 +100,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
         super.initData()
         
         let chinese : String = "Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。Swift 是一种新的编程语言，用于编写 iOS 和 OS X 应用。\n"
-        let index =  chinese.index(of: "是")
+        let index =  chinese.firstIndex(of: "是")
         let result = chinese.reversed()
         print(chinese.startIndex,chinese.endIndex,chinese.count,"index:",index!,result)
         

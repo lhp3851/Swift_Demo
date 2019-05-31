@@ -39,7 +39,7 @@ class ContactsTableViewCell: UITableViewCell {
         button.backgroundColor = kCOLOR_BUTTON_NORMOL
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 3.0
-        button.addTarget(self, action: #selector(invite), for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: #selector(invite), for: UIControl.Event.touchUpInside)
         return button
     }()
     
@@ -48,7 +48,7 @@ class ContactsTableViewCell: UITableViewCell {
         
     }
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         initPannel()
     }
@@ -92,7 +92,7 @@ class ContactsTableViewCell: UITableViewCell {
     func configCellWith(model:CNContact) -> Void {
 //        self.avatarImageView.image =
         self.nameLabel.text = String.init(format: "%@%@", model.familyName,model.givenName)
-        self.phoneButton.setTitle(model.phoneNumbers.first?.value.stringValue, for: UIControlState.normal)
+        self.phoneButton.setTitle(model.phoneNumbers.first?.value.stringValue, for: UIControl.State.normal)
     }
 
     
