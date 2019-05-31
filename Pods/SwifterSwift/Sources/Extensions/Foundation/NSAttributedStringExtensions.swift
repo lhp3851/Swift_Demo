@@ -24,7 +24,7 @@ public extension NSAttributedString {
 	
 	/// SwifterSwift: Underlined string.
 	public var underlined: NSAttributedString {
-		return applying(attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        return applying(attributes: [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
 	}
 	
 	#if os(iOS)
@@ -36,7 +36,7 @@ public extension NSAttributedString {
 	
 	/// SwifterSwift: Struckthrough string.
 	public var struckthrough: NSAttributedString {
-		return applying(attributes: [.strikethroughStyle: NSNumber(value: NSUnderlineStyle.single.rawValue as Int)])
+        return applying(attributes: [.strikethroughStyle: NSNumber(value: NSUnderlineStyle.styleSingle.rawValue as Int)])
 	}
 	
 	/// SwifterSwift: Dictionary of the attributes applied across the whole string

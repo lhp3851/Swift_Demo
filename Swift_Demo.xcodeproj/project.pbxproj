@@ -55,6 +55,9 @@
 		7A9784221F7559E3003F17D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9784211F7559E3003F17D1 /* String+Extension.swift */; };
 		7A988AC7228D9ACC0071C524 /* KKGenericsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A988AC6228D9ACC0071C524 /* KKGenericsTool.swift */; };
 		7A988AC9228FCCF90071C524 /* KKKeyPathObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A988AC8228FCCF90071C524 /* KKKeyPathObject.swift */; };
+		7AA8452822A18A0200A2821A /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8452322A18A0100A2821A /* CrashManager.swift */; };
+		7AA8452922A18A0200A2821A /* KKExceptionHandler.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8452422A18A0100A2821A /* KKExceptionHandler.c */; };
+		7AA8452A22A18A0200A2821A /* KKExceptionTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8452622A18A0100A2821A /* KKExceptionTool.swift */; };
 		7ADBF67C21A58C8D004B8896 /* KKSKTPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBF67B21A58C8D004B8896 /* KKSKTPickerModel.swift */; };
 		7ADBF67E21A5987E004B8896 /* KKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBF67D21A5987E004B8896 /* KKPickerView.swift */; };
 		7AEB0655229ED90C00869A3F /* KKPromisKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEB0654229ED90C00869A3F /* KKPromisKitViewController.swift */; };
@@ -218,6 +221,11 @@
 		7A9784211F7559E3003F17D1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7A988AC6228D9ACC0071C524 /* KKGenericsTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKGenericsTool.swift; sourceTree = "<group>"; };
 		7A988AC8228FCCF90071C524 /* KKKeyPathObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKKeyPathObject.swift; sourceTree = "<group>"; };
+		7AA8452322A18A0100A2821A /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
+		7AA8452422A18A0100A2821A /* KKExceptionHandler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KKExceptionHandler.c; sourceTree = "<group>"; };
+		7AA8452522A18A0100A2821A /* KKExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKExceptionHandler.h; sourceTree = "<group>"; };
+		7AA8452622A18A0100A2821A /* KKExceptionTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKExceptionTool.swift; sourceTree = "<group>"; };
+		7AA8452722A18A0100A2821A /* Swift_Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7ADBF67B21A58C8D004B8896 /* KKSKTPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKSKTPickerModel.swift; sourceTree = "<group>"; };
 		7ADBF67D21A5987E004B8896 /* KKPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerView.swift; sourceTree = "<group>"; };
 		7AEB0654229ED90C00869A3F /* KKPromisKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPromisKitViewController.swift; sourceTree = "<group>"; };
@@ -403,6 +411,7 @@
 		7A51C5AB1F9124DD002449C6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7AA8452222A18A0100A2821A /* Exception */,
 				7A988AC5228D9A970071C524 /* Generics */,
 				7A606F471F9900C000B47DE8 /* App */,
 				D7E172BD1F96182300A3E247 /* ProgressHUDTool */,
@@ -1158,7 +1167,6 @@
 				B089644429E6E6B35281124B /* Pods */,
 				E1E4B08A8B5DBAD3F02C1C14 /* Frameworks */,
 				7A92DFFA1F8E437F005AC51D /* ReadMe */,
-				BED5CCCB21EC2C1D00240CB9 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1185,6 +1193,7 @@
 				7A9783FD1F7558B1003F17D1 /* Info.plist */,
 				7A9783F11F7558B1003F17D1 /* AppDelegate.swift */,
 				7A51C5A91F91249B002449C6 /* Const.swift */,
+				7AA8452722A18A0100A2821A /* Swift_Demo-Bridging-Header.h */,
 				7A9783FA1F7558B1003F17D1 /* LaunchScreen.storyboard */,
 				7A9783F51F7558B1003F17D1 /* Main.storyboard */,
 				7A9783F31F7558B1003F17D1 /* ViewController.swift */,
@@ -1244,6 +1253,17 @@
 				7A988AC8228FCCF90071C524 /* KKKeyPathObject.swift */,
 			);
 			path = Generics;
+			sourceTree = "<group>";
+		};
+		7AA8452222A18A0100A2821A /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				7AA8452322A18A0100A2821A /* CrashManager.swift */,
+				7AA8452422A18A0100A2821A /* KKExceptionHandler.c */,
+				7AA8452522A18A0100A2821A /* KKExceptionHandler.h */,
+				7AA8452622A18A0100A2821A /* KKExceptionTool.swift */,
+			);
+			path = Exception;
 			sourceTree = "<group>";
 		};
 		B089644429E6E6B35281124B /* Pods */ = {
@@ -1451,13 +1471,6 @@
 				BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */,
 			);
 			path = DataSource;
-			sourceTree = "<group>";
-		};
-		BED5CCCB21EC2C1D00240CB9 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		D7AC7D8A1FC3DCEE00F601A9 /* Button */ = {
@@ -1811,6 +1824,7 @@
 				BD4BF0EB21C7AA3500EDE0FC /* RyPickerView.swift in Sources */,
 				BE2893C321AE6A60002659C0 /* KKSKTPickerView.swift in Sources */,
 				BE30D683221A4C3200434F36 /* KKTranstionViewController.swift in Sources */,
+				7AA8452A22A18A0200A2821A /* KKExceptionTool.swift in Sources */,
 				BE8FB7912248EA7A006E6C34 /* KKAutoLayoutViewController.swift in Sources */,
 				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
@@ -1830,6 +1844,7 @@
 				BD9B37C821DC5A5A007A5AD4 /* RyPickerView + height.swift in Sources */,
 				BE2893DB21AF82D7002659C0 /* KKLabel.swift in Sources */,
 				BD9B37CC21DC5E93007A5AD4 /* RyPickerView + gender.swift in Sources */,
+				7AA8452922A18A0200A2821A /* KKExceptionHandler.c in Sources */,
 				BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */,
 				7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */,
 				BE2893D521AE73BE002659C0 /* KKStaturePickerModel.swift in Sources */,
@@ -1894,6 +1909,7 @@
 				7ADBF67C21A58C8D004B8896 /* KKSKTPickerModel.swift in Sources */,
 				7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */,
 				7AEB0655229ED90C00869A3F /* KKPromisKitViewController.swift in Sources */,
+				7AA8452822A18A0200A2821A /* CrashManager.swift in Sources */,
 				7A606F491F9900DC00B47DE8 /* AppTool.swift in Sources */,
 				7A4C11B61F93069300F02866 /* NetWorkTool.swift in Sources */,
 				BE2893CD21AE736B002659C0 /* KKDatePickerModel.swift in Sources */,
@@ -2100,6 +2116,7 @@
 			baseConfigurationReference = 366743A426254E57AA9554D0 /* Pods-Swift_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2110,6 +2127,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_Demo/Swift_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2120,6 +2138,7 @@
 			baseConfigurationReference = 67F92991FA661353B173534F /* Pods-Swift_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2130,6 +2149,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_Demo/Swift_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -38,7 +38,7 @@ class PMKCLLocationManagerProxy: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    fileprivate func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    internal func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         seal.fulfill(locations)
     }
     

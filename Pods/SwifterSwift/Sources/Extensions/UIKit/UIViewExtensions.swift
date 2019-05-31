@@ -372,13 +372,13 @@ public extension UIView {
 		}
 		switch animationType {
 		case .linear:
-			animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+			animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
 		case .easeIn:
-			animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+			animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
 		case .easeOut:
-			animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+			animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
 		case .easeInOut:
-			animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+			animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
 		}
 		CATransaction.setCompletionBlock(completion)
 		animation.duration = duration

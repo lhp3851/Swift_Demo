@@ -25,7 +25,7 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
         view.sectionIndexColor = kCOLOR_BUTTON_NORMOL
         view.sectionIndexBackgroundColor = kCOLOR_CLEAR
         view.sectionIndexTrackingBackgroundColor = kCOLOR_BUTTON_HEIGHT
-        view.keyboardDismissMode = UIScrollViewKeyboardDismissMode.onDrag
+        view.keyboardDismissMode = UIScrollView.KeyboardDismissMode.onDrag
         return view
     }()
     
