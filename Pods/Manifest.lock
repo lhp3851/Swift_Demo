@@ -1,11 +1,23 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.8.2)
   - Appz (3.2.0)
   - Charts (3.2.1):
     - Charts/Core (= 3.2.1)
   - Charts/Core (3.2.1)
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
+  - Frameworks_Swift (0.0.1):
+    - Alamofire
+    - Kingfisher
+    - matrix-wechat
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+    - SnapKit
+    - SwiftLint
   - Instructions (1.0.0)
-  - Kingfisher (4.10.1)
+  - Kingfisher (5.5.0)
+  - lottie-ios (3.1.0)
   - matrix-wechat (0.5.1):
     - matrix-wechat/matrixARC (= 0.5.1)
     - matrix-wechat/matrixNonARC1 (= 0.5.1)
@@ -16,102 +28,137 @@ PODS:
   - matrix-wechat/matrixNonARC2 (0.5.1):
     - matrix-wechat/matrixARC
   - MBProgressHUD (1.0.0)
-  - Moya (10.0.2):
-    - Moya/Core (= 10.0.2)
-  - Moya/Core (10.0.2):
-    - Alamofire (~> 4.1)
-    - Result (~> 3.0)
   - NVActivityIndicatorView (4.4.0):
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
-  - ObjcExceptionBridging (1.0.1):
-    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
-  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - ObjectMapper (3.3.0)
+  - PermissionScope (1.1.1)
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.1)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
+  - RAMAnimatedTabBarController (5.0.0)
   - ReachabilitySwift (4.3.0)
-  - Result (3.2.4)
+  - Realm (3.16.1):
+    - Realm/Headers (= 3.16.1)
+  - Realm/Headers (3.16.1)
+  - RealmSwift (3.16.1):
+    - Realm (= 3.16.1)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
-  - SDCycleScrollView (1.75):
-    - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
-  - SnapKit (4.0.1)
-  - SQLite.swift (0.11.5):
-    - SQLite.swift/standard (= 0.11.5)
-  - SQLite.swift/standard (0.11.5)
-  - SwifterSwift (4.1.1):
-    - SwifterSwift/AppKit (= 4.1.1)
-    - SwifterSwift/CoreGraphics (= 4.1.1)
-    - SwifterSwift/CoreLocation (= 4.1.1)
-    - SwifterSwift/Foundation (= 4.1.1)
-    - SwifterSwift/SwiftStdlib (= 4.1.1)
-    - SwifterSwift/UIKit (= 4.1.1)
-  - SwifterSwift/AppKit (4.1.1)
-  - SwifterSwift/CoreGraphics (4.1.1)
-  - SwifterSwift/CoreLocation (4.1.1)
-  - SwifterSwift/Foundation (4.1.1)
-  - SwifterSwift/SwiftStdlib (4.1.1)
-  - SwifterSwift/UIKit (4.1.1)
-  - SwiftyJSON (4.2.0)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
+  - SnapKit (5.0.0)
+  - SwifterSwift (5.0.0):
+    - SwifterSwift/AppKit (= 5.0.0)
+    - SwifterSwift/CoreGraphics (= 5.0.0)
+    - SwifterSwift/CoreLocation (= 5.0.0)
+    - SwifterSwift/Dispatch (= 5.0.0)
+    - SwifterSwift/Foundation (= 5.0.0)
+    - SwifterSwift/MapKit (= 5.0.0)
+    - SwifterSwift/SpriteKit (= 5.0.0)
+    - SwifterSwift/SwiftStdlib (= 5.0.0)
+    - SwifterSwift/UIKit (= 5.0.0)
+  - SwifterSwift/AppKit (5.0.0)
+  - SwifterSwift/CoreGraphics (5.0.0)
+  - SwifterSwift/CoreLocation (5.0.0)
+  - SwifterSwift/Dispatch (5.0.0)
+  - SwifterSwift/Foundation (5.0.0)
+  - SwifterSwift/MapKit (5.0.0)
+  - SwifterSwift/SpriteKit (5.0.0)
+  - SwifterSwift/SwiftStdlib (5.0.0)
+  - SwifterSwift/UIKit (5.0.0)
+  - SwiftLint (0.33.0)
+  - SwiftyJSON (5.0.0)
   - SwiftyStoreKit (0.13.3)
-  - XCGLogger (6.0.4):
-    - XCGLogger/Core (= 6.0.4)
-  - XCGLogger/Core (6.0.4):
-    - ObjcExceptionBridging
+  - Texture (2.8.1):
+    - Texture/AssetsLibrary (= 2.8.1)
+    - Texture/Core (= 2.8.1)
+    - Texture/MapKit (= 2.8.1)
+    - Texture/Photos (= 2.8.1)
+    - Texture/PINRemoteImage (= 2.8.1)
+    - Texture/Video (= 2.8.1)
+  - Texture/AssetsLibrary (2.8.1):
+    - Texture/Core
+  - Texture/Core (2.8.1)
+  - Texture/MapKit (2.8.1):
+    - Texture/Core
+  - Texture/Photos (2.8.1):
+    - Texture/Core
+  - Texture/PINRemoteImage (2.8.1):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (2.8.1):
+    - Texture/Core
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
   - Appz
   - Charts
+  - CocoaLumberjack/Swift
+  - Frameworks_Swift
   - Instructions (~> 1.0.0)
-  - Kingfisher (~> 4.0)
-  - matrix-wechat
+  - lottie-ios
   - MBProgressHUD (~> 1.0.0)
-  - Moya (~> 10.0.1)
   - NVActivityIndicatorView
-  - ObjectMapper (~> 3.1)
+  - PermissionScope
+  - RAMAnimatedTabBarController (~> 5.0.0)
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
-  - SDCycleScrollView (~> 1.73)
-  - SnapKit (~> 4.0.0)
-  - SQLite.swift (~> 0.11.5)
-  - SwifterSwift (~> 4.1.0)
+  - RealmSwift
+  - SDCycleScrollView (~> 1.80)
+  - SwifterSwift (~> 5.0.0)
   - SwiftyJSON
   - SwiftyStoreKit
-  - XCGLogger (~> 6.0.1)
+  - Texture
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Appz
     - Charts
+    - CocoaLumberjack
+    - Frameworks_Swift
     - Instructions
     - Kingfisher
+    - lottie-ios
     - matrix-wechat
     - MBProgressHUD
-    - Moya
     - NVActivityIndicatorView
-    - ObjcExceptionBridging
-    - ObjectMapper
-    - Result
+    - PermissionScope
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - RAMAnimatedTabBarController
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
     - SDCycleScrollView
     - SDWebImage
     - SnapKit
-    - SQLite.swift
     - SwifterSwift
+    - SwiftLint
     - SwiftyJSON
     - SwiftyStoreKit
-    - XCGLogger
+    - Texture
 
 EXTERNAL SOURCES:
   ReachabilitySwift:
@@ -123,31 +170,37 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ashleymills/Reachability.swift
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Appz: 9afca8060886b75002092f4b5b5c238a0ab19bf0
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  Frameworks_Swift: f0abb620afe26a76e292438340ede676a9e3b31a
   Instructions: 11b6744e572b8cab6f61e9445403cb95fcde68f1
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  lottie-ios: 9467723922dfff46f6d4e3019c32594a62440b7c
   matrix-wechat: 87e227259bb07bd56b76c0f7f1081bf9593b1eec
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
-  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  PermissionScope: a30c16e015779ba27c97c124e7539e27b5829de2
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  RAMAnimatedTabBarController: 6736db7bec2ec74d64059ee9cb40cb9bd281338e
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  Realm: 601cacc51d8be3b17a377ef787be0f6ee0e76cf1
+  RealmSwift: 486f2e09d5a8ccff63ed66e48d0846b111deb5e5
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
-  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
-  SwifterSwift: bfcae9d659dfd306d164f13f72cad09198f30723
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
+  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
-  XCGLogger: 4fc1bc0bdd5828cb8dc8da7a843536cda1bea8f3
+  Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: d32325657cd358ef64cd15e8dd7e9098019a4627
+PODFILE CHECKSUM: 11608e85becd1cf40cce6ee5478e05283f6128e6
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.7.1
