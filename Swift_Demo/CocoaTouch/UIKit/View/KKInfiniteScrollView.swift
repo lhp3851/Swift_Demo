@@ -16,8 +16,8 @@ protocol KKInfiniteScrollViewDelegate {
 }
 
 class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
-    let width = kWINDOW_WIDTH
-    let height = kFIT_INSTANCE.fitHeight(height: 256.0)
+    let swidth = kWINDOW_WIDTH
+    let sheight = kFIT_INSTANCE.fitHeight(height: 256.0)
     
     private(set) var currentPage = 0 //当前页数
     

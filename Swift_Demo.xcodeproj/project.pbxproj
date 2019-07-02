@@ -93,6 +93,7 @@
 		7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A51FB820B100535D9F /* KKScrollView.swift */; };
 		7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF669A71FB828ED00535D9F /* KKImageView.swift */; };
 		BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE124534219421F900F93C30 /* KKPasteBoardTool.swift */; };
+		BE6592C322B3411E007F6A8A /* KKDynamicStaticFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6592C222B3411E007F6A8A /* KKDynamicStaticFeatures.swift */; };
 		D720B4C51FA6D18C00299462 /* pulling@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C11FA6D18C00299462 /* pulling@2x.gif */; };
 		D720B4C61FA6D18C00299462 /* pulling@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C21FA6D18C00299462 /* pulling@3x.gif */; };
 		D720B4C71FA6D18C00299462 /* refresh_cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */; };
@@ -269,6 +270,7 @@
 		B7A0B08F51942C7643AF53EA /* Pods-Swift_DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_DemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_DemoUITests/Pods-Swift_DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE124534219421F900F93C30 /* KKPasteBoardTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPasteBoardTool.swift; sourceTree = "<group>"; };
 		BE12453621943E8B00F93C30 /* Swift_Demo_README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift_Demo_README.md; sourceTree = "<group>"; };
+		BE6592C222B3411E007F6A8A /* KKDynamicStaticFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDynamicStaticFeatures.swift; sourceTree = "<group>"; };
 		D720B4C11FA6D18C00299462 /* pulling@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@2x.gif"; sourceTree = "<group>"; };
 		D720B4C21FA6D18C00299462 /* pulling@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pulling@3x.gif"; sourceTree = "<group>"; };
 		D720B4C31FA6D18C00299462 /* refresh_cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_cat@2x.png"; sourceTree = "<group>"; };
@@ -1253,6 +1255,7 @@
 		7A9783F01F7558B1003F17D1 /* Swift_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BE6592C122B340E0007F6A8A /* Swift */,
 				7A51C5AB1F9124DD002449C6 /* Tool */,
 				7A51C5861F9122EB002449C6 /* Resources */,
 				7A92DFFD1F8E457E005AC51D /* CocoaTouch */,
@@ -1343,6 +1346,14 @@
 				BE124534219421F900F93C30 /* KKPasteBoardTool.swift */,
 			);
 			path = PasteBoardTool;
+			sourceTree = "<group>";
+		};
+		BE6592C122B340E0007F6A8A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BE6592C222B3411E007F6A8A /* KKDynamicStaticFeatures.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		D720B4C01FA6D18C00299462 /* Refresh */ = {
@@ -1849,6 +1860,7 @@
 				7AF669941FB7DF2800535D9F /* KKInfiniteScrollView.swift in Sources */,
 				7A4C11BC1F9308B200F02866 /* UIImage+Extention.swift in Sources */,
 				7A9783F21F7558B1003F17D1 /* AppDelegate.swift in Sources */,
+				BE6592C322B3411E007F6A8A /* KKDynamicStaticFeatures.swift in Sources */,
 				7A37032B1F950FCC00F519F3 /* ProfileViewes.swift in Sources */,
 				7AF669A81FB828ED00535D9F /* KKImageView.swift in Sources */,
 				D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */,
