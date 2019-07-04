@@ -1,5 +1,5 @@
 #!/bin/sh
-#set -xeuo pipefail
+# set -xeuo pipefail
 #  Script.sh
 #  KKStarZone
 #
@@ -14,20 +14,26 @@ build_path=${project_path}/build
 #工程配置文件路径
 project_name=$(ls | grep xcodeproj | awk -F.xcodeproj '{print $1}')
 project_infoplist_path=${project_path}/${project_name}/Info.plist
+
 #取版本号
 bundleShortVersion=$(/usr/libexec/PlistBuddy -c "print CFBundleShortVersionString" ${project_infoplist_path})
-#取build值
+
+#设置build值
 bundleVersion=$(/usr/libexec/PlistBuddy -c "print CFBundleVersion" ${project_infoplist_path})
+newBundleVersion=$(($bundleVersion+1))
+$(/usr/libexec/PlistBuddy -c "Set :CFBundleVersion $newBundleVersion" ${project_infoplist_path})
+
 #取bundle Identifier前缀
 bundlePrefix=$(/usr/libexec/PlistBuddy -c "print CFBundleIdentifier" `find ./${project_name} -name "Info.plist"` | awk -F$ '{print $1}')
 
-
 echo clean start ...
+
 #删除bulid目录
 if  [ -d ${build_path} ];then
 	rm -rf ${build_path}
 	echo clean build_path success.
 fi
+
 #清理工程
 xcodebuild clean || exit
 
