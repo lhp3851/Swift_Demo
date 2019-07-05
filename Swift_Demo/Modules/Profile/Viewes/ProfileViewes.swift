@@ -11,7 +11,7 @@ import UIKit
 class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
 
     lazy var profileTableView:BaseTableview = {
-        let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
+        let view = BaseTableview.init(frame: CGRect.zero, style: UITableView.Style.grouped)
         view.delegate = self
         view.dataSource = self
         return view
@@ -38,7 +38,7 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
     
     func setConstraints() -> Void {
         self.profileTableView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     
@@ -76,7 +76,7 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
         let identifiler = "identifiler"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifiler)
         if cell == nil {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifiler)
+            cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifiler)
         }
         cell?.accessoryType = .disclosureIndicator
         let model : ProfileModle = self.datas[indexPath.section][indexPath.row]

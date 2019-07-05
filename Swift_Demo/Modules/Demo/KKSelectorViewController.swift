@@ -16,7 +16,7 @@ class KKSelectorViewController: BaseViewController {
     let pickerViewHeight:CGFloat = 297
 
     lazy var listView : BaseTableview = {
-        let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
+        let view = BaseTableview.init(frame: CGRect.zero, style: UITableView.Style.grouped)
         view.delegate = self
         view.dataSource = self
         return view
@@ -67,7 +67,7 @@ class KKSelectorViewController: BaseViewController {
             if #available(iOS 11.0, *) {
                 make.edges.equalTo(self.view.safeAreaLayoutGuide.snp.edges)
             } else {
-                make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+                make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
             }
         }
     }
@@ -114,7 +114,7 @@ extension KKSelectorViewController: UITableViewDelegate,UITableViewDataSource {
         let identifier = "identifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if (cell == nil) {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifier)
+            cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
         }
         if let key = listDatas.keys.first {
             let subDicItem = self.listDatas[key]

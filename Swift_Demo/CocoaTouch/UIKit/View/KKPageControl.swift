@@ -52,7 +52,7 @@ class KKPageControl: UIPageControl {
     
     init(frame: CGRect,type:KKPageControlType) {
         super.init(frame: frame)
-        self.contentMode = UIViewContentMode.redraw
+        self.contentMode = UIView.ContentMode.redraw
         self.normalType = type
         self.setUpPannel()
     }
@@ -76,7 +76,7 @@ class KKPageControl: UIPageControl {
     
     func setUpPannel() -> Void {
         self.backgroundColor = kCOLOR_WHITE
-        self.addTarget(self, action: #selector(click(object:)), for: UIControlEvents.valueChanged)
+        self.addTarget(self, action: #selector(click(object:)), for:UIControl.Event.valueChanged)
     }
     
     func loadDatas() -> Void {

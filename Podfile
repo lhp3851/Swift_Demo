@@ -1,5 +1,3 @@
-# Uncomment the next line to define a global platform for your project
-
 #source 'http://gitlab.lhp.com:9090/iOS/JProjects.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -13,21 +11,22 @@ target 'Swift_Demo' do
   pod 'Frameworks_Swift'
   pod 'SwifterSwift', '~> 5.0.0'
   pod 'Appz' # app Comunication
-  pod 'PermissionScope' #APP权限管理
+  #pod 'PermissionScope' #APP权限管理
   #pod 'ReactiveCocoa', '~> 9.0'
-  
+
   #NetWork
   #pod 'Moya', '~> 10.0.1'
   pod 'SwiftyStoreKit' #轻量级的APP内购框架
   pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
-  
+
   #Datas
   #pod 'XCGLogger', '~> 7.0.0'
   pod 'CocoaLumberjack/Swift'
   #pod 'SQLite.swift', '~> 0.12.0'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
-  
+  pod 'PromiseKit', '~> 6.8'
+
   #UI
   pod 'Texture'
   pod 'Charts'
@@ -41,11 +40,11 @@ target 'Swift_Demo' do
   #pod 'SCLAlertView' #alert View
   #pod 'DOFavoriteButton'#有动画效果的button，适用于收藏、喜欢、点赞等
   #pod 'LTMorphingLabel'#Label
-  
+
   #extend
   #pod 'BluetoothKit', '~> 0.2.0'#
   #pod 'RazzleDazzle' # keyframe-based animation
-  
+
   target 'Swift_DemoTests' do
     inherit! :search_paths
   end
@@ -54,4 +53,14 @@ target 'Swift_Demo' do
     inherit! :search_paths
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'PermissionScope'
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+  end
 end

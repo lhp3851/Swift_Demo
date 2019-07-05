@@ -14,8 +14,15 @@ class BaseViewController: UIViewController {
     typealias NetWorkChangedClosure = () -> Void
     typealias NetWorkStatus = () -> Void
     
-    let reachability = Reachability()!
-    var isNetWorkReachable = (Reachability()?.connection != .none)
+    let reachability = try? Reachability()
+    var isNetWorkReachable:Bool {
+        get {
+            if let  temp = reachability {
+                return temp.connection != .unavailable
+            } else {return false}
+        }
+        set {}
+    }
     
     lazy var translucentView: UIView = {
         let tempView = UIView.init(frame: UIScreen.main.bounds)
@@ -53,7 +60,7 @@ class BaseViewController: UIViewController {
     func listenNetWork() -> Void {
         do {
             
-            try reachability.startNotifier()
+            try reachability?.startNotifier()
             
         } catch {
             
@@ -64,7 +71,7 @@ class BaseViewController: UIViewController {
     
     func loadDataIfNetWorkWithReacablity(isReachable : @escaping NetWorkStatus,unReachable:@escaping NetWorkStatus) -> Void {
         
-        if reachability.connection != .none {
+        if reachability?.connection != .unavailable {
             isReachable()
         }
         else{
@@ -76,7 +83,7 @@ class BaseViewController: UIViewController {
     
     func netWorkChanged(netWorkChangedClosure closure: @escaping NetWorkChangedClosure) -> Void {
         
-        reachability.whenReachable = { reachability in
+        reachability?.whenReachable = { reachability in
             
             DispatchQueue.main.async {
                 
@@ -96,7 +103,7 @@ class BaseViewController: UIViewController {
             }
         }
         
-        reachability.whenUnreachable = { reachability in
+        reachability?.whenUnreachable = { reachability in
             
             DispatchQueue.main.async {
                 

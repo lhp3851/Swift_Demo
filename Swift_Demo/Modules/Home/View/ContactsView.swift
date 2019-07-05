@@ -25,7 +25,7 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
         view.sectionIndexColor = kCOLOR_BUTTON_NORMOL
         view.sectionIndexBackgroundColor = kCOLOR_CLEAR
         view.sectionIndexTrackingBackgroundColor = kCOLOR_BUTTON_HEIGHT
-        view.keyboardDismissMode = UIScrollViewKeyboardDismissMode.onDrag
+        view.keyboardDismissMode = UIScrollView.KeyboardDismissMode.onDrag
         return view
     }()
     
@@ -52,7 +52,7 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
     
     func setConstraints() -> Void {
         self.contactsTableview.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     
@@ -108,7 +108,7 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
         let identifiler = "indentifiler"
         var cell : ContactsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifiler) as? ContactsTableViewCell
         if cell == nil {
-            cell = ContactsTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifiler)
+            cell = ContactsTableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifiler)
         }
         cell?.configCellWith(model: self.datas[indexPath.section][indexPath.row])
         return cell!

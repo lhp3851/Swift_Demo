@@ -37,15 +37,15 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let alert = UIAlertController.init(title: "警告框", message: "提示消息", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alert = UIAlertController.init(title: "警告框", message: "提示消息", preferredStyle: UIAlertController.Style.actionSheet)
         
-        let actionSure = UIAlertAction.init(title: "确定", style: UIAlertActionStyle.default) { (action) in
+        let actionSure = UIAlertAction.init(title: "确定", style: UIAlertAction.Style.default) { (action) in
             print("yes")
         }
-        let actionCancle = UIAlertAction.init(title: "取消", style: UIAlertActionStyle.cancel) { (action) in
+        let actionCancle = UIAlertAction.init(title: "取消", style: UIAlertAction.Style.cancel) { (action) in
             print("取消")
         }
-        let actionDestruct = UIAlertAction.init(title: "Destruct", style: UIAlertActionStyle.destructive) { (action) in
+        let actionDestruct = UIAlertAction.init(title: "Destruct", style: UIAlertAction.Style.destructive) { (action) in
             print("Destruct")
         }
         

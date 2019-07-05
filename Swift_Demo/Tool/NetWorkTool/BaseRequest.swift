@@ -13,8 +13,14 @@ import Reachability
 
 class BaseRequest: NSObject {
 
-    func isReachabile() -> Bool {
-        return  (Reachability()?.connection != .none)
+    private let reachability = try? Reachability()
+    var isReachabile:Bool {
+        get {
+            if let  temp = reachability {
+                return temp.connection != .unavailable
+            } else {return false}
+        }
+        set {}
     }
     
 }

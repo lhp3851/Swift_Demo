@@ -12,9 +12,7 @@ import SQLite3
 class AccountModel: NSObject {
     
     static let shareInstance = AccountModel()
-    private override init() {
-        
-    }
+    private override init() {}
     
     var account : String?
     var password : String?

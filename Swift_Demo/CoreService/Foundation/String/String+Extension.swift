@@ -33,8 +33,8 @@ extension String {
     func getTextHeigh(font:UIFont,width:CGFloat) -> CGFloat {
         let normalText: String = self
         let size = CGSize.init(width: width, height: CGFloat.greatestFiniteMagnitude)
-        let dic = NSDictionary(object: font, forKey: NSAttributedStringKey.font as NSCopying)
-        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context:nil).size
+        let dic = NSDictionary(object: font, forKey: NSAttributedString.Key.font as NSCopying)
+        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key : Any], context:nil).size
         return stringSize.height
     }
     //固定高度计算文字宽度
@@ -42,8 +42,8 @@ extension String {
         
         let normalText: String = self
         let size = CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: height)
-        let dic = NSDictionary(object: font, forKey: NSAttributedStringKey.font as NSCopying)
-        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context:nil).size
+        let dic = NSDictionary(object: font, forKey: NSAttributedString.Key.font as NSCopying)
+        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key : Any], context:nil).size
         return stringSize.width
     }
     

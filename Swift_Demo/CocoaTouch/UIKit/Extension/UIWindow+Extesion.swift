@@ -12,7 +12,7 @@ import UIKit
 
 extension UIWindow {
     
-    class func translucentWindow(level:UIWindowLevel, color:UIColor) -> UIWindow? {
+    class func translucentWindow(level:UIWindow.Level, color:UIColor) -> UIWindow? {
         let normalWindow = UIWindow.init(frame: CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: kWINDOW_HEIGHT))
         normalWindow.windowLevel = level
         normalWindow.backgroundColor = color
@@ -29,11 +29,11 @@ extension UIWindow {
                window有一个属性：windowLevel
                当 windowLevel == UIWindowLevelNormal 的时候，表示这个window是当前屏幕正在显示的window
                */
-             if window?.windowLevel != UIWindowLevelNormal {
+             if window?.windowLevel != UIWindow.Level.normal {
         
                      for tempWindow in UIApplication.shared.windows {
             
-                             if tempWindow.windowLevel == UIWindowLevelNormal {
+                             if tempWindow.windowLevel == UIWindow.Level.normal {
                 
                                      window = tempWindow
                                      break

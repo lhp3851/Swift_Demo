@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-long  calculateAddress(void);
+long calculateAddress(void);
 
 #endif /* KKExceptionHandler_h */

@@ -30,7 +30,7 @@ class ProfileViewController: BaseViewController {
     
     func setConstraints() -> Void {
         self.profileView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     

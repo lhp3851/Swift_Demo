@@ -95,7 +95,7 @@ class NetWorkTool: NSObject {
     ///
     /// - Returns: 可达性
     func checkNetWork() -> Bool {
-        return BaseRequest().isReachabile()
+        return BaseRequest().isReachabile
     }
     
     

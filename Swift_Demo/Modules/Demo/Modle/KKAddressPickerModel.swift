@@ -66,10 +66,19 @@ class KKAddressPickerModel: KKPickerModel {
     
     override var defaultIndex: [Int] {
         get {
-            let provinceIndex = self.provinces.indices(of: "广东省")
-            let cityIndex = self.cities.indices(of: "深圳市")
-            let areaIndex = self.area.indices(of: "宝安区")
-            return [provinceIndex.first ?? 1,cityIndex.first ?? 1,areaIndex.first ?? 1]
+            let provinceIndex = self.provinces.indices { (subString) -> Bool in
+                if subString == "广东省" {return true}
+                return false
+            }
+            let cityIndex = self.cities.indices { (subString) -> Bool in
+                if subString == "深圳市" {return true}
+                return false
+            }
+            let areaIndex = self.area.indices { (subString) -> Bool in
+                if subString == "宝安区" {return true}
+                return false
+            }
+            return [provinceIndex?.first ?? 1,cityIndex?.first ?? 1,areaIndex?.first ?? 1]
         }
         set {}
     }

@@ -49,8 +49,8 @@ class BaseTabBarController: UITabBarController {
     }
     
     func setItemAttribute() -> Void {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kCOLOR_TABBAR_GRAY], for: UIControlState.normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: kCOLOR_NAVIGATION], for: UIControlState.selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: kCOLOR_TABBAR_GRAY], for: UIControl.State.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: kCOLOR_NAVIGATION], for: UIControl.State.selected)
     }
     
     override func didReceiveMemoryWarning() {

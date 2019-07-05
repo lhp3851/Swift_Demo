@@ -99,7 +99,7 @@ class FilesManagerTool: NSObject {
             let image_content_path = Bundle.main.path(forResource: image_name_string, ofType: "gif")
             let image_url = NSURL.fileURL(withPath: image_content_path!)
             let image_data = try? Data.init(contentsOf: image_url, options: Data.ReadingOptions.mappedIfSafe)
-            let image:UIImage? = UIImage.sd_animatedGIF(with: image_data)
+            let image:UIImage? = UIImage.sd_image(withGIFData: image_data)
             return image!
         }
         else{

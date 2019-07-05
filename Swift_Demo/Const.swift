@@ -95,13 +95,13 @@ let kCOLOR_WALLET_LITTLE = kRGBColorFromHex(rgbValue:0xfba78b)  //钱包余额�
 
 let kCOLOR_TRANSLUCENT =  kRGBColorFromHex(rgbValue:0x000000,alpha:0.6)//半透明色
 
-let kCOLOR_CLEAR = kRGBColorFromHex(rgbValue:0xfffff0,alpha:0.0)       //透明色
+let kCOLOR_CLEAR = kRGBColorFromHex(rgbValue:0xfffff0,alpha:0.0)        //透明色
 
-let kCOLOR_SEARCH_BAR  = kRGBColorFromHex(rgbValue:0xf0f0f0)     //条栏点击态
+let kCOLOR_SEARCH_BAR  = kRGBColorFromHex(rgbValue:0xf0f0f0)            //条栏点击态
 
-let kCOLOR_BACKGROUND_COLOR  = kRGBColorFromHex(rgbValue:0xeaecee)     //tableview 背景色
+let kCOLOR_BACKGROUND_COLOR  = kRGBColorFromHex(rgbValue:0xeaecee)      //tableview 背景色
 
-let KCOLOR_TINT_COLOR = kRGBColorFromHex(rgbValue:0x6595F4)         //tintcolor
+let KCOLOR_TINT_COLOR = kRGBColorFromHex(rgbValue:0x6595F4)             //tintcolor
 
 let KCOLOR_SEPERATE_LINE = kRGBColorFromHex(rgbValue:0xedeff0) 
 

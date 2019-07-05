@@ -187,7 +187,7 @@ class RyPickerItemListView: RyPickerItemBaseView {
         headerLabel.frame = CGRect(x: x, y: 0, width: headerWidth, height: h)
         let tableWidth = widthForItemWidth(widthContainer.content)
         if tableView.frame.height != h, h > 0.1{
-            tableView.contentInset = UIEdgeInsetsMake(h / 3.0, 0, h / 3.0, 0)
+            tableView.contentInset = UIEdgeInsets.init(top: h / 3.0, left: 0, bottom: h / 3.0, right: 0)
         }
         tableView.frame = CGRect(x: headerLabel.frame.maxX, y: 0, width: tableWidth, height: h)
         let footerWidth = widthForItemWidth([widthContainer.footer])
@@ -254,7 +254,7 @@ extension RyPickerItemListView: UITableViewDataSource, UITableViewDelegate, UISc
         if let temp = tableView.dequeueReusableCell(withIdentifier: cellType.defaultReuseIdentifier){
             cell = temp
         }else{
-            cell = cellType.init(style: UITableViewCellStyle.default, reuseIdentifier: cellType.defaultReuseIdentifier)
+            cell = cellType.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellType.defaultReuseIdentifier)
         }
         if let temp = cell as? RyBaseTableViewCell{
             temp.update(withData: item)

@@ -34,12 +34,12 @@ class KKTableViewController: BaseViewController {
     }()
     
     lazy var listView : BaseTableview = {
-        let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.plain)
+        let view = BaseTableview.init(frame: CGRect.zero, style: UITableView.Style.plain)
         view.delegate = self
         view.dataSource = self
         view.tableHeaderView = headView
         view.tableFooterView = footerView
-        view.contentInset = UIEdgeInsetsMake(-knavi_status_bar_height, 0, 0, 0)
+        view.contentInset = UIEdgeInsets.init(top: -knavi_status_bar_height, left: 0, bottom: 0, right: 0)
         view.showsVerticalScrollIndicator = false
         return view
     }()
@@ -95,7 +95,7 @@ class KKTableViewController: BaseViewController {
     
     func setConstraints() -> Void {
         self.listView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     
@@ -193,7 +193,7 @@ extension KKTableViewController:UITableViewDelegate,UITableViewDataSource {
         let identifier = "identifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if (cell == nil) {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifier)
+            cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
         }
         let subDicItem = self.listDatas[indexPath.section]
         let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
@@ -245,12 +245,12 @@ extension KKTableViewController {
         if offset >= knavi_status_bar_height {
             statusStyle = .default
             backGroundView.alpha = alpha
-            listView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+            listView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         }
         else if (offset > 0 && offset < knavi_status_bar_height){
             statusStyle = .lightContent
             backGroundView.alpha = 0
-            listView.contentInset = UIEdgeInsetsMake(-knavi_status_bar_height, 0, 0, 0)
+            listView.contentInset = UIEdgeInsets.init(top: -knavi_status_bar_height, left: 0, bottom: 0, right: 0)
         }
     }
 }

@@ -13,6 +13,7 @@ func SignalExceptionHandler(signal:Int32) -> Void
 {
     var mstr = String()
     mstr += "Stack:\n"
+    
     //增加偏移量地址
     mstr = mstr.appendingFormat("slideAdress:0x%0x\r\n", calculateAddress())
     //增加错误信息

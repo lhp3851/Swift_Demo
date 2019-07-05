@@ -98,7 +98,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         layer.path = path.cgPath
         layer.fillColor = kCOLOR_WHITE.cgColor
         layer.opacity = 0.7
-        layer.fillRule = kCAFillRuleEvenOdd
+        layer.fillRule = CAShapeLayerFillRule.evenOdd
         self.layer.addSublayer(layer)
     }
     
@@ -109,7 +109,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         layer.endPoint  = CGPoint.init(x: 0, y: 1.0)
         layer.locations = [0.0,0.5,0.97,1.0]
         layer.frame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: 167)
-        layer.type = kCAGradientLayerAxial
+        layer.type = CAGradientLayerType.axial
         self.layer.addSublayer(layer)
     }
     
