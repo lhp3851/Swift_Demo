@@ -24,7 +24,6 @@
 		7A4C11C11F93096D00F02866 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C11C01F93096D00F02866 /* AccountModel.swift */; };
 		7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C11C21F9309AE00F02866 /* AccountViewController.swift */; };
 		7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C11E41F93230D00F02866 /* ContactsTool.swift */; };
-		7A51C5AA1F91249B002449C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5A91F91249B002449C6 /* Const.swift */; };
 		7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5B81F912949002449C6 /* FilesManagerTool.swift */; };
 		7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5BC1F912B2D002449C6 /* NavigationBar.swift */; };
 		7A5999AE229C3A7A004515C8 /* KKContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */; };
@@ -189,7 +188,6 @@
 		7A4C11C01F93096D00F02866 /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		7A4C11C21F9309AE00F02866 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7A4C11E41F93230D00F02866 /* ContactsTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTool.swift; sourceTree = "<group>"; };
-		7A51C5A91F91249B002449C6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		7A51C5B81F912949002449C6 /* FilesManagerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesManagerTool.swift; sourceTree = "<group>"; };
 		7A51C5BC1F912B2D002449C6 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKContactsManager.swift; sourceTree = "<group>"; };
@@ -1193,23 +1191,13 @@
 		7A9783F01F7558B1003F17D1 /* Swift_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				7AA8452722A18A0100A2821A /* Swift_Demo-Bridging-Header.h */,
-				7A9783FD1F7558B1003F17D1 /* Info.plist */,
-				7A9783F11F7558B1003F17D1 /* AppDelegate.swift */,
-				7A51C5A91F91249B002449C6 /* Const.swift */,
-				7A7C80881F9343AE007532FA /* Headers.swift */,
-				7A9783F31F7558B1003F17D1 /* ViewController.swift */,
-				7A9783F81F7558B1003F17D1 /* Assets.xcassets */,
 				7A92DFFD1F8E457E005AC51D /* CocoaTouch */,
 				7A92E0001F8E45A2005AC51D /* CoreOS */,
 				7A92DFFF1F8E4597005AC51D /* CoreService */,
-				7A4C11A71F9242A600F02866 /* InfoPlist.strings */,
-				7A9783FA1F7558B1003F17D1 /* LaunchScreen.storyboard */,
-				7A4C11AD1F92432700F02866 /* Localizable.strings */,
-				7A9783F51F7558B1003F17D1 /* Main.storyboard */,
 				7A92DFFE1F8E458A005AC51D /* Media */,
 				7A97841F1F755925003F17D1 /* Modules */,
 				7A51C5861F9122EB002449C6 /* Resources */,
+				BEA9789322CF556F009F1C00 /* Supports */,
 				7A51C5AB1F9124DD002449C6 /* Tool */,
 			);
 			path = Swift_Demo;
@@ -1481,6 +1469,23 @@
 				BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BEA9789322CF556F009F1C00 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				7A9783F11F7558B1003F17D1 /* AppDelegate.swift */,
+				7A9783F31F7558B1003F17D1 /* ViewController.swift */,
+				7A7C80881F9343AE007532FA /* Headers.swift */,
+				7A9783F81F7558B1003F17D1 /* Assets.xcassets */,
+				7AA8452722A18A0100A2821A /* Swift_Demo-Bridging-Header.h */,
+				7A9783FD1F7558B1003F17D1 /* Info.plist */,
+				7A4C11A71F9242A600F02866 /* InfoPlist.strings */,
+				7A9783FA1F7558B1003F17D1 /* LaunchScreen.storyboard */,
+				7A4C11AD1F92432700F02866 /* Localizable.strings */,
+				7A9783F51F7558B1003F17D1 /* Main.storyboard */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 		D7AC7D8A1FC3DCEE00F601A9 /* Button */ = {
@@ -1944,7 +1949,6 @@
 				BD9B379221C8DFC5007A5AD4 /* RyPickerViewBaseData.swift in Sources */,
 				7A5999AE229C3A7A004515C8 /* KKContactsManager.swift in Sources */,
 				BD4BF0F421C87E1C00EDE0FC /* RyBaseTableViewCell.swift in Sources */,
-				7A51C5AA1F91249B002449C6 /* Const.swift in Sources */,
 				BE2893D821AEA373002659C0 /* KKColumnPickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
