@@ -18,7 +18,7 @@ class KKButton: UIButton,NVActivityIndicatorViewable {
     }
     
     var animatingView : NVActivityIndicatorView {
-        let view =  NVActivityIndicatorView.init(frame: CGRect.zero, type: NVActivityIndicatorType.ballBeat, color: kCOLOR_WHITE, padding: 0.0)
+        let view =  NVActivityIndicatorView.init(frame: CGRect.zero, type: NVActivityIndicatorType.ballBeat, color: UIColor.kWHITE, padding: 0.0)
         
         return view
     }

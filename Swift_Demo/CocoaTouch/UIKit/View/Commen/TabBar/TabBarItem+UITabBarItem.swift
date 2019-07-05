@@ -12,8 +12,10 @@ import UIKit
 extension UITabBarItem {
      func itemWithImage(title:String,image:String,selectedImage:String) -> Void {
         self.title = title
-        self.selectedImage = kIMAGE_WITH(name: selectedImage)
-        self.image = kIMAGE_WITH(name: image)
+        let image_ex = UIImage.named(selectedImage)
+        print(image_ex)
+        self.selectedImage = UIImage.named(selectedImage)
+        self.image = UIImage.named(image)
         self.titlePositionAdjustment = UIOffset.init(horizontal: 0, vertical: -3.0)
     }
 }

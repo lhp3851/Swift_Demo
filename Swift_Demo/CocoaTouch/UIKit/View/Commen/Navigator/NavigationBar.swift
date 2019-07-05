@@ -53,7 +53,7 @@ class BarButtonItem: UIBarButtonItem {
     }
     
     lazy var QRCodeItem : UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "sweep_icon")
+        let image = UIImage.named("sweep_icon")
         let selector : Selector = #selector(normalSelector)
         let QRCodeBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return QRCodeBarItem;
@@ -61,7 +61,7 @@ class BarButtonItem: UIBarButtonItem {
     
     
     lazy var messageItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "news_icon")
+        let image = UIImage.named("news_icon")
         let selector : Selector = #selector(normalSelector)
         let messageBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return messageBarItem;
@@ -69,28 +69,28 @@ class BarButtonItem: UIBarButtonItem {
     
    
     lazy var phoneItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "call_icon", needOffen: false)
+        let image = UIImage.named("call_icon")
         let selector : Selector = #selector(normalSelector)
         let phoneBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return phoneBarItem;
     }()
     
     lazy var searchItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "search_icon")
+        let image = UIImage.named("search_icon")
         let selector : Selector = #selector(normalSelector)
         let searchBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return searchBarItem;
     }()
     
     lazy var backItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "back_white_icon")
+        let image = UIImage.named("back_white_icon")
         let selector : Selector = #selector(normalSelector)
         let backBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return backBarItem
     }()
     
     lazy var otherItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "more_icon")
+        let image = UIImage.named("more_icon")
         let selector : Selector = #selector(normalSelector)
         let otherBarItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return otherBarItem;
@@ -99,12 +99,12 @@ class BarButtonItem: UIBarButtonItem {
     lazy var normalTextItem :UIBarButtonItem = { () -> UIBarButtonItem in
         let selector : Selector = #selector(normalSelector)
         let normalTextBarItem = UIBarButtonItem.init(title: "推送设置", style: UIBarButtonItem.Style.done, target: self, action: selector);
-        normalTextBarItem.setTitleTextAttributes({[NSAttributedString.Key.foregroundColor:kCOLOR_WHITE,NSAttributedString.Key.font:kFONT_16]}(), for: UIControl.State.normal)
+        normalTextBarItem.setTitleTextAttributes({[NSAttributedString.Key.foregroundColor:UIColor.kWHITE,NSAttributedString.Key.font:UIFont.F16]}(), for: UIControl.State.normal)
         return normalTextBarItem;
     }()
     
     lazy var cancleItem :UIBarButtonItem = { () -> UIBarButtonItem in
-        let image = FilesManagerTool.imageWithNames(imageName: "close_icon")
+        let image = UIImage.named("close_icon")
         let selector : Selector = #selector(normalSelector)
         let cancleItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.done, target: self, action: selector);
         return cancleItem;

@@ -14,9 +14,9 @@ class KKColumnPickerCell: UITableViewCell {
     
     lazy var contentLabel: KKLabel = {
         let label = KKLabel()
-        label.font = kFONT_18
-        label.textColor = kCOLOR_TEXT_FIRST
-        label.backgroundColor = kCOLOR_WHITE
+        label.font = UIFont.F18
+        label.textColor = UIColor.kTEXT_FIRST
+        label.backgroundColor = UIColor.kWHITE
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -61,7 +61,7 @@ class KKColumnPickerCell: UITableViewCell {
         }
         else{
             if let content = contentLabel.text {
-                let contentWidth = content.width(withConstraniedHeight: 167/3, font: kFONT_15)
+                let contentWidth = content.width(withConstraniedHeight: 167/3, font: UIFont.F15)
                 switch aligment {
                 case .left:
                     contentLabel.edgeInsets = UIEdgeInsets.init(top: 0, left: contentWidth, bottom: 0, right: 0)
@@ -78,10 +78,10 @@ class KKColumnPickerCell: UITableViewCell {
     
     func setStyle()  {
         if isFocoused {
-            contentLabel.textColor = KCOLOR_TINT_COLOR
+            contentLabel.textColor = UIColor.kTINT_COLOR
         }
         else{
-            contentLabel.textColor = kCOLOR_TEXT_FIRST
+            contentLabel.textColor = UIColor.kTEXT_FIRST
         }
     }
     

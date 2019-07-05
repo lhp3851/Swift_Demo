@@ -11,6 +11,14 @@ import Reachability
 import StoreKit
 
 class BaseViewController: UIViewController {
+    
+    let kNAVIGATION_BAR_HEIGHT : CGFloat = UIApplication.shared.keyWindow?.rootViewController?.navigationController?.navigationBar.frame.height ?? 44.0
+    let kSTATU_BAR_HEIGHT  : CGFloat     = UIApplication.shared.statusBarFrame.height
+    let kTAB_BAR_HEIGHT : CGFloat        = UIApplication.shared.keyWindow?.rootViewController?.tabBarController?.tabBar.frame.height ?? 49.0
+    var kNAVIGATION_STATU_BAR_HEIGHT:CGFloat {
+        return kNAVIGATION_BAR_HEIGHT + kSTATU_BAR_HEIGHT
+    }
+    
     typealias NetWorkChangedClosure = () -> Void
     typealias NetWorkStatus = () -> Void
     
@@ -48,7 +56,7 @@ class BaseViewController: UIViewController {
     }
     
     func initPannel () -> Void {
-        self.view.backgroundColor = kCOLOR_WHITE
+        self.view.backgroundColor = UIColor.kWHITE
         self.navigationItem.backBarButtonItem = BarButtonItem().itemWithType(type: BarButtomeType.BarButtomeTypeBack, title: "", selector: #selector(pop(toViewController:)), target: self);
     }
     
@@ -161,7 +169,7 @@ class BaseViewController: UIViewController {
         let backButton = UIButton(type: .custom)
         
         // 给按钮设置返回箭头图片
-        backButton.setBackgroundImage(kIMAGE_WITH(name: "back_white_icon"), for: .normal)
+        backButton.setBackgroundImage(UIImage.named("back_white_icon"), for: .normal)
         
         // 设置frame
         backButton.frame = CGRect(x: 200, y: 13, width: 18, height: 18)
@@ -266,4 +274,5 @@ extension BaseViewController:UIGestureRecognizerDelegate {
         }
     }
 }
+
 

@@ -38,8 +38,8 @@ class KKLabel: UILabel {
             let textWidth = text.width(withConstraniedHeight: .greatestFiniteMagnitude, font: self.font)
             let count = text.count
             let length = count - 1
-            let margin = fabs((width - textWidth))/CGFloat(length)
-            let attrs = [NSAttributedString.Key.font:self.font,
+            let margin = abs((width - textWidth))/CGFloat(length)
+            let attrs = [NSAttributedString.Key.font:self.font!,
                          NSAttributedString.Key.kern:margin] as [NSAttributedString.Key : Any]
             let attrText = NSMutableAttributedString.init(string: text, attributes: attrs)
             self.attributedText = attrText
@@ -63,17 +63,11 @@ class KKLabel: UILabel {
         btn.isSelected = !btn.isSelected
         if btn.isSelected {
             let size = btn.sizeThatFits(CGSize.init(width: 80, height: 150))
-            let titleSize = btn.titleLabel?.text!.boundingRect(with: size,
-                                                               options: .usesLineFragmentOrigin,
-                                                               attributes: [NSAttributedString.Key.font : btn.titleLabel?.font],
-                                                               context: nil)
+            let _ = btn.titleLabel?.text!.boundingRect(with: size,
+                                                    options: .usesLineFragmentOrigin,
+                                                    attributes: [NSAttributedString.Key.font : btn.titleLabel?.font! as Any],
+                                                    context: nil)
             let rect = btn.titleLabel?.textRect(forBounds: btn.frame, limitedToNumberOfLines: 2)
-            
-            print("btn.frame:",btn.frame,
-                  "fontSize:",btn.titleLabel?.font.lineHeight,
-                  "size:",size,
-                  "rect:",rect,
-                  "titleSize:",titleSize)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 btn.frame = rect ?? btn.frame

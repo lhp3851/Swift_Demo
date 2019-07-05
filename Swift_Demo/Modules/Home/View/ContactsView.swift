@@ -21,10 +21,10 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
         let view = BaseTableview.init(frame: CGRect.zero, style: .grouped)
         view.delegate = self
         view.dataSource = self
-        view.backgroundColor = kCOLOR_BACKGROUND
-        view.sectionIndexColor = kCOLOR_BUTTON_NORMOL
-        view.sectionIndexBackgroundColor = kCOLOR_CLEAR
-        view.sectionIndexTrackingBackgroundColor = kCOLOR_BUTTON_HEIGHT
+        view.backgroundColor = UIColor.kBACKGROUND
+        view.sectionIndexColor = UIColor.kBUTTON_NORMOL
+        view.sectionIndexBackgroundColor = UIColor.kCLEAR
+        view.sectionIndexTrackingBackgroundColor = UIColor.kBUTTON_HEIGHT
         view.keyboardDismissMode = UIScrollView.KeyboardDismissMode.onDrag
         return view
     }()
@@ -61,7 +61,7 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kFIT_INSTANCE.fitHeight(height: 60.0)
+        return 60.yfit
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -71,15 +71,15 @@ class ContactsView: BaseView,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let contacts = self.datas[section]
         if contacts.count > 0 {
-            return kFIT_INSTANCE.fitHeight(height: 30.0)
+            return 30.yfit
         }
         return CGFloat.leastNormalMagnitude
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headView : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        headView.contentView.backgroundColor = kCOLOR_BACKGROUND
-        headView.textLabel?.textColor = kCOLOR_BUTTON_NORMOL
+        headView.contentView.backgroundColor = UIColor.kBACKGROUND
+        headView.textLabel?.textColor = UIColor.kBUTTON_NORMOL
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

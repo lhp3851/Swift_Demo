@@ -19,24 +19,24 @@ class ContactsTableViewCell: UITableViewCell {
     
     lazy var nameLabel:UILabel = {
         let label = UILabel.init(frame: CGRect.zero)
-        label.font = kFONT_15
-        label.textColor = kCOLOR_TEXT_FIRST
+        label.font = UIFont.F15
+        label.textColor = UIColor.kTEXT_FIRST
         return label
     }()
     
     lazy var phoneButton:UIButton = {
         let button = UIButton.init(frame: CGRect.zero)
-        button.setTitleColor(kCOLOR_BUTTON_HEIGHT, for: .normal)
-        button.titleLabel?.font = kFONT_13
+        button.setTitleColor(UIColor.kBUTTON_HEIGHT, for: .normal)
+        button.titleLabel?.font = UIFont.F13
         return button
     }()
     
     lazy var handlerButton:UIButton = {
         let button = UIButton.init(frame: CGRect.zero)
         button.setTitle("邀请", for: .normal)
-        button.titleLabel?.font = kFONT_14
-        button.setTitleColor(kCOLOR_WHITE, for: .normal)
-        button.backgroundColor = kCOLOR_BUTTON_NORMOL
+        button.titleLabel?.font = UIFont.F13
+        button.setTitleColor(UIColor.kWHITE, for: .normal)
+        button.backgroundColor = UIColor.kBUTTON_NORMOL
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 3.0
         button.addTarget(self, action: #selector(invite), for: UIControl.Event.touchUpInside)
@@ -68,24 +68,24 @@ class ContactsTableViewCell: UITableViewCell {
     
     func setConstraint() -> Void {
         self.avatarImageView.snp.makeConstraints { (make) in
-            make.left.equalTo(kMARGIN_HORIZONE)
-            make.top.equalTo(kFIT_INSTANCE.fitHeight(height: 5.0))
-            make.bottom.equalTo(kFIT_INSTANCE.fitHeight(height: -5.0))
+            make.left.equalTo(UIScreen.hMargin)
+            make.top.equalTo(5.yfit)
+            make.bottom.equalTo((-5).yfit)
         }
         self.nameLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(self.avatarImageView.snp.right).offset(kFIT_INSTANCE.fitWidth(width: 5.0))
+            make.left.equalTo(self.avatarImageView.snp.right).offset(5.xfit)
             make.top.equalTo(self.avatarImageView)
         }
         self.phoneButton.snp.makeConstraints { (make) in
-            make.top.equalTo(self.nameLabel.snp.bottom).offset(kFIT_INSTANCE.fitHeight(height: 2.5))
+            make.top.equalTo(self.nameLabel.snp.bottom).offset(2.yfit)
             make.left.equalTo(self.nameLabel)
-            make.bottom.equalTo(kFIT_INSTANCE.fitHeight(height: -5.0))
+            make.bottom.equalTo(-5.yfit)
         }
         self.handlerButton.snp.makeConstraints { (make) in
-            make.top.equalTo(kFIT_INSTANCE.fitHeight(height: 15.0))
-            make.right.equalTo(-kMARGIN_HORIZONE)
-            make.bottom.equalTo(kFIT_INSTANCE.fitHeight(height: -15.0))
-            make.width.equalTo(kFIT_INSTANCE.fitWidth(width: 60.0))
+            make.top.equalTo(15.xfit)
+            make.right.equalTo(-UIScreen.hMargin)
+            make.bottom.equalTo((-15).xfit)
+            make.width.equalTo(60.xfit)
         }
     }
     

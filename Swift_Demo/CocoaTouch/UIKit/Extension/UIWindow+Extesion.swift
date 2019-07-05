@@ -13,7 +13,7 @@ import UIKit
 extension UIWindow {
     
     class func translucentWindow(level:UIWindow.Level, color:UIColor) -> UIWindow? {
-        let normalWindow = UIWindow.init(frame: CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: kWINDOW_HEIGHT))
+        let normalWindow = UIWindow.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height))
         normalWindow.windowLevel = level
         normalWindow.backgroundColor = color
         normalWindow.makeKeyAndVisible()

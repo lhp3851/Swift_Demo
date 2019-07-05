@@ -20,8 +20,8 @@ class KKTableViewController: BaseViewController {
     
     lazy var headView:UIImageView = {
         let temp = UIImageView()
-        temp.frame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: headHeight)
-        let image = kIMAGE_WITH(name: "navigation_bar")
+        temp.frame = CGRect.init(x: 0, y: 0, width: UIScreen.width, height: headHeight)
+        let image = UIImage.named("navigation_bar")
         temp.image = image
         return temp
     }()
@@ -29,7 +29,7 @@ class KKTableViewController: BaseViewController {
     lazy var footerView:UIView = {
         let temp = UIView()
         temp.backgroundColor = UIColor.yellow
-        temp.frame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: 20)
+        temp.frame = CGRect.init(x: 0, y: 0, width: UIScreen.width, height: 20)
         return temp
     }()
     
@@ -120,7 +120,7 @@ class KKTableViewController: BaseViewController {
             backGroundView.alpha = 1.0
         }
         else{
-            var image = kIMAGE_WITH(name: "navigation_bar", needOften: false)
+            var image = UIImage.named("navigation_bar")
             image = image.withRenderingMode(.alwaysTemplate)
             navigationController?.navigationBar.setBackgroundImage(image, for: .default)
             navigationController?.navigationBar.shadowImage = nil
@@ -160,7 +160,7 @@ extension KKTableViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kFIT_INSTANCE.fitHeight(height: 50.0)
+        return 50.yfit
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -40,10 +40,10 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
     lazy var titleView:UILabel = {
         let temp = UILabel()
         temp.text = "选择器"
-        temp.textColor = kCOLOR_TEXT_FIRST
-        temp.font = kFONT_15
+        temp.textColor = UIColor.kTEXT_FIRST
+        temp.font = UIFont.F15
         temp.textAlignment = .center
-        temp.backgroundColor = kCOLOR_WHITE
+        temp.backgroundColor = UIColor.kWHITE
         temp.isUserInteractionEnabled = true
         temp.addGestureRecognizer(self.tap)
         return temp
@@ -52,9 +52,9 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
     lazy var sendButton:UIButton = {
         let temp = UIButton()
         temp.setTitle("确定", for: .normal)
-        temp.titleLabel?.font = kFONT_15
-        temp.setTitleColor(kCOLOR_BUTTON_NORMOL, for: .normal)
-        temp.backgroundColor = kCOLOR_WHITE
+        temp.titleLabel?.font = UIFont.F15
+        temp.setTitleColor(UIColor.kBUTTON_NORMOL, for: .normal)
+        temp.backgroundColor = UIColor.kWHITE
         temp.addTarget(self, action: #selector(sendDatas(sender:)), for: .touchUpInside)
         return temp
     }()
@@ -62,7 +62,7 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
     lazy var selectorBackView: UIView = {
         let temp = UIView()
         temp.isUserInteractionEnabled = true
-        temp.backgroundColor = kCOLOR_WHITE
+        temp.backgroundColor = UIColor.kWHITE
         temp.addGestureRecognizer(self.tap)
         return temp
     }()
@@ -82,13 +82,13 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
     
     lazy var horizoneLineTop: UIView = {
         let temp = UIView()
-        temp.backgroundColor = KCOLOR_SEPERATE_LINE
+        temp.backgroundColor = UIColor.kSEPERATE_LINE
         return temp
     }()
     
     lazy var horizoneLineBottom: UIView = {
         let temp = UIView()
-        temp.backgroundColor = KCOLOR_SEPERATE_LINE
+        temp.backgroundColor = UIColor.kSEPERATE_LINE
         return temp
     }()
     
@@ -114,8 +114,8 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
     
     func setUpPannel(){
         self.isUserInteractionEnabled = true
-        self.backgroundColor = kCOLOR_BACKGROUND_COLOR
-        self.tintColor = KCOLOR_TINT_COLOR
+        self.backgroundColor = UIColor.kBACKGROUND_COLOR
+        self.tintColor = UIColor.kTINT_COLOR
         addSubview(titleView)
         selectorBackView.addSubview(collectionView)
 //        registeCell(type: self.model.type ?? .education)
@@ -164,8 +164,8 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
     }
     
     func addBlureTheEdges() {
-        let frame = CGRect.init(x: 0, y: 120, width: kWINDOW_WIDTH, height: 56)
-        let fullFrame = CGRect.init(x: 0, y: 65, width: kWINDOW_WIDTH, height: 167)
+        let frame = CGRect.init(x: 0, y: 120, width: UIScreen.width, height: 56)
+        let fullFrame = CGRect.init(x: 0, y: 65, width: UIScreen.width, height: 167)
         let path = UIBezierPath.init(rect: fullFrame)
         let reservePath = UIBezierPath.init(roundedRect: frame, cornerRadius: 5.0)
         path.append(reservePath)
@@ -173,7 +173,7 @@ class KKPickerView: BaseView,UIGestureRecognizerDelegate {
         
         let layer = CAShapeLayer.init(layer: collectionView.layer)
         layer.path = path.cgPath
-        layer.fillColor = kCOLOR_WHITE.cgColor
+        layer.fillColor = UIColor.kWHITE.cgColor
         layer.opacity = 0.7
         layer.fillRule = CAShapeLayerFillRule.evenOdd
         self.layer.addSublayer(layer)

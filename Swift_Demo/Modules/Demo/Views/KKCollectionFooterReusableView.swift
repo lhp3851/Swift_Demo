@@ -16,8 +16,8 @@ class KKCollectionFooterReusableView: UICollectionReusableView {
     
     lazy var unitLabel:UILabel = {
         let temp = UILabel()
-        temp.textColor = KCOLOR_TINT_COLOR
-        temp.font = kFONT_15
+        temp.textColor = UIColor.kTINT_COLOR
+        temp.font = UIFont.F15
         temp.textAlignment = .left
         return temp
     }()

@@ -25,8 +25,6 @@
 		7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C11C21F9309AE00F02866 /* AccountViewController.swift */; };
 		7A4C11E51F93230D00F02866 /* ContactsTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4C11E41F93230D00F02866 /* ContactsTool.swift */; };
 		7A51C5AA1F91249B002449C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5A91F91249B002449C6 /* Const.swift */; };
-		7A51C5AE1F912515002449C6 /* FitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5AD1F912515002449C6 /* FitTool.swift */; };
-		7A51C5B11F912775002449C6 /* DeviceInfoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5B01F912775002449C6 /* DeviceInfoTool.swift */; };
 		7A51C5B91F912949002449C6 /* FilesManagerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5B81F912949002449C6 /* FilesManagerTool.swift */; };
 		7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A51C5BC1F912B2D002449C6 /* NavigationBar.swift */; };
 		7A5999AE229C3A7A004515C8 /* KKContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */; };
@@ -127,6 +125,14 @@
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
 		BE97813B21C7B64900E4BCA5 /* KKPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */; };
 		BE97813E21C7B76700E4BCA5 /* KKTimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */; };
+		BEA9788522CF270D009F1C00 /* RyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788022CF270C009F1C00 /* RyTheme.swift */; };
+		BEA9788722CF270D009F1C00 /* RyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788222CF270C009F1C00 /* RyScreen.swift */; };
+		BEA9788822CF270D009F1C00 /* RyFitTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788322CF270D009F1C00 /* RyFitTool.swift */; };
+		BEA9788922CF270D009F1C00 /* RyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788422CF270D009F1C00 /* RyDevice.swift */; };
+		BEA9788B22CF2742009F1C00 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788A22CF2742009F1C00 /* Fonts.swift */; };
+		BEA9788D22CF2C2C009F1C00 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788C22CF2C2C009F1C00 /* Colors.swift */; };
+		BEA9789022CF3494009F1C00 /* Configures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9788F22CF3494009F1C00 /* Configures.swift */; };
+		BEA9789222CF370A009F1C00 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9789122CF370A009F1C00 /* Images.swift */; };
 		D7AA87781FA2DF3D00049277 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */; };
 		D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */; };
 		D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */; };
@@ -184,8 +190,6 @@
 		7A4C11C21F9309AE00F02866 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7A4C11E41F93230D00F02866 /* ContactsTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTool.swift; sourceTree = "<group>"; };
 		7A51C5A91F91249B002449C6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		7A51C5AD1F912515002449C6 /* FitTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitTool.swift; sourceTree = "<group>"; };
-		7A51C5B01F912775002449C6 /* DeviceInfoTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoTool.swift; sourceTree = "<group>"; };
 		7A51C5B81F912949002449C6 /* FilesManagerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesManagerTool.swift; sourceTree = "<group>"; };
 		7A51C5BC1F912B2D002449C6 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		7A5999AD229C3A7A004515C8 /* KKContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKContactsManager.swift; sourceTree = "<group>"; };
@@ -299,6 +303,14 @@
 		BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKCollectionFooterReusableView.swift; sourceTree = "<group>"; };
 		BE97813A21C7B64900E4BCA5 /* KKPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerViewDataSource.swift; sourceTree = "<group>"; };
 		BE97813D21C7B76700E4BCA5 /* KKTimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTimePickerDataSource.swift; sourceTree = "<group>"; };
+		BEA9788022CF270C009F1C00 /* RyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyTheme.swift; sourceTree = "<group>"; };
+		BEA9788222CF270C009F1C00 /* RyScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyScreen.swift; sourceTree = "<group>"; };
+		BEA9788322CF270D009F1C00 /* RyFitTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyFitTool.swift; sourceTree = "<group>"; };
+		BEA9788422CF270D009F1C00 /* RyDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RyDevice.swift; sourceTree = "<group>"; };
+		BEA9788A22CF2742009F1C00 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		BEA9788C22CF2C2C009F1C00 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BEA9788F22CF3494009F1C00 /* Configures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configures.swift; sourceTree = "<group>"; };
+		BEA9789122CF370A009F1C00 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Images.swift; path = Swift_Demo/Resources/Images.swift; sourceTree = SOURCE_ROOT; };
 		D7AA87771FA2DF3D00049277 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		D7AC7D8D1FC3DDF800F601A9 /* KKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKButton.swift; sourceTree = "<group>"; };
 		D7AC7D921FC3E0CA00F601A9 /* KKDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKDemoViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +409,7 @@
 			children = (
 				BE58520521A5755B00B36450 /* Files */,
 				7A51C5871F9122F9002449C6 /* Images */,
+				BEA9788F22CF3494009F1C00 /* Configures.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -404,6 +417,7 @@
 		7A51C5871F9122F9002449C6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BEA9789122CF370A009F1C00 /* Images.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -417,7 +431,6 @@
 				D7E172BD1F96182300A3E247 /* ProgressHUDTool */,
 				7A4C11B11F93069300F02866 /* NetWorkTool */,
 				7A51C5B71F912949002449C6 /* FileManegerTool */,
-				7A51C5AF1F912775002449C6 /* DeviceInfoTool */,
 				7A51C5AC1F912515002449C6 /* FitTool */,
 			);
 			path = Tool;
@@ -426,17 +439,14 @@
 		7A51C5AC1F912515002449C6 /* FitTool */ = {
 			isa = PBXGroup;
 			children = (
-				7A51C5AD1F912515002449C6 /* FitTool.swift */,
+				BEA9788422CF270D009F1C00 /* RyDevice.swift */,
+				BEA9788322CF270D009F1C00 /* RyFitTool.swift */,
+				BEA9788222CF270C009F1C00 /* RyScreen.swift */,
+				BEA9788022CF270C009F1C00 /* RyTheme.swift */,
+				BEA9788A22CF2742009F1C00 /* Fonts.swift */,
+				BEA9788C22CF2C2C009F1C00 /* Colors.swift */,
 			);
 			path = FitTool;
-			sourceTree = "<group>";
-		};
-		7A51C5AF1F912775002449C6 /* DeviceInfoTool */ = {
-			isa = PBXGroup;
-			children = (
-				7A51C5B01F912775002449C6 /* DeviceInfoTool.swift */,
-			);
-			path = DeviceInfoTool;
 			sourceTree = "<group>";
 		};
 		7A51C5B71F912949002449C6 /* FileManegerTool */ = {
@@ -1183,14 +1193,16 @@
 		7A9783F01F7558B1003F17D1 /* Swift_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7AA8452722A18A0100A2821A /* Swift_Demo-Bridging-Header.h */,
+				7A9783FD1F7558B1003F17D1 /* Info.plist */,
 				7A9783F11F7558B1003F17D1 /* AppDelegate.swift */,
+				7A51C5A91F91249B002449C6 /* Const.swift */,
+				7A7C80881F9343AE007532FA /* Headers.swift */,
+				7A9783F31F7558B1003F17D1 /* ViewController.swift */,
 				7A9783F81F7558B1003F17D1 /* Assets.xcassets */,
 				7A92DFFD1F8E457E005AC51D /* CocoaTouch */,
-				7A51C5A91F91249B002449C6 /* Const.swift */,
 				7A92E0001F8E45A2005AC51D /* CoreOS */,
 				7A92DFFF1F8E4597005AC51D /* CoreService */,
-				7A7C80881F9343AE007532FA /* Headers.swift */,
-				7A9783FD1F7558B1003F17D1 /* Info.plist */,
 				7A4C11A71F9242A600F02866 /* InfoPlist.strings */,
 				7A9783FA1F7558B1003F17D1 /* LaunchScreen.storyboard */,
 				7A4C11AD1F92432700F02866 /* Localizable.strings */,
@@ -1198,9 +1210,7 @@
 				7A92DFFE1F8E458A005AC51D /* Media */,
 				7A97841F1F755925003F17D1 /* Modules */,
 				7A51C5861F9122EB002449C6 /* Resources */,
-				7AA8452722A18A0100A2821A /* Swift_Demo-Bridging-Header.h */,
 				7A51C5AB1F9124DD002449C6 /* Tool */,
-				7A9783F31F7558B1003F17D1 /* ViewController.swift */,
 			);
 			path = Swift_Demo;
 			sourceTree = "<group>";
@@ -1816,6 +1826,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4C11B51F93069300F02866 /* BaseRequest.swift in Sources */,
+				BEA9788D22CF2C2C009F1C00 /* Colors.swift in Sources */,
 				7A3DB0401FB33CEE00053419 /* KKPageControl.swift in Sources */,
 				BE2893CB21AE7352002659C0 /* KKAddressPickerModel.swift in Sources */,
 				BE2893C721AE72F4002659C0 /* KKEducationPickerModel.swift in Sources */,
@@ -1835,6 +1846,7 @@
 				D7AC7D981FC40C2400F601A9 /* KKButtonViewController.swift in Sources */,
 				7AF669A61FB820B100535D9F /* KKScrollView.swift in Sources */,
 				BD9B37C621DC546A007A5AD4 /* RyPickerContentView.swift in Sources */,
+				BEA9788922CF270D009F1C00 /* RyDevice.swift in Sources */,
 				BE2893C121AE6A46002659C0 /* KKAddressPickerView.swift in Sources */,
 				7A7C80841F9342E8007532FA /* ContactsView.swift in Sources */,
 				BD9B37BE21D7174A007A5AD4 /* RyPickerView + MedicationRecord.swift in Sources */,
@@ -1844,6 +1856,7 @@
 				BE2893B721AE69D0002659C0 /* KKDatePickerView.swift in Sources */,
 				BE2893D121AE738F002659C0 /* KKDateTimePickerModel.swift in Sources */,
 				BE2893BD21AE6A08002659C0 /* KKWeightPickerView.swift in Sources */,
+				BEA9788B22CF2742009F1C00 /* Fonts.swift in Sources */,
 				BD9B37D621DC8E03007A5AD4 /* RyPickerRowData.swift in Sources */,
 				BE2893CF21AE737C002659C0 /* KKTimePickerModel.swift in Sources */,
 				7A4C11BB1F9308B200F02866 /* UIView+Extention.swift in Sources */,
@@ -1852,6 +1865,7 @@
 				BD9B37CC21DC5E93007A5AD4 /* RyPickerView + gender.swift in Sources */,
 				7AA8452922A18A0200A2821A /* KKExceptionHandler.c in Sources */,
 				BE5851FD21A559DF00B36450 /* KKSelectorViewController.swift in Sources */,
+				BEA9788822CF270D009F1C00 /* RyFitTool.swift in Sources */,
 				7A78189E1F8FC50B0043254E /* BaseViewController.swift in Sources */,
 				BE2893D521AE73BE002659C0 /* KKStaturePickerModel.swift in Sources */,
 				D7C872771FC9483600BE53F0 /* KKWebViewViewController.swift in Sources */,
@@ -1861,13 +1875,15 @@
 				7A4C11991F91F9EA00F02866 /* ContactsViewController.swift in Sources */,
 				BE30D685221A4E0700434F36 /* KKAnimateViewController.swift in Sources */,
 				7A9783F41F7558B1003F17D1 /* ViewController.swift in Sources */,
+				BEA9788522CF270D009F1C00 /* RyTheme.swift in Sources */,
 				BE124535219421F900F93C30 /* KKPasteBoardTool.swift in Sources */,
 				7A4C11C31F9309AE00F02866 /* AccountViewController.swift in Sources */,
 				BE5851FF21A55A7000B36450 /* SelectorConst.swift in Sources */,
-				7A51C5AE1F912515002449C6 /* FitTool.swift in Sources */,
 				7A7818B31F8FC94B0043254E /* BaseView.swift in Sources */,
+				BEA9788722CF270D009F1C00 /* RyScreen.swift in Sources */,
 				BE2893B521AE69B7002659C0 /* KKEducationPickerView.swift in Sources */,
 				7A7818AE1F8FC8C70043254E /* BaseTabBarController.swift in Sources */,
+				BEA9789222CF370A009F1C00 /* Images.swift in Sources */,
 				7A7818A81F8FC7BB0043254E /* GenealogyViewController.swift in Sources */,
 				BD9B37C021D71F04007A5AD4 /* RyPickerView + NightWakeupRecord.swift in Sources */,
 				BE2893B921AE69E1002659C0 /* KKTimePickerView.swift in Sources */,
@@ -1895,6 +1911,7 @@
 				D7AC7D931FC3E0CA00F601A9 /* KKDemoViewController.swift in Sources */,
 				BE2893C921AE7315002659C0 /* KKGenderPickerModel.swift in Sources */,
 				7A7C80811F934187007532FA /* BaseTableview.swift in Sources */,
+				BEA9789022CF3494009F1C00 /* Configures.swift in Sources */,
 				BD67D04321E8493E001577F1 /* RyRoundLabelTableViewCell.swift in Sources */,
 				BD4BF0F921C8816000EDE0FC /* RyPickerDefined.swift in Sources */,
 				BD9B37D421DC8540007A5AD4 /* RyBirthdatePikerView.swift in Sources */,
@@ -1904,7 +1921,6 @@
 				BE2893BF21AE6A2F002659C0 /* KKStaturePickerView.swift in Sources */,
 				BD4BF0EE21C7AB7500EDE0FC /* RyUI.swift in Sources */,
 				7A606F461F98F83D00B47DE8 /* StorePageViewController.swift in Sources */,
-				7A51C5B11F912775002449C6 /* DeviceInfoTool.swift in Sources */,
 				7A08544C1F91334100CAE1BC /* TabBarItem+UITabBarItem.swift in Sources */,
 				7A4C11BD1F9308B200F02866 /* UIWindow+Extesion.swift in Sources */,
 				D7AC7D8E1FC3DDF800F601A9 /* KKButton.swift in Sources */,

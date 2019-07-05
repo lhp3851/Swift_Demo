@@ -57,7 +57,7 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     
     //MARK: UITableViewDataSource , UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kFIT_INSTANCE.fitHeight(height: 50.0)
+        return 50.yfit
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
