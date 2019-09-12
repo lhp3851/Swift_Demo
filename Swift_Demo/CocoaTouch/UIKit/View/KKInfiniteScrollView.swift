@@ -16,8 +16,8 @@ protocol KKInfiniteScrollViewDelegate {
 }
 
 class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
-    let viewWidth = kWINDOW_WIDTH
-    let viewHeight = kFIT_INSTANCE.fitHeight(height: 256.0)
+    let viewWidth = UIScreen.width
+    let viewHeight = 256.yfit
     
     private(set) var currentPage = 0 //当前页数
     
@@ -65,7 +65,7 @@ class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
             let imageView = KKImageView.init(frame: frame, action: { (imageView) in
                 print("clicked imageView")
             })
-            imageView.image = kIMAGE_WITH(name: imageName)
+            imageView.image = UIImage.named(imageName)
             imageView.isUserInteractionEnabled = true
             imageView.contentMode = UIView.ContentMode.redraw
             self.addSubview(imageView)

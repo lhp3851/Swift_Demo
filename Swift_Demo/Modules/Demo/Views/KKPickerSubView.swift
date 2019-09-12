@@ -87,8 +87,8 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
 
     
     func addBlureTheEdges() {
-        let frame = CGRect.init(x: 0, y: 54.5, width: kWINDOW_WIDTH, height: 55.5)
-        let fullFrame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: 167)
+        let frame = CGRect.init(x: 0, y: 54.5, width: UIScreen.width, height: 55.5)
+        let fullFrame = CGRect.init(x: 0, y: 0, width: UIScreen.width, height: 167)
         let path = UIBezierPath.init(rect: fullFrame)
         let reservePath = UIBezierPath.init(roundedRect: frame, cornerRadius: 5.0)
         path.append(reservePath)
@@ -96,7 +96,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         
         let layer = CAShapeLayer.init(layer: pickerTableView.layer)
         layer.path = path.cgPath
-        layer.fillColor = kCOLOR_WHITE.cgColor
+        layer.fillColor = UIColor.kWHITE.cgColor
         layer.opacity = 0.7
         layer.fillRule = CAShapeLayerFillRule.evenOdd
         self.layer.addSublayer(layer)
@@ -104,11 +104,11 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
     
     func gradientLayer() {
         let layer = CAGradientLayer.init(layer: pickerTableView.layer)
-        layer.colors = [kCOLOR_WHITE.cgColor,kCOLOR_CLEAR.cgColor,kCOLOR_WHITE.cgColor]
+        layer.colors = [UIColor.kWHITE.cgColor,UIColor.kCLEAR.cgColor,UIColor.kWHITE.cgColor]
         layer.startPoint = CGPoint.init(x: 0, y: 0)
         layer.endPoint  = CGPoint.init(x: 0, y: 1.0)
         layer.locations = [0.0,0.5,0.97,1.0]
-        layer.frame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: 167)
+        layer.frame = CGRect.init(x: 0, y: 0, width: UIScreen.width, height: 167)
         layer.type = CAGradientLayerType.axial
         self.layer.addSublayer(layer)
     }
@@ -125,7 +125,7 @@ class KKPickerSubView: UICollectionViewCell,KKPickerDataProtocol {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             let cell:KKColumnPickerCell = self.pickerTableView.cellForRow(at: index_path) as! KKColumnPickerCell
-            cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+            cell.contentLabel.textColor = UIColor.kTINT_COLOR
         }
         self.indexPath?.row = index
     }
@@ -189,7 +189,7 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
         if deltaH >= 55/2 {
             for visualCell in tableView.visibleCells  {
                 let temp = visualCell as! KKColumnPickerCell
-                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
+                temp.contentLabel.textColor = UIColor.kTEXT_FIRST
             }
 
             let indexPath = IndexPath.init(row: lineNumber + 1, section: 0)
@@ -199,13 +199,13 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
                 pickDatas(model: self.model!)
             }
             if let cell = tableView.cellForRow(at: indexPath) as? KKColumnPickerCell{
-                cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+                cell.contentLabel.textColor = UIColor.kTINT_COLOR
             }
         }
         else{
             for visualCell in tableView.visibleCells  {
                 let temp = visualCell as! KKColumnPickerCell
-                temp.contentLabel.textColor = kCOLOR_TEXT_FIRST
+                temp.contentLabel.textColor = UIColor.kTEXT_FIRST
             }
             let indexPath = IndexPath.init(row: lineNumber , section: 0)
             if indexPath.row <= datas[0].count {
@@ -214,7 +214,7 @@ extension KKPickerSubView: UITableViewDelegate,UITableViewDataSource{
                 pickDatas(model: self.model!)
             }
             if let cell = tableView.cellForRow(at: indexPath) as? KKColumnPickerCell{
-                cell.contentLabel.textColor = KCOLOR_TINT_COLOR
+                cell.contentLabel.textColor = UIColor.kTINT_COLOR
             }
         }
     }

@@ -87,60 +87,6 @@ class FilesManagerTool: NSObject {
         }
     }
     
-    class func imageWithNames(imageName:String) -> UIImage {
-        if imageName.isEmpty {
-            return UIImage();
-        }
-        
-        var name = imageName
-        if name.hasSuffix("gif") {
-            let image_name = name.split(separator: ".").first
-            let image_name_string = image_name?.decomposedStringWithCompatibilityMapping
-            let image_content_path = Bundle.main.path(forResource: image_name_string, ofType: "gif")
-            let image_url = NSURL.fileURL(withPath: image_content_path!)
-            let image_data = try? Data.init(contentsOf: image_url, options: Data.ReadingOptions.mappedIfSafe)
-            let image:UIImage? = UIImage.sd_image(withGIFData: image_data)
-            return image!
-        }
-        else{
-            if UIDevice().retina > 2.0  {
-                name  = imageName + "@3x.png"
-            }
-            else{
-                name  = imageName + "@2x.png"
-            }
-            var image:UIImage? = UIImage(named: name);
-            
-            if image == nil {// 非2x、3x图片
-                image = UIImage(named: imageName)
-            }
-            
-            image = image?.withRenderingMode(.alwaysOriginal);
-            return image!;
-        }
-    }
-    
-    class func imageWithNames(imageName:String,needOffen:Bool) -> UIImage {
-        if !needOffen {
-            return self.imageWithNames(imageName: imageName)
-        }
-        else{
-            if let bundle = Bundle.main.path(forResource: imageName, ofType: nil){
-                var image = UIImage(contentsOfFile: bundle)
-                image = image?.withRenderingMode(.alwaysOriginal)
-                if let image = image {
-                    return image
-                }
-                else{// 非2x、3x图片
-                    image = UIImage(named: imageName)
-                    return image!
-                }
-            }
-            else{
-                return UIImage()
-            }
-        }
-    }
     // MARK: Contents Path
     
     /// 获取应用程序目录

@@ -124,6 +124,7 @@ DEPENDENCIES:
   - Frameworks_Swift
   - Instructions (~> 1.0.0)
   - lottie-ios
+  - matrix-wechat
   - MBProgressHUD (~> 1.0.0)
   - NVActivityIndicatorView
   - PromiseKit (~> 6.8)
@@ -209,6 +210,6 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: 4651cedb58cf47a4c280e57c94b7ef6f57e93c66
+PODFILE CHECKSUM: 3537dcb52fa97bb260df5ef19437c3aee5b7d720
 
 COCOAPODS: 1.7.3

@@ -56,7 +56,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
     }()
 
     lazy var scrollView : SDCycleScrollView = {
-        let infinitFrame = CGRect.init(x: 0, y: 0, width: kWINDOW_WIDTH, height: kFIT_INSTANCE.fitHeight(height: 256))
+        let infinitFrame = CGRect.init(x: 0, y: 0, width: UIScreen.width, height: 256.yfit)
         let view = SDCycleScrollView.init(frame: infinitFrame, imageNamesGroup: ["image1","image2","image3"])
         view?.autoScrollTimeInterval = 2.0
         view?.pageControlStyle = SDCycleScrollViewPageContolStyle.init(1)
@@ -65,16 +65,16 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
     }()
 
     lazy var infinitView : KKScrollView = {
-        let infinitFrame = CGRect.init(x: 0, y: self.scrollView.frame.maxY + 20.0, width: kWINDOW_WIDTH, height: kFIT_INSTANCE.fitHeight(height: 256))
+        let infinitFrame = CGRect.init(x: 0, y: self.scrollView.frame.maxY + 20.0, width: UIScreen.width, height: 256.yfit)
         let view = KKScrollView.init(frame: infinitFrame, needControl: true)
         return view
     }()
 
     lazy var contetLabel:KKLabel = {
-        let frame = CGRect.init(x: 15, y: 15 + kNAVIGATION_STATU_BAR_HEIGHT, width: kWINDOW_WIDTH - 30, height: 30)
+        let frame = CGRect.init(x: 15, y: 15 + kNAVIGATION_STATU_BAR_HEIGHT, width: UIScreen.width - 30, height: 30)
         let temp = KKLabel.init(frame: frame)
         temp.textAlignment = .left
-        temp.backgroundColor = kCOLOR_NOTTOUCH
+        temp.backgroundColor = UIColor.kNOTTOUCH
         temp.numberOfLines = 0
         temp.lineBreakMode = NSLineBreakMode.byClipping
         return temp
@@ -88,7 +88,7 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
 
     override func initPannel() {
         super.initPannel()
-        self.view.backgroundColor = kCOLOR_BACKGROUND
+        self.view.backgroundColor = UIColor.kBACKGROUND
         self.navigationItem.leftBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypePhone, title: "", selector: #selector(getContacts), target: self)
         self.navigationItem.rightBarButtonItem = BarButtonItem().itemWithType(type: .BarButtomeTypeQRCode, title: "", selector: #selector(scanQRcode), target: self)
         self.view.addSubview(contetLabel)
@@ -123,8 +123,9 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: QRcodeVC, animated: true)
     }
 
+    // MARK: -  Touchs
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        print("subViewes:",self.view.subviews[-1])
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,7 +139,8 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
     @objc func injected(){
          print("I've been injected: \(self)")
     }
-
+    
+    // MARK: -  CAAnimationDelegate
     func animationDidStart(_ anim: CAAnimation) {
         print("animate start")
     }

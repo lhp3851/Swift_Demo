@@ -14,8 +14,8 @@ class ProgressHUDTool: BaseView {
 
     static var activityView : NVActivityIndicatorView = {
         let frame = CGRect.init(x: 0.0, y: 0.0, width: 50.0, height: 50.0)
-        let view = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.ballClipRotate, color: kCOLOR_WHITE, padding: kMARGIN_HORIZONE)
-        view.backgroundColor = kCOLOR_SAFELY
+        let view = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.ballClipRotate, color: UIColor.kWHITE, padding: UIScreen.hMargin)
+        view.backgroundColor = UIColor.kSAFELY
         return view
     }()
     
@@ -33,7 +33,7 @@ class ProgressHUDTool: BaseView {
         let hud = MBProgressHUD.showAdded(to: toView, animated: true)
         hud.mode = .indeterminate
         hud.animationType = .zoom
-        hud.margin = kMARGIN_HORIZONE
+        hud.margin = UIScreen.hMargin
         hud.offset = CGPoint.init(x: 0, y: 0)
         hud.isSquare = false
         DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {

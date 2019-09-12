@@ -49,7 +49,7 @@ class QRCodeViewController: BaseViewController,AVCaptureMetadataOutputObjectsDel
     
     
     lazy var rightItem:UIBarButtonItem = {
-        let item = UIBarButtonItem.init(image: FilesManagerTool.imageWithNames(imageName: "sweep_icon"),
+        let item = UIBarButtonItem.init(image: UIImage.named("sweep_icon"),
                                         style: .done,
                                         target: self,
                                         action: #selector(getImage(sender:)))

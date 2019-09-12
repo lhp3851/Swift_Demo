@@ -22,15 +22,15 @@ class BaseNavigationViewController: UINavigationController,UIGestureRecognizerDe
     }
 
     func initNavigationBar() -> Void {
-        var image = kIMAGE_WITH(name: "navigation_bar", needOften: false)
+        var image = UIImage.named("navigation_bar")
         image = image.withRenderingMode(.alwaysTemplate)
         UINavigationBar.appearance().setBackgroundImage(image, for: UIBarMetrics.default)
         UINavigationBar.appearance().barStyle = UIBarStyle.black
-        UINavigationBar.appearance().tintColor = kCOLOR_BUTTON_NORMOL
-        UINavigationBar.appearance().barTintColor = kCOLOR_CLEAR
-        UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedString.Key.foregroundColor:kCOLOR_WHITE,NSAttributedString.Key.font:kFONT_18]}()
-        UINavigationBar.appearance().backIndicatorImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage.imageWithColor(color: kCOLOR_CLEAR)
+        UINavigationBar.appearance().tintColor = UIColor.kBUTTON_NORMOL
+        UINavigationBar.appearance().barTintColor = UIColor.kCLEAR
+        UINavigationBar.appearance().titleTextAttributes =  {[NSAttributedString.Key.foregroundColor:UIColor.kWHITE,NSAttributedString.Key.font:UIFont.F18]}()
+        UINavigationBar.appearance().backIndicatorImage = UIImage.imageWithColor(color: UIColor.kCLEAR)
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage.imageWithColor(color: UIColor.kCLEAR)
     }
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

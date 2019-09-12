@@ -53,7 +53,7 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kFIT_INSTANCE.fitHeight(height: 60.0)
+        return 60.yfit
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -61,7 +61,7 @@ class ProfileViewes: BaseView,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return kFIT_INSTANCE.fitHeight(height: 20.0)
+        return 20.yfit
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

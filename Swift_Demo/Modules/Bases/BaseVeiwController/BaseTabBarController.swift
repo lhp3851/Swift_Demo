@@ -18,8 +18,8 @@ class BaseTabBarController: UITabBarController {
     }
 
     func initPannle() -> Void {
-        self.tabBar.shadowImage = UIImage.init(color: kCOLOR_TRANSLUCENT, size: CGSize.init(width: kWINDOW_WIDTH, height: 0.1))
-        self.tabBar.backgroundImage = UIImage.init(color: kCOLOR_WHITE, size: CGSize.init(width: kWINDOW_WIDTH, height: kTAB_BAR_HEIGHT))
+        self.tabBar.shadowImage = UIImage.init(color: UIColor.kTRANSLUCENT, size: CGSize.init(width: UIScreen.width, height: 0.1))
+        self.tabBar.backgroundImage = UIImage.init(color: UIColor.kWHITE, size: CGSize.init(width: UIScreen.width, height: BaseViewController().kTAB_BAR_HEIGHT))
         composeViewControllers()
     }
     
@@ -49,8 +49,8 @@ class BaseTabBarController: UITabBarController {
     }
     
     func setItemAttribute() -> Void {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: kCOLOR_TABBAR_GRAY], for: UIControl.State.normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: kCOLOR_NAVIGATION], for: UIControl.State.selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.kTABBAR_GRAY], for: UIControl.State.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.kNAVIGATION], for: UIControl.State.selected)
     }
     
     override func didReceiveMemoryWarning() {

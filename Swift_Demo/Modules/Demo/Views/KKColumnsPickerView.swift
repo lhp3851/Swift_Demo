@@ -20,9 +20,9 @@ class KKColumnsPickerView: UIView {
     
     var contentLabel: UILabel  {
         let label = UILabel()
-        label.font = kFONT_18
-        label.textColor = kCOLOR_TEXT_FIRST
-        label.backgroundColor = kCOLOR_WHITE
+        label.font = UIFont.F18
+        label.textColor = UIColor.kTEXT_FIRST
+        label.backgroundColor = UIColor.kWHITE
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         return label
@@ -69,7 +69,7 @@ class KKColumnsPickerView: UIView {
     }
     
     func setAttr(content:String) -> NSMutableAttributedString {
-        let attrs = [NSAttributedString.Key.foregroundColor:kCOLOR_TEXT_FIRST];
+        let attrs = [NSAttributedString.Key.foregroundColor:UIColor.kTEXT_FIRST];
         let attrText = NSMutableAttributedString.init(string: content, attributes: attrs)
         return attrText
     }
@@ -78,7 +78,7 @@ class KKColumnsPickerView: UIView {
 
 extension KKColumnsPickerView:UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return (kWINDOW_WIDTH/CGFloat(components))
+        return (UIScreen.width/CGFloat(components))
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -96,13 +96,13 @@ extension KKColumnsPickerView:UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         for line in pickerView.subviews {
             if line.height < 1 {
-                line.backgroundColor = KCOLOR_SEPERATE_LINE
+                line.backgroundColor = UIColor.kSEPERATE_LINE
             }
         }
         let label = contentLabel
         label.text = datas[component][row]
         if selectedIndex.row == row && selectedIndex.section == component {
-            label.textColor = KCOLOR_TINT_COLOR
+            label.textColor = UIColor.kTINT_COLOR
         }
         return label
     }
