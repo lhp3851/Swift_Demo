@@ -123,8 +123,9 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: QRcodeVC, animated: true)
     }
 
+    // MARK: -  Touchs
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        print("subViewes:",self.view.subviews[-1])
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,7 +139,8 @@ class HomeViewController: BaseViewController,SDCycleScrollViewDelegate,CAAnimati
     @objc func injected(){
          print("I've been injected: \(self)")
     }
-
+    
+    // MARK: -  CAAnimationDelegate
     func animationDidStart(_ anim: CAAnimation) {
         print("animate start")
     }

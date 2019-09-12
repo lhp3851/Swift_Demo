@@ -44,6 +44,9 @@ target 'Swift_Demo' do
   #extend
   #pod 'BluetoothKit', '~> 0.2.0'#
   #pod 'RazzleDazzle' # keyframe-based animation
+  
+  #Optimize
+  pod 'matrix-wechat'
 
   target 'Swift_DemoTests' do
     inherit! :search_paths

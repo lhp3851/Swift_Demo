@@ -119,6 +119,8 @@
 		BE58520121A560B200B36450 /* KKPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520021A560B200B36450 /* KKPickerModel.swift */; };
 		BE58520421A573CA00B36450 /* KKColumnsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */; };
 		BE58520721A5759900B36450 /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = BE58520621A5759900B36450 /* province.json */; };
+		BE7007A222DDA246002745E1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE7007A122DDA246002745E1 /* Default-568h@2x.png */; };
+		BE7007A522DDA8B3002745E1 /* KKOptimizeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7007A422DDA8B3002745E1 /* KKOptimizeTool.swift */; };
 		BE833B1121FFEB9B008ED5A0 /* KKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */; };
 		BE8FB7912248EA7A006E6C34 /* KKAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */; };
 		BE97813921C7496600E4BCA5 /* KKCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */; };
@@ -296,6 +298,8 @@
 		BE58520021A560B200B36450 /* KKPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKPickerModel.swift; sourceTree = "<group>"; };
 		BE58520321A573CA00B36450 /* KKColumnsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKColumnsPickerView.swift; sourceTree = "<group>"; };
 		BE58520621A5759900B36450 /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
+		BE7007A122DDA246002745E1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BE7007A422DDA8B3002745E1 /* KKOptimizeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKOptimizeTool.swift; sourceTree = "<group>"; };
 		BE833B1021FFEB9B008ED5A0 /* KKTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKTableViewController.swift; sourceTree = "<group>"; };
 		BE8FB7902248EA79006E6C34 /* KKAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		BE97813821C7496600E4BCA5 /* KKCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKCollectionFooterReusableView.swift; sourceTree = "<group>"; };
@@ -1168,6 +1172,7 @@
 		7A9783E51F7558B1003F17D1 = {
 			isa = PBXGroup;
 			children = (
+				BE7007A122DDA246002745E1 /* Default-568h@2x.png */,
 				7A9783F01F7558B1003F17D1 /* Swift_Demo */,
 				7A9784051F7558B1003F17D1 /* Swift_DemoTests */,
 				7A9784101F7558B1003F17D1 /* Swift_DemoUITests */,
@@ -1256,6 +1261,7 @@
 		7AA8452222A18A0100A2821A /* Exception */ = {
 			isa = PBXGroup;
 			children = (
+				BE7007A322DDA874002745E1 /* Matrix */,
 				7AA8452322A18A0100A2821A /* CrashManager.swift */,
 				7AA8452422A18A0100A2821A /* KKExceptionHandler.c */,
 				7AA8452522A18A0100A2821A /* KKExceptionHandler.h */,
@@ -1460,6 +1466,14 @@
 				BE58520621A5759900B36450 /* province.json */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		BE7007A322DDA874002745E1 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				BE7007A422DDA8B3002745E1 /* KKOptimizeTool.swift */,
+			);
+			path = Matrix;
 			sourceTree = "<group>";
 		};
 		BE97813C21C7B71600E4BCA5 /* DataSource */ = {
@@ -1669,6 +1683,7 @@
 				7A9783FC1F7558B1003F17D1 /* LaunchScreen.storyboard in Resources */,
 				BD9B38A021DEF558007A5AD4 /* areas2.json in Resources */,
 				7A9783F91F7558B1003F17D1 /* Assets.xcassets in Resources */,
+				BE7007A222DDA246002745E1 /* Default-568h@2x.png in Resources */,
 				7A4C11A51F9242A600F02866 /* InfoPlist.strings in Resources */,
 				7A9783F71F7558B1003F17D1 /* Main.storyboard in Resources */,
 				7A7818B91F8FD0B70043254E /* Profile.png in Resources */,
@@ -1835,6 +1850,7 @@
 				7A3DB0401FB33CEE00053419 /* KKPageControl.swift in Sources */,
 				BE2893CB21AE7352002659C0 /* KKAddressPickerModel.swift in Sources */,
 				BE2893C721AE72F4002659C0 /* KKEducationPickerModel.swift in Sources */,
+				BE7007A522DDA8B3002745E1 /* KKOptimizeTool.swift in Sources */,
 				BE58520121A560B200B36450 /* KKPickerModel.swift in Sources */,
 				D7AC7D951FC4077B00F601A9 /* KKBaseModel.swift in Sources */,
 				7A51C5BD1F912B2D002449C6 /* NavigationBar.swift in Sources */,
@@ -2147,13 +2163,13 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
-				INFOPLIST_FILE = Swift_Demo/Info.plist;
+				INFOPLIST_FILE = Swift_Demo/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_Demo/Swift_Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_Demo/Supports/Swift_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2169,13 +2185,13 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
-				INFOPLIST_FILE = Swift_Demo/Info.plist;
+				INFOPLIST_FILE = Swift_Demo/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhp3851.project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_Demo/Swift_Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Swift_Demo/Supports/Swift_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

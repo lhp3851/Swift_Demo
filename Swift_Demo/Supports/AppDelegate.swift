@@ -13,35 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    lazy var contentLabel:UITextView = {
-        let infoLabel = UITextView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
-        infoLabel.backgroundColor = .gray
-        infoLabel.textColor = .white
-        infoLabel.isEditable = false
-        UIApplication.shared.keyWindow?.addSubview(infoLabel)
-        return infoLabel
-    }()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
-        
         window?.makeKeyAndVisible()
-        
         let rootVC = BaseTabBarController()
-        
         window?.rootViewController = rootVC
         
-        DispatchQueue.global().async {
-            crashHandle(crashContentAction: { (crashInfo) in
-                print(crashInfo.count)
-                for info in crashInfo{
-                    DispatchQueue.main.async {
-                        self.contentLabel.text = info
-                    }
-                }
-            })
-        }
+        KKOptimizeTool.shared.install().start()
+        
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         #endif
