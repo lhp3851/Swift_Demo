@@ -19,9 +19,7 @@ class ContactsTool: NSObject {
     var indexTitiles = Array<String>()
     
     static let share = ContactsTool()
-    private override init() {
-        
-    }
+    private override init() {}
     
     class func accessStatus() -> CNAuthorizationStatus {
         return CNContactStore.authorizationStatus(for: CNEntityType.contacts)

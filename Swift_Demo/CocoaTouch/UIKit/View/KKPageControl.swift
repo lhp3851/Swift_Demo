@@ -38,13 +38,13 @@ class KKPageControl: UIPageControl {
     
     var normalType = KKPageControlType.Dot
     var selectedType = KKPageControlType.LineWithCap
-    var selectedColor = kCOLOR_WHITE
-    var normalColor = kCOLOR_BUTTON_NORMOL
+    var selectedColor = UIColor.kWHITE
+    var normalColor = UIColor.kBUTTON_NORMOL
     var count = 0
     var current = 0
     var position = KKPageControlPosition.Left
     
-    private var margin = kMARGIN_HORIZONE
+    private var margin = UIScreen.hMargin
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -52,7 +52,7 @@ class KKPageControl: UIPageControl {
     
     init(frame: CGRect,type:KKPageControlType) {
         super.init(frame: frame)
-        self.contentMode = UIViewContentMode.redraw
+        self.contentMode = UIView.ContentMode.redraw
         self.normalType = type
         self.setUpPannel()
     }
@@ -64,19 +64,19 @@ class KKPageControl: UIPageControl {
         self.position = postionType
         print(self.frame)
         if self.position == KKPageControlPosition.Left {
-            self.margin = kMARGIN_HORIZONE
+            self.margin = UIScreen.hMargin
         }
         else if self.position == KKPageControlPosition.Center {
-            self.margin = (self.frame.width - CGFloat.init((count - 1))*(normalWidth + gap) - selectedWidth)/2 - kMARGIN_HORIZONE
+            self.margin = (self.frame.width - CGFloat.init((count - 1))*(normalWidth + gap) - selectedWidth)/2 - UIScreen.hMargin
         }
         else{
-            self.margin = self.frame.width - CGFloat.init((count - 1))*(normalWidth + gap) - selectedWidth - kMARGIN_HORIZONE*2
+            self.margin = self.frame.width - CGFloat.init((count - 1))*(normalWidth + gap) - selectedWidth - UIScreen.hMargin*2
         }
     }
     
     func setUpPannel() -> Void {
-        self.backgroundColor = kCOLOR_WHITE
-        self.addTarget(self, action: #selector(click(object:)), for: UIControlEvents.valueChanged)
+        self.backgroundColor = UIColor.kWHITE
+        self.addTarget(self, action: #selector(click(object:)), for:UIControl.Event.valueChanged)
     }
     
     func loadDatas() -> Void {
@@ -135,13 +135,13 @@ class KKPageControl: UIPageControl {
         case .Dot:
             let subFrame =  CGRect.init(x: (self.frame.width - normalWidth)/2, y: (self.frame.height - normalWidth)/2, width: normalWidth, height: normalWidth)
             let path = UIBezierPath.init(ovalIn:subFrame)
-            kCOLOR_BUTTON_NORMOL.setFill()
+            UIColor.kBUTTON_NORMOL.setFill()
             path.fill()
             
         case .Line:
             let subFrame =  CGRect.init(x: (self.frame.width - selectedWidth)/2, y: (self.frame.height - selectedHeight)/2, width: selectedWidth, height: selectedHeight)
             let path = UIBezierPath.init(rect: subFrame)
-            kCOLOR_BUTTON_NORMOL.setFill()
+            UIColor.kBUTTON_NORMOL.setFill()
             path.fill()
         
         case .LineWithCap:
@@ -166,7 +166,7 @@ class KKPageControl: UIPageControl {
         default:
             let subFrame =  CGRect.init(x: (self.frame.width - normalWidth)/2, y: (self.frame.height - normalWidth)/2, width: normalWidth, height: normalWidth)
             let path = UIBezierPath.init(ovalIn:subFrame)
-            kCOLOR_BUTTON_NORMOL.setFill()
+            UIColor.kBUTTON_NORMOL.setFill()
             path.fill()
         }
         

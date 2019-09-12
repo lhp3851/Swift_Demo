@@ -11,13 +11,13 @@ import UIKit
 class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
     
     lazy var listView : BaseTableview = {
-        let view = BaseTableview.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
+        let view = BaseTableview.init(frame: CGRect.zero, style: UITableView.Style.grouped)
         view.delegate = self
         view.dataSource = self
         return view
     }()
     
-    var listDatas = KKBaseModel.groupDatas
+    var listDatas = KKDemoModel.groupDatas
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,7 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
 
     override func initData() {
         super.initData()
-        KKPasteBoardTool.copy(contents: "instance sumian")
-        print(KKPasteBoardTool.getContents())
+        
     }
     
     override func initPannel() {
@@ -43,7 +42,7 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     
     func setConstraints() -> Void {
         self.listView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     
@@ -52,13 +51,13 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     
     //MARK: 功能方法
     @objc func demo() -> Void {
-        print("demo~")
+        
     }
     
     
     //MARK: UITableViewDataSource , UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kFIT_INSTANCE.fitHeight(height: 50.0)
+        return 50.yfit
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,30 +65,35 @@ class KKDemoViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listDatas[section].count
+        let subDicItem = self.listDatas[section]
+        let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
+        return item.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.listDatas[section][0]
+        return self.listDatas[section].keys.first
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "identifier"
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if (cell == nil) {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifier)
+            cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
         }
-        cell?.textLabel?.text = self.listDatas[indexPath.section][indexPath.row]
+        let subDicItem = self.listDatas[indexPath.section]
+        let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
+        cell?.textLabel?.text = item[indexPath.row]
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let vc = BaseViewController.getClass(objectName: self.listDatas[indexPath.section][indexPath.row])
+        let subDicItem = self.listDatas[indexPath.section]
+        let item:[String] = subDicItem[subDicItem.keys.first!] as! [String]
+        let vc = BaseViewController.getClass(objectName: item[indexPath.row])
+        vc.title = item[indexPath.row]
         BaseViewController.jumpViewController(sourceViewConrroller: self, destinationViewController: vc, animated: true)
     }
-    
     
     
     override func didReceiveMemoryWarning() {

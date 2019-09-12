@@ -27,18 +27,18 @@ class ContactsViewController: BaseViewController,UISearchControllerDelegate,UISe
         VC.searchResultsUpdater = self
         VC.searchBar.placeholder = "搜索"
         VC.dimsBackgroundDuringPresentation = false
-        VC.searchBar.tintColor = kCOLOR_BUTTON_NORMOL
+        VC.searchBar.tintColor = UIColor.kBUTTON_NORMOL
         VC.searchBar.setValue("完成", forKeyPath: "_cancelButtonText")
 //        VC.obscuresBackgroundDuringPresentation = false
 //        VC.hidesNavigationBarDuringPresentation = false
-        VC.searchBar.backgroundColor = kCOLOR_BACKGROUND
-        VC.searchBar.barTintColor = kCOLOR_BACKGROUND
+        VC.searchBar.backgroundColor = UIColor.kBACKGROUND
+        VC.searchBar.barTintColor = UIColor.kBACKGROUND
         VC.searchBar.subviews.first?.subviews.first?.removeFromSuperview()
         let textFiled : UITextField = VC.searchBar.value(forKey: "_searchField") as! UITextField
         textFiled.setValue("1", forKeyPath: "_placeholderLabel.textAlignment")
         textFiled.textAlignment = NSTextAlignment.left
-        textFiled.setValue(kCOLOR_BUTTON_HEIGHT, forKeyPath: "_placeholderLabel.textColor")
-        textFiled.font = kFONT_16
+        textFiled.setValue(UIColor.kBUTTON_HEIGHT, forKeyPath: "_placeholderLabel.textColor")
+        textFiled.font = UIFont.F16
         VC.searchBar.scopeButtonTitles = ["true"]
         VC.searchBar.showsScopeBar = true
         VC.searchBar.showsSearchResultsButton = true
@@ -75,7 +75,7 @@ class ContactsViewController: BaseViewController,UISearchControllerDelegate,UISe
     
     func setConstraints() -> Void {
         self.contactsView.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+            make.edges.equalTo(UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     

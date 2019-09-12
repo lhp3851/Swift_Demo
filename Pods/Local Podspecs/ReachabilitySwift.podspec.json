@@ -1,6 +1,6 @@
 {
   "name": "ReachabilitySwift",
-  "version": "4.3.0",
+  "version": "5.0.0-beta1",
   "module_name": "Reachability",
   "homepage": "https://github.com/ashleymills/Reachability.swift",
   "authors": {
@@ -17,9 +17,14 @@
   },
   "source": {
     "git": "https://github.com/ashleymills/Reachability.swift.git",
-    "tag": "v4.3.0"
+    "tag": "v5.0.0-beta1"
   },
   "source_files": "Sources/Reachability.swift",
   "frameworks": "SystemConfiguration",
-  "requires_arc": true
+  "ios": {
+    "frameworks": "CoreTelephony"
+  },
+  "requires_arc": true,
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
 }

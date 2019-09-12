@@ -33,8 +33,8 @@ extension String {
     func getTextHeigh(font:UIFont,width:CGFloat) -> CGFloat {
         let normalText: String = self
         let size = CGSize.init(width: width, height: CGFloat.greatestFiniteMagnitude)
-        let dic = NSDictionary(object: font, forKey: NSAttributedStringKey.font as NSCopying)
-        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context:nil).size
+        let dic = NSDictionary(object: font, forKey: NSAttributedString.Key.font as NSCopying)
+        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key : Any], context:nil).size
         return stringSize.height
     }
     //固定高度计算文字宽度
@@ -42,8 +42,8 @@ extension String {
         
         let normalText: String = self
         let size = CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: height)
-        let dic = NSDictionary(object: font, forKey: NSAttributedStringKey.font as NSCopying)
-        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : Any], context:nil).size
+        let dic = NSDictionary(object: font, forKey: NSAttributedString.Key.font as NSCopying)
+        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key : Any], context:nil).size
         return stringSize.width
     }
     
@@ -68,7 +68,7 @@ extension String {
                 pattern = "."
             }
             let regex: NSRegularExpression = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
-            let matches = regex.matches(in: validateString, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, validateString.characters.count))
+            let matches = regex.matches(in: validateString, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, validateString.count))
             return matches.count > 0
         }
         catch {
@@ -93,7 +93,7 @@ extension String {
             return false
         }
         
-        if (password.characters.count >= 6 && password.characters.count <= 22) {
+        if (password.count >= 6 && password.count <= 22) {
             return true
         }
         
@@ -137,6 +137,20 @@ extension String {
         CFStringTransform(pinyin , nil, kCFStringTransformToLatin, false)
         print(chinese,pinyin,(pinyin as String).uppercased())
         return (pinyin as String).uppercased();
+    }
+    
+    // 指定文本宽度，计算文本的高度
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+        return ceil(boundingBox.height)
+    }
+    
+    // 指定文本高度，计算文本的宽度
+    func width(withConstraniedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin,.truncatesLastVisibleLine], attributes: [.font: font], context: nil)
+        return ceil(boundingBox.width)
     }
     
 }

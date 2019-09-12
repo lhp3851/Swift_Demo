@@ -16,8 +16,8 @@ protocol KKInfiniteScrollViewDelegate {
 }
 
 class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
-    let swidth = kWINDOW_WIDTH
-    let sheight = kFIT_INSTANCE.fitHeight(height: 256.0)
+    let viewWidth = UIScreen.width
+    let viewHeight = 256.yfit
     
     private(set) var currentPage = 0 //当前页数
     
@@ -60,19 +60,19 @@ class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
         self.datasArray.insert(datas.first!, at: 0)
         
         for (idx,imageName) in self.datasArray.enumerated() {
-            let frame = CGRect.init(x: CGFloat(idx)*self.width, y: 0, width: self.width, height: self.height)
-            print("frame.origin.x:",frame.origin.x,self.width)
+            let frame = CGRect.init(x: CGFloat(idx)*viewWidth, y: 0, width: viewWidth, height: viewHeight)
+            print("frame.origin.x:",frame.origin.x,viewWidth)
             let imageView = KKImageView.init(frame: frame, action: { (imageView) in
                 print("clicked imageView")
             })
-            imageView.image = kIMAGE_WITH(name: imageName)
+            imageView.image = UIImage.named(imageName)
             imageView.isUserInteractionEnabled = true
-            imageView.contentMode = UIViewContentMode.redraw
+            imageView.contentMode = UIView.ContentMode.redraw
             self.addSubview(imageView)
         }
 
-        self.contentSize = CGSize.init(width: CGFloat(self.datasArray.count)*self.width, height: 0)
-        self.contentOffset = CGPoint.init(x: self.width, y: 0)
+        self.contentSize = CGSize.init(width: CGFloat(self.datasArray.count)*viewWidth, height: 0)
+        self.contentOffset = CGPoint.init(x: viewWidth, y: 0)
         self.startAutoScroll()
     }
     
@@ -105,7 +105,7 @@ class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
                 self.timer.cancel()
             }
             DispatchQueue.main.async(execute: {
-                let offset :CGFloat = self.contentOffset.x + self.width;
+                let offset :CGFloat = self.contentOffset.x + self.viewWidth;
                 self.setContentOffset(CGPoint.init(x: offset, y: 0), animated: true)
             })
         }
@@ -113,14 +113,14 @@ class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
     }
     
     func makeInfiniteScrolling() -> Void {
-        let page : Int = Int(self.contentOffset.x / self.width)
+        let page : Int = Int(self.contentOffset.x / viewWidth)
         if page == self.datasArray.count - 1 {
             self.currentPage = 0
-            self.setContentOffset(CGPoint.init(x: self.width, y: 0), animated: false)
+            self.setContentOffset(CGPoint.init(x: viewWidth, y: 0), animated: false)
         }
         else if page == 0 {
             self.currentPage = page - 2
-            self.setContentOffset(CGPoint.init(x: CGFloat((self.datasArray.count - 2))*self.width, y: 0), animated: false)
+            self.setContentOffset(CGPoint.init(x: CGFloat((self.datasArray.count - 2))*viewWidth, y: 0), animated: false)
         }
         else{
             self.currentPage = page - 1
@@ -140,7 +140,7 @@ class KKInfiniteScrollView: UIScrollView,UIScrollViewDelegate {
         if page>self.datasArray.count || page < 0 {
             return
         }
-        self.setContentOffset(CGPoint.init(x: CGFloat(page+1)*self.width, y: 0), animated: false)
+        self.setContentOffset(CGPoint.init(x: CGFloat(page+1)*viewWidth, y: 0), animated: false)
     }
     
     /*

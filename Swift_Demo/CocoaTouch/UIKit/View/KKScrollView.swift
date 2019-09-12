@@ -10,18 +10,18 @@ import UIKit
 
 class KKScrollView: BaseView,KKPageControlDelegate,KKInfiniteScrollViewDelegate {
     lazy var scrollView : KKInfiniteScrollView = {
-        let infinitFrame = CGRect.init(x: 0, y: kNAVIGATION_STATU_BAR_HEIGHT, width: kWINDOW_WIDTH, height: kFIT_INSTANCE.fitHeight(height: 256))
+        let infinitFrame = CGRect.init(x: 0, y: BaseViewController().kSTATU_BAR_HEIGHT, width: UIScreen.width, height: 256.yfit)
         let infinitScrollView = KKInfiniteScrollView.init(frame: infinitFrame, datas: ["image1","image3","image2"])
         infinitScrollView.scrollViewDelegate = self
         return infinitScrollView
     }()
     
     lazy var pageControl:KKPageControl = {
-        let frame = CGRect.init(x: kMARGIN_HORIZONE, y: self.scrollView.frame.maxY - kFIT_INSTANCE.fitHeight(height: 30.0), width: kWINDOW_WIDTH - kMARGIN_HORIZONE*2, height: kFIT_INSTANCE.fitHeight(height: 30.0))
+        let frame = CGRect.init(x: UIScreen.hMargin, y: self.scrollView.frame.maxY - 30.yfit, width: UIScreen.width - UIScreen.hMargin*2, height: 30.yfit)
         let control = KKPageControl.init(frame: frame , count: 3, selectedType: KKPageControlType.LineWithCap, normalType: KKPageControlType.Dot,postionType:KKPageControlPosition.Center)
         control.delegate = self
-        control.normalColor = kCOLOR_BUTTON_NORMOL
-        control.selectedColor = kCOLOR_SAFELY
+        control.normalColor = UIColor.kBUTTON_NORMOL
+        control.selectedColor = UIColor.kSAFELY
         return control
     }()
     

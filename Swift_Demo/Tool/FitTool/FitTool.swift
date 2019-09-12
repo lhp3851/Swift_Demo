@@ -11,15 +11,11 @@ import UIKit
 class FitTool: NSObject {
 
     static let shareInstance = FitTool()
-    private override init() {
-        
-    }
+    private override init() {}
     
     let kBASE_HEIGHT:CGFloat = 667.0
     let kBASE_WIDTH:CGFloat  = 375.0
     let kBASE_SCREEN_INCHE :CGFloat = 4.7
-    
-    let retina = UIDevice().retina
 
     
     func fitHeight(height:CGFloat) -> CGFloat {
@@ -54,7 +50,7 @@ class FitTool: NSObject {
     }
     
     func fitFont(fontSize:CGFloat) -> UIFont {
-        let inche  = UIDevice.current.inche
+        let inche  = UIScreen.main.inch
         return UIFont.systemFont(ofSize:inche*fontSize/kBASE_SCREEN_INCHE)
     }
     

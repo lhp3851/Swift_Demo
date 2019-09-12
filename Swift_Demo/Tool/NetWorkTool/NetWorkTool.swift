@@ -95,7 +95,7 @@ class NetWorkTool: NSObject {
     ///
     /// - Returns: 可达性
     func checkNetWork() -> Bool {
-        return BaseRequest().isReachabile()
+        return BaseRequest().isReachabile
     }
     
     
@@ -196,7 +196,7 @@ class NetWorkTool: NSObject {
     func login() -> Void {
         let sourceVC = UIWindow.topViewController() as! BaseViewController
         let destinationVC = AccountViewController()
-        destinationVC.view.backgroundColor = kCOLOR_CLEAR
+        destinationVC.view.backgroundColor = UIColor.kCLEAR
         sourceVC.present(destinationVC, animated: true) {
             
         }

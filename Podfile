@@ -1,49 +1,69 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+#source 'http://gitlab.lhp.com:9090/iOS/JProjects.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '10.0'
 inhibit_all_warnings!
 
 target 'Swift_Demo' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Swift_Demo
+  #Base
+  pod 'Frameworks_Swift'
+  pod 'SwifterSwift', '~> 5.0.0'
+  pod 'Appz' # app Comunication
+  #pod 'PermissionScope' #APP权限管理
+  #pod 'ReactiveCocoa', '~> 9.0'
+
+  #NetWork
+  #pod 'Moya', '~> 10.0.1'
+  pod 'SwiftyStoreKit' #轻量级的APP内购框架
+  pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
+
+  #Datas
+  #pod 'XCGLogger', '~> 7.0.0'
+  pod 'CocoaLumberjack/Swift'
+  #pod 'SQLite.swift', '~> 0.12.0'
+  pod 'SwiftyJSON'
+  pod 'RealmSwift'
+  pod 'PromiseKit', '~> 6.8'
+
+  #UI
+  pod 'Texture'
+  pod 'Charts'
+  pod 'NVActivityIndicatorView'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'SDCycleScrollView','~> 1.80'
+  pod 'Instructions', '~> 1.0.0' # instruction for freshmen
+  pod 'lottie-ios'
+  pod 'RAMAnimatedTabBarController', '~> 5.0.0'
+  #pod 'PageMenu' #
+  #pod 'SCLAlertView' #alert View
+  #pod 'DOFavoriteButton'#有动画效果的button，适用于收藏、喜欢、点赞等
+  #pod 'LTMorphingLabel'#Label
+
+  #extend
+  #pod 'BluetoothKit', '~> 0.2.0'#
+  #pod 'RazzleDazzle' # keyframe-based animation
   
-    pod 'SQLite.swift', '~> 0.11'
-    pod 'SnapKit', '~> 4.0.0'
-    pod 'Alamofire', '~> 4.5'
-    pod 'Kingfisher', '~> 4.0'
-    pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
-    pod 'SwiftyJSON'
-    pod 'Charts'
-    pod 'NVActivityIndicatorView' #HUD
-    pod 'MBProgressHUD', '~> 1.0.0'
-    pod 'Instructions', '~> 1.0.0' # instruction for freshmen
-    #pod 'RazzleDazzle' # instruction page
-    #pod 'RAMAnimatedTabBarController', '~> 2.0.13'  #swift 3
-    #pod 'SCLAlertView' #alert View
-    #pod 'DOFavoriteButton'#有动画效果的button，适用于收藏、喜欢、点赞等
-    #pod 'LTMorphingLabel'#Label
-    #pod 'PageMenu' #
-    pod 'XCGLogger', '~> 6.0.1'
-    #pod 'PermissionScope' #
-    pod 'SwiftyStoreKit' #轻量级的APP内购框架
-    #pod 'BluetoothKit', '~> 0.2.0'#
-    pod 'Appz' # app Comunication
-    pod 'SDCycleScrollView','~> 1.73'
-    
-    pod 'Moya', '~> 10.0.1'
-    pod 'ObjectMapper', '~> 3.1'
-    pod 'SwifterSwift', '~> 4.1.0'
-    pod 'RxSwift', '~> 4.0.0'
+  #Optimize
+  pod 'matrix-wechat'
 
   target 'Swift_DemoTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
   target 'Swift_DemoUITests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'PermissionScope'
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+  end
 end
